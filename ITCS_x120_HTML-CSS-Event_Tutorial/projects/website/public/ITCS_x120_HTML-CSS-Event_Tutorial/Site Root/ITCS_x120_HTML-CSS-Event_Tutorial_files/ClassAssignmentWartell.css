@@ -1,0 +1,336 @@
+/**
+ * \author Zachary Wartell
+ * \copyright Copyright 2015. Zachary Wartell.
+ * \license Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+ - http://creativecommons.org/licenses/by-nc-sa/4.0/
+ */
+
+/*   Shell Code Output  */
+.File_Name {
+    font-family: "Courier", monospace;
+}
+
+/*   Code Examples (put in 1x1 table)
+table.Hide_Code_Example:target
+{
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background-color: black;
+}
+*/
+
+p {
+    font-size: medium;
+}
+
+/*
+ *   SectionRubric
+ *   Table at head of each <section> with basic rubric info and menu
+ */
+table.SectionRubric
+{
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+table.SectionRubric > tbody > tr > td
+{
+    border: solid 1px black;
+}
+table.SectionRubric > tbody > tr:first-child > td
+{
+    color: gray;
+}
+
+table.SectionRubric > tbody > tr:nth-child(2) > td
+{
+    width: auto;
+}
+
+
+table.Menu
+{
+    background-color: lightgray;
+    border: solid 2px;
+    border-color : grey;
+}
+
+/*
+ * Rubric Table
+ */
+table.Rubric {
+    border: solid 2px black;
+    border-collapse: collapse;
+}
+
+table.Rubric td
+{
+    border: solid 1px;
+}
+
+table.Rubric tr td:nth-child(3)
+{
+    /* align-content: center; */
+    text-align: center;
+}
+
+
+table.Rubric td.Empty
+{
+    border: 0px;
+}
+
+/*
+ *  Code Examples
+ */
+
+/*   Code Examples are put in small 1x1 table */
+table.Code_Example {
+    width: 100%;
+    background-color: black;
+}
+
+/*  Code Example Expand style when displaying at full height, instead of with scroll bar
+*/
+table.Code_Example_Expand > tbody > tr > td > div {
+    width: 100%;
+    height: 100% !important;
+    /* overflow-y: scroll; */
+}
+
+/*  Code Example Table Cell that contains expand button
+*/
+table.Code_Example > tbody > tr > td:first-child {
+    vertical-align: text-top;
+    text-align: left;
+    width: 25px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* Code Example Expand style when displaying code in compact, scrollable mode.
+*/
+table.Code_Example > tbody > tr > td > div {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+/*
+           Displays figures that are Screen_Capture's and which are zoomable when clicked.
+           (Resourse [R1])
+           */
+figure.Screen_Capture {
+    width: 500px;
+    background: white;
+    border: 10px solid white;
+    -webkit-box-shadow: 0 3px 10px #ccc;
+    -moz-box-shadow: 0 3px 10px #ccc;
+    -o-box-shadow: 0 3px 10px #ccc;
+    box-shadow: 0 3px 10px #ccc;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    position: relative;
+}
+
+figure.Screen_Capture img {
+    width: 100%;
+}
+
+figure.Screen_Capture:hover {
+    -webkit-box-shadow: 0 3px 10px #F1EA35;
+    -moz-box-shadow: 0 3px 10px #F1EA35;
+}
+
+figure.Screen_Capture:focus {
+    outline: none;
+    -webkit-transform: translate(500px, 350px) scale(3.0);
+    -moz-transform: translate(500px, 350px) scale(3.0);
+    -webkit-box-shadow: 0 3px 10px #666;
+    -moz-box-shadow: 0 3px 10px #666;
+    z-index: 9999;
+}
+
+/*   Shell Code Input */
+code.Shell_Code_Input {
+    font-family: "Courier", monospace;
+    color: white;
+}
+
+/*   Shell Code Output  */
+code.Shell_Code_Output {
+    font-family: "Courier", monospace;
+    color: lightgreen;
+}
+
+/*   Shell Code Output  */
+code.Shell_Code_Prompt {
+    font-family: "Courier", monospace;
+    color: cyan;
+}
+
+/*  User Input Required
+*/
+.User_Input {
+    background-color: grey;
+    font-style: italic;
+    color: black;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+span.File_Name {
+    font-family: Courier, monospace;
+}
+
+span.Function_Name {
+    font-family: Courier, monospace;
+}
+
+/*   Comments in Shell Code
+*/
+span.Shell_Code_Comment {
+    font-family: Courier, monospace;
+    text-align: center;
+    color: pink;
+    background-color: grey;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+div.Time_Todo {
+    color: grey;
+}
+
+/* ZJW: in progress idea , add auto-counting, add auto collection of todo items */
+div.Doc_Todo {
+    color: grey;
+}
+
+span.Updated_Text {
+    color: red;
+    background-color: yellow;
+}
+
+/*   Hierarchical List of Instructions
+*/
+ol.Instruction {
+    font-size: medium;
+    counter-reset: instructionLevel1;
+    list-style-type: decimal;
+}
+
+ol.Instruction > li {
+    counter-increment: instructionLevel1;
+}
+
+ol.Instruction > li::marker {
+    font-size: medium;
+    content: counter(instructionLevel1, decimal) " ";
+}
+
+ol.Instruction > li > ol {
+    font-size: medium;
+    list-style-type: lower-alpha;
+
+    counter-reset: instructionLevel2;
+}
+
+ol.Instruction > li > ol > li {
+    counter-increment: instructionLevel2;
+}
+
+ol.Instruction > li > ol > li::marker {
+    font-size: medium;
+
+    content: counter(instructionLevel2, lower-alpha) " ";
+}
+
+ol.Instruction > li > ol > li > ol {
+    font-size: medium;
+    list-style-type: lower-roman;
+
+    counter-reset: instructionLevel3;
+}
+
+ol.Instruction > li > ol > li > ol > li {
+    counter-increment: instructionLevel3;
+}
+
+ol.Instruction > li > ol > li > ol > li::marker {
+    font-size: medium;
+
+    content: counter(instructionLevel3, lower-roman) " ";
+}
+
+span.Grade_Points {
+    font-weight: bold;
+}
+
+h1.Title, h2.Title, h3.Title {
+    text-align: center
+}
+
+/*
+Heading Numbering (Resource [R2])
+*/
+body {
+    counter-reset: h1
+}
+
+h1 {
+    counter-reset: h2
+}
+
+h2 {
+    counter-reset: h3
+}
+
+h3 {
+    counter-reset: h4
+}
+
+h4 {
+    counter-reset: h5
+}
+
+h5 {
+    counter-reset: h6
+}
+
+h1:before {
+    counter-increment: h1;
+    content: counter(h1) ". "
+}
+
+h2:before {
+    counter-increment: h2;
+    content: counter(h1) "." counter(h2) ". "
+}
+
+h3:before {
+    counter-increment: h3;
+    content: counter(h1) "." counter(h2) "." counter(h3) ". "
+}
+
+h4:before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h4) "." counter(h4) ". "
+}
+
+h5:before {
+    counter-increment: h5;
+    content: counter(h1) "." counter(h2) "." counter(h4) "." counter(h4) "." counter(h5) ". "
+}
+
+h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {
+    content: "";
+    counter-increment: none
+}
