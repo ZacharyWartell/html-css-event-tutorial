@@ -55,19 +55,24 @@
     <style id="dynCom" type="text/css">
 <!--
 -->
-</style> 
-    <script language="JavaScript">
+</style> <script language="JavaScript">
       /* \author Zachary Wartell
              *   
              */
       function onload_Body()
-      {              
+      {
+        const courseNumberElements = document.querySelectorAll('span[data-course-number]');
+        for(let e of courseNumberElements)
+        {
+          e.innerText = "3120";
+        }
+        
         /* smoothScrolling isn't working well, perhaps because of my page structure */
         /* $('#toc').toc( {'smoothScrolling': false}); */
         $('#toc').toc();
       }
     </script>
-<script language="JavaScript"><!--
+    <script language="JavaScript"><!--
 function msoCommentShow(anchor_id, com_id)
 {
 	if(msoBrowserCheck()) 
@@ -399,7 +404,9 @@ div.WordSection1 {
           missing without incurring a penalty.<br>
           <br>
           <b>Note</b>: If you accidentally commit with a missing or bad message,
-          you can correct the message using git commit –amend option (see <a href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things" target="_blank">https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</a>)<br>
+          you can correct the message using git commit –amend option (see <a href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things"
+
+            target="_blank">https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</a>)<br>
           <br>
           Finally, extra commit's are perfectly fine and common practice, such
           for fixing other types of coding mistakes, etc.<br>
@@ -424,19 +431,19 @@ div.WordSection1 {
           <br>
           <span class="ProgramName">https://cci-git.uncc.edu/</span><span class="ProgramName"><span
 
-              class="User_Input">your_userid</span>/6120-HTML-Tutorial<br>
+              class="User_Input">your_userid</span>/<span data-course-number="">6120</span>-HTML-Tutorial<br>
             <br>
           </span>
           <ol>
             <li>Make sure the repository is <span class="ProgramName">Private</span>
               and give <span class="ProgramName">Reporter</span> access to both
-              Dr. Wartell and the TA.&nbsp; <br>
+              Dr. Wartell and the TA's.&nbsp; <br>
               <br>
             </li>
           </ol>
         </li>
         <li>If you have not already done so, create the following directory for
-          your 6120 course work:<br>
+            your <span data-course-number="">6120</span> course work:<br>
           <img src="images/image001.png" alt="Text Box: $ mkdir ITCS_6120
 zwartell@CCIWD-435B-1 ~/ITCS_6120$ cd ITCS_6120" height="69" width="566"></li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Clone
@@ -445,7 +452,7 @@ zwartell@CCIWD-435B-1 ~/ITCS_6120$ cd ITCS_6120" height="69" width="566"></li>
 $ git clone https://cci-git.uncc.edu/your_userid/6120-HTML-Tutorial.git Cloning into '6120-HTML-Tutorial'                                   [...]$ cd 6120-HTML-Tutorial"
 
             height="103" width="618"></li>
-        <li>Inside the <span class="ProgramName">6120-HTML-Tutorial </span>directory
+        <li>Inside the <span class="ProgramName"><span data-course-number="">6120</span>-HTML-Tutorial </span>directory
           create a text file called <span class="ProgramName">README.md</span>.&nbsp;
           Add your name on the <u>first</u> line of the file.&nbsp;&nbsp; <br>
           <br>
@@ -466,12 +473,12 @@ $ git clone https://cci-git.uncc.edu/your_userid/6120-HTML-Tutorial.git Cloning 
       <!--- cleanup end -->
       <h2>Setup for Chrome and Chrome DevTools</h2>
       <ol>
-        <li>Download and install the Chrome browser <a href="https://www.google.com/chrome" target="_blank">https://www.google.com/chrome</a>
-        </li>
+        <li>Download and install the Chrome browser <a href="https://www.google.com/chrome"
+
+            target="_blank">https://www.google.com/chrome</a> </li>
       </ol>
       <h1>Part 2 - Option I versus Option II</h1>
-      <p>All students must complete either Part 2 - Option I or Part 2 - Option
-        II.</p>
+      <p>All students must complete either Part 2-Option I or Part 2-Option II.</p>
       <ul type="disc">
         <li><u>Part 2 - Option I: Tutorial on HTML, CSS, Event Handling</u>:&nbsp;&nbsp;
           This option is designed for individuals lacking experience in either
@@ -493,7 +500,9 @@ $ git clone https://cci-git.uncc.edu/your_userid/6120-HTML-Tutorial.git Cloning 
       <ul type="disc">
       </ul>
       <h2>Overview of HTML</h2>
-      <p>Go to the MDN page <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.&nbsp;&nbsp;
+      <p>Go to the MDN page <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
+
+          target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.&nbsp;&nbsp;
         Note the expandable index on the left hand-side of the page.&nbsp;&nbsp;
         Expand the first sub-section.&nbsp; It should look like:</p>
       <p style="text-align:center" align="center"><img src="images/image003.jpg"
@@ -513,14 +522,15 @@ $ git clone https://cci-git.uncc.edu/your_userid/6120-HTML-Tutorial.git Cloning 
           your git repository.</li>
       </ul>
       <h3>Introduction to HTML</h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML" target="_blank"><span
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
 
-            style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
+          target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>.&nbsp;&nbsp;&nbsp;
         Read <u>just</u> the first paragraph of this page.</p>
       <h3>Getting Started with HTML</h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank">Getting
-          Started with HTML</a>.<br>
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+
+          target="_blank">Getting Started with HTML</a>.<br>
       </p>
       <ol class="Instruction">
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Read
@@ -591,8 +601,9 @@ $ mkdir anatomy-of-HTML" height="54" width="566"></li>
             </span>What’s in the head? Metadata in HTML</a></h3>
       <p>Goto the next MDN subsection.&nbsp;&nbsp; There is a “Next” button at
         the top and bottom of the page that you just read.&nbsp; (Alternatively,
-        from the index, follow the link to page <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML" target="_blank">What’s
-          in the head? Metadata in HTML</a>).&nbsp; <br>
+        from the index, follow the link to page <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+
+          target="_blank">What’s in the head? Metadata in HTML</a>).&nbsp; <br>
       </p>
       <ol class="Instruction">
         <li>Read “What is the HTML head?”<br>
@@ -682,8 +693,9 @@ $ mkdir applying-CSS-and-JS" height="54" width="566"></li>
         <li>Read all of “Setting the primary language of the document”</li>
       </ol>
       <h3><a name="_Ref523305604">HTML text fundamentals</a></h3>
-      <p>Goto the next MDN page, <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals" target="_blank">HTML
-          text fundamentals</a>.&nbsp; </p>
+      <p>Goto the next MDN page, <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+
+          target="_blank">HTML text fundamentals</a>.&nbsp; </p>
       <ol class="Instruction">
         <li>Read all of “The basics: Headings and Paragraphs”<br>
           <br>
@@ -742,31 +754,35 @@ $ mkdir recipe-page" height="54" width="566"></li>
       </ol>
       <h2>CSS – Styling the Web</h2>
       <p>From the index, skip the rest of “HTML — Structuring the Web”, and
-        expand the index item <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS
-          — Styling the Web</a>:</p>
+        expand the index item <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
+
+          target="_blank">CSS — Styling the Web</a>:</p>
       <p style="text-align:center" align="center"><img src="images/image008.jpg"
 
           height="407" width="233" border="0"></p>
-      <p>Go to page <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS
-          — Styling the Web</a>, read up to and including the first section
-        “Learning Pathway”.&nbsp; Skim over the “Modules” paragraph. &nbsp;<br>
+      <p>Go to page <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
+
+          target="_blank">CSS — Styling the Web</a>, read up to and including
+        the first section “Learning Pathway”.&nbsp; Skim over the “Modules”
+        paragraph. &nbsp;<br>
         <br>
         The following sections of this ass will guide you through reading the
         sub-sections highlighted in red above.</p>
       <h3><a name="_Ref523474962">CSS</a> first steps overview</h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps" target="_blank">CSS
-          first steps overview</a>. </p>
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
+
+          target="_blank">CSS first steps overview</a>. </p>
       <p>Read up to and including the section “Prerequisites”</p>
       <h3><a name="_Ref523478078">What is CSS?</a></h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank"><span
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"
 
-            style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
+          target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
       <p>Read all sections, but stop without reading “CSS specifications” </p>
       <h3>Getting started with CSS</h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started" target="_blank"><span
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started"
 
-            style="font-size:10.5pt;color:#3D7E9A;letter-spacing:-.05pt;background:white">Getting
+          target="_blank"><span style="font-size:10.5pt;color:#3D7E9A;letter-spacing:-.05pt;background:white">Getting
             started with CSS</span></a></p>
       <!--- cleanup start -->
       <ol class="Instruction">
@@ -838,9 +854,9 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
       <p>You can skip the rest of the “Getting started with CSS” article.</p>
       <!-- cleanup end -->
       <h3>How CSS is structured </h3>
-      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured" target="_blank"><span
+      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured"
 
-            style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
+          target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">How CSS is structured</span></a>.<br>
       </p>
       <!--- cleanup start -->
@@ -886,9 +902,9 @@ letter-spacing:-.05pt;background:white">How CSS is structured</span></a>.<br>
       <p>You can skip the rest of the article “How CSS is structured”.<br>
       </p>
       <h3>How CSS works </h3>
-      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works" target="_blank"><span
+      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works"
 
-            style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
+          target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
       </p>
       <ol class="Instruction">
@@ -929,9 +945,9 @@ letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
       </ol>
       <p>You can skip the rest of the article “How CSS works”.</p>
       <h3>The box model</h3>
-      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model" target="_blank"><span
+      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model"
 
-            style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
+          target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">The box model</span></a></p>
       <!-- cleanup start -->
       <ol class="Instruction">
@@ -965,9 +981,9 @@ letter-spacing:-.05pt;background:white">The box model</span></a></p>
         it covers a teeny bit of JavaScript so as to better understand the event
         handling tutorial.</p>
       <h3><a name="_Ref523574167">What is JavaScript</a></h3>
-      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank"><span
+      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
 
-            style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
+          target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
       <ol class="Instruction">
         <li>Read all of “A high-level definition”<br>
@@ -1077,9 +1093,9 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
       <h3>Introduction to Events</h3>
       <p>From the index, under “<span style="font-size:10.5pt;
 font-family:&quot;Arial&quot;,sans-serif;color:#333333;letter-spacing:-.05pt">JavaScript
-          building blocks”, follow the link to </span><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank"><span
+          building blocks”, follow the link to </span><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
 
-            style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
+          target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
       <ol class="Instruction">
         <li>Read all of “A series of fortunate events”<br>
@@ -1214,7 +1230,9 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
       <h2>Panel Overview</h2>
       <!-- cleanup list start -->
       <ol>
-        <li>Using Chrome goto <a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank">https://developers.google.com/web/tools/chrome-devtools/</a>
+        <li>Using Chrome goto <a href="https://developers.google.com/web/tools/chrome-devtools/"
+
+            target="_blank">https://developers.google.com/web/tools/chrome-devtools/</a>
           <br>
           <br>
         </li>
@@ -1226,14 +1244,14 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
       </ol>
       <!-- cleanup list end -->
       <h2>Get Started With Viewing And Changing The DOM</h2>
-      Under “Elements Panel”, follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/dom/" target="_blank"><span
+      Under “Elements Panel”, follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/dom/"
 
-          style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
+        target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
           Started With Viewing And Changing The DOM</span></a><br>
       <ol class="Instruction">
-        <li>Read the first paragraph and follow the link to <a href="https://developers.google.com/web/tools/chrome-devtools/dom/#appendix" target="_blank"><span
+        <li>Read the first paragraph and follow the link to <a href="https://developers.google.com/web/tools/chrome-devtools/dom/#appendix"
 
-              style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Appendix:
+            target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Appendix:
               HTML versus the DOM</span></a> and read through that appendix
           before continuing.<br>
           <br>
@@ -1243,9 +1261,9 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           <br>
           Do all the exercises in this sub-section.&nbsp; Regarding the further
           links embedded this sub-section follow and read all them -- but <u>skip</u>
-          <a href="https://developers.google.com/web/tools/chrome-devtools/css/" target="_blank"><span
+          <a href="https://developers.google.com/web/tools/chrome-devtools/css/"
 
-              style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
+            target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
               Started With Viewing And Changing CSS</span></a>.<br>
           <br>
         </li>
@@ -1280,10 +1298,10 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
         </li>
       </ol>
       <h2>Get Started With Viewing And Changing CSS</h2>
-      <p>Return to the DevTools <a href="https://developers.google.com/web/tools/chrome-devtools" target="_blank">main
-          page</a>.&nbsp;&nbsp;&nbsp; Under “Elements Panel”, follow the link <a
+      <p>Return to the DevTools <a href="https://developers.google.com/web/tools/chrome-devtools"
 
-          href="https://developers.google.com/web/tools/chrome-devtools/css/"><span
+          target="_blank">main page</a>.&nbsp;&nbsp;&nbsp; Under “Elements
+        Panel”, follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/css/"><span
 
             style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
             Started With Viewing And Changing CSS</span></a></p>
@@ -1338,10 +1356,10 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
         </li>
       </ol>
       <h2><a name="_Ref19088667">Get Started With The Console</a></h2>
-      <p>Return to the DevTools <a href="https://developers.google.com/web/tools/chrome-devtools" target="_blank">main
-          page</a>.&nbsp;&nbsp;&nbsp; Under “Elements Panel”, follow the link <a
+      <p>Return to the DevTools <a href="https://developers.google.com/web/tools/chrome-devtools"
 
-          href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"><span
+          target="_blank">main page</a>.&nbsp;&nbsp;&nbsp; Under “Elements
+        Panel”, follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"><span
 
             style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
             Started With The Console</span></a>.</p>
@@ -1359,25 +1377,25 @@ $ mkdir get-started-console" height="69" width="566"><br>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </span>“Viewing logged messages” – read this section. <br>
           <br>
-          At this time do <u>not</u> follow link <a href="https://developers.google.com/web/tools/chrome-devtools/console/log" target="_blank"><span
+          At this time do <u>not</u> follow link <a href="https://developers.google.com/web/tools/chrome-devtools/console/log"
 
-              style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
+            target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
               Started With Logging Messages</span></a><br>
           <br>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </span>“Running JavaScript” – read this section<br>
           <br>
-          At this time do <u>not</u> follow link <a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript" target="_blank"><span
+          At this time do <u>not</u> follow link <a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript"
 
-              style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
+            target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
               Started With Running JavaScript</span></a></li>
       </ol>
       <h2>Get Started With Logging Messages<br>
       </h2>
-      <p>Now follow the first link you skipped in Section 5.4, i.e. go to <a href="https://developers.google.com/web/tools/chrome-devtools/console/log" target="_blank"><span
+      <p>Now follow the first link you skipped in Section 5.4, i.e. go to <a href="https://developers.google.com/web/tools/chrome-devtools/console/log"
 
-            style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
+          target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
             Started With Logging Messages</span></a>.</p>
       <ol class="Instruction">
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>“Set
@@ -1494,9 +1512,9 @@ $ lsdevelopers.google.com-1535898597380.log                      [.your file nam
       <h2>“Get Started With Running JavaScript In The Console”<br>
         <br>
       </h2>
-      <p>Now follow the second link you skipped in Section 5.4, i.e. go to <a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript" target="_blank"><span
+      <p>Now follow the second link you skipped in Section 5.4, i.e. go to <a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript"
 
-            style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
+          target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
             Started With Running JavaScript In the Console</span></a><span style="font-family:&quot;Arial&quot;,sans-serif;
 color:#212121"> <br>
         </span></p>
@@ -1573,18 +1591,26 @@ color:#212121"> <br>
       <ul type="disc">
         <li>Minimal Javascript:</li>
         <ul type="circle">
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</a>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash"
+
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</a>
           </li>
         </ul>
         <li>Minimal Events</li>
         <ul type="circle">
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
+
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a>
           </li>
         </ul>
         <li>Console Panel</li>
         <ul type="circle">
-          <li><a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started" target="_blank">https://developers.google.com/web/tools/chrome-devtools/console/get-started</a>
+          <li><a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"
+
+              target="_blank">https://developers.google.com/web/tools/chrome-devtools/console/get-started</a>
             <span class="MsoCommentReference"><span style="font-size:8.0pt"><a class="msocomanchor"
 
                   id="_anchor_2" onmouseover="msoCommentShow('_anchor_2','_com_2')"
@@ -1606,35 +1632,51 @@ color:#212121"> <br>
         <li>https://www.google.com/chrome</li>
         <li>https://developers.google.com/web/tools/chrome-devtools/</li>
         <li>https://developers.google.com/web/tools/chrome-devtools/beginners/html</li>
-        <li><a href="https://developers.google.com/web/tools/chrome-devtools/beginners/html" target="_blank">https://developers.google.com/web/tools/chrome-devtools/beginners/html</a></li>
+        <li><a href="https://developers.google.com/web/tools/chrome-devtools/beginners/html"
+
+            target="_blank">https://developers.google.com/web/tools/chrome-devtools/beginners/html</a></li>
       </ol>
       <ol start="10" type="1">
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a>
         </li>
         <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</li>
         <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals</a></li>
       </ol>
       <ol start="14" type="1">
         <li>https://developer.mozilla.org/en-US/docs/Learn/CSS</li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS</a>
         </li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS</a>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS</a>
         </li>
         <li>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works</li>
         <li>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model</a></li>
       </ol>
       <ol start="20" type="1">
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a>
         </li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
       </ol>
       <ol start="22" type="1">
         <li>https://developers.google.com/web/tools/chrome-devtools/</li>
         <li>https://developers.google.com/web/tools/chrome-devtools/beginners/html</li>
         <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li><a href="https://developers.google.com/web/tools/chrome-devtools/css/" target="_blank">https://developers.google.com/web/tools/chrome-devtools/css/</a></li>
+        <li><a href="https://developers.google.com/web/tools/chrome-devtools/css/"
+
+            target="_blank">https://developers.google.com/web/tools/chrome-devtools/css/</a></li>
       </ol>
       <ol start="26" type="1">
         <li>https://developers.google.com/web/tools/chrome-devtools/</li>
@@ -1650,7 +1692,9 @@ color:#212121"> <br>
         <li>https://developers.google.com/web/tools/chrome-devtools/console/</li>
         <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</li>
         <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
       </ol>
       <ol start="38" type="1">
         <li>https://developers.google.com/web/tools/chrome-devtools/console/get-started</li>
@@ -1658,10 +1702,14 @@ color:#212121"> <br>
       <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</p>
       <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</p>
       <h3>Selectors</h3>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</a>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors"
+
+          target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</a>
       </p>
       <h3>Simple Selectors</h3>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</a>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors"
+
+          target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</a>
       </p>
       <h3><br>
         <br>
@@ -1691,6 +1739,5 @@ color:#212121"> <br>
 8.0pt">&nbsp;<a href="#_msoanchor_2" class="msocomoff">[ZW2]</a></span></span>Problem:&nbsp;
         This already assumes reader knows about JavaScript and EventListeners</p>
     </div>
-    
   </body>
 </html>
