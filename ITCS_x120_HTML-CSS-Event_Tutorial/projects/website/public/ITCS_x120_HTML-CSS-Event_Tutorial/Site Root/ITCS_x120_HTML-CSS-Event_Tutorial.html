@@ -3,12 +3,10 @@
     <meta http-equiv="content-type" content="text/html; charset=windows-1252">
     <title>ITCS x120 HTML, CSS and Event Tutorial</title>
     <link href="ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
-
     <!-- ZJW: experimenting with the toc.min.js, but it has problems -- I think because of my pages hide/unhide scheme -->
     <!-- IF_TOC -->
     <!-- <script src="libs/jquery-3.1.0.js"></script> -->
     <!-- -->
-
     <style>
       /* Example from http://projects.jga.me/toc/#toc3 for lib/toc.js */
       #toc {
@@ -54,25 +52,18 @@
       } 
     </style>
     <!--
-    importmap is just a proposal, requires installing non-standard tools
-    <script type="importmap">
-      {
-        "imports": {
-          "@firstandthird/toc": "./node_modules/@firstandthird/index.js",
-        }
-      }
-    </script>
+    importmap is just a proposal, requires installing non-standard tools    <script type="importmap">
+      {        "imports": {
+          "@firstandthird/toc": "./node_modules/@firstandthird/index.js",        }
+      }    </script>
     -->
     <!--
-    <script type="module">
-      import '@firstandthird/toc';
-    </script>
-    -->
+    <script type="module">      import '@firstandthird/toc';
+    </script>    -->
     <script language="JavaScript" src="./libs/jquery-3.1.0.js"></script>
     <script language="JavaScript" src="./libs/toc.min.js"></script>
     <!--
-    <script language="JavaScript" type="module" src="main.js"></script>
-    -->
+    <script language="JavaScript" type="module" src="main.js"></script>    -->
     <script language="JavaScript">
       function onload_Body()
       {
@@ -91,15 +82,13 @@
         //$('#toc').toc();
       }
     </script>
-
-</head>
+  </head>
   <body onload="onload_Body()">
     <!-- w3.css stuff I experimented with
     <div  style="top: 112px;"  class="w3-sidenav w3-collapse w3-slim"  id="sidenav">      <div  style="padding-top: 112px;"  id="leftmenuinner">        <div  class="w3-light-grey"  id="leftmenuinnerinner"> <a  href="javascript:void(0)"  onclick="close_menu()"  class="w3-closebtn w3-hide-large w3-large"             style="padding:3px 12px;">×</a> </div>      </div>    </div>    <div  class="w3-main w3-light-grey"  id="belowtopnav"  style="margin-left: 220px; padding-top: 0px;">      <div  class="w3-row w3-white">        <div  class="w3-col l10 m12"  id="main">          -->
     <!-- IF_TOC -->
     <!--
-    <div class="toc" data-toc="h1">
-    -->
+    <div class="toc" data-toc="h1">    -->
     <div id="toc"></div>
     <div style="margin-left:250px">
       <p style="text-align:center" align="center"><span style="font-size:18.0pt">HTML,
@@ -142,8 +131,8 @@
       <ol start="1" type="1">
         <li>For a given exercise that includes specific git commit instructions,
           if there is not at least 1 git commit message associated with that
-          exercise, 1 point will be subtracted for "poor software development
-          practices" for that exercise.&nbsp; <br>
+          exercise, 1 point will be subtracted for &quot;poor software
+          development practices&quot; for that exercise.&nbsp; <br>
           <br>
           The student’s commit message need not be a verbatim copy of the commit
           message given in the exercise’s instructions, but it should be <u>very
@@ -193,77 +182,61 @@
           </ol>
         </li>
         <li>If you have not already done so, create the following directory for
-            your <span data-course-number="">6120</span> course work:<br>
-            <table class="Code_Example" id="Code_Example0_0" border="1">
-                <tbody>
-                <tr>
-                    <td> <button onclick="Code_Example_Toggle('Code_Example0_0');"> ? </button> </td>
-                    <td>
-                        <div style="height: 60px;">
-                            <code class="Shell_Code_Input">
-                                $ mkdir ITCS_<span data-course-number="">6120</span><br>
-                            </code>
-                            <code class="Shell_Code_Output">
-                                zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span><br>
-                            </code>
-                            <code class="Shell_Code_Input">
-                                $ cd ITCS_<span data-course-number="">6120</span><br>
-                            </code>
-                            <!--
-                            <span class="Shell_Code_Comment">
-                                            […misc additional output will
-                                            appear…] </span>
-                            --->
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+          your <span data-course-number="">6120</span> course work:<br>
+          <table class="Code_Example" id="Code_Example0_0" border="1">
+            <tbody>
+              <tr>
+                <td> <button onclick="Code_Example_Toggle('Code_Example0_0');">
+                    &#9661; </button> </td>
+                <td>
+                  <div style="height: 60px;"> <code class="Shell_Code_Input"> $
+                      mkdir ITCS_<span data-course-number="">6120</span><br>
+                    </code> <code class="Shell_Code_Output">
+                      zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span><br>
+                    </code> <code class="Shell_Code_Input"> $ cd ITCS_<span data-course-number="">6120</span><br>
+                    </code>
+                    <!--
+                            <span class="Shell_Code_Comment">                                            […misc additional output will
+                                            appear…] </span>                            --->
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <!--
-          <img src="images/image001.png" alt="Text Box: $ mkdir ITCS_<span data-course-number="">6120<span>
-zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>$ cd ITCS_<span data-course-number="">6120<span>" height="69" width="566">
-          -->
-          </li>
+          <img src="images/image001.png" alt="Text Box: $ mkdir ITCS_<span data-course-number="">6120<span>zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>$ cd ITCS_<span data-course-number="">6120<span>" height="69" width="566">
+          --> </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Clone
           your repo and enter the created directory.<br>
-            <table class="Code_Example" id="Code_Example1_0" border="1">
-                <tbody>
-                <tr>
-                    <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ? </button> </td>
-                    <td>
-                        <div style="height: 100px;">
-                            <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span><br>
-                            </code>
-                            <code class="Shell_Code_Input">
-                                $ git clone https://cci-git.uncc.edu/your_userid/<span data-course-number="">6120</span>-HTML-Tutorial.git<br>
-                            </code>
-                            <code class="Shell_Code_Output">
-                                Cloning into '<span data-course-number="">6120</span>-HTML-Tutorial'<br>
-                                <span class="Shell_Code_Comment">[...]</span><br>
-                            </code>
-                            <code class="Shell_Code_Input">
-                                $ cd <span data-course-number="">6120</span>-HTML-Tutorial<br>
-                            </code>
-                            <!--
-                            <span class="Shell_Code_Comment">[…]</span>
-                            <span class="Shell_Code_Comment">
-                                            […misc additional output will
-                                            appear…] </span>
-                            --->
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <!--
-            <img src="images/image002.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>
+          <table class="Code_Example" id="Code_Example1_0" border="1">
+            <tbody>
+              <tr>
+                <td> <button onclick="Code_Example_Toggle('Code_Example1_0');">
+                    &#9661; </button> </td>
+                <td>
+                  <div style="height: 100px;"> <code class="Shell_Code_Output">
+                      zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span><br>
+                    </code> <code class="Shell_Code_Input"> $ git clone
+                      https://cci-git.uncc.edu/your_userid/<span data-course-number="">6120</span>-HTML-Tutorial.git<br>
+                    </code> <code class="Shell_Code_Output"> Cloning into '<span
 
-              height="103" width="618">
-             -->
-        </li>
-        <li>Inside the <span class="ProgramName"><span data-course-number="">6120</span>-HTML-Tutorial </span>directory
-          create a text file called <span class="ProgramName">README.md</span>.&nbsp;
+                        data-course-number="">6120</span>-HTML-Tutorial'<br>
+                      <span class="Shell_Code_Comment">[...]</span><br>
+                    </code> <code class="Shell_Code_Input"> $ cd <span data-course-number="">6120</span>-HTML-Tutorial<br>
+                    </code>
+                    <!--
+                            <span class="Shell_Code_Comment">[…]</span>                            <span class="Shell_Code_Comment">
+                                            […misc additional output will                                            appear…] </span>
+                            ---> </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--
+            <img src="images/image002.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>
+              height="103" width="618">             --> </li>
+        <li>Inside the <span class="ProgramName"><span data-course-number="">6120</span>-HTML-Tutorial
+            </span>directory create a text file called <span class="ProgramName">README.md</span>.&nbsp;
           Add your name on the <u>first</u> line of the file.&nbsp;&nbsp; <br>
           <br>
           Git commit the file with the commit message “initial README.md” <br>
@@ -381,39 +354,35 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
               <br>
               <ol>
                 <li>Create a sub-directory<br>
-                    <table class="Code_Example" id="Code_Example3_0" border="1">
-                        <tbody>
-                        <tr>
-                            <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                            <td>
-                                <div style="height: 20px;">
-                                    <code class="Shell_Code_Output">
-                                        zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial<br>
-                                    </code>
-                                    <code class="Shell_Code_Input">
-                                        $ mkdir anatomy-of-HTML<br>
-                                    </code>
-                                    <!--
-                                    <span class="Shell_Code_Comment">[…]</span>
-                                    <span class="Shell_Code_Comment">
-                                                    […misc additional output will
-                                                    appear…] </span>
-                                    --->
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                  <table class="Code_Example" id="Code_Example3_0" border="1">
+                    <tbody>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>&quot;
+                          <div style="height: 40px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span>/<span
+
+                                data-course-number="">6120</span>-HTML-Tutorial<br>
+                            </code> <code class="Shell_Code_Input"> $ mkdir
+                              anatomy-of-HTML<br>
+                            </code>
+                            <!--
+                                    <span class="Shell_Code_Comment">[…]</span>                                    <span class="Shell_Code_Comment">
+                                                    […misc additional output will                                                    appear…] </span>
+                                    ---> </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                   <!--
-                  <img src="images/image004.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-$ mkdir anatomy-of-HTML" height="54" width="566">
-                  -->
-                </li>
+                  <img src="images/image004.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir anatomy-of-HTML" height="54" width="566">
+                  --> </li>
                 <li><a name="_Ref523302752">Move </a><span class="ProgramName">index.html</span>
                   to the above directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
                   <br>
-                  Git commit the file with the message "-exercise
-                  anatomy-of-HTML"<br>
+                  Git commit the file with the message &quot;-exercise
+                  anatomy-of-HTML&quot;<br>
                   <br>
                 </li>
               </ol>
@@ -460,36 +429,31 @@ $ mkdir anatomy-of-HTML" height="54" width="566">
                 <li>Create a sub-directory<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir adding-a-title<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir adding-a-title<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image005.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-$ mkdir adding-a-title" height="54" width="566">-->
+                  <img src="images/image005.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir adding-a-title" height="54" width="566">-->
                 </li>
                 <li>Move <span class="ProgramName">title-example.html</span> to
                   the above directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
                   <br>
-                  Git commit the file with the message "-exercise
-                  adding-a-title"<br>
+                  Git commit the file with the message &quot;-exercise
+                  adding-a-title&quot;<br>
                   <br>
                 </li>
               </ol>
@@ -510,7 +474,7 @@ $ mkdir adding-a-title" height="54" width="566">-->
               <ol>
                 <li>Save the file changes.<br>
                   <br>
-                  Git commit with the message "-exercise char-encoding"<br>
+                  Git commit with the message &quot;-exercise char-encoding&quot;<br>
                   <br>
                 </li>
               </ol>
@@ -526,7 +490,7 @@ $ mkdir adding-a-title" height="54" width="566">-->
         <li><u>Skip</u> sub-section “Adding custom icons to your site”<br>
           <br>
         </li>
-        <li>Read all of “Applying CSS and JavaScript to HTML"<br>
+        <li>Read all of “Applying CSS and JavaScript to HTML&quot;<br>
           <br>
           While reading do the exercises below:
           <ol>
@@ -540,37 +504,32 @@ $ mkdir adding-a-title" height="54" width="566">-->
                 <li>Create a sub-directory<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir applying-CSS-and-JS<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir applying-CSS-and-JS<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image006.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-$ mkdir applying-CSS-and-JS" height="54" width="566">
--->
-                </li>
+                  <img src="images/image006.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir applying-CSS-and-JS" height="54" width="566">
+--> </li>
                 <li>Move <span class="ProgramName">meta-example.html</span> and
                   the other files to the above
                   directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
                   <br>
-                  Git commit the file with the message "-exercise applying-CSS "<br>
+                  Git commit the file with the message &quot;-exercise
+                  applying-CSS &quot;<br>
                   <br>
                 </li>
               </ol>
@@ -620,36 +579,31 @@ $ mkdir applying-CSS-and-JS" height="54" width="566">
                 <li>Create a sub-directory<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir recipe-page<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir recipe-page<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image007.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-$ mkdir recipe-page" height="54" width="566">
-                  -->
-                </li>
+                  <img src="images/image007.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir recipe-page" height="54" width="566">
+                  --> </li>
                 <li>Move <span class="ProgramName">text-start.html </span>to
                   the above directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
                   <br>
-                  Git commit the file with the message "-exercise recipe-page"<br>
+                  Git commit the file with the message &quot;-exercise
+                  recipe-page&quot;<br>
                   <br>
                 </li>
               </ol>
@@ -707,34 +661,29 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
                 <li> Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir started-with-CSS<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir started-with-CSS<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image009.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-      $ mkdir started-with-CSS" height="54" width="566">-->
+                  <img src="images/image009.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial      $ mkdir started-with-CSS" height="54" width="566">-->
                 </li>
                 <li> Move the file to the above directory.
-                  <p>Git commit the file with the message "-exercise
-                    started-with-CSS"</p>
+                  <p>Git commit the file with the message &quot;-exercise
+                    started-with-CSS&quot;</p>
                 </li>
               </ol>
             </li>
@@ -746,7 +695,7 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
             <li> <u>Exercise [add-CCS]</u>: As described in this MDN section,
               create various the files, <span class="ProgramName">style.css</span>,
               etc. Create them in your sub-directory <span class="ProgramName">started-with-CSS</span>.
-              <p>Git commit the changes the message "-exercise add-CCS"</p>
+              <p>Git commit the changes the message &quot;-exercise add-CCS&quot;</p>
             </li>
           </ol>
         </li>
@@ -764,8 +713,8 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
             <li> <u>Exercise [changing-behavior]</u>: As described in this MDN
               section, modify the previously created the files that you placed
               your sub-directory <span class="ProgramName">started-with-CSS</span>.
-              <p>Git commit the changes the message "-exercise
-                changing-behavior"</p>
+              <p>Git commit the changes the message &quot;-exercise
+                changing-behavior&quot;</p>
             </li>
           </ol>
         </li>
@@ -775,7 +724,8 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
             <li> <u>Exercise [adding-a-class]</u>: As described in this MDN
               section, modify the previously created the files that you placed
               your sub-directory <span class="ProgramName">started-with-CSS</span>.
-              <p>Git commit the changes the message "-exercise adding-a-class"</p>
+              <p>Git commit the changes the message &quot;-exercise
+                adding-a-class&quot;</p>
             </li>
           </ol>
         </li>
@@ -784,8 +734,8 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
             <li> <u>Exercise [styling-on-location]</u>: As described in this
               MDN section, modify the previously created the files that you
               placed your sub-directory <span class="ProgramName">started-with-CSS</span>.
-              <p> Git commit the changes the message "-exercise
-                styling-on-location" </p>
+              <p> Git commit the changes the message &quot;-exercise
+                styling-on-location&quot; </p>
             </li>
           </ol>
         </li>
@@ -810,35 +760,29 @@ letter-spacing:-.05pt;background:white">How CSS is structured</span></a>.<br>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir CSS-structure<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir CSS-structure<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image010.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-        $ mkdir CSS-structure" height="54" width="566">
-                    -->
-                </li>
+                  <img src="images/image010.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial        $ mkdir CSS-structure" height="54" width="566">
+                    --> </li>
                 <li> Move the files to the above directory.
-                  <p>Git commit the file with the message "-exercise
-                    playing-with-CSS"</p>
+                  <p>Git commit the file with the message &quot;-exercise
+                    playing-with-CSS&quot;</p>
                 </li>
               </ol>
             </li>
@@ -848,7 +792,8 @@ letter-spacing:-.05pt;background:white">How CSS is structured</span></a>.<br>
           <ol>
             <li> <u>Exercise [selectors]</u>: As described in this MDN section
               modify the files in your CSS-structure sub-directory.
-              <p>Git commit the file with the message "-exercise selectors"</p>
+              <p>Git commit the file with the message &quot;-exercise
+                selectors&quot;</p>
             </li>
           </ol>
         </li>
@@ -859,7 +804,8 @@ letter-spacing:-.05pt;background:white">How CSS is structured</span></a>.<br>
           <ol>
             <li> <u>Exercise [comments]</u>: As described in this MDN section
               modify the files in your CSS-structure sub-directory.
-              <p>Git commit the file with the message "-exercise comments"</p>
+              <p>Git commit the file with the message &quot;-exercise
+                comments&quot;</p>
             </li>
           </ol>
         </li>
@@ -960,44 +906,39 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir javascript-label<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir javascript-label<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image011.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-    $ mkdir javascript-label" height="54" width="566">-->
+                  <img src="images/image011.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial    $ mkdir javascript-label" height="54" width="566">-->
                 </li>
                 <li><u>Inside</u> that sub-directory download and save the
                   example code (the link is given at the end the “A high-level
                   definition” section).<br>
                   <br>
                   Verify the code displays correctly in Chrome.</li>
-                <li>Git commit the file with the message "-exercise <u>javascript-label</u>"</li>
+                <li>Git commit the file with the message &quot;-exercise <u>javascript-label</u>&quot;</li>
                 <li>Using a text editor, change the code to display ‘First
                   Player’ instead of ‘Player 1’.&nbsp;&nbsp;&nbsp; <br>
                   Modify the background color of the paragraph
                   style.&nbsp;&nbsp; Save your changes and verify the page
                   appears correctly in Chrome. </li>
-                <li>Git commit the file(s) with message:&nbsp; "-exercise
-                  javascript-label"</li>
+                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
+                  javascript-label&quot;</li>
               </ol>
             </li>
           </ol>
@@ -1013,8 +954,8 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                   answer in the file.<br>
                   <br>
                 </li>
-                <li>Git commit the file(s) with message: &nbsp;"-exercise
-                  third-party-apis" </li>
+                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
+                  third-party-apis&quot; </li>
               </ol>
             </li>
           </ol>
@@ -1033,8 +974,8 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                   answer in the file.<br>
                   <br>
                 </li>
-                <li>Git commit the file(s) with message:&nbsp; "-exercise what
-                  is JS doing"<br>
+                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
+                  what is JS doing&quot;<br>
                   <br>
                 </li>
               </ol>
@@ -1051,38 +992,32 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir internal-javascript<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir internal-javascript<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image012.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-          $ mkdir internal-javascript" height="54" width="566">
-                  -->
-                </li>
+                  <img src="images/image012.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial          $ mkdir internal-javascript" height="54" width="566">
+                  --> </li>
                 <li>Move all the code for the MDN exercise into the above
                   sub-directory. <br>
                   <br>
                   Verify it displays correctly in Chrome.</li>
-                <li>Git commit the file(s) with message:&nbsp; "-exercise
-                  internal-javascript"</li>
+                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
+                  internal-javascript&quot;</li>
               </ol>
               <br>
             </li>
@@ -1092,37 +1027,32 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir external-javascript<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir external-javascript<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image013.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-          $ mkdir internal-javascript" height="54" width="566">-->
+                  <img src="images/image013.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial          $ mkdir internal-javascript" height="54" width="566">-->
                 </li>
                 <li>Move all the code for the MDN exercise into the above
                   sub-directory. <br>
                   <br>
                   Verify it displays correctly in Chrome.</li>
-                <li>Git commit the file(s) with message:&nbsp; "-exercise
-                  external-javascript"</li>
+                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
+                  external-javascript&quot;</li>
               </ol>
             </li>
           </ol>
@@ -1152,30 +1082,25 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir random-color-eventhandlerproperty<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir random-color-eventhandlerproperty<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image014.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-          $ mkdir random-color-eventhandlerproperty" height="54" width="566">-->
+                  <img src="images/image014.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial          $ mkdir random-color-eventhandlerproperty" height="54" width="566">-->
                 </li>
                 <li>Move the file(s) for the above exercise into the above
                   sub-directory.&nbsp; <br>
@@ -1186,7 +1111,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                   reasonable.</li>
                 <li>Git commit the file(s) with message:<br>
                   <br>
-                  &nbsp; "-exercise random-color-eventhandlerproperty"<br>
+                  &nbsp; &quot;-exercise random-color-eventhandlerproperty&quot;<br>
                 </li>
               </ol>
             </li>
@@ -1199,30 +1124,25 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir random-color-addeventlistener<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir random-color-addeventlistener<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image015.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-                          $ mkdir random-color-addeventlistener" height="54" width="566">-->
+                  <img src="images/image015.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial                          $ mkdir random-color-addeventlistener" height="54" width="566">-->
                 </li>
                 <li>Move the file(s) for the above exercise into the above
                   sub-directory.&nbsp; <br>
@@ -1231,7 +1151,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                   may be modified in any reasonable way you like).</li>
                 <li>Git commit the file(s) with message:<br>
                   <br>
-                  &nbsp; "-exercise random-color-addeventlistener"<br>
+                  &nbsp; &quot;-exercise random-color-addeventlistener&quot;<br>
                 </li>
               </ol>
             </li>
@@ -1248,37 +1168,32 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir useful-eventtarget<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir useful-eventtarget<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image016.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-        $ mkdir useful-eventtarget" height="54" width="566">--></li>
+                  <img src="images/image016.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial        $ mkdir useful-eventtarget" height="54" width="566">--></li>
                 <li>Move the file(s) for the above exercise into the above
                   sub-directory.&nbsp; Verify it displays correctly in Chrome. <br>
                   <br>
                 </li>
                 <li>Git commit the file(s) with message:<br>
                   <br>
-                  &nbsp; "-imported useful-eventtarget"<br>
+                  &nbsp; &quot;-imported useful-eventtarget&quot;<br>
                   <br>
                 </li>
                 <li>Modify the code to render 32 clickable squares instead of
@@ -1286,8 +1201,8 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                   feel like making to the rendering of the squares.<br>
                   <br>
                 </li>
-                <li>Git commit the file(s) with message:&nbsp;&nbsp; "-playing
-                  :)"<br>
+                <li>Git commit the file(s) with message:&nbsp;&nbsp;
+                  &quot;-playing :)&quot;<br>
                   <br>
                 </li>
               </ol>
@@ -1300,30 +1215,25 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
-                    <tr>
-                      <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                      <td>
-                        <div style="height: 20px;">
-                          <code class="Shell_Code_Output">
-                            zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                          </code>
-                          <code class="Shell_Code_Input">
-                            $ mkdir show-video-box<br>
-                          </code>
-                          <!--
-                          <span class="Shell_Code_Comment">[…]</span>
-                          <span class="Shell_Code_Comment">
-                                          […misc additional output will
-                                          appear…] </span>
-                          --->
-                        </div>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                            &#9661; </button> </td>
+                        <td>
+                          <div style="height: 20px;"> <code class="Shell_Code_Output">
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                                </span></span></code> <code class="Shell_Code_Input">
+                              $ mkdir show-video-box<br>
+                            </code>
+                            <!--
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
+                                          […misc additional output will                                          appear…] </span>
+                          ---> </div>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image017.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-          $ mkdir show-video-box" height="54" width="566">-->
+                  <img src="images/image017.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial          $ mkdir show-video-box" height="54" width="566">-->
                 </li>
                 <li>Move the file(s) for the above exercise into the above
                   sub-directory.&nbsp; Verify it displays correctly in Chrome. <br>
@@ -1331,14 +1241,14 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 </li>
                 <li>Git commit the file(s) with message:<br>
                   <br>
-                  &nbsp; "-imported show-video-box"<br>
+                  &nbsp; &quot;-imported show-video-box&quot;<br>
                   <br>
                 </li>
                 <li>Fix the bug as describe in the “Event bubbling and capture”
                   section.</li>
                 <li>Git commit the file(s) with
-                  message:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "-bug
-                  fix!"<br>
+                  message:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &quot;-bug fix!&quot;<br>
                   <br>
                 </li>
               </ol>
@@ -1397,8 +1307,8 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           before continuing.<br>
           <br>
         </li>
-        <li>"View DOM nodes” - return to “Get Started With Viewing And Changing
-          The DOM” and continue reading sub-section “View DOM nodes”<br>
+        <li>&quot;View DOM nodes” - return to “Get Started With Viewing And
+          Changing The DOM” and continue reading sub-section “View DOM nodes”<br>
           <br>
           Do all the exercises in this sub-section.&nbsp; Regarding the further
           links embedded this sub-section follow and read all them -- but <u>skip</u>
@@ -1418,36 +1328,31 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
             <li>Create the following directory structure: <br>
               <table class="Code_Example" id="Code_Example3_0" border="1">
                 <tbody>
-                <tr>
-                  <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                  <td>
-                    <div style="height: 20px;">
-                      <code class="Shell_Code_Output">
-                        zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                      </code>
-                      <code class="Shell_Code_Input">
-                        $ mkdir view-and-change-DOM<br>
-                      </code>
-                      <!--
-                      <span class="Shell_Code_Comment">[…]</span>
-                      <span class="Shell_Code_Comment">
-                                      […misc additional output will
-                                      appear…] </span>
-                      --->
-                    </div>
-                  </td>
-                </tr>
+                  <tr>
+                    <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                        &#9661; </button> </td>
+                    <td>
+                      <div style="height: 20px;"> <code class="Shell_Code_Output">
+                          zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                            </span></span></code> <code class="Shell_Code_Input">
+                          $ mkdir view-and-change-DOM<br>
+                        </code>
+                        <!--
+                      <span class="Shell_Code_Comment">[…]</span>                      <span class="Shell_Code_Comment">
+                                      […misc additional output will                                      appear…] </span>
+                      ---> </div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
               <!--
-              <img src="images/image018.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-        $ mkdir view-and-change-DOM" height="56" width="566">-->
+              <img src="images/image018.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial        $ mkdir view-and-change-DOM" height="56" width="566">-->
             </li>
             <li>Move the png file into this directory. <br>
               <br>
             </li>
-            <li>Git commit the above files with commit message&nbsp; "-exercise
-              edit-the-dom"</li>
+            <li>Git commit the above files with commit message&nbsp;
+              &quot;-exercise edit-the-dom&quot;</li>
           </ol>
         </li>
         <li>“Access nodes in the Console” <br>
@@ -1538,30 +1443,25 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           Create the following directory structure: <br>
           <table class="Code_Example" id="Code_Example3_0" border="1">
             <tbody>
-            <tr>
-              <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-              <td>
-                <div style="height: 20px;">
-                  <code class="Shell_Code_Output">
-                    zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
-                  </code>
-                  <code class="Shell_Code_Input">
-                    $ mkdir get-started-console<br>
-                  </code>
-                  <!--
-                  <span class="Shell_Code_Comment">[…]</span>
-                  <span class="Shell_Code_Comment">
-                                  […misc additional output will
-                                  appear…] </span>
-                  --->
-                </div>
-              </td>
-            </tr>
+              <tr>
+                <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                    &#9661; </button> </td>
+                <td>
+                  <div style="height: 20px;"> <code class="Shell_Code_Output">
+                      zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
+                        </span></span></code> <code class="Shell_Code_Input"> $
+                      mkdir get-started-console<br>
+                    </code>
+                    <!--
+                  <span class="Shell_Code_Comment">[…]</span>                  <span class="Shell_Code_Comment">
+                                  […misc additional output will                                  appear…] </span>
+                  ---> </div>
+                </td>
+              </tr>
             </tbody>
           </table>
           <!--
-          <img src="images/image019.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial
-$ mkdir get-started-console" height="69" width="566">--><br>
+          <img src="images/image019.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir get-started-console" height="69" width="566">--><br>
           <br>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1620,55 +1520,49 @@ $ mkdir get-started-console" height="69" width="566">--><br>
                 </span>Verify the file is saved to the directory:<br>
               <table class="Code_Example" id="Code_Example3_0" border="1">
                 <tbody>
-                <tr>
-                  <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ? </button> </td>
-                  <td>
-                    <div style="height: 175px;">
-                      <code class="Shell_Code_Output">
-                        zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /<br>
-                      </code>
-                      <code class="Shell_Code_Input">
-                        $ ls developers.google.com-1535898597380.log<br>
-                        <span class="Shell_Code_Comment">[.your file name will differ.]</span><br>
-                      </code>
-                      <code class="Shell_Code_Output">
-                        zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /<br>
-                      </code>
-                      <code class="Shell_Code_Input">
-                        $ cat developers.google.com-1535898597380.log<br>
-                        <span class="Shell_Code_Comment">[cat displays the file contents… your details will differ.]</span>
-                      </code>
-                      <code class="Shell_Code_Output">
-                        document.getElementById('changeMyText')
-                        button id="changeMyText">Change My Text/button
-                        document.getElementById('changeMyText').textContent = 'Hello'
-                        VM378:1 Uncaught TypeError: Cannot set property 'textContent' of null
-                        <br>
-                        <span class="Shell_Code_Comment">[... the rest of log file will appear here ... ]</span>
-                      </code>
-                      <!--
-                      <span class="Shell_Code_Comment">[…]</span>
-                      <span class="Shell_Code_Comment">
-                                      […misc additional output will
-                                      appear…] </span>
-                      --->
-                    </div>
-                  </td>
-                </tr>
+                  <tr>
+                    <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                        &#9661; </button> </td>
+                    <td>
+                      <div style="height: 175px;"> <code class="Shell_Code_Output">
+                          zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console
+                              /<br>
+                            </span></span></code> <code class="Shell_Code_Input">
+                          $ ls developers.google.com-1535898597380.log<br>
+                          <span class="Shell_Code_Comment">[.your file name will
+                            differ.]</span><br>
+                        </code> <code class="Shell_Code_Output">
+                          zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console
+                              /<br>
+                            </span></span></code> <code class="Shell_Code_Input">
+                          $ cat developers.google.com-1535898597380.log<br>
+                          <span class="Shell_Code_Comment">[cat displays the
+                            file contents… your details will differ.]</span> </code>
+                        <code class="Shell_Code_Output">
+                          document.getElementById('changeMyText') button
+                          id=&quot;changeMyText&quot;&gt;Change My Text/button
+                          document.getElementById('changeMyText').textContent =
+                          'Hello' VM378:1 Uncaught TypeError: Cannot set
+                          property 'textContent' of null <br>
+                          <span class="Shell_Code_Comment">[... the rest of log
+                            file will appear here ... ]</span> </code>
+                        <!--
+                      <span class="Shell_Code_Comment">[…]</span>                      <span class="Shell_Code_Comment">
+                                      […misc additional output will                                      appear…] </span>
+                      ---> </div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
               <!--
-              <img src="images/image021.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /
-$ lsdevelopers.google.com-1535898597380.log                      [.your file name will differ.]zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /$ cat developers.google.com-1535898597380.log             [cat displays the file contents… your details will differ.]   document.getElementById('changeMyText')&lt;button id=&quot;changeMyText&quot;&gt;Change My Text&lt;/button&gt;document.getElementById('changeMyText').textContent = 'Hello'VM378:1 Uncaught TypeError: Cannot set property 'textContent' of null                 [….the rest of log file will appear here … ] "
-
-                height="255" width="566">-->
-              <br>
+              <img src="images/image021.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /$ lsdevelopers.google.com-1535898597380.log                      [.your file name will differ.]zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /$ cat developers.google.com-1535898597380.log             [cat displays the file contents… your details will differ.]   document.getElementById('changeMyText')&lt;button id=&quot;changeMyText&quot;&gt;Change My Text&lt;/button&gt;document.getElementById('changeMyText').textContent = 'Hello'VM378:1 Uncaught TypeError: Cannot set property 'textContent' of null                 [….the rest of log file will appear here … ] "
+                height="255" width="566">--> <br>
               <br>
             </li>
             <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>Git commit the above file(s) with commit message:<br>
               <br>
-              "-exercise get-started-console #1"<br>
+              &quot;-exercise get-started-console #1&quot;<br>
               <br>
             </li>
           </ol>
@@ -1698,7 +1592,7 @@ $ lsdevelopers.google.com-1535898597380.log                      [.your file nam
                 </li>
                 <li>Git commit the above file(s) with commit message:<br>
                   <br>
-                  "-exercise get-started-console #2"<br>
+                  &quot;-exercise get-started-console #2&quot;<br>
                   <br>
                 </li>
               </ol>
@@ -1730,7 +1624,7 @@ $ lsdevelopers.google.com-1535898597380.log                      [.your file nam
                 </li>
                 <li>Git commit the above file(s) with commit message:<br>
                   <br>
-                  "-exercise get-started-console #3" </li>
+                  &quot;-exercise get-started-console #3&quot; </li>
               </ol>
               <br>
             </li>
@@ -1784,7 +1678,7 @@ color:#212121"> <br>
                 </li>
                 <li>Git commit the above file(s) with commit message:<br>
                   <br>
-                  "-exercise javascript-console”</li>
+                  &quot;-exercise javascript-console”</li>
               </ol>
             </li>
           </ol>
@@ -1815,160 +1709,157 @@ color:#212121"> <br>
       <p>The TA will be running the submitted code through various plagiarism
         detection software such as TurnitIn.</p>
       <br>
-
       <section style="visibility: hidden">
-      <h1>Appendix:&nbsp;&nbsp; Notes for TA and Professor</h1>
-      <p style="text-align:center" align="center"><i><span style="color:red;background:yellow">This
-            section should NOT be distributed to students when the file is
-            printed to a PDF</span></i></p>
-      <ul type="disc">
-        <li>Minimal Javascript:</li>
-        <ul type="circle">
+        <h1>Appendix:&nbsp;&nbsp; Notes for TA and Professor</h1>
+        <p style="text-align:center" align="center"><i><span style="color:red;background:yellow">This
+              section should NOT be distributed to students when the file is
+              printed to a PDF</span></i></p>
+        <ul type="disc">
+          <li>Minimal Javascript:</li>
+          <ul type="circle">
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+
+                target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash"
+
+                target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</a>
+            </li>
+          </ul>
+          <li>Minimal Events</li>
+          <ul type="circle">
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
+
+                target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a>
+            </li>
+          </ul>
+          <li>Console Panel</li>
+          <ul type="circle">
+            <li><a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"
+
+                target="_blank">https://developers.google.com/web/tools/chrome-devtools/console/get-started</a>
+              <span class="MsoCommentReference"><span style="font-size:8.0pt"><a
+
+                    class="msocomanchor" id="_anchor_2" onmouseover="msoCommentShow('_anchor_2','_com_2')"
+
+                    onmouseout="msoCommentHide('_com_2')" href="#_msocom_2" language="JavaScript"
+
+                    name="_msoanchor_2">[ZW2]</a>&nbsp;</span></span></li>
+          </ul>
+        </ul>
+        <p>Extracted Links:</p>
+        <ol start="1" type="1">
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li><a href="http://www.csszengarden.com/221/" target="_blank">http://www.csszengarden.com/221/</a></li>
+        </ol>
+        <ol start="5" type="1">
+          <li>https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</li>
+          <li>https://www.google.com/chrome</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/beginners/html</li>
+          <li><a href="https://developers.google.com/web/tools/chrome-devtools/beginners/html"
+
+              target="_blank">https://developers.google.com/web/tools/chrome-devtools/beginners/html</a></li>
+        </ol>
+        <ol start="10" type="1">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a>
+          </li>
+          <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</li>
+          <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals</a></li>
+        </ol>
+        <ol start="14" type="1">
+          <li>https://developer.mozilla.org/en-US/docs/Learn/CSS</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS</a>
+          </li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS"
+
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS</a>
+          </li>
+          <li>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works</li>
+          <li>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model"
+
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model</a></li>
+        </ol>
+        <ol start="20" type="1">
           <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
 
-              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash"
-
-              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</a>
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a>
           </li>
-        </ul>
-        <li>Minimal Events</li>
-        <ul type="circle">
           <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
 
-              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a>
-          </li>
-        </ul>
-        <li>Console Panel</li>
-        <ul type="circle">
-          <li><a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"
-
-              target="_blank">https://developers.google.com/web/tools/chrome-devtools/console/get-started</a>
-            <span class="MsoCommentReference"><span style="font-size:8.0pt"><a class="msocomanchor"
-
-                  id="_anchor_2" onmouseover="msoCommentShow('_anchor_2','_com_2')"
-
-                  onmouseout="msoCommentHide('_com_2')" href="#_msocom_2" language="JavaScript"
-
-                  name="_msoanchor_2">[ZW2]</a>&nbsp;</span></span></li>
-        </ul>
-      </ul>
-      <p>Extracted Links:</p>
-      <ol start="1" type="1">
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li><a href="http://www.csszengarden.com/221/" target="_blank">http://www.csszengarden.com/221/</a></li>
-      </ol>
-      <ol start="5" type="1">
-        <li>https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</li>
-        <li>https://www.google.com/chrome</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/beginners/html</li>
-        <li><a href="https://developers.google.com/web/tools/chrome-devtools/beginners/html"
-
-            target="_blank">https://developers.google.com/web/tools/chrome-devtools/beginners/html</a></li>
-      </ol>
-      <ol start="10" type="1">
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-
-            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a>
-        </li>
-        <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</li>
-        <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-
-            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals</a></li>
-      </ol>
-      <ol start="14" type="1">
-        <li>https://developer.mozilla.org/en-US/docs/Learn/CSS</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS</a>
-        </li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS"
-
-            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS</a>
-        </li>
-        <li>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works</li>
-        <li>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model"
-
-            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model</a></li>
-      </ol>
-      <ol start="20" type="1">
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
-
-            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a>
-        </li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
-
-            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
-      </ol>
-      <ol start="22" type="1">
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/beginners/html</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li><a href="https://developers.google.com/web/tools/chrome-devtools/css/"
-
-            target="_blank">https://developers.google.com/web/tools/chrome-devtools/css/</a></li>
-      </ol>
-      <ol start="26" type="1">
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/inspect-styles/</li>
-        <li>http://www.csszengarden.com/221/</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-dom</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-        <li>https://developers.google.com/web/tools/chrome-devtools/console/get-started</li>
-        <li><a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank">https://developers.google.com/web/tools/chrome-devtools/</a></li>
-      </ol>
-      <ol start="34" type="1">
-        <li>https://developers.google.com/web/tools/chrome-devtools/console/</li>
-        <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</li>
-        <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
-
-            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
-      </ol>
-      <ol start="38" type="1">
-        <li>https://developers.google.com/web/tools/chrome-devtools/console/get-started</li>
-      </ol>
-      <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</p>
-      <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</p>
-      <h3>Selectors</h3>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors"
-
-          target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</a>
-      </p>
-      <h3>Simple Selectors</h3>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors"
-
-          target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</a>
-      </p>
-      <h3><br>
-        <br>
-      </h3>
-      <li>
-        <ol>
-          <li>
-            <ol>
-              <li> <br>
-              </li>
-            </ol>
-          </li>
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
         </ol>
-      </li>
-    </div>
+        <ol start="22" type="1">
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/beginners/html</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li><a href="https://developers.google.com/web/tools/chrome-devtools/css/"
+
+              target="_blank">https://developers.google.com/web/tools/chrome-devtools/css/</a></li>
+        </ol>
+        <ol start="26" type="1">
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/inspect-styles/</li>
+          <li>http://www.csszengarden.com/221/</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-dom</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/</li>
+          <li>https://developers.google.com/web/tools/chrome-devtools/console/get-started</li>
+          <li><a href="https://developers.google.com/web/tools/chrome-devtools/"
+
+              target="_blank">https://developers.google.com/web/tools/chrome-devtools/</a></li>
+        </ol>
+        <ol start="34" type="1">
+          <li>https://developers.google.com/web/tools/chrome-devtools/console/</li>
+          <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</li>
+          <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
+
+              target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
+        </ol>
+        <ol start="38" type="1">
+          <li>https://developers.google.com/web/tools/chrome-devtools/console/get-started</li>
+        </ol>
+        <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</p>
+        <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</p>
+        <h3>Selectors</h3>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</a>
+        </p>
+        <h3>Simple Selectors</h3>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors"
+
+            target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</a>
+        </p>
+        <h3><br>
+          <br>
+        </h3>
+        <li>
+          <ol>
+            <li>
+              <ol>
+                <li> <br>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
       </section>
+    </div>
     <!--
-    <script type="module" src="main.js"></script>
-    This also fails:
-      Uncaught TypeError: Failed to resolve module specifier "@firstandthird/toc". Relative references must start with either "/", "./", or "../".
-    <script type="module" src="main.js"></script>
+    <script type="module" src="main.js"></script>    This also fails:
+      Uncaught TypeError: Failed to resolve module specifier "@firstandthird/toc". Relative references must start with either "/", "./", or "../".    <script type="module" src="main.js"></script>
     -->
     <!--
-    this is what https://github.com/jgallen23/toc says to do.   It fails:
-         Uncaught SyntaxError: Cannot use import statement outside a module
-    <script src="main.js"></script>
-    -->
-    </body>
-  </html>
+    this is what https://github.com/jgallen23/toc says to do.   It fails:         Uncaught SyntaxError: Cannot use import statement outside a module
+    <script src="main.js"></script>    -->
+  </body>
+</html>
