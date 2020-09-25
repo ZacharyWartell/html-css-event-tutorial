@@ -1,0 +1,20 @@
+{
+  "name": "itcs-x120-html-css-and-event-tutorial",
+  "version": "1.0.0",
+  "description": "tba",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tba"
+  },
+  "author": "Zachary Wartell",
+  "license": "ISC",
+  "dependencies": {
+    "@firstandthird/toc": "^2.1.0",
+    "domassist": "^2.2.0",
+    "import": "0.0.6"
+  }
+}
