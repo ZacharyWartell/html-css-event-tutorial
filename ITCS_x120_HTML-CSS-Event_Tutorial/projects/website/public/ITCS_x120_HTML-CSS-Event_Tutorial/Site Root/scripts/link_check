@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# SOURCE: https://www.digitalocean.com/community/tutorials/how-to-find-broken-links-on-your-website-using-wget-on-debian-7
+#
+wget --spider -r -nd -nv -H -l 1 -w 2 -o run1.log https://webpages.uncc.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html
+grep -B1 "broken link!" run1.log
