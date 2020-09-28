@@ -10,7 +10,7 @@ if not defined DROPBOX_UNC_CHARLOTTE (
 )
 
 echo Copying to Dropbox...
-robocopy "%CD%\Site Root" "%DROPBOX_UNC_CHARLOTTE%\UNCC webpage\public_html\Teaching\Git Tutorial" /mir /xf "*.bak"
+robocopy "%CD%\Site Root" "%DROPBOX_UNC_CHARLOTTE%\UNCC webpage\public_html\Teaching\ITCS_x120_HTML-CSS-Event_Tutorial" /mir /xf "*.bak"
 
 SET /P ENTER="Hit Enter to complete"
 exit 0
@@ -31,7 +31,7 @@ REM below fails, but works directly on command-line
 REM below fails as well
 (
 echo open sftp://zwartell@webpages.uncc.edu
-echo synchronize remote "%DROPBOX_UNC_CHARLOTTE%\UNCC webpage\public_html\Teaching\Git Tutorial" "/public_html/Teaching/Git Tutorial"
+echo synchronize remote "%DROPBOX_UNC_CHARLOTTE%\UNCC webpage\public_html\Teaching\ITCS_x120_HTML-CSS-Event_Tutorial" "/public_html/Teaching/ITCS_x120_HTML-CSS-Event_Tutorial"
 )| %WSSCP%
 
 if %ERRORLEVEL% NEQ 0 (
