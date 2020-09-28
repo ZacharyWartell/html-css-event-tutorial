@@ -52,14 +52,11 @@
       } 
     </style>
     <!--
-    importmap is just a proposal, requires installing non-standard tools    <script type="importmap">
-      {        "imports": {
-          "@firstandthird/toc": "./node_modules/@firstandthird/index.js",        }
-      }    </script>
+    importmap is just a proposal, requires installing non-standard tools    <script type="importmap">      {        "imports": {
+          "@firstandthird/toc": "./node_modules/@firstandthird/index.js",        }      }    </script>
     -->
     <!--
-    <script type="module">      import '@firstandthird/toc';
-    </script>    -->
+    <script type="module">      import '@firstandthird/toc';    </script>    -->
     <script language="JavaScript" src="./libs/jquery-3.1.0.js"></script>
     <script language="JavaScript" src="./libs/toc.min.js"></script>
     <!--
@@ -131,8 +128,8 @@
       <ol start="1" type="1">
         <li>For a given exercise that includes specific git commit instructions,
           if there is not at least 1 git commit message associated with that
-          exercise, 1 point will be subtracted for &quot;poor software
-          development practices&quot; for that exercise.&nbsp; <br>
+          exercise, 1 point will be subtracted for "poor software development
+          practices" for that exercise.&nbsp; <br>
           <br>
           The student’s commit message need not be a verbatim copy of the commit
           message given in the exercise’s instructions, but it should be <u>very
@@ -143,8 +140,7 @@
           missing without incurring a penalty.<br>
           <br>
           <b>Note</b>: If you accidentally commit with a missing or bad message,
-          you can correct the message using git commit –amend option (see <a href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things"
-
+          you can correct the message using git commit –amend option (see <a href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things"
             target="_blank">https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</a>)<br>
           <br>
           Finally, extra commit's are perfectly fine and common practice, such
@@ -168,8 +164,7 @@
       <ol class="Instruction">
         <li>Create a Git repository:<br>
           <br>
-          <span class="ProgramName">https://cci-git.uncc.edu/</span><span class="ProgramName"><span
-
+          <span class="ProgramName">https://cci-git.uncc.edu/</span><span class="ProgramName"><span
               class="User_Input">your_userid</span>/<span data-course-number="">6120</span>-HTML-Tutorial<br>
             <br>
           </span>
@@ -187,7 +182,7 @@
             <tbody>
               <tr>
                 <td> <button onclick="Code_Example_Toggle('Code_Example0_0');">
-                    &#9661; </button> </td>
+                    ▽ </button> </td>
                 <td>
                   <div style="height: 60px;"> <code class="Shell_Code_Input"> $
                       mkdir ITCS_<span data-course-number="">6120</span><br>
@@ -196,57 +191,54 @@
                     </code> <code class="Shell_Code_Input"> $ cd ITCS_<span data-course-number="">6120</span><br>
                     </code>
                     <!--
-                            <span class="Shell_Code_Comment">                                            […misc additional output will
-                                            appear…] </span>                            --->
+                            <span class="Shell_Code_Comment">                                            […misc additional output will                                            appear…] </span>                            --->
                   </div>
                 </td>
               </tr>
             </tbody>
           </table>
           <!--
-          <img src="images/image001.png" alt="Text Box: $ mkdir ITCS_<span data-course-number="">6120<span>zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>$ cd ITCS_<span data-course-number="">6120<span>" height="69" width="566">
-          --> </li>
+          <img src="images/image001.png" alt="Text Box: $ mkdir ITCS_<span data-course-number="">6120<span>zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>$ cd ITCS_<span data-course-number="">6120<span>" height="69" width="566">          -->
+        </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Clone
           your repo and enter the created directory.<br>
           <table class="Code_Example" id="Code_Example1_0" border="1">
             <tbody>
               <tr>
                 <td> <button onclick="Code_Example_Toggle('Code_Example1_0');">
-                    &#9661; </button> </td>
+                    ▽ </button> </td>
                 <td>
                   <div style="height: 100px;"> <code class="Shell_Code_Output">
                       zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span><br>
                     </code> <code class="Shell_Code_Input"> $ git clone
                       https://cci-git.uncc.edu/your_userid/<span data-course-number="">6120</span>-HTML-Tutorial.git<br>
-                    </code> <code class="Shell_Code_Output"> Cloning into '<span
-
+                    </code> <code class="Shell_Code_Output"> Cloning into '<span
                         data-course-number="">6120</span>-HTML-Tutorial'<br>
                       <span class="Shell_Code_Comment">[...]</span><br>
                     </code> <code class="Shell_Code_Input"> $ cd <span data-course-number="">6120</span>-HTML-Tutorial<br>
                     </code>
                     <!--
-                            <span class="Shell_Code_Comment">[…]</span>                            <span class="Shell_Code_Comment">
-                                            […misc additional output will                                            appear…] </span>
+                            <span class="Shell_Code_Comment">[…]</span>                            <span class="Shell_Code_Comment">                                            […misc additional output will                                            appear…] </span>
                             ---> </div>
                 </td>
               </tr>
             </tbody>
           </table>
           <!--
-            <img src="images/image002.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>
-              height="103" width="618">             --> </li>
+            <img src="images/image002.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>              height="103" width="618">             -->
+        </li>
         <li>Inside the <span class="ProgramName"><span data-course-number="">6120</span>-HTML-Tutorial
             </span>directory create a text file called <span class="ProgramName">README.md</span>.&nbsp;
           Add your name on the <u>first</u> line of the file.&nbsp;&nbsp; <br>
           <br>
-          Git commit the file with the commit message &quot;initial README.md&quot; <br>
+          Git commit the file with the commit message "initial README.md" <br>
           <br>
         </li>
         <li>Inside the above directory create a second text file called <span class="ProgramName">Questions.txt.
             A</span>dd your name on the <u>first</u> line of the
           file.&nbsp;&nbsp; <br>
           <br>
-          Git commit the file with the commit message &quot;initial Questions.txt&quot; <br>
+          Git commit the file with the commit message "initial Questions.txt" <br>
           <br>
           Some of the exercises in this tutorial may involve you answering
           questions.&nbsp;&nbsp; You will write you answers in this file. <br>
@@ -256,8 +248,7 @@
       <!--- cleanup end -->
       <h2>Setup for Chrome and Chrome DevTools</h2>
       <ol>
-        <li>Download and install the Chrome browser <a href="https://www.google.com/chrome"
-
+        <li>Download and install the Chrome browser <a href="https://www.google.com/chrome"
             target="_blank">https://www.google.com/chrome</a> </li>
       </ol>
       <h1>Part 2 - Option I versus Option II</h1>
@@ -283,13 +274,11 @@
       <ul type="disc">
       </ul>
       <h2>Overview of HTML</h2>
-      <p>Go to the MDN page <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
-
+      <p>Go to the MDN page <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
           target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.&nbsp;&nbsp;
         Note the expandable index on the left hand-side of the page.&nbsp;&nbsp;
         Expand the first sub-section.&nbsp; It should look like:</p>
-      <p style="text-align:center" align="center"><img src="images/image003.jpg"
-
+      <p style="text-align:center" align="center"><img src="images/image003.jpg"
           height="296" width="247" border="0"><br>
         <br>
       </p>
@@ -299,42 +288,40 @@
       <ul type="disc">
         <li>What sections of the Chrome DevTools and Developer Mozilla (MDN)
           webpages to read</li>
-        <li>Which of the &quot;Active Learning&quot; exercises in these articles you must
+        <li>Which of the "Active Learning" exercises in these articles you must
           perform</li>
-        <li>How to submit the results of these &quot;Active Learning&quot; exercises to
+        <li>How to submit the results of these "Active Learning" exercises to
           your git repository.</li>
       </ul>
       <h3>Introduction to HTML</h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
-
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
           target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>.&nbsp;&nbsp;&nbsp;
         Read <u>just</u> the first paragraph of this page.</p>
       <h3>Getting Started with HTML</h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           target="_blank">Getting Started with HTML</a>.<br>
       </p>
       <ol class="Instruction">
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Read
-          &quot;What is HTML&quot;<br>
+          "What is HTML"<br>
           <br>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Read
-          all of &quot;Anatomy of an HTML element&quot;
+          all of "Anatomy of an HTML element"
           <ol>
-            <li><u>Exercise</u>:&nbsp;&nbsp;&nbsp; Do &quot;Active learning: creating
-              your first HTML element&quot;<br>
+            <li><u>Exercise</u>:&nbsp;&nbsp;&nbsp; Do "Active learning: creating
+              your first HTML element"<br>
               <br>
               You do not have to submit anything for this exercise.<br>
               <br>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;Attributes&quot;
+        <li>Read all of "Attributes"
           <ol>
-            <li><u>Exercise</u>:&nbsp; Do &quot;Active learning: Adding attributes to
-              an element&quot;<br>
+            <li><u>Exercise</u>:&nbsp; Do "Active learning: Adding attributes to
+              an element"<br>
               <br>
               You do not have to submit anything for this exercise.<br>
               <br>
@@ -342,11 +329,11 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
           </ol>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Read
-          all of &quot;Anatomy of a HTML document&quot;<br>
+          all of "Anatomy of a HTML document"<br>
           <br>
           <ol>
-            <li><u>Exercise [anatomy-of-HTML]</u>: Do &quot;Active learning: Adding
-              some features to an HTML document&quot;<br>
+            <li><u>Exercise [anatomy-of-HTML]</u>: Do "Active learning: Adding
+              some features to an HTML document"<br>
               <br>
               Perform the entire exercise in a separate file, <span class="ProgramName">index.html</span>,
               as suggested in the Active Learning instructions.&nbsp;&nbsp;
@@ -358,31 +345,29 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
-                        <td>&quot;
+                            ▽ </button> </td>
+                        <td>"
                           <div style="height: 40px;"> <code class="Shell_Code_Output">
-                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span>/<span
-
+                              zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120</span>/<span
                                 data-course-number="">6120</span>-HTML-Tutorial<br>
                             </code> <code class="Shell_Code_Input"> $ mkdir
                               anatomy-of-HTML<br>
                             </code>
                             <!--
-                                    <span class="Shell_Code_Comment">[…]</span>                                    <span class="Shell_Code_Comment">
-                                                    […misc additional output will                                                    appear…] </span>
+                                    <span class="Shell_Code_Comment">[…]</span>                                    <span class="Shell_Code_Comment">                                                    […misc additional output will                                                    appear…] </span>
                                     ---> </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image004.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir anatomy-of-HTML" height="54" width="566">
-                  --> </li>
+                  <img src="images/image004.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir anatomy-of-HTML" height="54" width="566">                  -->
+                </li>
                 <li><a name="_Ref523302752">Move </a><span class="ProgramName">index.html</span>
                   to the above directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
                   <br>
-                  Git commit the file with the message &quot;-exercise
-                  anatomy-of-HTML&quot;<br>
+                  Git commit the file with the message "-exercise
+                  anatomy-of-HTML"<br>
                   <br>
                 </li>
               </ol>
@@ -390,37 +375,36 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
           </ol>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Read
-          all of &quot;Entity references: Including special characters in HTML&quot;<br>
+          all of "Entity references: Including special characters in HTML"<br>
           <br>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Read
-          all of &quot;HTML comments&quot;<br>
+          all of "HTML comments"<br>
           <br>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>Read
-          all of &quot;Summary&quot;<br>
+          all of "Summary"<br>
           <br>
         </li>
       </ol>
       <h3><a name="_Ref523303742"><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
             </span>What’s in the head? Metadata in HTML</a></h3>
-      <p>Goto the next MDN subsection.&nbsp;&nbsp; There is a &quot;Next&quot; button at
+      <p>Goto the next MDN subsection.&nbsp;&nbsp; There is a "Next" button at
         the top and bottom of the page that you just read.&nbsp; (Alternatively,
-        from the index, follow the link to page <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
-
+        from the index, follow the link to page <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
           target="_blank">What’s in the head? Metadata in HTML</a>).&nbsp; <br>
       </p>
       <ol class="Instruction">
-        <li>Read &quot;What is the HTML head?&quot;<br>
+        <li>Read "What is the HTML head?"<br>
           <br>
         </li>
-        <li>Read all of &quot;Adding a title&quot;.&nbsp;&nbsp;&nbsp;&nbsp; <br>
+        <li>Read all of "Adding a title".&nbsp;&nbsp;&nbsp;&nbsp; <br>
           <br>
           While reading do the exercises below:<br>
           <br>
           <ol>
             <li><a name="_Ref523303735"><u>Exercise [adding-a-title]</u>:&nbsp;
-                Do &quot;Active learning: Inspecting a simple example&quot;<br>
+                Do "Active learning: Inspecting a simple example"<br>
                 <br>
                 Perform the entire exercise in a separate file, </a><span class="ProgramName">title-example.html</span>,
               as suggested in the Active Learning instructions.<br>
@@ -431,7 +415,7 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -439,8 +423,7 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
                               $ mkdir adding-a-title<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
@@ -452,51 +435,51 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
                 <li>Move <span class="ProgramName">title-example.html</span> to
                   the above directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
                   <br>
-                  Git commit the file with the message &quot;-exercise
-                  adding-a-title&quot;<br>
+                  Git commit the file with the message "-exercise
+                  adding-a-title"<br>
                   <br>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;Metadata: the &lt;meta&gt; element&quot;.&nbsp;&nbsp;&nbsp;
+        <li>Read all of "Metadata: the &lt;meta&gt; element".&nbsp;&nbsp;&nbsp;
           <br>
           <br>
           While reading do the exercises below:<br>
           <br>
           <ol>
             <li><a name="_Ref523304046"><u>Exercise [char-encoding]</u>:&nbsp;
-                Do &quot;Active learning: Experiment with character encoding&quot;<br>
+                Do "Active learning: Experiment with character encoding"<br>
                 <br>
                 Perform the entire exercise by editing your file from the
                 previous exercise, </a><span class="ProgramName">title-example.html</span>.<br>
               <ol>
                 <li>Save the file changes.<br>
                   <br>
-                  Git commit with the message &quot;-exercise char-encoding&quot;<br>
+                  Git commit with the message "-exercise char-encoding"<br>
                   <br>
                 </li>
               </ol>
             </li>
-            <li><u>Exercise</u>:&nbsp; Do &quot;Active learning: The description's
-              use in search engines&quot;<br>
+            <li><u>Exercise</u>:&nbsp; Do "Active learning: The description's
+              use in search engines"<br>
               <br>
               You do not have to submit anything for this exercise.<br>
               <br>
             </li>
           </ol>
         </li>
-        <li><u>Skip</u> sub-section &quot;Adding custom icons to your site&quot;<br>
+        <li><u>Skip</u> sub-section "Adding custom icons to your site"<br>
           <br>
         </li>
-        <li>Read all of &quot;Applying CSS and JavaScript to HTML&quot;<br>
+        <li>Read all of "Applying CSS and JavaScript to HTML"<br>
           <br>
           While reading do the exercises below:
           <ol>
             <li><a name="_Ref523304436">a)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </span><u>Exercise [applying-CSS]</u>:&nbsp; Do &quot;Active
-                Learning:&nbsp; Applying CSS and JavaScript to a page&quot;<br>
+                  </span><u>Exercise [applying-CSS]</u>:&nbsp; Do "Active
+                Learning:&nbsp; Applying CSS and JavaScript to a page"<br>
                 <br>
                 Perform the entire exercise in separate files, </a><span class="ProgramName">meta-example.html</span>,
               etc., as suggested in the Active Learning instructions.
@@ -506,7 +489,7 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -514,63 +497,60 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
                               $ mkdir applying-CSS-and-JS<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image006.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir applying-CSS-and-JS" height="54" width="566">
---> </li>
+                  <img src="images/image006.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir applying-CSS-and-JS" height="54" width="566">-->
+                </li>
                 <li>Move <span class="ProgramName">meta-example.html</span> and
                   the other files to the above
                   directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
                   <br>
-                  Git commit the file with the message &quot;-exercise
-                  applying-CSS &quot;<br>
+                  Git commit the file with the message "-exercise applying-CSS "<br>
                   <br>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;Setting the primary language of the document&quot;</li>
+        <li>Read all of "Setting the primary language of the document"</li>
       </ol>
       <h3><a name="_Ref523305604">HTML text fundamentals</a></h3>
-      <p>Goto the next MDN page, <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-
+      <p>Goto the next MDN page, <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           target="_blank">HTML text fundamentals</a>.&nbsp; </p>
       <ol class="Instruction">
-        <li>Read all of &quot;The basics: Headings and Paragraphs&quot;<br>
+        <li>Read all of "The basics: Headings and Paragraphs"<br>
           <br>
           <ol>
-            <li><u>Exercise</u>: &nbsp;Do &quot;Active learning: Giving our content
-              structure&quot;<br>
+            <li><u>Exercise</u>: &nbsp;Do "Active learning: Giving our content
+              structure"<br>
               &nbsp;<br>
               You do not have to submit anything for this exercise.<br>
               <br>
             </li>
           </ol>
         </li>
-        <li><a name="_Ref523305714">Read all of &quot;Lists&quot;</a><br>
+        <li><a name="_Ref523305714">Read all of "Lists"</a><br>
           <br>
           <ol>
-            <li><u>Exercise</u>:&nbsp; Do &quot;Active learning: Marking up an
-              unordered list&quot; <br>
+            <li><u>Exercise</u>:&nbsp; Do "Active learning: Marking up an
+              unordered list" <br>
               &nbsp;<br>
               You do not have to submit anything for this exercise.<br>
               <br>
             </li>
-            <li><u>Exercise</u>:&nbsp; Do &quot;Active learning: Marking up an
-              ordered list&quot; <br>
+            <li><u>Exercise</u>:&nbsp; Do "Active learning: Marking up an
+              ordered list" <br>
               &nbsp;<br>
               You do not have to submit anything for this exercise.<a name="_Ref523305624"><br>
                 <br>
               </a></li>
             <li><a name="_Ref523305685"><u>Exercise [recipe-page]</u>:&nbsp; Do
-                &quot;Active learning: Marking up our recipe page&quot; <br>
+                "Active learning: Marking up our recipe page" <br>
                 &nbsp;<br>
                 Perform the entire exercise in a separate file, </a><span class="ProgramName">text-start.html,
                 </span>as suggested in the Active Learning instructions.<br>
@@ -581,7 +561,7 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -589,71 +569,63 @@ letter-spacing:-.05pt;background:white">Introduction to HTML overview</span></a>
                               $ mkdir recipe-page<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image007.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir recipe-page" height="54" width="566">
-                  --> </li>
+                  <img src="images/image007.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial$ mkdir recipe-page" height="54" width="566">                  -->
+                </li>
                 <li>Move <span class="ProgramName">text-start.html </span>to
                   the above directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
                   <br>
-                  Git commit the file with the message &quot;-exercise
-                  recipe-page&quot;<br>
+                  Git commit the file with the message "-exercise recipe-page"<br>
                   <br>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;Emphasis and importance&quot;<br>
+        <li>Read all of "Emphasis and importance"<br>
           <br>
           <ol>
-            <li><u>Exercise</u>:&nbsp; Do &quot;Active learning: Let's be important!&quot;
+            <li><u>Exercise</u>:&nbsp; Do "Active learning: Let's be important!"
               You do not have to submit anything for this exercise.<br>
             </li>
           </ol>
         </li>
       </ol>
       <h2>CSS – Styling the Web</h2>
-      <p>From the index, skip the rest of &quot;HTML — Structuring the Web&quot;, and
-        expand the index item <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
-
+      <p>From the index, skip the rest of "HTML — Structuring the Web", and
+        expand the index item <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
           target="_blank">CSS — Styling the Web</a>:</p>
-      <p style="text-align:center" align="center"><img src="images/image008.jpg"
-
+      <p style="text-align:center" align="center"><img src="images/image008.jpg"
           height="407" width="233" border="0"></p>
-      <p>Go to page <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
-
+      <p>Go to page <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
           target="_blank">CSS — Styling the Web</a>, read up to and including
-        the first section &quot;Learning Pathway&quot;.&nbsp; Skim over the &quot;Modules&quot;
+        the first section "Learning Pathway".&nbsp; Skim over the "Modules"
         paragraph. &nbsp;<br>
         <br>
         The following sections of this ass will guide you through reading the
         sub-sections highlighted in red above.</p>
       <h3><a name="_Ref523474962">CSS</a> first steps overview</h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
-
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
           target="_blank">CSS first steps overview</a>. </p>
-      <p>Read up to and including the section &quot;Prerequisites&quot;</p>
+      <p>Read up to and including the section "Prerequisites"</p>
       <h3><a name="_Ref523478078">What is CSS?</a></h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"
-
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"
           target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
-      <p>Read all sections, but stop without reading &quot;CSS specifications&quot; </p>
+      <p>Read all sections, but stop without reading "CSS specifications" </p>
       <h3>Getting started with CSS</h3>
-      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started"
-
+      <p>From the index, follow the link <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started"
           target="_blank"><span style="font-size:10.5pt;color:#3D7E9A;letter-spacing:-.05pt;background:white">Getting
             started with CSS</span></a></p>
       <!--- cleanup start -->
       <ol class="Instruction">
-        <li> Read all of &quot;Starting with some HTML&quot;
+        <li> Read all of "Starting with some HTML"
           <ol>
             <li> <u>Exercise [started-with-CSS]</u>: As described in this MDN
               section, created the file, <span class="ProgramName">index.html</span>
@@ -663,7 +635,7 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -671,8 +643,7 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
                               $ mkdir started-with-CSS<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
@@ -682,24 +653,24 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
                   <img src="images/image009.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial      $ mkdir started-with-CSS" height="54" width="566">-->
                 </li>
                 <li> Move the file to the above directory.
-                  <p>Git commit the file with the message &quot;-exercise
-                    started-with-CSS&quot;</p>
+                  <p>Git commit the file with the message "-exercise
+                    started-with-CSS"</p>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li> Read all of &quot;Adding CSS to our document&quot; <br>
+        <li> Read all of "Adding CSS to our document" <br>
           <br>
           <ol>
             <li> <u>Exercise [add-CCS]</u>: As described in this MDN section,
               create various the files, <span class="ProgramName">style.css</span>,
               etc. Create them in your sub-directory <span class="ProgramName">started-with-CSS</span>.
-              <p>Git commit the changes the message &quot;-exercise add-CCS&quot;</p>
+              <p>Git commit the changes the message "-exercise add-CCS"</p>
             </li>
           </ol>
         </li>
-        <li> Read all of &quot;Styling HTML elements&quot; <br>
+        <li> Read all of "Styling HTML elements" <br>
           <br>
           <ol>
             <li> <u>Exercise</u>: Do the exercise using the
@@ -707,51 +678,49 @@ letter-spacing:-.05pt;background:white">What is CSS?</span></a></p>
             </li>
           </ol>
         </li>
-        <li> Read all of &quot;Changing the default behavior of elements&quot; <br>
+        <li> Read all of "Changing the default behavior of elements" <br>
           <br>
           <ol>
             <li> <u>Exercise [changing-behavior]</u>: As described in this MDN
               section, modify the previously created the files that you placed
               your sub-directory <span class="ProgramName">started-with-CSS</span>.
-              <p>Git commit the changes the message &quot;-exercise
-                changing-behavior&quot;</p>
+              <p>Git commit the changes the message "-exercise
+                changing-behavior"</p>
             </li>
           </ol>
         </li>
-        <li> Read all of &quot;Adding a class&quot; <br>
+        <li> Read all of "Adding a class" <br>
           <br>
           <ol>
             <li> <u>Exercise [adding-a-class]</u>: As described in this MDN
               section, modify the previously created the files that you placed
               your sub-directory <span class="ProgramName">started-with-CSS</span>.
-              <p>Git commit the changes the message &quot;-exercise
-                adding-a-class&quot;</p>
+              <p>Git commit the changes the message "-exercise adding-a-class"</p>
             </li>
           </ol>
         </li>
-        <li> Read all of &quot;Styling things based on their location in a document&quot;
+        <li> Read all of "Styling things based on their location in a document"
           <ol>
             <li> <u>Exercise [styling-on-location]</u>: As described in this
               MDN section, modify the previously created the files that you
               placed your sub-directory <span class="ProgramName">started-with-CSS</span>.
-              <p> Git commit the changes the message &quot;-exercise
-                styling-on-location&quot; </p>
+              <p> Git commit the changes the message "-exercise
+                styling-on-location" </p>
             </li>
           </ol>
         </li>
       </ol>
-      <p>You can skip the rest of the &quot;Getting started with CSS&quot; article.</p>
+      <p>You can skip the rest of the "Getting started with CSS" article.</p>
       <!-- cleanup end -->
       <h3>How CSS is structured </h3>
-      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured"
-
+      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured"
           target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">How CSS is structured</span></a>.<br>
       </p>
       <!--- cleanup start -->
       <ol class="Instruction">
-        <li> Read all of &quot;Applying CSS to your HTML&quot; </li>
-        <li> Read all of &quot;Playing with the CSS in this article&quot;
+        <li> Read all of "Applying CSS to your HTML" </li>
+        <li> Read all of "Playing with the CSS in this article"
           <ol>
             <li> <u>Exercise [playing-with-CSS]</u>: As described in this MDN
               section, create the files, <span class="ProgramName">index.html</span>,
@@ -762,7 +731,7 @@ letter-spacing:-.05pt;background:white">How CSS is structured</span></a>.<br>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -770,59 +739,55 @@ letter-spacing:-.05pt;background:white">How CSS is structured</span></a>.<br>
                               $ mkdir CSS-structure<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image010.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial        $ mkdir CSS-structure" height="54" width="566">
-                    --> </li>
+                  <img src="images/image010.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial        $ mkdir CSS-structure" height="54" width="566">                    -->
+                </li>
                 <li> Move the files to the above directory.
-                  <p>Git commit the file with the message &quot;-exercise
-                    playing-with-CSS&quot;</p>
+                  <p>Git commit the file with the message "-exercise
+                    playing-with-CSS"</p>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li> Read all of &quot;Selectors&quot;
+        <li> Read all of "Selectors"
           <ol>
             <li> <u>Exercise [selectors]</u>: As described in this MDN section
               modify the files in your CSS-structure sub-directory.
-              <p>Git commit the file with the message &quot;-exercise
-                selectors&quot;</p>
+              <p>Git commit the file with the message "-exercise selectors"</p>
             </li>
           </ol>
         </li>
-        <li> Read part of &quot;Properties and values&quot; up to but not including
-          &quot;Functions&quot; </li>
-        <li> Skip to section &quot;Comments&quot; </li>
-        <li> Read all of &quot;Comments&quot;
+        <li> Read part of "Properties and values" up to but not including
+          "Functions" </li>
+        <li> Skip to section "Comments" </li>
+        <li> Read all of "Comments"
           <ol>
             <li> <u>Exercise [comments]</u>: As described in this MDN section
               modify the files in your CSS-structure sub-directory.
-              <p>Git commit the file with the message &quot;-exercise
-                comments&quot;</p>
+              <p>Git commit the file with the message "-exercise comments"</p>
             </li>
           </ol>
         </li>
       </ol>
       <!-- cleanup end -->
-      <p>You can skip the rest of the article &quot;How CSS is structured&quot;.<br>
+      <p>You can skip the rest of the article "How CSS is structured".<br>
       </p>
       <h3>How CSS works </h3>
-      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works"
-
+      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works"
           target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
       </p>
       <ol class="Instruction">
-        <li>Read all of &quot;How does CSS actually work?&quot;</li>
-        <li>Read all of &quot;About the DOM&quot;</li>
-        <li>Read all of &quot;A real DOM representation&quot;
+        <li>Read all of "How does CSS actually work?"</li>
+        <li>Read all of "About the DOM"</li>
+        <li>Read all of "A real DOM representation"
           <ol>
             <li><u>Exercise</u>:&nbsp;&nbsp; There is an example that can be
               experimented with using CodePen or JSFiddle.&nbsp;&nbsp;&nbsp;
@@ -833,7 +798,7 @@ letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;Applying CSS to the DOM&quot;
+        <li>Read all of "Applying CSS to the DOM"
           <ol>
             <li><u>Exercise</u>:&nbsp;&nbsp;&nbsp; There is an example that can
               be experimented with using CodePen or JSFiddle.&nbsp;&nbsp;&nbsp;
@@ -844,8 +809,8 @@ letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;What happens if a browser encounters CSS it doesn't
-          understand?&quot;<br>
+        <li>Read all of "What happens if a browser encounters CSS it doesn't
+          understand?"<br>
           <ol>
             <li><u>Exercise</u>:&nbsp;&nbsp;&nbsp; There is an example that can
               be experimented with using CodePen or JSFiddle.&nbsp;&nbsp;&nbsp;
@@ -855,25 +820,24 @@ letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
           </ol>
         </li>
       </ol>
-      <p>You can skip the rest of the article &quot;How CSS works&quot;.</p>
+      <p>You can skip the rest of the article "How CSS works".</p>
       <h3>The box model</h3>
-      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model"
-
+      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model"
           target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">The box model</span></a></p>
       <!-- cleanup start -->
       <ol class="Instruction">
-        <li> Read all of &quot;Block and inline boxes&quot;.</li>
-        <li> Read all of &quot;Aside: Inner and outer display types&quot;.</li>
-        <li> Read all of &quot;Examples of different display types&quot;
+        <li> Read all of "Block and inline boxes".</li>
+        <li> Read all of "Aside: Inner and outer display types".</li>
+        <li> Read all of "Examples of different display types"
           <ol>
             <li> <u>Exercise</u>: There is an example that can be experimented
               with. Experiment with the example. </li>
             <li> You do not have to submit anything for this exercise. </li>
           </ol>
         </li>
-        <li> Read all of &quot;What is the CSS box model?&quot; </li>
-        <li> Read all of &quot;Playing with box models&quot;
+        <li> Read all of "What is the CSS box model?" </li>
+        <li> Read all of "Playing with box models"
           <ol>
             <li> <u>Exercise [playing-box]</u>: </li>
           </ol>
@@ -893,12 +857,11 @@ letter-spacing:-.05pt;background:white">The box model</span></a></p>
         it covers a teeny bit of JavaScript so as to better understand the event
         handling tutorial.</p>
       <h3><a name="_Ref523574167">What is JavaScript</a></h3>
-      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
-
+      <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
           target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
       <ol class="Instruction">
-        <li>Read all of &quot;A high-level definition&quot;<br>
+        <li>Read all of "A high-level definition"<br>
           <br>
           <ol>
             <li><u>Exercise [javascript-label]</u>:
@@ -908,7 +871,7 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -916,8 +879,7 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                               $ mkdir javascript-label<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
@@ -927,40 +889,40 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                   <img src="images/image011.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial    $ mkdir javascript-label" height="54" width="566">-->
                 </li>
                 <li><u>Inside</u> that sub-directory download and save the
-                  example code (the link is given at the end the &quot;A high-level
-                  definition&quot; section).<br>
+                  example code (the link is given at the end the "A high-level
+                  definition" section).<br>
                   <br>
                   Verify the code displays correctly in Chrome.</li>
-                <li>Git commit the file with the message &quot;-exercise <u>javascript-label</u>&quot;</li>
+                <li>Git commit the file with the message "-exercise <u>javascript-label</u>"</li>
                 <li>Using a text editor, change the code to display ‘First
                   Player’ instead of ‘Player 1’.&nbsp;&nbsp;&nbsp; <br>
                   Modify the background color of the paragraph
                   style.&nbsp;&nbsp; Save your changes and verify the page
                   appears correctly in Chrome. </li>
-                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
-                  javascript-label&quot;</li>
+                <li>Git commit the file(s) with message:&nbsp; "-exercise
+                  javascript-label"</li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;So what can it really do?&quot;<br>
+        <li>Read all of "So what can it really do?"<br>
           <ol>
             <li><u>Exercise [third-party-apis]</u>:
               <ol>
                 <li>After reading, online find any <b>Third party API</b> not
                   mentioned in the text.&nbsp;&nbsp; Write the API name and the
                   web address in your <span class="ProgramName">Questions.txt</span>
-                  file.&nbsp;&nbsp; Put the text &quot;JS 1)&quot; on the line above your
+                  file.&nbsp;&nbsp; Put the text "JS 1)" on the line above your
                   answer in the file.<br>
                   <br>
                 </li>
-                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
-                  third-party-apis&quot; </li>
+                <li>Git commit the file(s) with message:&nbsp; "-exercise
+                  third-party-apis" </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;What is JavaScript doing on your page?&quot;
+        <li>Read all of "What is JavaScript doing on your page?"
           <ol start="1" type="a">
             <li><u>Exercise [what-is-JS]</u>:
               <ol>
@@ -970,31 +932,31 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                   Compiled?&nbsp; Some combination of both?<br>
                   <br>
                   Write your answers in your <span class="ProgramName">Questions.txt</span>
-                  file.&nbsp;&nbsp; Put the text &quot;JS 2)&quot; on the line above your
+                  file.&nbsp;&nbsp; Put the text "JS 2)" on the line above your
                   answer in the file.<br>
                   <br>
                 </li>
-                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
-                  what is JS doing&quot;<br>
+                <li>Git commit the file(s) with message:&nbsp; "-exercise what
+                  is JS doing"<br>
                   <br>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;How do you add JavaScript to your page?&quot;<br>
+        <li>Read all of "How do you add JavaScript to your page?"<br>
           <br>
           While reading do the following exercises:<br>
           <ol start="1" type="a">
             <li><u>Exercise [internal-js]</u>: Do the exercise in sub-section
-              &quot;Internal JavaScript&quot;<br>
+              "Internal JavaScript"<br>
               <ol>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -1002,34 +964,33 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                               $ mkdir internal-javascript<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                   <!--
-                  <img src="images/image012.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial          $ mkdir internal-javascript" height="54" width="566">
-                  --> </li>
+                  <img src="images/image012.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial          $ mkdir internal-javascript" height="54" width="566">                  -->
+                </li>
                 <li>Move all the code for the MDN exercise into the above
                   sub-directory. <br>
                   <br>
                   Verify it displays correctly in Chrome.</li>
-                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
-                  internal-javascript&quot;</li>
+                <li>Git commit the file(s) with message:&nbsp; "-exercise
+                  internal-javascript"</li>
               </ol>
               <br>
             </li>
             <li><u>Exercise [external-js]</u>: Do the exercise in sub-section
-              &quot;External JavaScript&quot;<br>
+              "External JavaScript"<br>
               <ol>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -1037,8 +998,7 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                               $ mkdir external-javascript<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
@@ -1051,29 +1011,28 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
                   sub-directory. <br>
                   <br>
                   Verify it displays correctly in Chrome.</li>
-                <li>Git commit the file(s) with message:&nbsp; &quot;-exercise
-                  external-javascript&quot;</li>
+                <li>Git commit the file(s) with message:&nbsp; "-exercise
+                  external-javascript"</li>
               </ol>
             </li>
           </ol>
         </li>
         <br>
-        <li>Read all of &quot;Comments&quot; and &quot;Summary&quot;</li>
+        <li>Read all of "Comments" and "Summary"</li>
       </ol>
       <p>This introduction to JavaScript should be enough in order to complete
         the rest of this assignment.</p>
       <h3>Introduction to Events</h3>
-      <p>From the index, under &quot;<span style="font-size:10.5pt;
+      <p>From the index, under "<span style="font-size:10.5pt;
 font-family:&quot;Arial&quot;,sans-serif;color:#333333;letter-spacing:-.05pt">JavaScript
-          building blocks&quot;, follow the link to </span><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
-
+          building blocks", follow the link to </span><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
           target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
 letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
       <ol class="Instruction">
-        <li>Read all of &quot;A series of fortunate events&quot;<br>
+        <li>Read all of "A series of fortunate events"<br>
           <br>
         </li>
-        <li>Read all of &quot;Ways of using web events&quot;<br>
+        <li>Read all of "Ways of using web events"<br>
           <br>
           While reading do the following exercises:
           <ol>
@@ -1084,7 +1043,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -1092,8 +1051,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                               $ mkdir random-color-eventhandlerproperty<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
@@ -1111,13 +1069,13 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                   reasonable.</li>
                 <li>Git commit the file(s) with message:<br>
                   <br>
-                  &nbsp; &quot;-exercise random-color-eventhandlerproperty&quot;<br>
+                  &nbsp; "-exercise random-color-eventhandlerproperty"<br>
                 </li>
               </ol>
             </li>
             <li><u>Exercise [random-color-add]</u>:&nbsp;&nbsp; &nbsp;&nbsp;<br>
               <br>
-              In sub-section &quot;addEventListener() and removeEventListener()&quot;, do
+              In sub-section "addEventListener() and removeEventListener()", do
               all the MDN experiments described for the file <span class="ProgramName">random-color-addeventlistener.html.&nbsp;
                 </span>Experiment a bit with the code.<br>
               <ol>
@@ -1126,7 +1084,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -1134,8 +1092,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                               $ mkdir random-color-addeventlistener<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
@@ -1151,26 +1108,27 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                   may be modified in any reasonable way you like).</li>
                 <li>Git commit the file(s) with message:<br>
                   <br>
-                  &nbsp; &quot;-exercise random-color-addeventlistener&quot;<br>
+                  &nbsp; "-exercise random-color-addeventlistener"<br>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;Other event concepts&quot;<br>
+        <li>Read all of "Other event concepts"<br>
           <br>
           While reading do the following exercises:<br>
           <ol>
-            <li><u>Exercise</u>: &nbsp;&nbsp;&nbsp;&nbsp;<br>
+            <li><u>Exercise </u><span style="color: rgb(45, 59, 69); font-family: &quot;Lato Extended&quot;, Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">[useful-eventtarget]</span>:
+              &nbsp;&nbsp;&nbsp;&nbsp;<br>
               <br>
-              In subsection &quot;Event Objects&quot;, retrieve the file <span class="ProgramName">useful-eventtarget.html.</span>
+              In subsection "Event Objects", retrieve the file <span class="ProgramName">useful-eventtarget.html.</span>
               <ol>
                 <li>Create a sub-directory:<br>
                   <table class="Code_Example" id="Code_Example3_0" border="1">
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -1178,8 +1136,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                               $ mkdir useful-eventtarget<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
@@ -1193,7 +1150,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 </li>
                 <li>Git commit the file(s) with message:<br>
                   <br>
-                  &nbsp; &quot;-imported useful-eventtarget&quot;<br>
+                  &nbsp; "-imported useful-eventtarget"<br>
                   <br>
                 </li>
                 <li>Modify the code to render 32 clickable squares instead of
@@ -1201,15 +1158,15 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                   feel like making to the rendering of the squares.<br>
                   <br>
                 </li>
-                <li>Git commit the file(s) with message:&nbsp;&nbsp;
-                  &quot;-playing :)&quot;<br>
+                <li>Git commit the file(s) with message:&nbsp;&nbsp; "-playing
+                  :)"<br>
                   <br>
                 </li>
               </ol>
             </li>
             <li><u>Exercise [show-video]</u>:&nbsp;&nbsp;&nbsp;&nbsp; <br>
               <br>
-              In sub-section &quot;Event Objects&quot; retrieve the file <span class="ProgramName">show-video-box.html</span>,
+              In sub-section "Event Objects" retrieve the file <span class="ProgramName">show-video-box.html</span>,
               as well as the required data files.
               <ol>
                 <li>Create a sub-directory:<br>
@@ -1217,7 +1174,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                            &#9661; </button> </td>
+                            ▽ </button> </td>
                         <td>
                           <div style="height: 20px;"> <code class="Shell_Code_Output">
                               zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -1225,8 +1182,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                               $ mkdir show-video-box<br>
                             </code>
                             <!--
-                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">
-                                          […misc additional output will                                          appear…] </span>
+                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>
                           ---> </div>
                         </td>
                       </tr>
@@ -1241,21 +1197,21 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 </li>
                 <li>Git commit the file(s) with message:<br>
                   <br>
-                  &nbsp; &quot;-imported show-video-box&quot;<br>
+                  &nbsp; "-imported show-video-box"<br>
                   <br>
                 </li>
-                <li>Fix the bug as describe in the &quot;Event bubbling and capture&quot;
+                <li>Fix the bug as describe in the "Event bubbling and capture"
                   section.</li>
                 <li>Git commit the file(s) with
-                  message:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &quot;-bug fix!&quot;<br>
+                  message:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "-bug
+                  fix!"<br>
                   <br>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>Read all of &quot;Conclusion&quot;</li>
+        <li>Read all of "Conclusion"</li>
       </ol>
       <h1><a name="_Ref523692612">Part 2 - Option II:&nbsp; Written Description
           of Prior Experience in HTML, CSS and Event Handling <br>
@@ -1281,44 +1237,40 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
       <h2>Panel Overview</h2>
       <!-- cleanup list start -->
       <ol>
-        <li>Using Chrome goto <a href="https://developers.google.com/web/tools/chrome-devtools/"
-
+        <li>Using Chrome goto <a href="https://developers.google.com/web/tools/chrome-devtools/"
             target="_blank">https://developers.google.com/web/tools/chrome-devtools/</a>
           <br>
           <br>
         </li>
         <li><u>Panel Overview</u>: <br>
           <br>
-          Read all of the &quot;Chrome DevTools&quot; page -- but do not follow any
+          Read all of the "Chrome DevTools" page -- but do not follow any
           further hyperlinks -- to get a rough idea of the functionality that
-          the various &quot;panels&quot; provide.<a name="_Ref523490878"></a> </li>
+          the various "panels" provide.<a name="_Ref523490878"></a> </li>
       </ol>
       <!-- cleanup list end -->
       <h2>Get Started With Viewing And Changing The DOM</h2>
-      Under &quot;Elements Panel&quot;, follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/dom/"
-
+      Under "Elements Panel", follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/dom/"
         target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
           Started With Viewing And Changing The DOM</span></a><br>
       <ol class="Instruction">
-        <li>Read the first paragraph and follow the link to <a href="https://developers.google.com/web/tools/chrome-devtools/dom/#appendix"
-
+        <li>Read the first paragraph and follow the link to <a href="https://developers.google.com/web/tools/chrome-devtools/dom/#appendix"
             target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Appendix:
               HTML versus the DOM</span></a> and read through that appendix
           before continuing.<br>
           <br>
         </li>
-        <li>&quot;View DOM nodes&quot; - return to &quot;Get Started With Viewing And
-          Changing The DOM&quot; and continue reading sub-section &quot;View DOM nodes&quot;<br>
+        <li>"View DOM nodes" - return to "Get Started With Viewing And Changing
+          The DOM" and continue reading sub-section "View DOM nodes"<br>
           <br>
           Do all the exercises in this sub-section.&nbsp; Regarding the further
           links embedded this sub-section follow and read all them -- but <u>skip</u>
-          <a href="https://developers.google.com/web/tools/chrome-devtools/css/"
-
+          <a href="https://developers.google.com/web/tools/chrome-devtools/css/"
             target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
               Started With Viewing And Changing CSS</span></a>.<br>
           <br>
         </li>
-        <li>&quot;Edit the DOM&quot;<br>
+        <li>"Edit the DOM"<br>
           <br>
           Do all the exercises in this sub-section.&nbsp; <br>
           <p>Take 1 screenshot of the page as it appears after all your DOM
@@ -1330,7 +1282,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 <tbody>
                   <tr>
                     <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                        &#9661; </button> </td>
+                        ▽ </button> </td>
                     <td>
                       <div style="height: 20px;"> <code class="Shell_Code_Output">
                           zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -1338,8 +1290,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                           $ mkdir view-and-change-DOM<br>
                         </code>
                         <!--
-                      <span class="Shell_Code_Comment">[…]</span>                      <span class="Shell_Code_Comment">
-                                      […misc additional output will                                      appear…] </span>
+                      <span class="Shell_Code_Comment">[…]</span>                      <span class="Shell_Code_Comment">                                      […misc additional output will                                      appear…] </span>
                       ---> </div>
                     </td>
                   </tr>
@@ -1351,34 +1302,32 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
             <li>Move the png file into this directory. <br>
               <br>
             </li>
-            <li>Git commit the above files with commit message&nbsp;
-              &quot;-exercise edit-the-dom&quot;</li>
+            <li>Git commit the above files with commit message&nbsp; "-exercise
+              edit-the-dom"</li>
           </ol>
         </li>
-        <li>&quot;Access nodes in the Console&quot; <br>
+        <li>"Access nodes in the Console" <br>
           <br>
           Do all the exercises, but there is nothing to submit to git.<br>
           <br>
         </li>
-        <li>&quot;Break on DOM changes&quot;<br>
+        <li>"Break on DOM changes"<br>
           <br>
           Do all the exercises, but there is nothing to submit to git.<br>
           <br>
         </li>
-        <li>&quot;Next Steps&quot; -&nbsp; read this sub-section.<br>
+        <li>"Next Steps" -&nbsp; read this sub-section.<br>
         </li>
       </ol>
       <h2>Get Started With Viewing And Changing CSS</h2>
-      <p>Return to the DevTools <a href="https://developers.google.com/web/tools/chrome-devtools"
-
-          target="_blank">main page</a>.&nbsp;&nbsp;&nbsp; Under &quot;Elements
-        Panel&quot;, follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/css/"><span
-
+      <p>Return to the DevTools <a href="https://developers.google.com/web/tools/chrome-devtools"
+          target="_blank">main page</a>.&nbsp;&nbsp;&nbsp; Under "Elements
+        Panel", follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/css/"><span
             style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
             Started With Viewing And Changing CSS</span></a></p>
       <ol class="Instruction">
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>Read &quot;View an element's CSS&quot;
+            </span>Read "View an element's CSS"
           <ol>
             <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
@@ -1388,7 +1337,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           </ol>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>Read &quot;Add a CSS declaration to an element&quot;
+            </span>Read "Add a CSS declaration to an element"
           <ol>
             <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
@@ -1398,7 +1347,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           </ol>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>Read &quot;Add a CSS class to an element&quot;
+            </span>Read "Add a CSS class to an element"
           <ol>
             <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
@@ -1408,7 +1357,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           </ol>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>Read &quot;Add a pseudostate to a class&quot;
+            </span>Read "Add a pseudostate to a class"
           <ol>
             <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
@@ -1418,7 +1367,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           </ol>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>Read &quot;Change the dimensions of an element&quot;
+            </span>Read "Change the dimensions of an element"
           <ol>
             <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
@@ -1427,11 +1376,9 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
         </li>
       </ol>
       <h2><a name="_Ref19088667">Get Started With The Console</a></h2>
-      <p>Return to the DevTools <a href="https://developers.google.com/web/tools/chrome-devtools"
-
-          target="_blank">main page</a>.&nbsp;&nbsp;&nbsp; Under &quot;Elements
-        Panel&quot;, follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"><span
-
+      <p>Return to the DevTools <a href="https://developers.google.com/web/tools/chrome-devtools"
+          target="_blank">main page</a>.&nbsp;&nbsp;&nbsp; Under "Elements
+        Panel", follow the link <a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"><span
             style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
             Started With The Console</span></a>.</p>
       <ol class="Instruction">
@@ -1445,7 +1392,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
             <tbody>
               <tr>
                 <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                    &#9661; </button> </td>
+                    ▽ </button> </td>
                 <td>
                   <div style="height: 20px;"> <code class="Shell_Code_Output">
                       zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial<br>
@@ -1453,8 +1400,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                       mkdir get-started-console<br>
                     </code>
                     <!--
-                  <span class="Shell_Code_Comment">[…]</span>                  <span class="Shell_Code_Comment">
-                                  […misc additional output will                                  appear…] </span>
+                  <span class="Shell_Code_Comment">[…]</span>                  <span class="Shell_Code_Comment">                                  […misc additional output will                                  appear…] </span>
                   ---> </div>
                 </td>
               </tr>
@@ -1465,37 +1411,33 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           <br>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>&quot;Viewing logged messages&quot; – read this section. <br>
+            </span>"Viewing logged messages" – read this section. <br>
           <br>
-          At this time do <u>not</u> follow link <a href="https://developers.google.com/web/tools/chrome-devtools/console/log"
-
+          At this time do <u>not</u> follow link <a href="https://developers.google.com/web/tools/chrome-devtools/console/log"
             target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
               Started With Logging Messages</span></a><br>
           <br>
         </li>
         <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>&quot;Running JavaScript&quot; – read this section<br>
+            </span>"Running JavaScript" – read this section<br>
           <br>
-          At this time do <u>not</u> follow link <a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript"
-
+          At this time do <u>not</u> follow link <a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript"
             target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
               Started With Running JavaScript</span></a></li>
       </ol>
       <h2>Get Started With Logging Messages<br>
       </h2>
-      <p>Now follow the first link you skipped in Section 5.4, i.e. go to <a href="https://developers.google.com/web/tools/chrome-devtools/console/log"
-
+      <p>Now follow the first link you skipped in Section 5.4, i.e. go to <a href="https://developers.google.com/web/tools/chrome-devtools/console/log"
           target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
             Started With Logging Messages</span></a>.</p>
       <ol class="Instruction">
-        <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>&quot;Set
-          up the demo and DevTools&quot; <br>
+        <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span>"Set
+          up the demo and DevTools" <br>
           <br>
           Read and do all the exercises in this section.<br>
           <br>
         </li>
-        <li>Click the Settings Icon in the Console (<img src="images/image020.jpg"
-
+        <li>Click the Settings Icon in the Console (<img src="images/image020.jpg"
             height="22" width="28" border="0">).&nbsp;&nbsp; Enable the check
           box |<span class="ProgramName">Preserve Log|.&nbsp;&nbsp; </span>Click
           the Settings Icon again to close the Settings panel.<span class="ProgramName"><br>
@@ -1522,7 +1464,7 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 <tbody>
                   <tr>
                     <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                        &#9661; </button> </td>
+                        ▽ </button> </td>
                     <td>
                       <div style="height: 175px;"> <code class="Shell_Code_Output">
                           zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console
@@ -1540,34 +1482,33 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                             file contents… your details will differ.]</span> </code>
                         <code class="Shell_Code_Output">
                           document.getElementById('changeMyText') button
-                          id=&quot;changeMyText&quot;&gt;Change My Text/button
+                          id="changeMyText"&gt;Change My Text/button
                           document.getElementById('changeMyText').textContent =
                           'Hello' VM378:1 Uncaught TypeError: Cannot set
                           property 'textContent' of null <br>
                           <span class="Shell_Code_Comment">[... the rest of log
                             file will appear here ... ]</span> </code>
                         <!--
-                      <span class="Shell_Code_Comment">[…]</span>                      <span class="Shell_Code_Comment">
-                                      […misc additional output will                                      appear…] </span>
+                      <span class="Shell_Code_Comment">[…]</span>                      <span class="Shell_Code_Comment">                                      […misc additional output will                                      appear…] </span>
                       ---> </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
               <!--
-              <img src="images/image021.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /$ lsdevelopers.google.com-1535898597380.log                      [.your file name will differ.]zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /$ cat developers.google.com-1535898597380.log             [cat displays the file contents… your details will differ.]   document.getElementById('changeMyText')&lt;button id=&quot;changeMyText&quot;&gt;Change My Text&lt;/button&gt;document.getElementById('changeMyText').textContent = 'Hello'VM378:1 Uncaught TypeError: Cannot set property 'textContent' of null                 [….the rest of log file will appear here … ] "
-                height="255" width="566">--> <br>
+              <img src="images/image021.png" alt="Text Box: zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /$ lsdevelopers.google.com-1535898597380.log                      [.your file name will differ.]zwartell@CCIWD-435B-1 ~/ITCS_<span data-course-number="">6120<span>/6120-HTML-Tutorial/get-started-console /$ cat developers.google.com-1535898597380.log             [cat displays the file contents… your details will differ.]   document.getElementById('changeMyText')&lt;button id=&quot;changeMyText&quot;&gt;Change My Text&lt;/button&gt;document.getElementById('changeMyText').textContent = 'Hello'VM378:1 Uncaught TypeError: Cannot set property 'textContent' of null                 [….the rest of log file will appear here … ] "                height="255" width="566">-->
+              <br>
               <br>
             </li>
             <li><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>Git commit the above file(s) with commit message:<br>
               <br>
-              &quot;-exercise get-started-console #1&quot;<br>
+              "-exercise get-started-console #1"<br>
               <br>
             </li>
           </ol>
         </li>
-        <li>&quot;View messages logged from JavaScript&quot;<br>
+        <li>"View messages logged from JavaScript"<br>
           <br>
           Read and do all the exercises this section.&nbsp; Then save the
           console output log:
@@ -1592,14 +1533,14 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 </li>
                 <li>Git commit the above file(s) with commit message:<br>
                   <br>
-                  &quot;-exercise get-started-console #2&quot;<br>
+                  "-exercise get-started-console #2"<br>
                   <br>
                 </li>
               </ol>
             </li>
           </ol>
         </li>
-        <li>&quot;View messages logged by the browser&quot;
+        <li>"View messages logged by the browser"
           <p>Read and do all the exercises this section.&nbsp; Then save the
             console output log:<br>
             <br>
@@ -1624,33 +1565,31 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
                 </li>
                 <li>Git commit the above file(s) with commit message:<br>
                   <br>
-                  &quot;-exercise get-started-console #3&quot; </li>
+                  "-exercise get-started-console #3" </li>
               </ol>
               <br>
             </li>
           </ol>
         </li>
-        <li>&quot;Use the Console alongside any other panel&quot;<br>
+        <li>"Use the Console alongside any other panel"<br>
           <br>
           Skip ahead to the above sub-section and read it.</li>
       </ol>
-      <h2>&quot;Get Started With Running JavaScript In The Console&quot;<br>
+      <h2>"Get Started With Running JavaScript In The Console"<br>
         <br>
       </h2>
-      <p>Now follow the second link you skipped in Section 5.4, i.e. go to <a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript"
-
+      <p>Now follow the second link you skipped in Section 5.4, i.e. go to <a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript"
           target="_blank"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#039BE5">Get
             Started With Running JavaScript In the Console</span></a><span style="font-family:&quot;Arial&quot;,sans-serif;
 color:#212121"> <br>
         </span></p>
       <ol class="Instruction">
-        <li>Click the Settings Icon in the Console (<img src="images/image020.jpg"
-
+        <li>Click the Settings Icon in the Console (<img src="images/image020.jpg"
             height="22" width="28" border="0">).&nbsp;&nbsp; Enable the check
           box <span class="ProgramName">Preserve Log</span>, (if it’s not
           already enabled)<span class="ProgramName">. </span>Click the Settings
           Icon again to close the Settings panel.</li>
-        <li>Return to the &quot;Console&quot; window and right click the mouse on any
+        <li>Return to the "Console" window and right click the mouse on any
           Console output line.&nbsp;&nbsp; In the pop-up menu, select <span class="ProgramName">|Clear
             console|</span>.<br>
           <br>
@@ -1662,7 +1601,7 @@ color:#212121"> <br>
           <ol>
             <li><u>Exercise [save log]</u>:<br>
               <ol>
-                <li>Return to the &quot;Console&quot; window and right click the
+                <li>Return to the "Console" window and right click the
                   mouse.&nbsp;&nbsp; In the pop-up menu, select <span class="ProgramName">|Save
                     As|</span>.&nbsp;&nbsp;&nbsp; This opens a dialog box to
                   save all your interactions on the Console.&nbsp;&nbsp; <br>
@@ -1678,7 +1617,7 @@ color:#212121"> <br>
                 </li>
                 <li>Git commit the above file(s) with commit message:<br>
                   <br>
-                  &quot;-exercise javascript-console&quot;</li>
+                  "-exercise javascript-console"</li>
               </ol>
             </li>
           </ol>
@@ -1717,32 +1656,25 @@ color:#212121"> <br>
         <ul type="disc">
           <li>Minimal Javascript:</li>
           <ul type="circle">
-            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
-
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
                 target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash"
-
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash"
                 target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</a>
             </li>
           </ul>
           <li>Minimal Events</li>
           <ul type="circle">
-            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
-
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
                 target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a>
             </li>
           </ul>
           <li>Console Panel</li>
           <ul type="circle">
-            <li><a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"
-
+            <li><a href="https://developers.google.com/web/tools/chrome-devtools/console/get-started"
                 target="_blank">https://developers.google.com/web/tools/chrome-devtools/console/get-started</a>
-              <span class="MsoCommentReference"><span style="font-size:8.0pt"><a
-
-                    class="msocomanchor" id="_anchor_2" onmouseover="msoCommentShow('_anchor_2','_com_2')"
-
-                    onmouseout="msoCommentHide('_com_2')" href="#_msocom_2" language="JavaScript"
-
+              <span class="MsoCommentReference"><span style="font-size:8.0pt"><a
+                    class="msocomanchor" id="_anchor_2" onmouseover="msoCommentShow('_anchor_2','_com_2')"
+                    onmouseout="msoCommentHide('_com_2')" href="#_msocom_2" language="JavaScript"
                     name="_msoanchor_2">[ZW2]</a>&nbsp;</span></span></li>
           </ul>
         </ul>
@@ -1758,50 +1690,42 @@ color:#212121"> <br>
           <li>https://www.google.com/chrome</li>
           <li>https://developers.google.com/web/tools/chrome-devtools/</li>
           <li>https://developers.google.com/web/tools/chrome-devtools/beginners/html</li>
-          <li><a href="https://developers.google.com/web/tools/chrome-devtools/beginners/html"
-
+          <li><a href="https://developers.google.com/web/tools/chrome-devtools/beginners/html"
               target="_blank">https://developers.google.com/web/tools/chrome-devtools/beginners/html</a></li>
         </ol>
         <ol start="10" type="1">
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
               target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a>
           </li>
           <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</li>
           <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML</li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
               target="_blank">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals</a></li>
         </ol>
         <ol start="14" type="1">
           <li>https://developer.mozilla.org/en-US/docs/Learn/CSS</li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS</a>
           </li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS"
-
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS"
               target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS</a>
           </li>
           <li>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works</li>
           <li>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax</li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model"
-
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model"
               target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model</a></li>
         </ol>
         <ol start="20" type="1">
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
-
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
               target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a>
           </li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
-
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
               target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
         </ol>
         <ol start="22" type="1">
           <li>https://developers.google.com/web/tools/chrome-devtools/</li>
           <li>https://developers.google.com/web/tools/chrome-devtools/beginners/html</li>
           <li>https://developers.google.com/web/tools/chrome-devtools/</li>
-          <li><a href="https://developers.google.com/web/tools/chrome-devtools/css/"
-
+          <li><a href="https://developers.google.com/web/tools/chrome-devtools/css/"
               target="_blank">https://developers.google.com/web/tools/chrome-devtools/css/</a></li>
         </ol>
         <ol start="26" type="1">
@@ -1812,16 +1736,14 @@ color:#212121"> <br>
           <li>https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-dom</li>
           <li>https://developers.google.com/web/tools/chrome-devtools/</li>
           <li>https://developers.google.com/web/tools/chrome-devtools/console/get-started</li>
-          <li><a href="https://developers.google.com/web/tools/chrome-devtools/"
-
+          <li><a href="https://developers.google.com/web/tools/chrome-devtools/"
               target="_blank">https://developers.google.com/web/tools/chrome-devtools/</a></li>
         </ol>
         <ol start="34" type="1">
           <li>https://developers.google.com/web/tools/chrome-devtools/console/</li>
           <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</li>
           <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
-
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
               target="_blank">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a></li>
         </ol>
         <ol start="38" type="1">
@@ -1830,13 +1752,11 @@ color:#212121"> <br>
         <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</p>
         <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</p>
         <h3>Selectors</h3>
-        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors"
-
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors"
             target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors</a>
         </p>
         <h3>Simple Selectors</h3>
-        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors"
-
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors"
             target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors</a>
         </p>
         <h3><br>
@@ -1855,11 +1775,9 @@ color:#212121"> <br>
       </section>
     </div>
     <!--
-    <script type="module" src="main.js"></script>    This also fails:
-      Uncaught TypeError: Failed to resolve module specifier "@firstandthird/toc". Relative references must start with either "/", "./", or "../".    <script type="module" src="main.js"></script>
+    <script type="module" src="main.js"></script>    This also fails:      Uncaught TypeError: Failed to resolve module specifier "@firstandthird/toc". Relative references must start with either "/", "./", or "../".    <script type="module" src="main.js"></script>
     -->
     <!--
-    this is what https://github.com/jgallen23/toc says to do.   It fails:         Uncaught SyntaxError: Cannot use import statement outside a module
-    <script src="main.js"></script>    -->
+    this is what https://github.com/jgallen23/toc says to do.   It fails:         Uncaught SyntaxError: Cannot use import statement outside a module    <script src="main.js"></script>    -->
   </body>
 </html>
