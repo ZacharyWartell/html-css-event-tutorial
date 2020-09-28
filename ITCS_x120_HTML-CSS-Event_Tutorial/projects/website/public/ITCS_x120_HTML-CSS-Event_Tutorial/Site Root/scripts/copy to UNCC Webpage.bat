@@ -10,7 +10,7 @@ if not defined DROPBOX_UNC_CHARLOTTE (
 )
 
 echo Copying to Dropbox...
-robocopy "%CD%\Site Root" "%DROPBOX_UNC_CHARLOTTE%\UNCC webpage\public_html\Teaching\ITCS_x120_HTML-CSS-Event_Tutorial" /mir /xf "*.bak"
+robocopy "%CD%" "%DROPBOX_UNC_CHARLOTTE%\UNCC webpage\public_html\Teaching\ITCS_x120_HTML-CSS-Event_Tutorial" /mir /xf "*.bak" /xd "node_modules"
 
 SET /P ENTER="Hit Enter to complete"
 exit 0
