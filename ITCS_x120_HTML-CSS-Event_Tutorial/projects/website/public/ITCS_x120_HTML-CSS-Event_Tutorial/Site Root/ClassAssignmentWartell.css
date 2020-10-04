@@ -278,6 +278,13 @@ h1.Title, h2.Title, h3.Title {
     text-align: center
 }
 
+/* copied from MDN pages to match their h2 section headers. */
+span.MDN_h2
+{
+    font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif;
+    font-weight : bold;
+}
+
 /*
 Heading Numbering (Resource [R2])
 */
