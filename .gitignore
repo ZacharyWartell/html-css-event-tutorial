@@ -2,3 +2,5 @@
 ~*
 /new/new/nbproject/private/
 *.html~
+*.bak
+*.swp
