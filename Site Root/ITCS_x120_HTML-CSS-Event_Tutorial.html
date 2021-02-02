@@ -65,7 +65,8 @@
         const courseNumberElements = document.querySelectorAll('span[data-course-number]');
         for(let e of courseNumberElements)
         {
-          e.innerText = "3120";
+          //e.innerText = "3120";
+          e.innerText = "5121";
         }
 
         /* smoothScrolling isn't working well, perhaps because of my page structure */
@@ -88,9 +89,11 @@
     <div style="margin-left:250px">
       <p style="text-align:center" align="center"><span style="font-size:18.0pt">HTML,
           CSS and Event Tutorial</span></p>
-      <p style="text-align:center" align="center">ITCS 3120/6120/8120 Computer
-        Graphics</p>
-      <p style="text-align:center" align="center">Fall 2020<br>
+      <p style="text-align:center" align="center">ITCS 5121/4121 Information
+        Visualization </p>
+      <!-- <p style="text-align:center" align="center">ITCS 3120 Computer Graphics </p> -->
+      <!-- <p style="text-align:center" align="center">ITCS 6120/8120 Computer Graphics </p> -->
+      <p style="text-align:center" align="center">Spring 2021<br>
       </p>
       <p style="text-align:center" align="center">Professor Zachary Wartell</p>
       <p style="text-align:center" align="center">$REVISION$ <span style="font-size:10.0pt"><sup>(<a
@@ -112,12 +115,17 @@
       </ul>
       <section>
         <h1 id="Overview">Overview </h1>
-        <p>This course focuses on 2D/3D computer graphics and programming with
-          WebGL.&nbsp; WebGL runs in the context of a HTML5 web browser
+        <!--
+        <p>This course focuses on 2D/3D computer graphics and programming with          WebGL.&nbsp; WebGL runs in the context of a HTML5 web
+          browser environment with JavaScript.&nbsp; This tutorial selects a          subset of several on-line resources to cover the minimal amount of
+          HTML5, CSS and event handling required to get the most out of the          book, <u><em>WebGL Programming Guide</em></u>, that will be used in
+          this class.</p>        -->
+        <p>This course focuses Information Visualization and programming with D3
+          and SVG.&nbsp; D3 and SVG runs in the context of a HTML5 web browser
           environment with JavaScript.&nbsp; This tutorial selects a subset of
           several on-line resources to cover the minimal amount of HTML5, CSS
-          and event handling required to get the most out of the book, <u><em>WebGL
-              Programming Guide</em></u>, that will be used in this class.</p>
+          and event handling required to get the most out of the later D3
+          tutorials and documentation that will be used in this class.</p>
       </section>
       <h1>Git Commit Protocol and Rubric</h1>
       <p>In the instructions below, you are required to make git commits at
@@ -254,7 +262,7 @@
         <li>Download and install the Chrome browser <a href="https://www.google.com/chrome"
             target="_blank">https://www.google.com/chrome</a> </li>
       </ol>
-      <h1>Part 2 - Option I versus Option II</h1>
+      <h1>Option I versus Option II for Part 2</h1>
       <p>All students must complete either Part 2-Option I or Part 2-Option II.</p>
       <ul type="disc">
         <li><u>Part 2 - Option I: Tutorial on HTML, CSS, Event Handling</u>:&nbsp;&nbsp;
@@ -268,10 +276,11 @@
             HTML, CSS and Event Handling</u>:<u>&nbsp; </u><br>
           This option is designed for individuals who already have programming
           experience in all three areas:&nbsp; HTML, CSS, and HTML5 Event
-          handling.</li>
+          handling.&nbsp; "Part 2 - Option II " is very short but must be
+          completed if you choose Option II.</li>
       </ul>
-      If you choose Option I or II, you must still complete <u>both</u> Part 1
-      and Part 3.<br>
+      Note, if you choose Option I or II for Part 2, you must <u>still</u>
+      complete <u>both</u> Part 1 and Part 3.<br>
       <h1>Part 2 - Option I:&nbsp; Tutorial on HTML, CSS, Event Handling</h1>
       <p></p>
       <ul type="disc">
@@ -812,7 +821,10 @@ letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
           -&nbsp; read all and ...<br>
           <ol>
             <li><u>Exercise</u>:&nbsp;&nbsp; There is an example that can be
-              experimented with using CodePen or JSFiddle.&nbsp;&nbsp;&nbsp;
+              experimented with using&nbsp; <a href="https://jsfiddle.net/" target="_blank">JSFiddle</a>
+              or <a href="https://codepen.io/https://codepen.io/" target="_blank">CodePen</a>.
+              &nbsp; <br>
+              <br>
               Experiment with the example.<br>
               <br>
               You do not have to submit anything for this exercise.<br>
@@ -824,7 +836,10 @@ letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
           ...<br>
           <ol>
             <li><u>Exercise</u>:&nbsp;&nbsp;&nbsp; There is an example that can
-              be experimented with using CodePen or JSFiddle.&nbsp;&nbsp;&nbsp;
+              be experimented with using <a href="https://jsfiddle.net/" target="_blank">JSFiddle</a>
+              or <a href="https://codepen.io/https://codepen.io/" target="_blank">CodePen</a>.
+              &nbsp; .&nbsp;&nbsp;&nbsp; <br>
+              <br>
               Experiment with the example.<br>
               <br>
               You do not have to submit anything for this exercise.<br>
@@ -836,7 +851,10 @@ letter-spacing:-.05pt;background:white">How CSS works</span></a>.<br>
             doesn't understand?"</span> - read all and ...<br>
           <ol>
             <li><u>Exercise</u>:&nbsp;&nbsp;&nbsp; There is an example that can
-              be experimented with using CodePen or JSFiddle.&nbsp;&nbsp;&nbsp;
+              be experimented with using <a href="https://jsfiddle.net/" target="_blank">JSFiddle
+                or </a><a href="https://codepen.io/https://codepen.io/" target="_blank">CodePen</a>.
+              &nbsp; .&nbsp;&nbsp;&nbsp; <br>
+              <br>
               Experiment with the example.<br>
               <br>
               You do not have to submit anything for this exercise.</li>
@@ -865,23 +883,20 @@ letter-spacing:-.05pt;background:white">The box model</span></a></p>
         <li><span class="MDN_h2">"Playing with box models"</span> - read all
           and...<br>
           <ol>
-            <li> <u>Exercise [playing-box]</u>: </li>
-          </ol>
-          <ol>
-            <li> This MDN section provides an interactive example that can be
-              done directly within the webpage. <br>
+            <li> <u>Exercise [playing-box]</u>:<br>
+              <br>
+              This MDN section provides an interactive example that can be done
+              directly within the webpage. <br>
               You do not have to submit anything for this exercise. </li>
           </ol>
         </li>
       </ol>
       <!-- cleanup end -->
-      <p><br>
-        You do not have to submit anything for this exercise.<br>
-      </p>
       <h2>Event Programming (and a teeny bit of JavaScript)</h2>
       <p>This section guides you through reading about event handling, but first
         it covers a teeny bit of JavaScript so as to better understand the event
-        handling tutorial.</p>
+        handling tutorial.&nbsp;&nbsp; (A latter optional tutorial in this
+        course will cover JavaScript in depth).</p>
       <h3><a name="_Ref523574167">What is JavaScript</a></h3>
       <p>From the index, follow the link to <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
           target="_blank"><span style="font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3D7E9A;
@@ -1049,6 +1064,9 @@ letter-spacing:-.05pt;background:white">What is JavaScript?</span></a></p>
         </li>
         <span><br>
         </span>
+        <li><strong>Script loading strategies - </strong>skip this
+          section.&nbsp; This is more detail than needed to for this course.<br>
+          <span class="MDN_h2"></span></li>
         <li><span class="MDN_h2">"Comments"</span> and <span class="MDN_h2">"Summary"</span>
           - read all.</li>
       </ol>
@@ -1313,8 +1331,8 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
             target="_blank">"Edit the DOM"</a><br>
           <br>
           Do all the exercises in this sub-section.&nbsp; <br>
-          <p>Take 1 screenshot of the page as it appears after all your DOM
-            changes.&nbsp; Save it to a png file named <span class="ProgramName">edit-DOM.png</span>.<br>
+          <p>Take 1 screenshot of the page as it appears <u>after</u> all your
+            DOM changes.&nbsp; Save it to a png file named <span class="ProgramName">edit-DOM.png</span>.<br>
           </p>
           <ol>
             <li>Create the following directory structure: <br>
@@ -1363,7 +1381,11 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
           <br>
         </li>
         <li><a href="https://developers.google.com/web/tools/chrome-devtools/dom/#next"
-            target="_blank">"Next Steps"</a> -&nbsp; read this sub-section.<br>
+            target="_blank">"Next Steps"</a> -&nbsp; read this
+          sub-section.&nbsp;&nbsp; (But you do <u>not</u> have to follow all
+          the links)<br>
+          <br>
+          Stop here.<br>
         </li>
       </ol>
       <h2>Get Started With Viewing And Changing CSS</h2>
@@ -1619,9 +1641,8 @@ letter-spacing:-.05pt;background:white">Introduction to events</span></a>. </p>
             </li>
           </ol>
         </li>
-        <li><span class="MDN_h2">"Use the Console alongside any other panel"</span><br>
-          <br>
-          Skip ahead to the above sub-section and read it.</li>
+        <li><span class="MDN_h2">"Use the Console alongside any other panel" - </span>read
+          all.</li>
       </ol>
       <h2>"Get Started With Running JavaScript In The Console"<br>
         <br>
@@ -1643,7 +1664,8 @@ color:#212121"> <br>
           <br>
         </li>
         <li>Now read this entire DevTools article and work through all the
-          examples.<br>
+          examples.&nbsp; (You do <u>not</u> necessarily have to follow every
+          link within this article).<br>
           When you are done, save the console log as follows:<br>
           <br>
           <ol>
@@ -1672,9 +1694,10 @@ color:#212121"> <br>
         </li>
       </ol>
       <strong>This completes your introduction to HTML, CSS, Events and the
-        Chrome DevTools. </strong> <b>Don’t Forget!&nbsp;&nbsp; git push your
-        local repo to the server.&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+        Chrome DevTools.<br>
+        <br>
+      </strong> <b>Don’t Forget!&nbsp;&nbsp; git push your local repo to the
+        server and give the TA and professor reporter access.<br>
       </b>
       <h1><a name="_Ref523489498">Academic Integrity</a></h1>
       <ul type="disc">
