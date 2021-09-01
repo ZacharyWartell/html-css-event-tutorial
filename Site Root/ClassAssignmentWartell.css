@@ -342,7 +342,13 @@ h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.n
     counter-increment: none
 }
 
-/*
+
+span.Highlight
+{
+    background-color: yellow;
+    color: red;
+}
+/*s
 Reference:
     - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
     - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
