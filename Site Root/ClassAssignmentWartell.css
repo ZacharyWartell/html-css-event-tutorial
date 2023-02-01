@@ -22,6 +22,14 @@ table.Hide_Code_Example:target
 }
 */
 
+*.UnpublishedDraft
+{
+    background-color: aquamarine;
+}
+*.StaffOnly
+{
+    display : none;
+}
 p {
     font-size: medium;
 }
@@ -214,10 +222,62 @@ div.Doc_Todo {
     color: grey;
 }
 
-span.Updated_Text {
+span.Updated_Text, h1.Updated_Text, h2.Updated_Text, h3.Updated_Text {
     color: red;
     background-color: yellow;
 }
+
+/*
+Reference:
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+  - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
+*/
+ins {
+    background-color: greenyellow;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+ins
+{
+    background-color: greenyellow;
+}
+
+ins:hover + span.Updated_Text_Popup_Note {
+    display: block;
+}
+
+ins:hover + span.Updated_Text_Popup_Note:before {
+    content: "\2196  INSERT: ";
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+    color: red;
+    background-color: white;
+}
+
+del:hover + span.Updated_Text_Popup_Note {
+    display: block;
+}
+
+del:hover + span.Updated_Text_Popup_Note:before {
+    content: "\2196  DELETE: ";
+    font-weight: bold;
+}
+
+span.Updated_Text_Popup_Note {
+    position: absolute;
+    /* top: -2em; */
+    /* left: 50em; */
+    display: none;
+    background-color: lightblue;
+    border: black solid 1px;
+    padding: 5px;
+}
+
+
 
 /*   Hierarchical List of Instructions
 */
@@ -229,6 +289,11 @@ ol.Instruction {
 
 ol.Instruction > li {
     counter-increment: instructionLevel1;
+}
+
+ol.Instruction li.Instruction_Question > span:nth-child(1)
+{
+    font-weight: bold;
 }
 
 ol.Instruction > li::marker {
@@ -276,13 +341,6 @@ span.Grade_Points {
 
 h1.Title, h2.Title, h3.Title {
     text-align: center
-}
-
-/* copied from MDN pages to match their h2 section headers. */
-span.MDN_h2
-{
-    font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif;
-    font-weight : bold;
 }
 
 /*
@@ -341,54 +399,3 @@ h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.n
     content: "";
     counter-increment: none
 }
-
-
-span.Highlight
-{
-    background-color: yellow;
-    color: red;
-}
-/*s
-Reference:
-    - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
-    - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
-*/
-del:hover ~ span.Updated_Text_Popup_Note:before
-{
-    content: "\2196  DELETE: ";
-    font-weight: bold;
-}
-
-ins
-{
-    background-color: greenyellow;
-    text-decoration-line: underline;
-}
-ins:hover ~ span.Updated_Text_Popup_Note:before
-{
-    content: "\2196  INSERT: ";
-    font-weight: bold;
-}
-
-del {
-    text-decoration:line-through;
-    color: red;
-    background-color: white;
-}
-
-del:hover ~ span.Updated_Text_Popup_Note
-{
-    display: block;
-}
-
-span.Updated_Text_Popup_Note
-{
-    position: absolute;
-    /* top: -2em; */
-    /* left: 50em; */
-    display: none;
-    background-color: lightblue;
-    border: black solid 1px;
-    padding: 5px;
-}
-

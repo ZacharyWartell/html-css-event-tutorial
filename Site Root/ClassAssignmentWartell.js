@@ -3,8 +3,6 @@
  * \copyright Copyright 2015. Zachary Wartell.
  * \license Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
  - http://creativecommons.org/licenses/by-nc-sa/4.0/
-
- \status [STATUS=not deployed] work-in-progress
  */
 
 
@@ -186,13 +184,28 @@ function collectionInstructions(section, sectionLabel) {
 
 }
 
-function onLoad() {
+function class_onLoad() {
     // [STATUS=not deployed] work-in-progress
     {
         Global.studentDirectory = localStorage.getItem('studentDirectory') || "";
     }
 
+    /*
+     *   Compute total TimeToRead for upper levels sections based on TimeToRead in lower level sections
+     */
+    if (false) {
+        let totalTTRs = document.querySelectorAll("td.Time_To_Read_Total");
+        for (let tttr of totalTTRs) {
+            const sum = computeTimeToRead(tttr.parentElement.parentElement.parentElement.nextElementSibling);
+            const span = tttr.querySelector(":scope > span")
+            console.assert(span != null);
+            span.innerText = sum;
+        }
+    }
 
+    /*
+     *   find all instruction class <li> elements in instruction sections in order to automatically generate Rubric section
+     */
     // Note this traversal assumes every <h1>, <h2> etc. is immediately preceded by a <section> element
     let h1List = document.querySelectorAll("section > h1");
     let h1c, h2c, h3c;
@@ -331,6 +344,17 @@ function onLoad() {
     return;
 }
 
+function computeTimeToRead(h2Element)
+{
+    const parts=h2Element.parentElement.querySelectorAll(":scope section > table.SectionRubric > tbody > tr:nth-of-type(1) > td:nth-of-type(2)")
+    let sum = 0
+    for (td of parts)
+    {
+        const i = parseInt(td.innerText.slice(8).split(' ')[0]);
+        sum += i;
+    }
+    return sum;
+}
 /**
  \brief GradingScript generates and downloads a Bash script from the browser that
  when executed on the client PC automates various parts of the task of grading a particular <section>'s
