@@ -30,7 +30,8 @@ const Category = Object.freeze({
     GENERAL: Symbol("General"),
     READ: Symbol("Read"),
     TODO: Symbol("Todo"),
-    OVERVIEW: Symbol("Overview")
+    OVERVIEW: Symbol("Overview"),
+    NON_RUBRIC: Symbol("NON_RUBRIC")
 });
 
 function getCategoryFromClass(element, returnNull) {
@@ -42,6 +43,8 @@ function getCategoryFromClass(element, returnNull) {
         return Category.TODO;
     if (element.className.includes("Instruction_Overview"))
         return Category.OVERVIEW;
+    if (element.className.includes("Instruction_Non_Rubric"))
+        return Category.NON_RUBRIC;
     if (element.className.includes("Instruction_General"))
         return Category.GENERAL;
     if (returnNull)
@@ -144,6 +147,8 @@ function collectionInstructions(section, sectionLabel) {
             for (let li1 of li1List) {
                 let tmp, cat = (tmp = getCategoryFromClass(li1, true)) !== null ? tmp : category;
 
+                if (tmp === Category.NON_RUBRIC)
+                    continue;
                 instructions.push(new Instruction(sectionLabel, itemString(l1c),
                     li1.innerText.trimStart().slice(0, 10) + " ...", cat));
                 li1.id = instructions.instructions [instructions.instructions.length-1].id;
