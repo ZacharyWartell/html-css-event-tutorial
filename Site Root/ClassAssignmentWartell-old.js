@@ -136,7 +136,7 @@ function collectionInstructions(section, sectionLabel) {
 
     const temp = "self"+Date.now().toString();
     section.id = temp;
-    let olList = section.querySelectorAll(":scope > ol.Instruction");
+    let olList = section.querySelectorAll(":scope > ol.Instruction, :scope > ul.Instruction");
     //section.id = "";
     if (olList !== null && olList.length !== 0) {
         for (let ol of olList) {
