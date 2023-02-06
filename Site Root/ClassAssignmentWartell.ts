@@ -5,22 +5,20 @@
  - http://creativecommons.org/licenses/by-nc-sa/4.0/
  */
 
+//export { class_onLoad };
 
 /**
  Misc. Global variables
  */
-var Global =
-    {
-        /**
-         * @brief directory for student being graded
-         * @type {string}
-         */
-        studentDirectory : "",
-        /**
-         * \todo make this configuration by application
-         */
-        visualStudio : "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\devenv.exe"
-    };
+/**
+ * @brief directory for student being graded
+ * @type {string}
+ */
+var studentDirectory : string;
+/**
+ * \todo make this configuration by application
+ */
+const visualStudio : string = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\devenv.exe"
 
 /*
  * @type {Readonly<{READ: symbol, TODO: symbol, OVERVIEW: symbol, GENERAL: symbol, QUESTION: symbol}>}
@@ -45,7 +43,7 @@ const Category = Object.freeze({
 });
  */
 
-function getCategoryFromClass(element : HTMLElement, returnNull : boolean) : Category {
+function getCategoryFromClass(element : HTMLElement, returnNull : boolean) : Category | null{
     if (element.className.includes("Instruction_Question"))
         return Category.QUESTION;
     if (element.className.includes("Instruction_Read"))
@@ -131,18 +129,14 @@ function roman_lower (n : number)
     const roman = [ 'i','ii','iii','iv','v','vi','vii','viii','ix','x'];
     return roman[n-1];
 }
-function itemString(L1 : number,L2 : number,L3 : number)
+function itemString(L1 : number,L2? : number,L3? : number) : string
 {
     const aCode = "a".charCodeAt(0);
-    switch(arguments.length)
-    {
-        case 1:
-            return L1.toString();
-        case 2:
-            return L1.toString() + "." + String.fromCharCode(aCode+L2-1);
-        case 3:
-            return L1.toString() + "." + String.fromCharCode(aCode+L2-1) + "." + roman_lower(L3);
-    }
+    let ret : string;
+    ret = L1.toString();
+    if (L2 !== undefined) ret += "." + String.fromCharCode(aCode+L2-1);
+    if (L3 !== undefined) ret += "." + roman_lower(L3);
+    return ret;
 }
 
 function itemID(sectionLabel : string,L1 : number,L2 : number,L3 : number) : string
@@ -217,7 +211,7 @@ function collectionInstructions(section : HTMLElement, sectionLabel : string) {
 export function class_onLoad() {
     // [STATUS=not deployed] work-in-progress
     {
-        Global.studentDirectory = localStorage.getItem('studentDirectory') || "";
+        studentDirectory = localStorage.getItem('studentDirectory') || "";
     }
 
     /*
@@ -367,9 +361,9 @@ export function class_onLoad() {
         (e) =>
         {
             console.log(e);
-            Global.studentDirectory = (<HTMLInputElement>e.target).value;//files[0].match(/(.*)[\/\\]/)[1] || '';
-            localStorage.setItem('studentDirectory', Global.studentDirectory);
-            console.log(Global.studentDirectory);
+            studentDirectory = (<HTMLInputElement>e.target).value;//files[0].match(/(.*)[\/\\]/)[1] || '';
+            localStorage.setItem('studentDirectory', studentDirectory);
+            console.log(studentDirectory);
         });
 
     return;
@@ -423,7 +417,7 @@ class GradingScript
         // bash script for automatically grading report and process
         const script=
 `#!/bin/bash
-DIR=\`cygpath -u "${Global.studentDirectory}"\`/${this.projectDirectory}
+DIR=\`cygpath -u "${studentDirectory}"\`/${this.projectDirectory}
 CATEGORY=${this.category}
 #echo Enter Student Directory:
 #read studentDir
@@ -483,7 +477,7 @@ if [[ $CATEGORY == "MSVSSolution" ]]; then
     echo '"solutionFile"' : "$SLN",			    >> $REC
     
     # open solution file in Visual Studio
-    start "${Global.visualStudio}" $SLN
+    start "${visualStudio}" $SLN
     
     # find all 'user' source code files
     CODE_FILES_CONDITION='-name "*.cs" ! -name "*.AssemblyInfo.cs"'				
