@@ -69,7 +69,7 @@ function getCategoryFromClass(element : HTMLElement, returnNull : boolean) : Cat
 class OptionSet
 {
     name : string;
-    options : array
+    options : string[];  // not sure what type I intended in original JS
     constructor(n)
     {
         this.name = n;
@@ -95,6 +95,7 @@ class Instruction {
     id : string;
     points : number;
     comment : string;
+    category : Category;
     constructor(s, n, sh, c) {
         this.section = s;
         this.number = n;
@@ -108,7 +109,7 @@ class Instruction {
 
 class Instructions
 {
-    instructions :  Instructions[];
+    instructions :  Instruction[];
     optionSets : OptionSet[];
 
     constructor()
@@ -160,12 +161,13 @@ function collectionInstructions(section : HTMLElement, sectionLabel : string) {
     let olList =  section.querySelectorAll(":scope > ol.Instruction, :scope > ul.Instruction");
     //section.id = "";
     if (olList !== null && olList.length !== 0) {
-        for (let ol : HTMLLIElement of olList) {
+        for (let ol of olList) {
             let li1List = ol.querySelectorAll(":scope > li");
-            let category = getCategoryFromClass(ol, false);
+            let category = getCategoryFromClass(<HTMLElement>ol, false);
 
             l1c = 1;
-            for (let li1 of li1List) {
+            for (let li1_ of li1List) {
+                let  li1 : HTMLElement = <HTMLElement>li1_;
                 let tmp, cat = (tmp = getCategoryFromClass(li1, true)) !== null ? tmp : category;
 
                 if (tmp === Category.NON_RUBRIC)
@@ -173,25 +175,27 @@ function collectionInstructions(section : HTMLElement, sectionLabel : string) {
                 instructions.push(new Instruction(sectionLabel, itemString(l1c),
                     li1.innerText.trimStart().slice(0, 10) + " ...", cat));
                 li1.id = instructions.instructions [instructions.instructions.length-1].id;
-                let ol1 = li1.querySelector(":scope > ol");
-                if (ol1 !== null && ol1.length !== 0) {
+                let ol1 : HTMLElement = li1.querySelector(":scope > ol");
+                if (ol1 !== null) { //&& ol1.length !== 0) {
                     let category1 = getCategoryFromClass(ol1, false);
 
                     let li2List = ol1.querySelectorAll(":scope > li"); // only children, no nested descendants
                     l2c = 1;
-                    for (let li2 of li2List) {
+                    for (let li2_ of li2List) {
+                        const li2 : HTMLElement = <HTMLElement> li2_;
                         let tmp, cat = (tmp = getCategoryFromClass(li2, true)) !== null ? tmp : category1;
 
                         instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c ,l2c),
                             li2.innerText.trimStart().slice(0, 10) + " ...",  cat));
                         li2.id = instructions.instructions[instructions.instructions.length-1].id;
-                        let ol2 = li2.querySelector(":scope > ol");
-                        if (ol2 !== null && ol2.length !== 0) {
+                        let ol2 : HTMLOListElement = <HTMLOListElement> li2.querySelector(":scope > ol");
+                        if (ol2 !== null){// && ol2.length !== 0) {
                             let category2 = getCategoryFromClass(ol2, false);
 
                             let li3List = ol2.querySelectorAll(":scope > li"); // only children, no nested descendants
                             l3c = 1;
-                            for (let li3 of li3List) {
+                            for (let li3_ of li3List) {
+                                const li3 : HTMLOListElement = <HTMLOListElement> li3_;
                                 let tmp, cat = (tmp = getCategoryFromClass(li3, true)) !== null ? tmp : category2;
 
                                 instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c , l2c ,l3c),
@@ -210,7 +214,7 @@ function collectionInstructions(section : HTMLElement, sectionLabel : string) {
 
 }
 
-function class_onLoad() {
+export function class_onLoad() {
     // [STATUS=not deployed] work-in-progress
     {
         Global.studentDirectory = localStorage.getItem('studentDirectory') || "";
@@ -221,11 +225,12 @@ function class_onLoad() {
      */
     if (false) {
         let totalTTRs = document.querySelectorAll("td.Time_To_Read_Total");
-        for (let tttr : HTMLTableDataCellElement of totalTTRs) {
-            const sum = computeTimeToRead(tttr.parentElement.parentElement.parentElement.nextElementSibling);
-            const span = tttr.querySelector(":scope > span")
+        for (let tttr_ of totalTTRs) {
+            const tttr : HTMLTableCellElement = <HTMLTableCellElement> tttr_;
+            const sum = computeTimeToRead(<HTMLHeadElement>tttr.parentElement.parentElement.parentElement.nextElementSibling);
+            const span : HTMLSpanElement = <HTMLSpanElement> tttr.querySelector(":scope > span")
             console.assert(span != null);
-            span.innerText = sum;
+            span.innerText = sum.toString();
         }
     }
 
@@ -302,13 +307,13 @@ function class_onLoad() {
                  <td><input type="text"></td>`;
         prevSection = instruction.section;
         row.querySelector('input[type="text"]').addEventListener('input',
-            (e) =>
+            (e : Event) =>
             {
-                const itemID=e.srcElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.querySelector('a').getAttribute('href');
-                const rowIndex=parseInt(e.srcElement.parentElement.parentElement.getAttribute("data-ri"));
+                const itemID=(<HTMLInputElement>(e.target)).parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.querySelector('a').getAttribute('href');
+                const rowIndex=parseInt((<HTMLInputElement>(e.target)).parentElement.parentElement.getAttribute("data-ri"));
                 console.log(itemID.slice(1) + ":" + rowIndex + ":" + e);
                 console.log(instructions.instructions[rowIndex]);
-                instructions.instructions[rowIndex].comment = e.srcElement.valueOf().value;
+                instructions.instructions[rowIndex].comment = (<HTMLInputElement>(e.target)).value;
             });
         rubric.append(row);
         ri++;
@@ -323,7 +328,7 @@ function class_onLoad() {
         let url = URL.createObjectURL(new Blob([rubricTable_xmls], {type: 'application/xml; charset=UTF-16'}));
 
         // create button to open new browser tab with .xml file
-        document.querySelector("#CreateGradingRubricXML").onclick = () => {
+        (<HTMLElement> document.querySelector("#CreateGradingRubricXML")).onclick = () => {
             window.open(url);
         };
 
@@ -345,7 +350,7 @@ function class_onLoad() {
         let url = URL.createObjectURL(new Blob([rubricTable_json], {type: 'text/plain; charset=UTF-16'}));
 
         // create button to open new browser tab with .json file
-        document.querySelector("#CreateGradingRubricJSON").onclick = () => {
+        (<HTMLElement> document.querySelector("#CreateGradingRubricJSON")).onclick = () => {
             window.open(url);
         };
 
@@ -362,7 +367,7 @@ function class_onLoad() {
         (e) =>
         {
             console.log(e);
-            Global.studentDirectory = e.target.value;//files[0].match(/(.*)[\/\\]/)[1] || '';
+            Global.studentDirectory = (<HTMLInputElement>e.target).value;//files[0].match(/(.*)[\/\\]/)[1] || '';
             localStorage.setItem('studentDirectory', Global.studentDirectory);
             console.log(Global.studentDirectory);
         });
@@ -374,8 +379,9 @@ function computeTimeToRead(h2Element : HTMLHeadElement)
 {
     const parts=h2Element.parentElement.querySelectorAll(":scope section > table.SectionRubric > tbody > tr:nth-of-type(1) > td:nth-of-type(2)")
     let sum : number = 0
-    for (let td : HTMLTableDataCellElement of parts)
+    for (let td_ of parts)
     {
+        const td : HTMLTableDataCellElement = <HTMLTableCellElement> td_;
         const i = parseInt(td.innerText.slice(8).split(' ')[0]);
         sum += i;
     }
