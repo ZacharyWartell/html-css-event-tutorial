@@ -27,7 +27,8 @@ var Category;
     Category[Category["READ"] = 2] = "READ";
     Category[Category["TODO"] = 3] = "TODO";
     Category[Category["OVERVIEW"] = 4] = "OVERVIEW";
-    Category[Category["NON_RUBRIC"] = 5] = "NON_RUBRIC";
+    Category[Category["SECTION"] = 5] = "SECTION";
+    Category[Category["NON_RUBRIC"] = 6] = "NON_RUBRIC";
 })(Category || (Category = {}));
 /*
 const Category = Object.freeze({
@@ -52,6 +53,8 @@ function getCategoryFromClass(element, returnNull) {
         return Category.NON_RUBRIC;
     if (element.className.includes("Instruction_General"))
         return Category.GENERAL;
+    if (element.className.includes("Instruction_Section"))
+        return Category.SECTION;
     if (returnNull)
         return null;
     else
@@ -75,13 +78,14 @@ class OptionSet {
            static TODO = 3;
     };*/
 class Instruction {
-    constructor(s, n, sh, c) {
+    constructor(s, n, sh, c, pf = 0) {
         this.section = s;
         this.number = n;
         this.short = sh;
         this.category = c;
         this.id = "Section_" + (s + "_Item_" + n).replace(/\./g, '_');
         this.points = 0;
+        this.pointFraction = pf;
         this.comment = "";
     }
 }
@@ -118,6 +122,10 @@ function itemID(sectionLabel, L1, L2, L3) {
 }
 function collectionInstructions(section, sectionLabel) {
     let l1c = 1, l2c = 1, l3c = 1;
+    const h = section.querySelector(":scope > h1, :scope > h2, :scope > h3");
+    instructions.push(new Instruction(sectionLabel, "", h.innerText.trimStart().slice(0, 10) + " ...", Category.SECTION, section.dataset.pointFraction !== undefined ? parseInt(section.dataset.pointFraction) : 0));
+    section.id = instructions.instructions[instructions.instructions.length - 1].id;
+    const nInstructions = instructions.instructions.length;
     const temp = "self" + Date.now().toString();
     section.id = temp;
     let olList = section.querySelectorAll(":scope > ol.Instruction, :scope > ul.Instruction");
@@ -127,32 +135,35 @@ function collectionInstructions(section, sectionLabel) {
             let li1List = ol.querySelectorAll(":scope > li");
             let category = getCategoryFromClass(ol, false);
             l1c = 1;
+            const equalFraction1 = 1.0 / li1List.length * 100;
             for (let li1_ of li1List) {
                 let li1 = li1_;
                 let tmp, cat = (tmp = getCategoryFromClass(li1, true)) !== null ? tmp : category;
                 if (tmp === Category.NON_RUBRIC)
                     continue;
-                instructions.push(new Instruction(sectionLabel, itemString(l1c), li1.innerText.trimStart().slice(0, 10) + " ...", cat));
+                instructions.push(new Instruction(sectionLabel, itemString(l1c), li1.innerText.trimStart().slice(0, 10) + " ...", cat, li1.dataset.pointFraction !== undefined ? parseInt(li1.dataset.pointFraction) : equalFraction1));
                 li1.id = instructions.instructions[instructions.instructions.length - 1].id;
                 let ol1 = li1.querySelector(":scope > ol");
                 if (ol1 !== null) { //&& ol1.length !== 0) {
                     let category1 = getCategoryFromClass(ol1, false);
                     let li2List = ol1.querySelectorAll(":scope > li"); // only children, no nested descendants
                     l2c = 1;
+                    const equalFraction2 = 1.0 / li2List.length * 100;
                     for (let li2_ of li2List) {
                         const li2 = li2_;
                         let tmp, cat = (tmp = getCategoryFromClass(li2, true)) !== null ? tmp : category1;
-                        instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c, l2c), li2.innerText.trimStart().slice(0, 10) + " ...", cat));
+                        instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c, l2c), li2.innerText.trimStart().slice(0, 10) + " ...", cat, li2.dataset.pointFraction !== undefined ? parseInt(li2.dataset.pointFraction) : equalFraction2));
                         li2.id = instructions.instructions[instructions.instructions.length - 1].id;
                         let ol2 = li2.querySelector(":scope > ol");
                         if (ol2 !== null) { // && ol2.length !== 0) {
                             let category2 = getCategoryFromClass(ol2, false);
                             let li3List = ol2.querySelectorAll(":scope > li"); // only children, no nested descendants
                             l3c = 1;
+                            const equalFraction3 = 1.0 / li3List.length * 100;
                             for (let li3_ of li3List) {
                                 const li3 = li3_;
                                 let tmp, cat = (tmp = getCategoryFromClass(li3, true)) !== null ? tmp : category2;
-                                instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c, l2c, l3c), li3.innerText.trimStart().slice(0, 10) + " ...", cat));
+                                instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c, l2c, l3c), li3.innerText.trimStart().slice(0, 10) + " ...", cat, li3.dataset.pointFraction !== undefined ? parseInt(li3.dataset.pointFraction) : equalFraction3));
                                 li3.id = instructions.instructions[instructions.instructions.length - 1].id;
                                 l3c++;
                             }
@@ -164,6 +175,9 @@ function collectionInstructions(section, sectionLabel) {
             }
         }
     }
+    // remove section if it contains no <ol class=Instruction>
+    if (nInstructions === instructions.instructions.length)
+        instructions.instructions.pop();
 }
 export function class_onLoad() {
     // [STATUS=not deployed] work-in-progress
@@ -192,7 +206,9 @@ export function class_onLoad() {
     h1c = 1;
     for (let h1 of h1List) {
         console.assert(h1.parentElement.tagName === "SECTION");
+        const h1InstructionCount = instructions.instructions.length;
         collectionInstructions(h1.parentElement, h1c.toString());
+        const h1NoInstructions = h1InstructionCount === instructions.instructions.length;
         let parent = h1.parentElement;
         let selfIndex = [].slice.call(parent.children).indexOf(h1) + 1;
         let h2List = parent.querySelectorAll(":nth-child(" + selfIndex + ") ~ section > h2");
@@ -200,7 +216,9 @@ export function class_onLoad() {
             h2c = 1;
             for (let h2 of h2List) {
                 console.assert(h2.parentElement.tagName === "SECTION");
+                const h2InstructionCount = instructions.instructions.length;
                 collectionInstructions(h2.parentElement, h1c.toString() + "." + h2c.toString());
+                const h2NoInstructions = h2InstructionCount === instructions.instructions.length;
                 let parent = h2.parentElement;
                 let selfIndex = [].slice.call(parent.children).indexOf(h2) + 1;
                 let h3List = parent.querySelectorAll(":nth-child(" + selfIndex + ") ~ section > h3");
@@ -208,11 +226,34 @@ export function class_onLoad() {
                     h3c = 1;
                     for (let h3 of h3List) {
                         console.assert(h3.parentElement.tagName === "SECTION");
+                        const h3InstructionCount = instructions.instructions.length;
                         collectionInstructions(h3.parentElement, h1c.toString() + "." + h2c.toString() + "." + h3c.toString());
+                        const h3NoInstructions = h3InstructionCount === instructions.instructions.length;
+                        if (h3NoInstructions && instructions.instructions.length != h3InstructionCount) {
+                            instructions.instructions.push(instructions.instructions[instructions.instructions.length - 1]);
+                            instructions.instructions.copyWithin(h3InstructionCount, h3InstructionCount - 1, instructions.instructions.length - 2);
+                            const section = h3.parentElement;
+                            instructions.instructions[h3InstructionCount] = new Instruction(h1c.toString() + "." + h2c.toString() + "." + h3c.toString(), "", h3.innerText.trimStart().slice(0, 10) + " ...", Category.SECTION, section.dataset.pointFraction !== undefined ? parseInt(section.dataset.pointFraction) : 0);
+                            section.id = instructions.instructions[h3InstructionCount].id;
+                        }
                         h3c++;
                     }
                 }
+                if (h2NoInstructions && instructions.instructions.length != h2InstructionCount) {
+                    instructions.instructions.push(instructions.instructions[instructions.instructions.length - 1]);
+                    instructions.instructions.copyWithin(h2InstructionCount, h2InstructionCount - 1, instructions.instructions.length - 2);
+                    const section = h2.parentElement;
+                    instructions.instructions[h2InstructionCount] = new Instruction(h1c.toString() + "." + h2c.toString(), "", h2.innerText.trimStart().slice(0, 10) + " ...", Category.SECTION, section.dataset.pointFraction !== undefined ? parseInt(section.dataset.pointFraction) : 0);
+                    section.id = instructions.instructions[h2InstructionCount].id;
+                }
                 h2c++;
+            }
+            if (h1NoInstructions && instructions.instructions.length != h1InstructionCount) {
+                instructions.instructions.push(instructions.instructions[instructions.instructions.length - 1]);
+                instructions.instructions.copyWithin(h1InstructionCount, h1InstructionCount - 1, instructions.instructions.length - 2);
+                const section = h1.parentElement;
+                instructions.instructions[h1InstructionCount] = new Instruction(h1c.toString(), "", h1.innerText.trimStart().slice(0, 10) + " ...", Category.SECTION, section.dataset.pointFraction !== undefined ? parseInt(section.dataset.pointFraction) : 0);
+                section.id = instructions.instructions[h1InstructionCount].id;
             }
         }
         if (h1.className !== "nocount")
@@ -235,9 +276,10 @@ export function class_onLoad() {
             row.innerHTML =
                 `<td class="Empty"></td>
                  <td>${instruction.number}</td>
-				 <td>${instruction.category.toString().replace(REGEX, '$1')}</td>
+				 <td>${Category[instruction.category].toLowerCase()}</td>
 				 <td><a href="#${instruction.id}">${instruction.short}</a></td>
                  <td><input type="checkbox" id="#CB_${instruction.id}" name="scales"></td>
+                 <td>${instruction.pointFraction.toFixed(0)}</td>
                  <td></td>
                  <td></td>
                  <td><input type="text"></td>`;
@@ -245,9 +287,10 @@ export function class_onLoad() {
             row.innerHTML =
                 `<td>${instruction.section}</td>
 				 <td>${instruction.number}</td>
-				 <td>${instruction.category.toString().replace(REGEX, '$1')}</td>
+				 <td>${Category[instruction.category].toLowerCase()}</td>
 				 <td><a href="#${instruction.id}">${instruction.short}</a></td>
                  <td><input type="checkbox" id="#CB_${instruction.id}" name="scales"></td>
+                 <td>${instruction.pointFraction.toFixed(0)}</td>
                  <td></td>
                  <td></td>
                  <td><input type="text"></td>`;
