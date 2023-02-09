@@ -59,10 +59,8 @@
     <script type="text/javascript" src="./libs/jquery-3.1.0.js"></script>
     <script type="text/javascript" src="./libs/toc.min.js"></script>
     <!--
-    <script language="JavaScript" type="module" src="main.js"></script>
-    <script src="ClassAssignmentWartell.js" type="text/javascript"></script>
-    -->
-    <script lang="text/javascript" type="module">
+    <script language="JavaScript" type="module" src="main.js"></script>    <script src="ClassAssignmentWartell.js" type="text/javascript"></script>    -->
+    <script type="module" lang="text/javascript">
         import {class_onLoad} from "./ClassAssignmentWartell.js";
 
         export function onload_Body() {
@@ -94,9 +92,7 @@
     </script>
   </head>
   <!--
-  <body onload="onload_Body();">
-  -->
-  <body>
+  <body onload="onload_Body();">  --> <body>
     <!-- w3.css stuff I experimented with
 <div  style="top: 112px;"  class="w3-sidenav w3-collapse w3-slim"  id="sidenav">      <div  style="padding-top: 112px;"  id="leftmenuinner">        <div  class="w3-light-grey"  id="leftmenuinnerinner"> <a  href="javascript:void(0)"  onclick="close_menu()"  class="w3-closebtn w3-hide-large w3-large"             style="padding:3px 12px;">×</a> </div>      </div>    </div>    <div  class="w3-main w3-light-grey"  id="belowtopnav"  style="margin-left: 220px; padding-top: 0px;">      <div  class="w3-row w3-white">        <div  class="w3-col l10 m12"  id="main">          -->
     <!-- IF_TOC -->
@@ -194,19 +190,20 @@
           </p>
           <!--- cleanup start -->
           <ol class="Instruction">
-            <li class="Instruction_Todo">Create a Git repository called <span class="File_Name"><span data-course-number="">6120</span>-HTML-Tutorial</span>on
-              the course's designated Git server following the guidelines
-              prescribed for the course.&nbsp;&nbsp; (Recall <a target="_blank"
+            <li class="Instruction_Todo">Create a Git repository called <span class="File_Name"><span
 
-                href="https://zwartell.gitlab.io/Git_Tutorial_and_Coding_Standards/Git%20Tutorial.html#How_to_Create_New_Remote_Repository">How
+                  data-course-number="">6120</span>-HTML-Tutorial</span>on the
+              course's designated Git server following the guidelines prescribed
+              for the course.&nbsp;&nbsp; (Recall <a target="_blank" href="https://zwartell.gitlab.io/Git_Tutorial_and_Coding_Standards/Git%20Tutorial.html#How_to_Create_New_Remote_Repository">How
                 to Create New Remote Repository</a> in the earlier <a target="_blank"
 
                 href="https://zwartell.gitlab.io/Git_Tutorial_and_Coding_Standards/Git%20Tutorial.html">Git
                 Tutorial and "Coding" Standards</a>). <br>
               <a target="_blank" href="https://zwartell.gitlab.io/Git_Tutorial_and_Coding_Standards/Git%20Tutorial.html"></a><br>
             </li>
-            <li class="Instruction_Todo">If you have not already done so, create the following directory
-              for your <span data-course-number="">6120</span> course work:<br>
+            <li class="Instruction_Todo">If you have not already done so, create
+              the following directory for your <span data-course-number="">6120</span>
+              course work:<br>
               <table class="Code_Example" id="Code_Example0_0">
                 <tbody>
                   <tr>
@@ -232,9 +229,8 @@
                             <img src="images/image001.png" alt="Text Box: $ mkdir ITCS_<span data-course-number="">6120<span>lucretius@monad42 ~/ITCS_<span data-course-number="">6120<span>$ cd ITCS_<span data-course-number="">6120<span> height="69" width="566">          -->
               <br>
             </li>
-            <li class="Instruction_Todo"> Clone your repo and enter the created directory.&nbsp;&nbsp; <span
-
-                class="Highlight"></span> <br>
+            <li class="Instruction_Todo"> Clone your repo and enter the created
+              directory.&nbsp;&nbsp; <span class="Highlight"></span> <br>
               <table class="Code_Example" id="Code_Example1_0">
                 <tbody>
                   <tr>
@@ -264,17 +260,19 @@
               <!--
                               <img src="images/image002.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120<span>              height="103" width="618">             -->
             </li>
-            <li class="Instruction_Todo">Inside the <span class="ProgramName"><span data-course-number="">6120</span>-HTML-Tutorial
-                </span>directory create a text file called <span class="ProgramName">README.md</span>.&nbsp;
+            <li class="Instruction_Todo">Inside the <span class="ProgramName"><span
+
+                  data-course-number="">6120</span>-HTML-Tutorial </span>directory
+              create a text file called <span class="ProgramName">README.md</span>.&nbsp;
               Add your name on the <u>first</u> line of the file.&nbsp;&nbsp; <br>
               <br>
               Git commit the file with the commit message "initial README.md" <br>
               <br>
             </li>
-            <li class="Instruction_Todo">Inside the above directory create a second text file called <span
-
-                class="ProgramName">Questions.txt. A</span>dd your name on the <u>first</u>
-              line of the file.&nbsp;&nbsp; <br>
+            <li class="Instruction_Todo">Inside the above directory create a
+              second text file called <span class="ProgramName">Questions.txt.
+                A</span>dd your name on the <u>first</u> line of the
+              file.&nbsp;&nbsp; <br>
               <br>
               Git commit the file with the commit message "initial
               Questions.txt" <br>
@@ -288,7 +286,8 @@
         <section data-point-fraction="50">
           <h2>Setup for Chrome and Chrome DevTools</h2>
           <ol class="Instruction">
-            <li class="Instruction_Todo">Download and install the Chrome browser <a target="_blank" href="https://www.google.com/chrome">https://www.google.com/chrome</a></li>
+            <li class="Instruction_Todo">Download and install the Chrome browser
+              <a target="_blank" href="https://www.google.com/chrome">https://www.google.com/chrome</a></li>
           </ol>
         </section>
         <section>
@@ -298,10 +297,11 @@
             a <b><u>required</u></b> part of the assignment.&nbsp;&nbsp; It
             also introduces you to good git practices.</p>
           <ol class="Instruction">
-            <li class="Instruction_Non_Rubric">For a given exercise that includes specific git commit
-              instructions, if there is not at least 1 git commit message
-              associated with that exercise, 1 point will be subtracted for
-              "poor software development practices" for that exercise.&nbsp;<br>
+            <li class="Instruction_Non_Rubric">For a given exercise that
+              includes specific git commit instructions, if there is not at
+              least 1 git commit message associated with that exercise, 1 point
+              will be subtracted for "poor software development practices" for
+              that exercise.&nbsp;<br>
               <br>
               The student’s commit message need not be a verbatim copy of the
               commit message given in the exercise’s instructions, but it should
@@ -319,18 +319,20 @@
               Finally, extra commit's are perfectly fine and common practice,
               such for fixing other types of coding mistakes, etc.<br>
             </li>
-            <li class="Instruction_Non_Rubric">For exercises that require students modify code already given to
-              you, if only the original example code is committed with no change
-              &amp; there is no evidence from the student (documentation, notes,
-              etc) of trying to solve the exercise, then minimal points will be
-              awarded for that exercise. </li>
+            <li class="Instruction_Non_Rubric">For exercises that require
+              students modify code already given to you, if only the original
+              example code is committed with no change &amp; there is no
+              evidence from the student (documentation, notes, etc) of trying to
+              solve the exercise, then minimal points will be awarded for that
+              exercise. </li>
           </ol>
           <p> The complete grading Rubric is available on Canvas.</p>
         </section>
       </section>
       <section data-point-fraction="50">
         <h1 id="Part2_OptionI">Part 2:Option I - HTML, CSS, Event Handling</h1>
-            Part 2 : Option I is series of readning and exercises form the MDN doc's on HTML, CSS and event handling.
+        Part 2 : Option I is series of readning and exercises form the MDN doc's
+        on HTML, CSS and event handling.
         <section data-point-fraction="33.3">
           <h2>Overview of HTML</h2>
           <p>Go to the MDN page <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.&nbsp;&nbsp;
@@ -354,10 +356,10 @@
               to your git repository. </li>
           </ul>
           <section>
-          <h3>Introduction to HTML</h3>
-          <p>From the index, follow the link <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction
-              to HTML overview</a>.&nbsp;&nbsp;&nbsp; Read <u>just</u> the
-            first paragraph of this page. </p>
+            <h3>Introduction to HTML</h3>
+            <p>From the index, follow the link <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction
+                to HTML overview</a>.&nbsp;&nbsp;&nbsp; Read <u>just</u> the
+              first paragraph of this page. </p>
           </section>
           <section data-point-fraction="33.3">
             <h3>Getting Started with HTML</h3>
@@ -1181,11 +1183,11 @@
           <section data-point-fraction="50">
             <h3><a id="_Ref523574167">What is JavaScript</a></h3>
             <p>Goto topic <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What
-              is JavaScript?</a> </p>
+                is JavaScript?</a> </p>
             <ol class="Instruction">
               <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#a_high-level_definitionhttps://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#a_high-level_definition"><span
 
-                      class="MDN_h2">A high-level definition</span></a> - read
+                    class="MDN_h2">A high-level definition</span></a> - read
                 all.&nbsp; When you reach each Active Learning exercise perform
                 the exercise with the instruction modifications listed below: <br>
                 <br>
@@ -1195,22 +1197,22 @@
                       <li>Create a sub-directory:<br>
                         <table class="Code_Example">
                           <tbody>
-                          <tr>
-                            <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                              ▽ </button> </td>
-                            <td>
-                              <div style="height: 40px;"><code class="Shell_Code_Output">
-                                lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
+                            <tr>
+                              <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                                  ▽ </button> </td>
+                              <td>
+                                <div style="height: 40px;"><code class="Shell_Code_Output">
+                                    lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
 
                                       data-course-number="">6120</span>-HTML-Tutorial<br>
-                              </code> <code class="Shell_Code_Input"> $
-                                mkdir javascript-label<br>
-                              </code>
-                                <!--
+                                  </code> <code class="Shell_Code_Input"> $
+                                    mkdir javascript-label<br>
+                                  </code>
+                                  <!--
                                                                                       <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>                          --->
-                              </div>
-                            </td>
-                          </tr>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                         <!--
@@ -1235,7 +1237,7 @@
               </li>
               <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#so_what_can_it_really_do"><span
 
-                      class="MDN_h2">So what can it really do?</span></a> - read
+                    class="MDN_h2">So what can it really do?</span></a> - read
                 all.<br>
                 <ol>
                   <li class="Instruction_Todo"><u>Exercise [third-party-apis]</u>:
@@ -1254,7 +1256,7 @@
                 </ol>
               </li>
               <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#so_what_can_it_really_do">What
-                is JavaScript doing on your page?</a>- read all<br>
+                  is JavaScript doing on your page?</a>- read all<br>
                 <ol start="1" type="a">
                   <li class="Instruction_Todo"><u>Exercise [what-is-JS]</u>:
                     <ol>
@@ -1279,7 +1281,7 @@
               </li>
               <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#how_do_you_add_javascript_to_your_pagehttps://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#how_do_you_add_javascript_to_your_page"><span
 
-                      class="MDN_h2">How do you add JavaScript to your page?</span></a>
+                    class="MDN_h2">How do you add JavaScript to your page?</span></a>
                 - read up to but not including "Script loading
                 strategies".&nbsp; When you reach each Active Learning exercise
                 perform the exercise with the instruction modifications listed
@@ -1293,22 +1295,22 @@
                       <li>Create a sub-directory:<br>
                         <table class="Code_Example">
                           <tbody>
-                          <tr>
-                            <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                              ▽ </button> </td>
-                            <td>
-                              <div style="height: 40px;"><code class="Shell_Code_Output">
-                                lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
+                            <tr>
+                              <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                                  ▽ </button> </td>
+                              <td>
+                                <div style="height: 40px;"><code class="Shell_Code_Output">
+                                    lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
 
                                       data-course-number="">6120</span>-HTML-Tutorial<br>
-                              </code> <code class="Shell_Code_Input"> $
-                                mkdir internal-javascript<br>
-                              </code>
-                                <!--
+                                  </code> <code class="Shell_Code_Input"> $
+                                    mkdir internal-javascript<br>
+                                  </code>
+                                  <!--
                                                                                       <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>                          --->
-                              </div>
-                            </td>
-                          </tr>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                         <!--
@@ -1329,22 +1331,22 @@
                       <li>Create a sub-directory:<br>
                         <table class="Code_Example">
                           <tbody>
-                          <tr>
-                            <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
-                              ▽ </button> </td>
-                            <td>
-                              <div style="height: 40px;"><code class="Shell_Code_Output">
-                                lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
+                            <tr>
+                              <td> <button onclick="Code_Example_Toggle('Code_Example3_0');">
+                                  ▽ </button> </td>
+                              <td>
+                                <div style="height: 40px;"><code class="Shell_Code_Output">
+                                    lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
 
                                       data-course-number="">6120</span>-HTML-Tutorial<br>
-                              </code> <code class="Shell_Code_Input"> $
-                                mkdir external-javascript<br>
-                              </code>
-                                <!--
+                                  </code> <code class="Shell_Code_Input"> $
+                                    mkdir external-javascript<br>
+                                  </code>
+                                  <!--
                                                                                       <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>                          --->
-                              </div>
-                            </td>
-                          </tr>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                         <!--
@@ -1363,11 +1365,11 @@
                 </ol>
               </li>
               <li class="Instruction_Read"><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#comments">
-                <span class="MDN_h2">Comments</span></a> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#summaryhttps://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#summary">
-              </a> - read all. </li>
+                  <span class="MDN_h2">Comments</span></a> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#summaryhttps://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#summary">
+                </a> - read all. </li>
               <li class="Instruction_Read"><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#summaryhttps://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#summary"><span
 
-                      class="MDN_h2">Summary</span></a> - read all. </li>
+                    class="MDN_h2">Summary</span></a> - read all. </li>
             </ol>
             <p>This introduction to JavaScript should be enough in order to
               complete the rest of this tutorial.&nbsp;&nbsp; A later tutorial
@@ -1464,7 +1466,8 @@
                       </span></span>directory.&nbsp;&nbsp; Make the additional
                     listeners do something that is visible in the browser.<br>
                     <br>
-                    Git commit with message "-exercise: multiple listeners" </li>
+                    Git commit with message "-exercise: multiple
+                    listeners" </li>
                 </ol>
                 <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#other_event_listener_mechanisms"><span
 
@@ -1531,19 +1534,23 @@
                         <!--
                                                               <img src="images/image016.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial        $ mkdir useful-eventtarget" height="54" width="566">-->
                       </li>
-                      <li class="Instruction_Todo">Perform the MDN exercises in the sub-section <br>
+                      <li class="Instruction_Todo">Perform the MDN exercises in
+                        the sub-section <br>
                         <br>
                         Git commit with message "-exercise: event-object<br>
                         <br>
                       </li>
-                      <li class="Instruction_Todo">Modify the code to render 32 clickable squares instead
-                        of 16.&nbsp;&nbsp;&nbsp; Also, make any other minor
-                        change your feel like making to the rendering of the
-                        squares.<br>
+                      <li class="Instruction_Todo"><ins>Motify the code to show
+                          a border of a few pixels on the button and also
+                          randomly change the border color on each button click.
+                        </ins><del>Modify the code to render 32 clickable
+                          squares instead of 16.&nbsp;&nbsp;&nbsp; Also, make
+                          any other minor change your feel like making to the
+                          rendering of the squares.</del><br>
                         <br>
                       </li>
-                      <li class="Instruction_Todo">Git commit the file(s) with message:&nbsp;&nbsp;
-                        "-playing :)<br>
+                      <li class="Instruction_Todo">Git commit the file(s) with
+                        message:&nbsp;&nbsp; "-playing :)<br>
                         <br>
                       </li>
                     </ol>
@@ -1577,18 +1584,19 @@
                         <!--
                                                               <img src="images/image017.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial          $ mkdir show-video-box" height="54" width="566">-->
                       </li>
-                      <li class="Instruction_Todo">Move the file(s) for the above exercise into the above
-                        sub-directory.&nbsp; Verify it displays correctly in
-                        Chrome. <br>
+                      <li class="Instruction_Todo">Move the file(s) for the
+                        above exercise into the above sub-directory.&nbsp;
+                        Verify it displays correctly in Chrome. <br>
                         <br>
                       </li>
-                      <li class="Instruction_Todo">Git commit the file(s) with message:<br>
+                      <li class="Instruction_Todo">Git commit the file(s) with
+                        message:<br>
                         <br>
                         &nbsp; "-imported show-video-box<br>
                         <br>
                       </li>
-                      <li class="Instruction_Todo">Fix the bug as describe in the "Event bubbling and
-                        capture" section. </li>
+                      <li class="Instruction_Todo">Fix the bug as describe in
+                        the "Event bubbling and capture" section. </li>
                       <li class="Instruction_Todo">Git commit the file(s) with
                         message:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         "-bug fix!<br>
@@ -1603,8 +1611,8 @@
                 perform the exercise with the instruction modifications listed
                 below<u>:</u>
                 <ol>
-                  <li class="Instruction_Todo"><u>Exercise [extra properties]</u>:&nbsp; Experiment with
-                    the embedded interactive editor exercise<br>
+                  <li class="Instruction_Todo"><u>Exercise [extra properties]</u>:&nbsp;
+                    Experiment with the embedded interactive editor exercise<br>
                     This exercise.does not require you add anything to your Git
                     repo. </li>
                   <li class="Instruction_Todo"><u>Exercise [key events]</u>: <br>
@@ -1627,7 +1635,8 @@
                 inside the directory described below::<u><br>
                 </u>
                 <ol>
-                  <li class="Instruction_Todo"><u>Exercise</u>: [preventing-defaults]<br>
+                  <li class="Instruction_Todo"><u>Exercise</u>:
+                    [preventing-defaults]<br>
                     <ol>
                       <li class="Instruction_Todo">Create a sub-directory:<br>
                         <table class="Code_Example">
@@ -1647,9 +1656,9 @@
                           </tbody>
                         </table>
                       </li>
-                      <li class="Instruction_Todo">Put all the MDN's sections downloaded files in this
-                        directory and modified them as suggested by the MDN
-                        docs..<br>
+                      <li class="Instruction_Todo">Put all the MDN's sections
+                        downloaded files in this directory and modified them as
+                        suggested by the MDN docs..<br>
                         <br>
                         Git commit with
                         message:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1662,18 +1671,21 @@
               <li class="Instruction_Read"><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling">Event_Bubbling</a>
                 <!-- - \todo fix-me --> <br>
                 <ol>
-                  <li class="Instruction_Todo"><u>Exercise</u>: [parent-element]&nbsp; Read and do the
-                    exercise in MDN sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#setting_a_listener_on_a_parent_element">Setting_a_listener_on_a_parent_element</a><br>
+                  <li class="Instruction_Todo"><u>Exercise</u>:
+                    [parent-element]&nbsp; Read and do the exercise in MDN
+                    sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#setting_a_listener_on_a_parent_element">Setting_a_listener_on_a_parent_element</a><br>
                     <br>
                     This exercise does not require you add anything to your Git
                     repo. </li>
-                  <li class="Instruction_Todo"><u>Exercise</u>: [bubbling-example&nbsp; Read and do the
-                    exercise in MDN sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_example">Bubbling_example</a><br>
+                  <li class="Instruction_Todo"><u>Exercise</u>:
+                    [bubbling-example&nbsp; Read and do the exercise in MDN
+                    sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_example">Bubbling_example</a><br>
                     <br>
                     This exercise.does not require you add anything to your Git
                     repo. </li>
-                  <li class="Instruction_Todo"><u>Exercise</u>: [video-player]&nbsp; Read and do the
-                    exercise in MDN sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#video_player_example">Video_player_example.</a>
+                  <li class="Instruction_Todo"><u>Exercise</u>:
+                    [video-player]&nbsp; Read and do the exercise in MDN
+                    sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#video_player_example">Video_player_example.</a>
                     Then copy and paste the all example code into a working set
                     set of files called video-player.js, video-player.html, etc.
                     and organize them as follows:<br>
@@ -1696,23 +1708,26 @@
                           </tbody>
                         </table>
                       </li>
-                      <li class="Instruction_Todo"> Put all the file you created in the above directory
-                        and verify result web page works as expected in Chrome.<br>
+                      <li class="Instruction_Todo"> Put all the file you created
+                        in the above directory and verify result web page works
+                        as expected in Chrome.<br>
                         <br>
                         Git commit with
                         message:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         "-exercise: video-player" </li>
                     </ol>
                   </li>
-                  <li class="Instruction_Todo"><u>Exercise</u>: [stop-propagation]&nbsp; Read and do the
-                    exercise in MDN sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#fixing_the_problem_with_stoppropagation">Fixing_the_problem_with_stop_propagation.</a>
+                  <li class="Instruction_Todo"><u>Exercise</u>:
+                    [stop-propagation]&nbsp; Read and do the exercise in MDN
+                    sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#fixing_the_problem_with_stoppropagation">Fixing_the_problem_with_stop_propagation.</a>
                     Apply the discussed changes to your code in your <span class="File_Name">video-player</span>
                     directory. <br>
                     <br>
                     Git commit with message:&nbsp;&nbsp;&nbsp; "-exercise: fixed
                     propagation problem" </li>
-                  <li class="Instruction_Todo"><u>Exercise</u>: [event-capture]&nbsp; Read and do the
-                    exercise in MDN sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_capture">Event_capture.</a>
+                  <li class="Instruction_Todo"><u>Exercise</u>:
+                    [event-capture]&nbsp; Read and do the exercise in MDN
+                    sub-section <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_capture">Event_capture.</a>
                     <br>
                     <br>
                     This exercise does not require you add anything to your Git
@@ -1745,11 +1760,12 @@
                           </tbody>
                         </table>
                       </li>
-                      <li class="Instruction_Todo"> Place the downloaded files in this directory and
-                        perform any modifications described in the MDN docs. <br>
+                      <li class="Instruction_Todo"> Place the downloaded files
+                        in this directory and perform any modifications
+                        described in the MDN docs. <br>
                         Git commit with message: "-exercise: event-capture" </li>
-                      <li class="Instruction_Todo"> Modify the code to have 64 tiles (8 x 8) with each
-                        one 50px in height. <br>
+                      <li class="Instruction_Todo"> Modify the code to have 64
+                        tiles (8 x 8) with each one 50px in height. <br>
                         <br>
                         Git commit with message: "-changed to 8 x 8 tiles" </li>
                     </ol>
@@ -1762,15 +1778,13 @@
           </section>
         </section>
       </section>
-      </section>
       <section data-point-fraction="5">
         <h1><a id="Part2_OptionII">Part 2: Option II - Description of Your Prior
             Experience in HTML, CSS and Event Handling<br>
           </a></h1>
-            Part 2 : Option II is only for students meeting
-            the criteria discussed in Section&nbsp;<a href="#Tutorial_Structure">Tutorial
-            Structure</a>.
-        In your previously created README.md file, add the following:
+        Part 2 : Option II is only for students meeting the criteria discussed
+        in Section&nbsp;<a href="#Tutorial_Structure">Tutorial Structure</a>. In
+        your previously created README.md file, add the following:
         <ol class="Instruction">
           <li>List all courses you already took or are currently taking where
             you learned HTML5, CSS, and Event Handling.<br>
@@ -1783,9 +1797,8 @@
       </section>
       <section data-point-fraction="40">
         <h1><a id="Part3">Part 3: Chrome DevTools</a></h1>
-        <p>Part 3 is required of all students.
-            Part 3 is series of readings and exercises from the Chrome DevTool doc's.
-        </p>
+        <p>Part 3 is required of all students. Part 3 is series of readings and
+          exercises from the Chrome DevTool doc's. </p>
         <section data-point-fraction="16.6">
           <h2>Panel Overview</h2>
           <!-- cleanup list start -->
@@ -1845,7 +1858,8 @@
                 multiple screenshots into a single .png, if you prefer).<br>
               </p>
               <ol>
-                <li class="Instruction_Todo">Create the following directory structure: <br>
+                <li class="Instruction_Todo">Create the following directory
+                  structure: <br>
                   <table class="Code_Example">
                     <tbody>
                       <tr>
@@ -1868,11 +1882,12 @@
                   <!--
                                             <img src="images/image018.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial        $ mkdir view-and-change-DOM" height="56" width="566">-->
                 </li>
-                <li class="Instruction_Todo">Move the png file(s) into this directory. <br>
+                <li class="Instruction_Todo">Move the png file(s) into this
+                  directory. <br>
                   <br>
                 </li>
-                <li class="Instruction_Todo">Git commit the above files with commit message&nbsp;
-                  "-exercise edit-the-dom" </li>
+                <li class="Instruction_Todo">Git commit the above files with
+                  commit message&nbsp; "-exercise edit-the-dom" </li>
               </ol>
             </li>
             <li class="Instruction_Todo"><a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/#console">Access
@@ -1912,8 +1927,8 @@
                   class="MDN_h2">View an element's CSS</span></a>- read all and
               ...<br>
               <ol>
-                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
-                  there is nothing to submit to git.<br>
+                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp;
+                  Do them all, but there is nothing to submit to git.<br>
                   <br>
                 </li>
               </ol>
@@ -1923,8 +1938,8 @@
                   class="MDN_h2">Add a CSS declaration to an element</span></a>
               - read all and ...<br>
               <ol>
-                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
-                  there is nothing to submit to git.<br>
+                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp;
+                  Do them all, but there is nothing to submit to git.<br>
                   <br>
                 </li>
               </ol>
@@ -1932,8 +1947,8 @@
             <li><span class="MDN_h2"><a target="_blank" href="https://developer.chrome.com/docs/devtools/css/#classes">Add
                   a CSS class to an element</a> </span>- read all and ..<br>
               <ol>
-                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
-                  there is nothing to submit to git.<br>
+                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp;
+                  Do them all, but there is nothing to submit to git.<br>
                   <br>
                 </li>
               </ol>
@@ -1943,8 +1958,8 @@
                   class="MDN_h2">Add a pseudostate to a class</span></a> - read
               all and ...<br>
               <ol>
-                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
-                  there is nothing to submit to git.<br>
+                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp;
+                  Do them all, but there is nothing to submit to git.<br>
                   <br>
                 </li>
               </ol>
@@ -1954,8 +1969,8 @@
                   class="MDN_h2">Change the dimensions of an element</span></a>
               - read all and ...<br>
               <ol>
-                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but
-                  there is nothing to submit to git. </li>
+                <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp;
+                  Do them all, but there is nothing to submit to git. </li>
               </ol>
             </li>
           </ol>
@@ -1983,7 +1998,8 @@
           <p>Go to <a target="_blank" href="https://developer.chrome.com/docs/devtools/console/log/">Log
               messages in the Console</a>.</p>
           <ol class="Instruction">
-            <li class="Instruction_Todo">First, prepare a git repo directory as follows:<br>
+            <li class="Instruction_Todo">First, prepare a git repo directory as
+              follows:<br>
               <u>Exercise</u>:<br>
               <br>
               Create the following directory structure: <br>
@@ -2012,34 +2028,39 @@
               <br>
               <br>
             </li>
-            <li class="Instruction_Todo"><span class="MDN_h2"><a target="_blank" href="https://developer.chrome.com/docs/devtools/console/log/#setup">Set
+            <li class="Instruction_Todo"><span class="MDN_h2"><a target="_blank"
+
+                  href="https://developer.chrome.com/docs/devtools/console/log/#setup">Set
                   up the demo and DevTools</a> - As described in this Chrome doc
                 article set up the demo and DevTools.&nbsp; R</span>ead and do
               all the exercises in this section.<br>
               <br>
             </li>
-            <li class="Instruction_Todo">Click the Settings Icon in the Console (<img src="images/image020.jpg"
-
-                height="22" width="28">).&nbsp;&nbsp; Enable the check box |<span
-
-                class="ProgramName">Preserve Log|.&nbsp;&nbsp; </span>Click the
-              Settings Icon again to close the Settings panel.<span class="ProgramName"><br>
+            <li class="Instruction_Todo">Click the Settings Icon in the Console
+              (<img src="images/image020.jpg" height="22" width="28">).&nbsp;&nbsp;
+              Enable the check box |<span class="ProgramName">Preserve
+                Log|.&nbsp;&nbsp; </span>Click the Settings Icon again to close
+              the Settings panel.<span class="ProgramName"><br>
                 <br>
               </span></li>
             <li class="Instruction_Todo"><u>Exercise [save-log]:</u>
               <ol>
-                <li class="Instruction_Todo">Return to the Console window and right click the mouse on
-                  any Console output line.&nbsp;&nbsp; A pop-up menu will list
-                  an option |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
-                  Select |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
-                  This opens a dialog box to save all the text that you typed in
-                  at the Console.&nbsp;&nbsp; <br>
+                <li class="Instruction_Todo">Return to the Console window and
+                  right click the mouse on any Console output line.&nbsp;&nbsp;
+                  A pop-up menu will list an option |<span class="ProgramName">Save
+                    As|</span>.&nbsp;&nbsp;&nbsp; Select |<span class="ProgramName">Save
+                    As|</span>.&nbsp;&nbsp;&nbsp; This opens a dialog box to
+                  save all the text that you typed in at the
+                  Console.&nbsp;&nbsp; <br>
                 </li>
-                <li class="Instruction_Todo">Save the file to the directory, <span class="ProgramName">get-started-console</span>
-                  that you created the directory earlier.<br>
+                <li class="Instruction_Todo">Save the file to the directory, <span
+
+                    class="ProgramName">get-started-console</span> that you
+                  created the directory earlier.<br>
                   <br>
                 </li>
-                <li class="Instruction_Todo">Verify the file is saved to the directory:<br>
+                <li class="Instruction_Todo">Verify the file is saved to the
+                  directory:<br>
                   <table class="Code_Example">
                     <tbody>
                       <tr>
@@ -2084,7 +2105,8 @@
                   <br>
                   <br>
                 </li>
-                <li class="Instruction_Todo">Git commit the above file(s) with commit message:<br>
+                <li class="Instruction_Todo">Git commit the above file(s) with
+                  commit message:<br>
                   <br>
                   "-exercise get-started-console #1<br>
                   <br>
@@ -2100,20 +2122,23 @@
               <ol>
                 <li class="Instruction_Todo"><u>Exercise [save log]</u>:
                   <ol>
-                    <li class="Instruction_Todo">Return to the Console window and right click the mouse
-                      on any Console output line. &nbsp;&nbsp;A pop-up menu will
-                      list an option |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
-                      Select |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
-                      This opens a dialog box to save all the text that you
-                      typed in at the Console.&nbsp;&nbsp; <br>
+                    <li class="Instruction_Todo">Return to the Console window
+                      and right click the mouse on any Console output line.
+                      &nbsp;&nbsp;A pop-up menu will list an option |<span class="ProgramName">Save
+                        As|</span>.&nbsp;&nbsp;&nbsp; Select |<span class="ProgramName">Save
+                        As|</span>.&nbsp;&nbsp;&nbsp; This opens a dialog box to
+                      save all the text that you typed in at the
+                      Console.&nbsp;&nbsp; <br>
                     </li>
-                    <li class="Instruction_Todo">Save the file to the directory, <span class="ProgramName">get-started-console</span>
-                      that you created the directory earlier.<br>
+                    <li class="Instruction_Todo">Save the file to the directory,
+                      <span class="ProgramName">get-started-console</span> that
+                      you created the directory earlier.<br>
                     </li>
-                    <li class="Instruction_Todo">Verify the file is saved to the directory (as discussed
-                      earlier)<br>
+                    <li class="Instruction_Todo">Verify the file is saved to the
+                      directory (as discussed earlier)<br>
                     </li>
-                    <li class="Instruction_Todo">Git commit the above file(s) with commit message:<br>
+                    <li class="Instruction_Todo">Git commit the above file(s)
+                      with commit message:<br>
                       <br>
                       "-exercise get-started-console #2<br>
                       <br>
@@ -2130,20 +2155,24 @@
               <ol>
                 <li class="Instruction_Todo"><u>Exercise [save log]</u>:<br>
                   <ol>
-                    <li class="Instruction_Todo">Return to the Console window and right click the mouse
-                      on any Console output line.&nbsp;&nbsp; A pop-up menu will
-                      list an option |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
+                    <li class="Instruction_Todo">Return to the Console window
+                      and right click the mouse on any Console output
+                      line.&nbsp;&nbsp; A pop-up menu will list an option |<span
+
+                        class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
                       Select |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
                       This opens a dialog box to save all the text that you
                       typed in at the Console.&nbsp;&nbsp; <br>
                     </li>
-                    <li class="Instruction_Todo">Save the file to the directory, <span class="ProgramName">get-started-console</span>
-                      that you created the directory earlier.<br>
+                    <li class="Instruction_Todo">Save the file to the directory,
+                      <span class="ProgramName">get-started-console</span> that
+                      you created the directory earlier.<br>
                     </li>
-                    <li class="Instruction_Todo">Verify the file is saved to the directory (as discussed
-                      earlier)<br>
+                    <li class="Instruction_Todo">Verify the file is saved to the
+                      directory (as discussed earlier)<br>
                     </li>
-                    <li class="Instruction_Todo">Git commit the above file(s) with commit message:<br>
+                    <li class="Instruction_Todo">Git commit the above file(s)
+                      with commit message:<br>
                       <br>
                       "-exercise get-started-console #3" </li>
                   </ol>
@@ -2151,7 +2180,9 @@
                 </li>
               </ol>
             </li>
-            <li class="Instruction_Read"><span class="MDN_h2"><a target="_blank" href="https://developer.chrome.com/docs/devtools/console/log/#drawer">Use
+            <li class="Instruction_Read"><span class="MDN_h2"><a target="_blank"
+
+                  href="https://developer.chrome.com/docs/devtools/console/log/#drawer">Use
                   the Console alongside any other panel</a> - </span>read all.
             </li>
           </ol>
@@ -2161,17 +2192,14 @@
           Go to <a target="_blank" href="https://developer.chrome.com/docs/devtools/console/javascript/">Run
             JavaScript in the Console</a>
           <ol class="Instruction">
-            <li class="Instruction_Todo">Click the Settings Icon in the Console (<img src="images/image020.jpg"
-
-                height="22" width="28">).&nbsp;&nbsp; Enable the check box <span
-
-                class="ProgramName">Preserve Log</span>, (if it’s not already
-              enabled)<span class="ProgramName">. </span>Click the Settings
-              Icon again to close the Settings panel. </li>
-            <li class="Instruction_Todo">Return to the "Console" window and right click the mouse on any
-              Console output line.&nbsp;&nbsp; In the pop-up menu, select <span
-
-                class="ProgramName">|Clear console|</span>.<br>
+            <li class="Instruction_Todo">Click the Settings Icon in the Console
+              (<img src="images/image020.jpg" height="22" width="28">).&nbsp;&nbsp;
+              Enable the check box <span class="ProgramName">Preserve Log</span>,
+              (if it’s not already enabled)<span class="ProgramName">. </span>Click
+              the Settings Icon again to close the Settings panel. </li>
+            <li class="Instruction_Todo">Return to the "Console" window and
+              right click the mouse on any Console output line.&nbsp;&nbsp; In
+              the pop-up menu, select <span class="ProgramName">|Clear console|</span>.<br>
               <br>
             </li>
             <li>Now read the entire DevTools <a target="_blank" href="https://developer.chrome.com/docs/devtools/console/javascript/">Run
@@ -2184,21 +2212,24 @@
               <ol>
                 <li class="Instruction_Todo"><u>Exercise [save log]</u>:<br>
                   <ol>
-                    <li class="Instruction_Todo">Return to the "Console" window and right click the
-                      mouse.&nbsp;&nbsp; In the pop-up menu, select <span class="ProgramName">|Save
-                        As|</span>.&nbsp;&nbsp;&nbsp; This opens a dialog box to
-                      save all your interactions on the Console.&nbsp;&nbsp; <br>
+                    <li class="Instruction_Todo">Return to the "Console" window
+                      and right click the mouse.&nbsp;&nbsp; In the pop-up menu,
+                      select <span class="ProgramName">|Save As|</span>.&nbsp;&nbsp;&nbsp;
+                      This opens a dialog box to save all your interactions on
+                      the Console.&nbsp;&nbsp; <br>
                       <br>
                     </li>
-                    <li class="Instruction_Todo">Save the file to the directory, <span class="ProgramName">get-started-console</span>
-                      that you created the directory earlier.<br>
+                    <li class="Instruction_Todo">Save the file to the directory,
+                      <span class="ProgramName">get-started-console</span> that
+                      you created the directory earlier.<br>
                       <br>
                     </li>
-                    <li class="Instruction_Todo">Verify the file is saved to the directory (as described
-                      earlier)<br>
+                    <li class="Instruction_Todo">Verify the file is saved to the
+                      directory (as described earlier)<br>
                       <br>
                     </li>
-                    <li class="Instruction_Todo">Git commit the above file(s) with commit message:<br>
+                    <li class="Instruction_Todo">Git commit the above file(s)
+                      with commit message:<br>
                       <br>
                       "-exercise javascript-console" </li>
                   </ol>
@@ -2228,15 +2259,10 @@
           </li>
         </ul>
         <!--
-        <section hidden="untilfound">
+        <section hidden="untilfound">        <section hidden="hidden">        <section hidden="hidden">        -->
         <section hidden="hidden">
-        <section hidden="hidden">
-        -->
-        <section>
-
-            <!--
-            This section and the associated .js code is a work-in-progress
-            -->
+          <!--
+            This section and the associated .js code is a work-in-progress            -->
           <h2>Detailed Grader Version</h2>
           <p>The Grader Version of the Rubric is still under construction.</p>
           <!-- [Status=90%] this is a work-in-progress. The goal is to have it automatically fillout out by process the DOM -->
@@ -2334,7 +2360,7 @@ type="button">
               printed to a PDF</span></i></p>
         <ul>
           <li>Minimal Javascript:
-            <ul >
+            <ul>
               <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a>
               </li>
               <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash</a>
@@ -2342,13 +2368,13 @@ type="button">
             </ul>
           </li>
           <li>Minimal Events
-            <ul >
+            <ul>
               <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</a>
               </li>
             </ul>
           </li>
           <li>Console Panel
-            <ul >
+            <ul>
               <li><a target="_blank" href="https://developers.google.com/web/tools/chrome-devtools/console/get-started">https://developers.google.com/web/tools/chrome-devtools/console/get-started</a>
                 <a id="_anchor_2">[ZW2]</a>&nbsp; </li>
             </ul>
