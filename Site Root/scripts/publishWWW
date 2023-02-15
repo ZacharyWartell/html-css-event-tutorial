@@ -9,12 +9,12 @@
 echo -n '<span class="Revision">' > REVISION.txt
 echo -n `git show --no-patch --no-notes --pretty='%cd'` >> REVISION.txt
 echo -n '<\/span>' >> REVISION.txt
-sed -i -e s/'<span class="Revision">.*<\/span>'/"$(cat REVISION.txt)"/ "../Site Root/ITCS_x120_HTML-CSS-Event_Tutorial.html"
+sed -i -e s/'<span class="Revision">.*<\/span>'/"$(cat REVISION.txt)"/ "../ITCS_x120_HTML-CSS-Event_Tutorial.html"
 #exit
 
 rm ftp.cmd
 echo cd 'public_html/Teaching/ITCS_x120_HTML-CSS-Event_Tutorial'  > ftp.cmd
-echo lcd '../Site\ Root'                      >> ftp.cmd
+echo lcd '..'                                 >> ftp.cmd
 echo put -R . .                               >> ftp.cmd
 
 sftp 'zwartell@webpages.uncc.edu' < ftp.cmd
