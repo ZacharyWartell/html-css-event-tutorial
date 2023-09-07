@@ -1,0 +1,4 @@
+ftphost webpages.charlotte.edu
+ftpdir 'public_html/Teaching/WebGL Tutorial 1'
+ftpuser zwartell
+htmlfile index.html
