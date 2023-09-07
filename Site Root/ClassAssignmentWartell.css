@@ -22,6 +22,12 @@ table.Hide_Code_Example:target
 }
 */
 
+span.Git_Commit_Message
+{
+
+}
+
+
 *.UnpublishedDraft
 {
     background-color: aquamarine;
@@ -301,6 +307,7 @@ ol.Instruction > li::marker {
     content: counter(instructionLevel1, decimal) " ";
 }
 
+
 ol.Instruction > li > ol {
     font-size: medium;
     list-style-type: lower-alpha;
@@ -318,6 +325,12 @@ ol.Instruction > li > ol > li::marker {
     content: counter(instructionLevel2, lower-alpha) " ";
 }
 
+ol.Instruction > li > ol > li.Instruction_Git_Commit::marker {
+    font-size: medium;
+    content: "\2022";
+}
+
+
 ol.Instruction > li > ol > li > ol {
     font-size: medium;
     list-style-type: lower-roman;
@@ -334,6 +347,13 @@ ol.Instruction > li > ol > li > ol > li::marker {
 
     content: counter(instructionLevel3, lower-roman) " ";
 }
+
+ol.Instruction > li > ol > li > ol > li.Instruction_Git_Commit::marker {
+    font-size: medium;
+    list-style-type: circle;
+    /* content: counter(instructionLevel3, lower-roman) " "; */
+}
+
 
 span.Grade_Points {
     font-weight: bold;

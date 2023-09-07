@@ -29,6 +29,7 @@ var Category;
     Category[Category["OVERVIEW"] = 4] = "OVERVIEW";
     Category[Category["SECTION"] = 5] = "SECTION";
     Category[Category["NON_RUBRIC"] = 6] = "NON_RUBRIC";
+    Category[Category["GIT_COMMIT"] = 7] = "GIT_COMMIT";
 })(Category || (Category = {}));
 /*
 const Category = Object.freeze({
@@ -55,6 +56,8 @@ function getCategoryFromClass(element, returnNull) {
         return Category.GENERAL;
     if (element.className.includes("Instruction_Section"))
         return Category.SECTION;
+    if (element.className.includes("Instruction_Git_Commit"))
+        return Category.GIT_COMMIT;
     if (returnNull)
         return null;
     else
@@ -78,7 +81,7 @@ class OptionSet {
            static TODO = 3;
     };*/
 class Instruction {
-    constructor(s, n, sh, c, pf = 0) {
+    constructor(s, n, sh, c, pf = 0, parent = null) {
         this.section = s;
         this.number = n;
         this.short = sh;
@@ -87,6 +90,21 @@ class Instruction {
         this.points = 0;
         this.pointFraction = pf;
         this.comment = "";
+        this.parent = parent;
+        this.subSteps = new Array();
+        if (this.parent !== null)
+            this.parent.subSteps.push(this);
+    }
+    static replacer(key, value) {
+        if (key === 'parent')
+            return instructions.instructions.indexOf(value);
+        if (key === 'subSteps') {
+            const subSets = new Array;
+            for (let s of value)
+                subSets.push(instructions.instructions.indexOf(s));
+            return subSets;
+        }
+        return value;
     }
 }
 class Instructions {
@@ -120,10 +138,11 @@ function itemID(sectionLabel, L1, L2, L3) {
     id += itemString(L1, L2, L3).replace('.', '_');
     return id;
 }
-function collectionInstructions(section, sectionLabel) {
+function collectionInstructions(section, sectionLabel, parent) {
     let l1c = 1, l2c = 1, l3c = 1;
     const h = section.querySelector(":scope > h1, :scope > h2, :scope > h3");
-    instructions.push(new Instruction(sectionLabel, "", h.innerText.trimStart().slice(0, 10) + " ...", Category.SECTION, section.dataset.pointFraction !== undefined ? parseInt(section.dataset.pointFraction) : 0));
+    instructions.push(new Instruction(sectionLabel, "", h.innerText.trimStart().slice(0, 10) + " ...", Category.SECTION, section.dataset.pointFraction !== undefined ? parseInt(section.dataset.pointFraction) : 0, parent));
+    const parent0 = instructions.instructions[instructions.instructions.length - 1];
     section.id = instructions.instructions[instructions.instructions.length - 1].id;
     const nInstructions = instructions.instructions.length;
     const temp = "self" + Date.now().toString();
@@ -141,7 +160,8 @@ function collectionInstructions(section, sectionLabel) {
                 let tmp, cat = (tmp = getCategoryFromClass(li1, true)) !== null ? tmp : category;
                 if (tmp === Category.NON_RUBRIC)
                     continue;
-                instructions.push(new Instruction(sectionLabel, itemString(l1c), li1.innerText.trimStart().slice(0, 10) + " ...", cat, li1.dataset.pointFraction !== undefined ? parseInt(li1.dataset.pointFraction) : equalFraction1));
+                instructions.push(new Instruction(sectionLabel, itemString(l1c), li1.innerText.trimStart().slice(0, 10) + " ...", cat, li1.dataset.pointFraction !== undefined ? parseInt(li1.dataset.pointFraction) : equalFraction1, parent0));
+                const parent1 = instructions.instructions[instructions.instructions.length - 1];
                 li1.id = instructions.instructions[instructions.instructions.length - 1].id;
                 let ol1 = li1.querySelector(":scope > ol");
                 if (ol1 !== null) { //&& ol1.length !== 0) {
@@ -152,7 +172,8 @@ function collectionInstructions(section, sectionLabel) {
                     for (let li2_ of li2List) {
                         const li2 = li2_;
                         let tmp, cat = (tmp = getCategoryFromClass(li2, true)) !== null ? tmp : category1;
-                        instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c, l2c), li2.innerText.trimStart().slice(0, 10) + " ...", cat, li2.dataset.pointFraction !== undefined ? parseInt(li2.dataset.pointFraction) : equalFraction2));
+                        instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c, l2c), li2.innerText.trimStart().slice(0, 10) + " ...", cat, li2.dataset.pointFraction !== undefined ? parseInt(li2.dataset.pointFraction) : equalFraction2), parent1);
+                        const parent2 = instructions.instructions[instructions.instructions.length - 1];
                         li2.id = instructions.instructions[instructions.instructions.length - 1].id;
                         let ol2 = li2.querySelector(":scope > ol");
                         if (ol2 !== null) { // && ol2.length !== 0) {
@@ -163,7 +184,7 @@ function collectionInstructions(section, sectionLabel) {
                             for (let li3_ of li3List) {
                                 const li3 = li3_;
                                 let tmp, cat = (tmp = getCategoryFromClass(li3, true)) !== null ? tmp : category2;
-                                instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c, l2c, l3c), li3.innerText.trimStart().slice(0, 10) + " ...", cat, li3.dataset.pointFraction !== undefined ? parseInt(li3.dataset.pointFraction) : equalFraction3));
+                                instructions.instructions.push(new Instruction(sectionLabel, itemString(l1c, l2c, l3c), li3.innerText.trimStart().slice(0, 10) + " ...", cat, li3.dataset.pointFraction !== undefined ? parseInt(li3.dataset.pointFraction) : equalFraction3), parent2);
                                 li3.id = instructions.instructions[instructions.instructions.length - 1].id;
                                 l3c++;
                             }
@@ -197,27 +218,27 @@ export function class_onLoad() {
             span.innerText = sum.toString();
         }
     }
-    /*
+    /**
      *   find all instruction class <li> elements in instruction sections in order to automatically generate Rubric section
      */
     // Note this traversal assumes every <h1>, <h2> etc. is immediately preceded by a <section> element
     let h1List = document.querySelectorAll("section > h1");
-    let h1c, h2c, h3c;
+    let h1c, h2c, h3c; // 'headingCountX' ....
     h1c = 1;
     for (let h1 of h1List) {
         console.assert(h1.parentElement.tagName === "SECTION");
         const h1InstructionCount = instructions.instructions.length;
-        collectionInstructions(h1.parentElement, h1c.toString());
+        collectionInstructions(h1.parentElement, h1c.toString(), null);
         const h1NoInstructions = h1InstructionCount === instructions.instructions.length;
         let parent = h1.parentElement;
-        let selfIndex = [].slice.call(parent.children).indexOf(h1) + 1;
-        let h2List = parent.querySelectorAll(":nth-child(" + selfIndex + ") ~ section > h2");
+        let selfIndex = [].slice.call(parent.children).indexOf(h1) + 1; // index of <h1> element, 'h1', within it's parent HTML element
+        let h2List = parent.querySelectorAll(":nth-child(" + selfIndex + ") ~ section > h2"); // all <h2> children in this <h1> element 'h1'
         if (h2List !== null && h2List.length !== 0) {
             h2c = 1;
             for (let h2 of h2List) {
                 console.assert(h2.parentElement.tagName === "SECTION");
                 const h2InstructionCount = instructions.instructions.length;
-                collectionInstructions(h2.parentElement, h1c.toString() + "." + h2c.toString());
+                collectionInstructions(h2.parentElement, h1c.toString() + "." + h2c.toString(), null);
                 const h2NoInstructions = h2InstructionCount === instructions.instructions.length;
                 let parent = h2.parentElement;
                 let selfIndex = [].slice.call(parent.children).indexOf(h2) + 1;
@@ -227,8 +248,9 @@ export function class_onLoad() {
                     for (let h3 of h3List) {
                         console.assert(h3.parentElement.tagName === "SECTION");
                         const h3InstructionCount = instructions.instructions.length;
-                        collectionInstructions(h3.parentElement, h1c.toString() + "." + h2c.toString() + "." + h3c.toString());
+                        collectionInstructions(h3.parentElement, h1c.toString() + "." + h2c.toString() + "." + h3c.toString(), null);
                         const h3NoInstructions = h3InstructionCount === instructions.instructions.length;
+                        // if this <Section> had no Instructions, create Instruction  Category.SECTION
                         if (h3NoInstructions && instructions.instructions.length != h3InstructionCount) {
                             instructions.instructions.push(instructions.instructions[instructions.instructions.length - 1]);
                             instructions.instructions.copyWithin(h3InstructionCount, h3InstructionCount - 1, instructions.instructions.length - 2);
@@ -329,7 +351,7 @@ export function class_onLoad() {
      *  serialize DOM created Rubric table to .json
      */
     {
-        let rubricTable_json = JSON.stringify(instructions);
+        let rubricTable_json = JSON.stringify(instructions, Instruction.replacer);
         let url = URL.createObjectURL(new Blob([rubricTable_json], { type: 'text/plain; charset=UTF-16' }));
         // create button to open new browser tab with .json file
         document.querySelector("#CreateGradingRubricJSON").onclick = () => {
