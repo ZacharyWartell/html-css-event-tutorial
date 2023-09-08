@@ -35,10 +35,10 @@
         {
             "AssignmentName" :
             {
-                "courseNumber" : "xyzw",
-                "number" : "t1",
+                "courseNumber" : "3120",
+                "number" : "t2",
                 "numberLongDir" : "3120-t2-html-css-event-tutorial",
-                "name" : "javascript-tutorial"
+                "name" : "html-css-event-tutorial"
             }
         }
     </script>
@@ -146,16 +146,17 @@
             <section data-point-fraction="5" class="Instruction_Section">
               <h1 class="Section" id="Part1">Project Directory Setup</h1>
               <ol>
-                <li>Create a directory for this assignment in your class directory:<br>
+                <li>Create a directory for this assignment in your class directory and cd to that directory. Perform all the exercise in this tutorial within
+                  that subdirectory<br>
                   <table class="Code_Example" id="Code_Example1_0">
                     <tbody>
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                         <td>
-                          <div style="height: 100px;">
-                            <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span><br>
-                            </code>                                               
-                          </div>
+                          <div style="height: 25px;"> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
+
+                                data-project-name-dir="">data-project-name</span><br>
+                            </code> </div>
                         </td>
                       </tr>
                     </tbody>
@@ -183,13 +184,77 @@
                     <a href="https://code.visualstudio.com/docs/introvideos/basics">https://code.visualstudio.com/docs/introvideos/basics<br>
                     </a><br>
                   </li>
-                  <li><u>Exercise [Git Repo Setup</u><u>]</u>: </li>
+                  <li><u>Exercise [Git Repo Setup</u><u>]</u>:
+                    <ol class="Instruction_Option Instruction_Todo">
+                      <li> [<em>YourServer</em>=<strong>cci-git</strong>]
+                        <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name"> editing-in-vscode</span>. using the
+                          procedures of <abbr>GT</abbr>: Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>.<br>
+                          &nbsp; <br>
+                          Do not forget to to <strong><u>share</u></strong> your repo with the TA and Professor (as discussed in the Appendix section <a href="#Basic_Git_Operations">Basic
+                            Git Operations).</a></div>
+                      </li>
+                      <li>Fork the repo as described below.&nbsp; (You will be performing all the <u>next</u> video's exercises in your forked version of this
+                        repo.)
+                        <table class="Code_Example" id="Code_Example1_0">
+                          <tbody>
+                            <tr>
+                              <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                              <td>
+                                <div style="height: 75;"> 
+                                  <span id="cursor"></span>
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span
+                                      data-project-name-dir="">data-project-name </span></code>
+                                  <code class="Shell_Code_Input-v2">git clone https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
+                                  
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name </span></code> 
+                                  <code class="Shell_Code_Input-v2"> cd editing-in-vscode</code>
+                                  
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vs-code</code>
+                                  <code class="Shell_Code_Input-v2"> git remote rename origin upstream </code>
+                                  
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name/</span>&sol;editing-in-vs-code</code>
+                                  <code class="Shell_Code_Input-v2">  git remote add origin <span class="User_Input">URL to your course repositories</span>/<span class="File_Name">editing-in-vscode.</span>git</code>
+                                                                            
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name/</span>&sol;editing-in-vs-code</code>
+                                  <code class="Shell_Code_Input-v2">  git remote add origin <span class="User_Input">URL to your course repositories</span>/editing-in-vscode.git</code>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                      <li> Clone the repo.&nbsp;&nbsp; (You will be performing all the <u>next</u> video's exercises in this local directory.)
+                        <table class="Code_Example" id="Code_Example1_0">
+                          <tbody>
+                            <tr>
+                              <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                              <td>
+                                <div style="height: 75;"> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
+
+                                      data-project-name-dir="">data-project-name </span></code> <code class="Shell_Code_Input">git clone <span class="User_Input">URL
+                                      to your course repos</span>/</code><code class="Shell_Code_Input"><span class="File_Name">editing-in-vscode.</span>git&nbsp;</code>
+                                  <code class="Shell_Code_Input"></code> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
+
+                                      data-project-name-dir="">data-project-name </span></code> <span style="color: white;"><span style="font-family: &quot;Courier&quot;,monospace;">cd
+                                      </span></span><code class="Shell_Code_Input"><span class="File_Name">editing-in-vscode</span> 
+                                  </code> <code class="Shell_Code_Input"></code> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
+
+                                      data-project-name-dir="">data-project-name/</span>editing-in-vs-code</code>&nbsp; </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                      <!--
+                        <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                <div class="Server_Bitbucket"> <br>                  Create new remote repo on Bitbucket called,<span class="File_Name">                    git-micro-tutorial </span> . This is best done using the                  Web Browser interface to the server. Review&nbsp; <a href="#Bitbucket_URL_List">                    Bitbucket Server URL </a> and Section&nbsp;<a href="#Basic_Git_Operations">                    Basic Git Operations </a> on repo creation.&nbsp; Make sure                  to <strong><u>share</u></strong> it with the TA and Dr.                  Wartell’s Bitbucket accounts. <br>                  <br>                </div>              </li>              -->
+                    </ol>
+                  </li>
                   <li><u>Exercise [<abbr>VSM</abbr>:Code editing in Visual Studio Code]</u>: <br>
-                    Watch the video below and following all the instructions to install VS Code on your computer:<br>
+                    Watch the video below.&nbsp; Follow all the video instructions:<br>
                     <a href="https://code.visualstudio.com/docs/introvideos/codeediting" target="_blank">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
                     <br>
-                    You must perform <u>all</u> the instructions in the video above.&nbsp;&nbsp; The items below are listed to merely help provide a checklist
-                    in the assignment rubric that highlight some of the key steps in the video's instructions.<br>
+                    You must perform <u>all</u> the instructions in the video above.&nbsp;&nbsp; The items below are listed to merely provide you a partial
+                    checklist in the assignment rubric to highlights the key steps in the video's&nbsp; detailed instructions.<br>
                     <br>
                     <ol>
                       <li><u>Exercise: [<abbr>VSM</abbr>:"Open a folder".... "Use File Explorer"]</u></li>
@@ -223,9 +288,9 @@
                         <tr>
                           <td> <button onclick="Code_Example_Toggle('Code_Example0_0');"> ▽ </button> </td>
                           <td>
-                            <div style="height: 60px;"><code class="Shell_Code_Input"> $ mkdir ITCS_<span data-course-number="">6120</span><br>
+                            <div style="height: 60px;"><code class="Shell_Code_Input">  mkdir ITCS_<span data-course-number="">6120</span><br>
                               </code> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span><br>
-                              </code> <code class="Shell_Code_Input"> $ cd ITCS_<span data-course-number="">6120</span><br>
+                              </code> <code class="Shell_Code_Input"> cd ITCS_<span data-course-number="">6120</span><br>
                               </code>
                               <!--
                                                                                     <span class="Shell_Code_Comment">                                            […misc additional output will                                            appear…] </span>                            --->
