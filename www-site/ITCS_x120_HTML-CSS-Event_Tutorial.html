@@ -101,13 +101,12 @@
                 <!-- experimental stuff  --> <button onclick="window.open('mailto:zwartell@uncc.edu?subject=subject&amp;body=Test%201');">Test1</button> <button
 
                   onclick="window.open('https://docs.google.com/spreadsheets/d/1ptfQQKmokFro5CC4nCB_x9myjuK32064COfipYYk2jI/edit#gid=0');"> Test2 </button> </div>
-              <h1 class="nocount">Learning Objectives<br>
-              </h1>
+              <h1 class="nocount">Learning Objectives</h1>
               <ul>
+                <li>Learn basics of Visual Studio Code IDE</li>
                 <li>Learn minimalist basics of HTML5</li>
                 <li>Learn minimalist basics of CSS</li>
-                <li>Learn minimalist basics of Event handling<br>
-                </li>
+                <li>Learn basics of JavaScript event handling</li>
                 <li>Learn the basics of using Developer Tools in the Chrome web browser </li>
               </ul>
             </section>
@@ -144,8 +143,8 @@
               <p></p>
             </section>
             <section data-point-fraction="5" class="Instruction_Section">
-              <h1 class="Section" id="Part1">Project Directory Setup</h1>
-              <ol>
+              <h1 class="Section" id="Part1">Assignment Setup</h1>
+              <ol class="Instruction">
                 <li>Create a directory for this assignment in your class directory and cd to that directory. Perform all the exercise in this tutorial within
                   that subdirectory<br>
                   <table class="Code_Example" id="Code_Example1_0">
@@ -162,46 +161,164 @@
                     </tbody>
                   </table>
                 </li>
+                
+                <li>To automate some GitLab operations several command-line programs have been created for this course.
+                  You should download and install them as follows:<br>
+                  <ol>
+                    <li> Clone the tools:
+                      <table class="Code_Example" id="Code_Example1_0">
+                        <tbody>
+                          <tr>
+                            <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                            <td>
+                              <div style="height: 175px;"> 
+                                <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/
+                                </code> 
+                                <code class="Shell_Code_Input-v2">git clone https://cci-git.charlotte.edu/UNCC_Graphics/tools.git</code>
+                                <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/
+                                </code> 
+                                <code class="Shell_Code_Input-v2">cd tools</code>                                
+                                <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/tools
+                                </code> 
+                                <code class="Shell_Code_Input-v2">pwd</code>                                                                
+                                <code class="Shell_Code_Output">/c/Users/zwart/ITCS_3120/tools</code>                                                                
+                                <br>
+                                <span class="Shell_Code_Comment">Copy and paste the path that appears above to a temporary file</span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>                      
+                    </li>
+                    <li> Add the tools path to the $PATH bash environment variable:
+                      <table class="Code_Example" id="Code_Example1_0">
+                        <tbody>
+                          <tr>
+                            <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                            <td>
+                              <div> 
+                                <span class="Shell_Code_Comment">First check if you have a .bash_profile file in your bash home directory</span>
+                                <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/
+                                </code>                                                                 
+                                <code class="Shell_Code_Input-v2">cd ~</code>
+                                <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~
+                                </code>                                 
+                                <code class="Shell_Code_Input-v2">ls -la .bash_profile</code>
+                                <span class="Shell_Code_Comment">
+                                  If the file exists, then stop with the above command.  Next, edit the existing file with any text file editor such as notepad, etc.                                  
+                                </span><br><br>
+                                <span class="Shell_Code_Comment">
+                                  If the file does not exist, then first create an empty file with the command below.
+                                  After creating it, then edit the file with a text file editor such as notepad, etc.                                  
+                                </span><br>
+                                <code class="Shell_Code_Input-v2">echo > .bash_profile</code>
+                                <br>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>                      
+                    </li>
+                    <li> Edit the file <span class="File_Name">.bash_profile</span> and add the following line to the file.  Substitute the path shown (in grey) with whatever path 
+                      you copied earlier from running the <span class="File_Name">pwd</span> command. <br>
+                        <code>export PATH=$PATH:<span class="User_Input">/c/Users/zwart/ITCS_3120/tools</span></code>
+                    </li>
+                    <li> To activate the updated PATH in your current bash shell, explicitly execute the .bash_profile script as follows.
+                      (When you start any future instance of bash the .bash_profile will be automatically executed).
+                      <table class="Code_Example" id="Code_Example1_0">
+                        <tbody>
+                          <tr>
+                            <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                            <td>
+                              <div>
+                                <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/</code> 
+                                <code class="Shell_Code_Input-v2">. .bash_profile</code>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>                    
+                    <li> You can verify that the tools directory was successfully added to the path environment variable by executing
+                      one of the tools:
+                      <table class="Code_Example" id="Code_Example1_0">
+                        <tbody>
+                          <tr>
+                            <td> <button onclick="Code_Example_Toggle('Code_Example1_10');"> ▽ </button> </td>
+                            <td>
+                              <div>
+                                <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/</code> 
+                                <code class="Shell_Code_Input-v2">cci-git-path-test</code>
+                                <code class="Shell_Code_Output"> cci-git-path-test successfully executing.</code> </br>
+                                  <code class="Shell_Code_Output">The current PATH variables is:</code></br></br>
+                                  <code class="Shell_Code_Output">/c/Users/zwart/bin:/mingw64/bin</code>
+                                <span class="Shell_Code_Comment">[the full details will vary]</span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                  </ol>
+                </li>
               </ol>
-              <h1 class="Section"> Part 1:&nbsp; Visual Studio Code </h1>
-              <p>The the TA will grade all assignments in this course using:</p>
+              <h1 class="Section"> Part 1:&nbsp; The Visual Studio Code IDE </h1>
+              <p>The TA will grade all assignments in this course using:</p>
               <ol>
                 <li>The Visual Studio Code (VS Code) <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">IDE</a></li>
                 with
                 <li>The Chrome web browser.</li>
               </ol>
-              <p>It is the responsibility of each student to test all their submitted assignments using VS Code and the Chrome Browser using the "VS Code with
-                Chrome" configuration specified in section X.&nbsp;&nbsp; Therefore each students is expected to be fully capable in using VS Code.&nbsp;
-                Section walks the reader through a tutorial at <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>.&nbsp;&nbsp;
-                In this document, further references to this online resource will be abbreviated <abbr>VSM.</abbr></p>
+              <p>It is the responsibility of each student to test all their submitted assignments using VS Code and the Chrome Browser using the "VS Code +
+                Chrome" configuration specified in the rest of this document. Therefore each student is expected to be have basic familiarity with using VS Code.
+                
+                If you are an expert in another IDE, you may well choose to develop and debug your assignments in your favored IDE.  However, 
+                all course assignments will be graded in the "VS Code + Chrome" environment, therefore you must learn enough about the "VS Code + Chrome" environment
+                thorugh this tutorial such that your submitted programs execute properly in the "VS Code + Chrome" environment.</p>
+                <p>                
+                The following sections guides the reader through tutorial exercises that require reading parts of <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>.&nbsp;&nbsp;
+                The abbreviation, <abbr>VSC</abbr>, will be used to refer to <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>.</p>
               <ol>
               </ol>
-              <section class="Instruction_Section">
+              <section class="Instruction_Section" data-point-fraction="50">
                 <h2 class="Section">Visual Studio Code Tutorial</h2>
                 <ol class="Instruction">
-                  <li><u>Exercise [<abbr>VSM</abbr>: Getting started with Visual Studio Code]</u>: <br>
-                    Watch the video below and following all the instructions to install VS Code on your computer:<br>
+                  <li data-point-fraction="33"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
+                    Watch the video below and follow all the instructions to install VS Code on your computer and learn the basics of the VS Code GUI:<br>
                     <a href="https://code.visualstudio.com/docs/introvideos/basics">https://code.visualstudio.com/docs/introvideos/basics<br>
                     </a><br>
+                    <div class="Side_Note"> <b>Side Note:</b>
+                      In the above reading,  the Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
+                      Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
+                      <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
+                          <img src="images/terminal.png" alt="images/terminal.png">
+                      </figure>
+                    </div>                    
                   </li>
-                  <li><u>Exercise [Git Repo Setup</u><u>]</u>:
+                  <li data-point-fraction="10"><u>Exercise [Git Repo Setup]</u>:
+                    <span id="cursor"></span> 
+                    <p>
+                    This tutorial will intersperse short exercises to demonstrate your understanding of the readings in <abbr>VSC</abbr>.  These exercises will require you
+                    to git fork multiple repo's with starter code which you will modify to practice the skills presented in the <abbr>VSC</abbr> readings.
+                  </p>
+                  <p>
+                    Below is a typical description of how to fork a repo with starter code that you will modify after reading a section from <abbr>VSC</abbr>.
+                  </p>
                     <ol class="Instruction_Option Instruction_Todo">
                       <li> [<em>YourServer</em>=<strong>cci-git</strong>]
-                        <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name"> editing-in-vscode</span>. using the
+                        <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name"> editing-in-vscode</span> using the
                           procedures of <abbr>GT</abbr>: Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>.<br>
                           &nbsp; <br>
                           Do not forget to to <strong><u>share</u></strong> your repo with the TA and Professor (as discussed in the Appendix section <a href="#Basic_Git_Operations">Basic
                             Git Operations).</a></div>
                       </li>
-                      <li>Fork the repo as described below.&nbsp; (You will be performing all the <u>next</u> video's exercises in your forked version of this
-                        repo.)
+                      <li>Fork the repo exactly as described below.
                         <table class="Code_Example" id="Code_Example1_0">
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                               <td>
-                                <div style="height: 75;"> 
-                                  <span id="cursor"></span>
+                                <div>                                   
                                   <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span
                                       data-project-name-dir="">data-project-name </span></code>
                                   <code class="Shell_Code_Input-v2">git clone https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
@@ -210,57 +327,129 @@
                                   <code class="Shell_Code_Input-v2"> cd editing-in-vscode</code>
                                   
                                   <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vs-code</code>
-                                  <code class="Shell_Code_Input-v2"> git remote rename origin upstream </code>
-                                  
-                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name/</span>&sol;editing-in-vs-code</code>
-                                  <code class="Shell_Code_Input-v2">  git remote add origin <span class="User_Input">URL to your course repositories</span>/<span class="File_Name">editing-in-vscode.</span>git</code>
-                                                                            
-                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name/</span>&sol;editing-in-vs-code</code>
-                                  <code class="Shell_Code_Input-v2">  git remote add origin <span class="User_Input">URL to your course repositories</span>/editing-in-vscode.git</code>
+                                  <code class="Shell_Code_Input-v2"> cci-git-fork.js https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
+                                  <div class="Shell_Code_Comment">
+                                    Note, the above command is our first use of one of the UNCC_Graphics GitLab tools installed in ~/ITCS_3120/tools.
+                                    The cci-git-fork.js can execute only because you already installed NodeJs when you installed of VS Code IDE.
+                                  </div>
+                                  <code class="Shell_Code_Output">
+                                    <br>
+                                  <span class="Shell_Code_Comment">The output below is generated by cci-git-fork.js. It shows what git operations cci-git-fork is performing.</span>
+<pre>  
+> git remote add upstream https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git
+> git pull upstream main
+From https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode
+* branch            main       -> FETCH_HEAD
+* [new branch]      main       -> upstream/main
+> git push --set-upstream origin main
+To https://cci-git.charlotte.edu/student-wartell/editing-in-vscode.git
+* [new branch]      main -> main
+</pre>
+<span class="Shell_Code_Comment">In addition to automating the git fork operations, cci-git-fork adds your cci-git name to the header of each source code file.
+These modifications are <b>required</b> by the course grading system to automate grading, confirm identify, manage academic integrity, etc.
+</span>
+<pre>
+> Signing forked files with your cci-git info:
+      user.name Arthur Dent
+      user.email adent42@uncc.edu
+      url https://cci-git.charlotte.edu/adent42/editing-in-vscode.git
+---------------------------------------
+  signing 'app.js'
+> git commit -m "-completed fork and signing of skeleton code" .
+> git push origin main
+</pre>
+                                  </code>
+
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </li>
-                      <li> Clone the repo.&nbsp;&nbsp; (You will be performing all the <u>next</u> video's exercises in this local directory.)
+                      <li> You can verify that cci-git-fork successfully pushed your fork by viewing the your private repo history on the git www server.
+                        <div style="display:flex; flex-direction: row;">
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/gitlab-history.png"><figcaption>Click History button to display History Details (middle figure)</figcaption></figure>
+                          <figure class="Screen_Capture" tabindex="2"><img src="images/gitlab-history-details.png"><figcaption>History Details. Click on top item to display git diff (right most figure)</figcaption></figure>
+                          <figure class="Screen_Capture" tabindex="2"><img src="images/cci-git-fork-auto-grader-header.png"><figcaption>cci-git-fork insertion of git user.name for autograding.</figcaption></figure>
+                        </div>                          
+                      </li>
+                    </ol>
+                  </li>
+                  <li><u>Exercise [<abbr>VSC</abbr>:Code editing in Visual Studio Code]</u>: <br>
+                    Watch the video below.&nbsp; Follow all the video instructions:<br>
+                    <a href="https://code.visualstudio.com/docs/introvideos/codeediting" target="_blank">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
+                    <br>
+                    You must perform <u>all</u> the instructions in the video above.&nbsp;&nbsp; 
+                    Items (a) - (c) below partition the above video instructions into separate rubric points.  Note, item (d) instructs you to make additional modifications to code referenced in the video.<br>
+                    <br>
+                    <ol>
+                      <li><u>Exercise: [<abbr>VSC</abbr>:"Open a folder".... "Use File Explorer"]</u></li>
+                      <li><u>Exercise: [<abbr>VSC</abbr>:"Install the Node.js runtime" ... "Check your Node.js"]</u></li>
+                      <li><u>Exercise: [<abbr>VSC</abbr>:"Create a simple 'Hello world'" ..."Run the application"]</u></li>
+                      <li><u>Exercise: [modify app.js]</u>
+                        <ol>
+                          <li class="Instruction_Todo">Modify the string printed out in app.js to introduce yourself </li>
+                          <li class="Instruction_Commit">git commit and <b>push</b> your changes </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li><u>Exercise [<abbr>VSC</abbr>:Basic Editing]</u>: <br>
+                    The <abbr>VSC</abbr> article <a href="https://code.visualstudio.com/docs/editor/codebasics" target="_blank">https://code.visualstudio.com/docs/editor/codebasics</a> 
+                    covers a fair amount of detail of VS Code code editing GUI.  The exercises below guide the reader through a subset of the sections of 
+                    the article and then provide short exercises to do based on the reading.
+                    
+                    <ol>                        
+                      <li> [<em>YourServer</em>=<strong>cci-git</strong>]
+                        <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name">basic-editing</span>. using the
+                          procedures of <abbr>GT</abbr>: Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>.<br>
+                          &nbsp; <br>
+                          Do not forget to to <strong><u>share</u></strong> your repo with the TA and Professor (as discussed in the Appendix section <a href="#Basic_Git_Operations">Basic
+                            Git Operations).</a></div>
+                      </li>                      
+                      <li>Fork the repo as described below.&nbsp; (You will be performing all the various exercises in your forked version of this
+                        repo.)
                         <table class="Code_Example" id="Code_Example1_0">
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                               <td>
-                                <div style="height: 75;"> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
+                                <div style="height: 75;">                                   
+                                  
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span
+                                      data-project-name-dir="">data-project-name </span></code>
+                                 <code class="Shell_Code_Input-v2">  git clone <span class="User_Input">URL to your course repositories</span>/<span class="File_Name">basic-editing.</span>git</code>
+                                  
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name </span></code> 
+                                  <code class="Shell_Code_Input-v2"> cd basic-editing</code>
+                                  
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;basic-editing</code>                                  
+                                  <code class="Shell_Code_Input-v2">git remote add upstream https://cci-git.charlotte.edu/UNCC_Graphics/basic-editing.git</code>
 
-                                      data-project-name-dir="">data-project-name </span></code> <code class="Shell_Code_Input">git clone <span class="User_Input">URL
-                                      to your course repos</span>/</code><code class="Shell_Code_Input"><span class="File_Name">editing-in-vscode.</span>git&nbsp;</code>
-                                  <code class="Shell_Code_Input"></code> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name/</span>&sol;basic-editing</code>
+                                  <code class="Shell_Code_Input-v2"> git pull upstream main</code>
 
-                                      data-project-name-dir="">data-project-name </span></code> <span style="color: white;"><span style="font-family: &quot;Courier&quot;,monospace;">cd
-                                      </span></span><code class="Shell_Code_Input"><span class="File_Name">editing-in-vscode</span> 
-                                  </code> <code class="Shell_Code_Input"></code> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
-
-                                      data-project-name-dir="">data-project-name/</span>editing-in-vs-code</code>&nbsp; </div>
+                                  
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name/</span>&sol;basic-editing</code>
+                                  <code class="Shell_Code_Input-v2"> git push --set-upstream origin main</code>
+                                                                            
+                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name/</span>&sol;basic-editing</code>
+                                  <code class="Shell_Code_Input-v2"> cci-git-sign-fork.js </code>
+                                </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </li>
-                      <!--
-                        <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                <div class="Server_Bitbucket"> <br>                  Create new remote repo on Bitbucket called,<span class="File_Name">                    git-micro-tutorial </span> . This is best done using the                  Web Browser interface to the server. Review&nbsp; <a href="#Bitbucket_URL_List">                    Bitbucket Server URL </a> and Section&nbsp;<a href="#Basic_Git_Operations">                    Basic Git Operations </a> on repo creation.&nbsp; Make sure                  to <strong><u>share</u></strong> it with the TA and Dr.                  Wartell’s Bitbucket accounts. <br>                  <br>                </div>              </li>              -->
-                    </ol>
-                  </li>
-                  <li><u>Exercise [<abbr>VSM</abbr>:Code editing in Visual Studio Code]</u>: <br>
-                    Watch the video below.&nbsp; Follow all the video instructions:<br>
-                    <a href="https://code.visualstudio.com/docs/introvideos/codeediting" target="_blank">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
-                    <br>
-                    You must perform <u>all</u> the instructions in the video above.&nbsp;&nbsp; The items below are listed to merely provide you a partial
-                    checklist in the assignment rubric to highlights the key steps in the video's&nbsp; detailed instructions.<br>
-                    <br>
-                    <ol>
-                      <li><u>Exercise: [<abbr>VSM</abbr>:"Open a folder".... "Use File Explorer"]</u></li>
-                      <li><u>Exercise: [<abbr>VSM</abbr>:"Install the Node.js runtime" ... "Check your Node.js"]</u></li>
-                      <li><u>Exercise: [<abbr>VSM</abbr>:"Create a simple 'Hello world'" ..."Run the application"]</u></li>
-                      <li><u>Exercise: </u></li>
+                      </li>                        
+                        <li class="Instruction_Reading"><u>Read [<abbr>VSC</abbr>: ... Keyboard shortcuts]</u> Read up and including through <a href="https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts" target="_blank">https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts</a></li>
+                        <li class="Instruction_Reading">
+                          <u>[<abbr>VSC</abbr>: 
+                            <a href="https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor" target="_blank">multiple-selections-multicursor</a>]</u>
+                            <br> Read the first paragraphs of above section, stopping <u>before</u> <a href="https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier" target="_blank">Multi Cursor Modifier</a>
+                            <ol>
+                              <li></li>
+                            </ol>
+                        </li>
                     </ol>
                   </li>
                 </ol>
@@ -1939,6 +2128,15 @@
                   </tbody>
                 </table>
               </div>
+            </section>
+            <section>
+              <h1 class="Section" id="_Ref523489498">References</h1>
+              <ol class="References">
+                  <li id="cite_atlassian2023a">        
+                    "Forking Workflow", <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow">https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow</a>,
+                    Access September 2023.            
+                  </li>
+              </ol>
             </section>
             <section>
               <h1 class="Section" id="_Ref523489498">Academic Integrity</h1>
