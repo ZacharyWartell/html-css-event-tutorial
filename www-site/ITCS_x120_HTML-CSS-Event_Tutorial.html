@@ -454,38 +454,14 @@ These modifications are <b>required</b> by the course grading system to automate
               <h1 class="Section" id="Part1"> Part 1:&nbsp; Project Organization and Setup </h1>
               Part 1 covers project organization, setup, and general requirements.
               <section data-point-fraction="50" class="Instruction_Section">
-                <h2 class="Section">git setup</h2>
+                <h2 class="Section">Git Repo Setup</h2>
                 <p>Your working directory structure and your git repository structure <u>must</u> be exactly as described below.<br>
                 </p>
                 <!--- cleanup start -->
                 <ol class="Instruction">
-                  <li class="Instruction_Todo">Create a Git repository called <span class="File_Name"><span data-course-number="">6120</span>-HTML-Tutorial</span>on
-                    the course's designated Git server following the guidelines prescribed for the course.&nbsp;&nbsp; (Recall <a class="WindowOpenLeft" onclick="windowOpenLeft('https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#How_to_Create_New_Remote_Repository','GT');">How
-                      to Create New Remote Repository</a> in the earlier <a class="WindowOpenLeft" onclick="windowOpenLeft('https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html','GT');">Git
-                      Tutorial and "Coding" Standards</a>). <br>
+                  <li class="Instruction_Todo">Create a Git repository called <span class="File_Name"><span data-course-number="">6120</span>-html-exercises</span> on
+                    the course's designated Git server following the guidelines prescribed for the course.
                     <a class="WindowOpenLeft" onclick="windowOpenLeft('https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html','GT');"></a><br>
-                  </li>
-                  <li class="Instruction_Todo">If you have not already done so, create the following directory for your <span data-course-number="">6120</span>
-                    course work:<br>
-                    <table class="Code_Example" id="Code_Example0_0">
-                      <tbody>
-                        <tr>
-                          <td> <button onclick="Code_Example_Toggle('Code_Example0_0');"> ▽ </button> </td>
-                          <td>
-                            <div style="height: 60px;"><code class="Shell_Code_Input">  mkdir ITCS_<span data-course-number="">6120</span><br>
-                              </code> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span><br>
-                              </code> <code class="Shell_Code_Input"> cd ITCS_<span data-course-number="">6120</span><br>
-                              </code>
-                              <!--
-                                                                                    <span class="Shell_Code_Comment">                                            […misc additional output will                                            appear…] </span>                            --->
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <!--
-                                          <img src="images/image001.png" alt="Text Box: $ mkdir ITCS_<span data-course-number="">6120<span>lucretius@monad42 ~/ITCS_<span data-course-number="">6120<span>$ cd ITCS_<span data-course-number="">6120<span> height="69" width="566">          -->
-                    <br>
                   </li>
                   <li class="Instruction_Todo"> Clone your repo and enter the created directory.&nbsp;&nbsp; <span class="Highlight"></span> <br>
                     <table class="Code_Example" id="Code_Example1_0">
@@ -493,43 +469,25 @@ These modifications are <b>required</b> by the course grading system to automate
                         <tr>
                           <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                           <td>
-                            <div style="height: 100px;"><code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span><br>
-                              </code> <code class="Shell_Code_Input"> $ git clone <span class="User_Input">URL of the <span data-course-number="">6120</span>-HTML-Tutorial
-                                  repo<br>
-                                </span>/<span data-course-number="">6120</span>-HTML-Tutorial.git<br>
+                            <div>
+                              <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>
+                              </code>
+                              <code class="Shell_Code_Input-v2">git clone <span class="User_Input">URL of the <span data-course-number="">6120</span>-HTML-Tutorial
+                                  repo
                               </code> <code class="Shell_Code_Output"> Cloning into '<span data-course-number="">6120</span>-HTML-Tutorial'<br>
                                 <span class="Shell_Code_Comment">[...]</span><br>
-                              </code> <code class="Shell_Code_Input"> $ cd <span data-course-number="">6120</span>-HTML-Tutorial<br>
                               </code>
-                              <!--
-                                                                                    <span class="Shell_Code_Comment">[…]</span>                            <span class="Shell_Code_Comment">                                            […misc additional output will                                            appear…] </span>                            --->
+                               <code class="Shell_Code_Input-v2"> cd <span data-course-number="">6120</span>-html-exercises</span></code>                              
+                               <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>/<span data-course-number="">6120</span>-html-exercises</span></code>
+                               <code class="Shell_Code_Input-v2">cci-git-fork.js https://cci-git.charlotte.edu/UNCC_Graphics/html-exercises.git</code>
+                               <span class="Shell_Code_Comment">The output generated by cci-git-fork.js is not shown. It will be similar that shown in exercise <a href="#My_First_Cci_Git_Fork">My_First_Cci_Git_Fork</a></span>.
                             </div>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <!--
-                                            <img src="images/image002.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120<span>              height="103" width="618">             -->
                   </li>
-                  <li class="Instruction_Todo">Inside the <span class="ProgramName"><span data-course-number="">6120</span>-HTML-Tutorial </span>directory
-                    create a text file called <span class="ProgramName">README.md</span>.&nbsp; Add your name on the <u>first</u> line of the
-                    file.&nbsp;&nbsp; <br>
-                    <br>
-                    <ol>
-                      <li class="Instruction_Git_Commit">Git commit the file with commit message <span class="Git_Commit_Message">"initial README.md"</span> </li>
-                    </ol>
-                    <br>
-                  </li>
-                  <li class="Instruction_Todo">Inside the above directory create a second text file called <span class="ProgramName">Questions.txt. A</span>dd
-                    your name on the <u>first</u> line of the file.&nbsp;&nbsp; <br>
-                    <br>
-                    <ol>
-                      <li class="Instruction_Git_Commit">Git commit the file with the commit message <span class="Git_Commit_Message">"initial Questions.txt"</span>
-                      </li>
-                    </ol>
-                    <br>
-                    Some of the exercises in this tutorial may involve you answering questions.&nbsp;&nbsp; You will write you answers in this file. <br>
-                    <br>
+                  <li class="Instruction_Todo"> Examine the contents of the above directory.  It contains starter and skeleton files for the exercises you will be completing.
                   </li>
                 </ol>
                 <!--- cleanup end --> </section>
@@ -569,97 +527,92 @@ These modifications are <b>required</b> by the course grading system to automate
               <h1 class="Section" id="Part2_OptionI">Part 2:Option I - HTML, CSS, Event Handling</h1>
               Part 2 : Option I is series of readning and exercises form the MDN doc's on HTML, CSS and event handling.
               <section data-point-fraction="33.3" class="Instruction_Section">
-                <h2 class="Section">Overview of HTML</h2>
-                <p>Go to the MDN page <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML','MDN');">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.&nbsp;&nbsp;
+                <h2 class="Section">Overview of HTML</h2>                
+                <p>Go to the MDN page <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML','MDN');">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.
+                  <!--
                   Note the expandable index on the left hand-side of the page.&nbsp;&nbsp; Expand the first sub-section.&nbsp; It should look like:</p>
                 <p style="text-align:center"><img src="images/image003.jpg" height="296" width="247"><br>
                   <br>
                 </p>
-                <p>This assignment will guide you through reading the sub-sections highlighted red in the image above.</p>
-                <p>The instructions below tell you:</p>
+                -->
+                <p>This assignment will guide you through reading a small subset of this documentation.</p>
+                <p>The assignment instructions below tell you:</p>
                 <ul>
-                  <li>What sections of the Chrome DevTools and Developer Mozilla (MDN) webpages to read </li>
-                  <li>Which of the "Active Learning" exercises in these articles you must perform </li>
-                  <li>How to submit the results of these "Active Learning" exercises to your git repository. </li>
+                  <li>What sections of the <abbr>MDN</abbr> webpages to read </li>
+                  <li>Which of the <abbr>MDN</abbr> webpages "Active Learning" exercises you must perform. </li>
+                  <li>How to submit the results of <u>some</u> of the "Active Learning" exercises to your git repository. </li>
                 </ul>
                 <section>
                   <h3 class="Section">Introduction to HTML</h3>
-                  <p>From the index, follow the link <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML','MDN');">Introduction
-                      to HTML overview</a>.&nbsp;&nbsp;&nbsp; Read <u>just</u> the first paragraph of this page. </p>
+                  Read <u>just</u> the first paragraph of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML','MDN');">Introduction
+                      to HTML</a></p>
                 </section>
                 <section data-point-fraction="33.3" class="Instruction_Section">
                   <h3 class="Section">Getting Started with HTML</h3>
-                  <p>From the index, follow the link <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started','MDN');">Getting
+                  <p>Go to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started','MDN');">Getting
                       Started with HTML</a>. <br>
                   </p>
                   <ol class="Instruction">
                     <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started','MDN');">Getting
-                        Started with HTML</a> - read through the first sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#what_is_html','MDN');">
+                        Started with HTML</a> - read through up to and including the first sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#what_is_html','MDN');">
                         <span class="MDN_h2">What is HTML</span></a> <br>
                       <br>
                     </li>
                     <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_element','MDN');"><span
 
-                          class="MDN_h2">Anatomy of an HTML element</span></a>&nbsp; - read this sub-section pausing to do the MDN "Active Learning" exercises
+                          class="MDN_h2">Anatomy of an HTML element</span></a>&nbsp; - read this entire sub-section, pausing to do the MDN "Active Learning" exercises
                       listed below:<br>
                       <ol>
-                        <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp; Do "Active learning: creating your first HTML element<br>
+                        <li class="Instruction_Todo"><u>Exercise</u>:
+                          Do <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_creating_your_first_html_element','MDN');">"Active learning: Adding attributes to an element"</a><br>
                           <br>
-                          This exercise.does not require you add anything to your Git repo.<br>
+                          This exercise does not require you add anything to your Git repo.<br>
                           <br>
                         </li>
                       </ol>
                     </li>
                     <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#attributes','MDN');"><span class="MDN_h2">Attributes</span></a>-
-                      read this sub-section and do the MDN "Active Learning" exercises listed below:
+                      read this entire sub-section and do the MDN "Active Learning" exercises listed below:
                       <ol>
-                        <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; Do "Active learning: Adding attributes to an element<br>
+                        <li class="Instruction_Todo"><u>Exercise</u>:
+                          Do <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_adding_attributes_to_an_element','MDN');">"Active learning: Adding attributes to an element"</a><br>
                           <br>
-                          This exercise.does not require you add anything to your Git repo.<br>
+                          This exercise does not require you add anything to your Git repo.<br>
                           <br>
                         </li>
                       </ol>
                     </li>
                     <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document','MDN');"><span
 
-                          class="MDN_h2">Anatomy of a HTML document</span></a> - read all.&nbsp; However when you reach each Active Learning exercise perform
+                          class="MDN_h2">Anatomy of a HTML document</span></a> - read all.  However when you reach each "Active Learning" exercise perform
                       the exercise with the instruction modifications listed below:<br>
                       <br>
                       <ol>
-                        <li class="Instruction_Todo"><u>Exercise [anatomy-of-HTML]</u>: Do "Active learning: Adding some features to an HTML document<br>
+                        <li class="Instruction_Todo"><u>Exercise [anatomy-of-HTML]</u>:
+                          Do <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_adding_some_features_to_an_html_document','MDN');">"Active learning: Adding some features to an HTML document"</a>
+                          with the modifications described below.<br>
                           <br>
-                          Perform the entire exercise in a separate file, <span class="ProgramName">index.html</span>, as suggested in the Active Learning
-                          instructions.&nbsp;&nbsp; Then:<br>
-                          <br>
+                          Use VS Code to perform the entire exercise in a separate file, <span class="ProgramName">index.html</span>, as suggested in the "Active Learning"
+                          instructions.  Place the files the subdirectory below and git commit:<br>
+                          <br>                          
                           <ol>
-                            <li>Create a sub-directory<br>
+                            <li>
                               <table class="Code_Example">
                                 <tbody>
                                   <tr>
                                     <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ▽ </button> </td>
                                     <td>
-                                      <div style="height: 40px;"><code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
-
-                                            data-course-number="">6120</span>-HTML-Tutorial<br>
-                                        </code> <code class="Shell_Code_Input"> $ mkdir anatomy-of-HTML<br>
-                                        </code>
-                                        <!--
-                                                                                                                                <span class="Shell_Code_Comment">[…]</span>                                    <span class="Shell_Code_Comment">                                                    […misc additional output will                                                    appear…] </span>                                    --->
+                                      <div style="height: 40px;">
+                                        <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>/<span data-course-number="">6120</span>-html-exercises</span></code>
+                                        <code class="Shell_Code_Input-v2">cd anatomy-of-HTML</code>                                        
                                       </div>
                                     </td>
                                   </tr>
                                 </tbody>
                               </table>
-                              <!--
-                                                                                      <img src="images/image004.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial$ mkdir anatomy-of-HTML" height="54" width="566">                  -->
                             </li>
-                            <li><a id="_Ref523302752">Move </a><span class="ProgramName">index.html</span> to the above directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
-                              <br>
-                              <ol>
-                                <li class="Instruction_Git_Commit">Git commit the file with the message <span class="Git_Commit_Message">"-exercise
-                                    anatomy-of-HTML </span> </li>
-                              </ol>
-                            </li>
+                            <li class="Instruction_Git_Commit">Git commit the file with the message <span class="Git_Commit_Message">"-exercise
+                              anatomy-of-HTML </span> </li>
                           </ol>
                         </li>
                       </ol>
@@ -683,56 +636,47 @@ These modifications are <b>required</b> by the course grading system to automate
                 </section>
                 <section data-point-fraction="33.3" class="Instruction_Section">
                   <h3 class="Section"><a id="_Ref523303742">What’s in the head? Metadata in HTML</a></h3>
+                  <span id="cursor"></span>
                   <p>Goto the next MDN subsection.&nbsp;&nbsp; There is a "Next" button at the top and bottom of the page that you just read.&nbsp;&nbsp; <br>
                   </p>
                   <ol class="Instruction">
-                    <li class="Instruction_Read"><span class="MDN_h2"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML','MDN');">What’s
-                          in the head? Metadata in HTML</a> - read up to and including the first sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#what_is_the_html_head','MDN');">What
-                          is the HTML head?</a></span><br>
+                    <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML','MDN');">What’s
+                          in the head? Metadata in HTML</a> - read up to and <u>including</u> the first sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#what_is_the_html_head','MDN');">What
+                          is the HTML head?</a><br>
                       <br>
                     </li>
                     <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_title','MDN');"><span
 
-                          class="MDN_h2">Adding a title</span></a> - read all but when you reach each Active Learning exercise perform the exercise with the
+                          class="MDN_h2">Adding a title</span></a> - Read all, but when you reach each Active Learning exercise perform the exercise with the
                       instruction modifications listed below:<br>
                       <br>
                       <ol>
-                        <li class="Instruction_Todo"><a id="_Ref523303735"><u>Exercise [adding-a-title]</u>:&nbsp; Do "Active learning: Inspecting a simple
-                            example<br>
-                            <br>
-                            Perform the entire exercise in a separate file, </a><span class="ProgramName">title-example.html</span>, as suggested in the Active
-                          Learning instructions.<br>
+                        <li class="Instruction_Todo"><u>Exercise [adding-a-title]</u>:
+                          Do <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#active_learning_inspecting_a_simple_example','MDN');">"Active learning: Inspecting a simple example"</a>
+                          with the modifications described below.<br>
                           <br>
+                          Use VS Code to perform the entire exercise in a separates files as indicated in the "Active Learning" instructions.  Place the files the subdirectory below and git commit:<br>
+                          <br>                          
                           <ol>
-                            <li>Create a sub-directory<br>
+                            <li>
                               <table class="Code_Example">
                                 <tbody>
                                   <tr>
                                     <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ▽ </button> </td>
                                     <td>
-                                      <div style="height: 40px;"><code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
-
-                                            data-course-number="">6120</span>-HTML-Tutorial<br>
-                                        </code> <code class="Shell_Code_Input"> $ mkdir adding-a-title<br>
-                                        </code>
-                                        <!--
-                                                                                                                      <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>                          --->
+                                      <div style="height: 40px;">
+                                        <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>/<span data-course-number="">6120</span>-html-exercises</span></code>
+                                        <code class="Shell_Code_Input-v2">cd adding-a-title</code>                                        
                                       </div>
                                     </td>
                                   </tr>
                                 </tbody>
                               </table>
-                              <!--
-                                                                                      <img src="images/image005.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial$ mkdir adding-a-title" height="54" width="566">-->
                             </li>
-                            <li>Move <span class="ProgramName">title-example.html</span> to the above directory.&nbsp;&nbsp;&nbsp;&nbsp;
-                              <ol>
-                                <li class="Instruction_Git_Commit">Git commit the file with the message <span class="Git_Commit_Message">"-exercise
-                                    adding-a-title </span> </li>
-                              </ol>
-                            </li>
+                            <li class="Instruction_Git_Commit">Git commit the file with the message <span class="Git_Commit_Message">"-exercise
+                              adding-a-title"</span> </li>
                           </ol>
-                        </li>
+                        </li>                        
                       </ol>
                     </li>
                     <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element','MDN');"><span
@@ -741,27 +685,44 @@ These modifications are <b>required</b> by the course grading system to automate
                       the exercise with the instruction modifications listed below:<br>
                       <br>
                       <ol>
-                        <li class="Instruction_Todo"><u>Exercise [char-encoding]</u>:&nbsp; Do "Active learning: Experiment with character encoding<br>
-                          <br>
-                          Perform the entire exercise by editing your file from the previous exercise, <span class="ProgramName">title-example.html</span>.<br>
+                        <li class="Instruction_Todo"><u>Exercise [char-encoding]</u>:
+                          Do <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#active_learning_experiment_with_character_encoding','MDN');">"Active learning: Experiment with character encoding"</a>
+                          with the modifications described below.<br>
+                          <br>                          
+                          Use VS Code to perform the entire exercise by <u>copying</u> editing your files from the previous exercise into the subdirectory below and git commit:
+                          <br>                          
                           <ol>
-                            <li>Save the file changes.<br>
-                              <br>
-                              <ol>
-                                <li class="Instruction_Git_Commit">Git commit with the message <span class="Git_Commit_Message">"-exercise char-encoding "</span>
-                                </li>
-                              </ol>
+                            <li>
+                              <table class="Code_Example">
+                                <tbody>
+                                  <tr>
+                                    <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ▽ </button> </td>
+                                    <td>
+                                      <div style="height: 40px;">
+                                        <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>/<span data-course-number="">6120</span>-html-exercises</span></code>
+                                        <code class="Shell_Code_Input-v2">cd char-encoding</code>                                        
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </li>
+                            <li class="Instruction_Git_Commit">Git commit the file with the message <span class="Git_Commit_Message">"-exercise
+                              char-encoding"</span> 
                             </li>
                           </ol>
-                        </li>
-                        <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; Do "Active learning: The description's use in search engines<br>
-                          <br>
-                          This exercise.does not require you add anything to your Git repo.<br>
-                          <br>
-                        </li>
+                        </li>                         
+                        <li class="Instruction_Todo"><u>Exercise [search-engines]</u>:
+                          Do <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#active_learning_the_descriptions_use_in_search_engines','MDN');">"Active learning: The description's use in search engines"</a>
+                          .<br>
+                          <br>                          
+                          This exercise does not require you add anything to your Git repo.
+                        </li>                         
                       </ol>
                     </li>
-                    <li><span class="MDN_h2">Adding custom icons to your site</span> - <strong><u>skip</u></strong> this sub-section <br>
+                    <li class="Instruction_Reading">
+                      <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site','MDN');"><span
+                        class="MDN_h2">Adding custom icons to your site</span></a> - Read all.                      
                       <br>
                     </li>
                     <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#applying_css_and_javascript_to_html','MDN');"><span
@@ -770,42 +731,35 @@ These modifications are <b>required</b> by the course grading system to automate
                       the exercise with the instruction modifications listed below:<br>
                       <br>
                       <ol>
-                        <li class="Instruction_Todo"><a id="_Ref523304436"><u>Exercise [applying-CSS]</u>:&nbsp; Do "Active Learning:&nbsp; Applying CSS and
-                            JavaScript to a page<br>
-                            <br>
-                            Perform the entire exercise in separate files, </a><span class="ProgramName">meta-example.html</span>, etc., as suggested in the
-                          Active Learning instructions.
+                        <!-- -->
+                        <li class="Instruction_Todo"><u>Exercise [applying-CSS]</u>:
+                          Do <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#active_learning_applying_css_and_javascript_to_a_page','MDN');">"Active learning: applying CSS and JavaScript to a page"</a>
+                          with the modifications described below.<br>
+                          <br>                          
+                          Use VS Code to perform the entire exercise in separate files, </a><span class="ProgramName">meta-example.html</span>, etc., as suggested in the
+                          Active Learning instructions. Place the files in the subdirectory below and git commit:
+                          <br>                          
                           <ol>
-                            <li>Create a sub-directory<br>
+                            <li>
                               <table class="Code_Example">
                                 <tbody>
                                   <tr>
                                     <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ▽ </button> </td>
                                     <td>
-                                      <div style="height: 40px;"><code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
-
-                                            data-course-number="">6120</span>-HTML-Tutorial<br>
-                                        </code> <code class="Shell_Code_Input"> $ mkdir applying-CSS-and-JS<br>
-                                        </code>
-                                        <!--
-                                                                                                                      <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>                          --->
+                                      <div style="height: 40px;">
+                                        <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>/<span data-course-number="">6120</span>-html-exercises</span></code>
+                                        <code class="Shell_Code_Input-v2">cd applying-CSS</code>                                        
                                       </div>
                                     </td>
                                   </tr>
                                 </tbody>
                               </table>
-                              <!--
-                                                                                      <img src="images/image006.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial$ mkdir applying-CSS-and-JS" height="54" width="566">-->
                             </li>
-                            <li>Move <span class="ProgramName">meta-example.html</span> and the other files to the above directory.&nbsp;&nbsp;&nbsp;&nbsp; <br>
-                              <br>
-                              <ol>
-                                <li class="Instruction_Git_Commit">Git commit the file with the message <span class="Git_Commit_Message">"-exercise
-                                    applying-CSS </span></li>
-                              </ol>
+                            <li class="Instruction_Git_Commit">Git commit the file with the message <span class="Git_Commit_Message">"-exercise
+                              applying-CSS"</span> 
                             </li>
                           </ol>
-                        </li>
+                        </li>  
                       </ol>
                     </li>
                     <li class="&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#setting_the_primary_language_of_the_document','MDN');"><span
@@ -826,7 +780,7 @@ These modifications are <b>required</b> by the course grading system to automate
                       <ol>
                         <li class="Instruction_Todo"><u>Exercise</u>: &nbsp;Do "Active learning: Giving our content structure<br>
                           &nbsp;<br>
-                          This exercise.does not require you add anything to your Git repo.<br>
+                          This exercise does not require you add anything to your Git repo.<br>
                           <br>
                         </li>
                       </ol>
@@ -839,12 +793,12 @@ These modifications are <b>required</b> by the course grading system to automate
                       <ol>
                         <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; Do "Active learning: Marking up an unordered list" <br>
                           &nbsp;<br>
-                          This exercise.does not require you add anything to your Git repo.<br>
+                          This exercise does not require you add anything to your Git repo.<br>
                           <br>
                         </li>
                         <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; Do "Active learning: Marking up an ordered list" <br>
                           &nbsp;<br>
-                          This exercise.does not require you add anything to your Git repo.<a id="_Ref523305624"><br>
+                          This exercise does not require you add anything to your Git repo.<a id="_Ref523305624"><br>
                           </a></li>
                         <li class="Instruction_Todo"><a id="_Ref523305685"><u>Exercise [recipe-page]</u>:&nbsp; Do "Active learning: Marking up our recipe page"
                             <br>
@@ -1519,7 +1473,7 @@ These modifications are <b>required</b> by the course grading system to automate
 
                           class="MDN_h2">Using addEventListener()</span></a> : <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#removing_listeners','MDN');">Removing
                         listeners</a> - read.<br>
-                      This exercise.does not require you add anything to your Git repo.<br>
+                      This exercise does not require you add anything to your Git repo.<br>
                       <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener','MDN');"><span class="MDN_h2"></span></a></li>
                     <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener','MDN');"><span
 
@@ -1615,7 +1569,7 @@ These modifications are <b>required</b> by the course grading system to automate
                       - read all.&nbsp; When you reach each Active Learning exercise perform the exercise with the instruction modifications listed below<u>:</u>
                       <ol>
                         <li class="Instruction_Todo"><u>Exercise [extra properties]</u>:&nbsp; Experiment with the embedded interactive editor exercise<br>
-                          This exercise.does not require you add anything to your Git repo. </li>
+                          This exercise does not require you add anything to your Git repo. </li>
                         <li class="Instruction_Todo"><u>Exercise [key events]</u>: <br>
                           <br>
                           Modify some of the code in your <span class="File_Name">random-color-addeventlistener<span style="font-family: serif;"> </span></span>directory
@@ -1669,7 +1623,7 @@ These modifications are <b>required</b> by the course grading system to automate
                           This exercise does not require you add anything to your Git repo. </li>
                         <li class="Instruction_Todo"><u>Exercise</u>: [bubbling-example&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_example','MDN');">Bubbling_example</a><br>
                           <br>
-                          This exercise.does not require you add anything to your Git repo. </li>
+                          This exercise does not require you add anything to your Git repo. </li>
                         <li class="Instruction_Todo"><u>Exercise</u>: [video-player]&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#video_player_example','MDN');">Video_player_example.</a>
                           <ins> Download the code from this link, <a href="./code/video-player.html" target="_blank">video-player.html</a></ins> <span class="Updated_Text_Popup_Note">2/15/2023:
                             Simplified exercise by giving .html file </span>, and organize the file(s) as follows:<br>
@@ -1774,6 +1728,10 @@ These modifications are <b>required</b> by the course grading system to automate
             </section>
             <section data-point-fraction="40" class="Instruction_Section">
               <h1 class="Section"><a id="Part3">Part 3: Chrome DevTools</a></h1>
+              <div class="Staff_Notes" style="color:red;background-color: yellow;">
+                  Reconsidering this section.
+                  \todo Probably want to remove and and find a suitable replacement with VS Code
+              </div>
               <p>Part 3 is required of all students. Part 3 is series of readings and exercises from the Chrome DevTool doc's. </p>
               <section data-point-fraction="16.6">
                 <h2 class="Section">Panel Overview</h2>
