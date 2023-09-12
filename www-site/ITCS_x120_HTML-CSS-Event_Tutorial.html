@@ -34,15 +34,30 @@
    </script>
     <script type="application/json" id="AssignmentName">
         {
-            "AssignmentName" :
+            "AssignmentName" : {
+                "courseNumber" : "5122",
+                "number" : "t2",
+                "numberLongDir" : "5122-t2-html-css-event-tutorial",
+                "name" : "html-css-event-tutorial"
+              }   
+        }
+    </script>
+    <!--
+        [            
             {
                 "courseNumber" : "3120",
                 "number" : "t2",
                 "numberLongDir" : "3120-t2-html-css-event-tutorial",
                 "name" : "html-css-event-tutorial"
-            }
-        }
-    </script>
+            },
+            {
+              "courseNumber" : "5122",
+              "number" : "t2",
+              "numberLongDir" : "5122-t2-html-css-event-tutorial",
+              "name" : "html-css-event-tutorial"
+            }            
+        ]
+    -->
   </head>
   <body onload="onload_Body();">
     <div class="window-container"> </div>
@@ -250,8 +265,8 @@
                                 <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/</code> 
                                 <code class="Shell_Code_Input-v2">cci-git-path-test</code>
                                 <code class="Shell_Code_Output"> cci-git-path-test successfully executing.</code> </br>
-                                  <code class="Shell_Code_Output">The current PATH variables is:</code></br></br>
-                                  <code class="Shell_Code_Output">/c/Users/zwart/bin:/mingw64/bin</code>
+                                <code class="Shell_Code_Output">The current PATH variables is:</code></br></br>
+                                <code class="Shell_Code_Output">/c/Users/zwart/bin:/mingw64/bin</code>
                                 <span class="Shell_Code_Comment">[the full details will vary]</span>
                               </div>
                             </td>
@@ -385,8 +400,9 @@ These modifications are <b>required</b> by the course grading system to automate
                       </li>                      
                       <li><u>Exercise: [modify app.js]</u>
                         <ol>
-                          <li class="Instruction_Todo">Open the folder <span class="File_Name">editing-in-vs-code</span> in VS Code.  Modify the string printed out in JavaScript file app.js in order to introduce yourself.</li>
-                          <li class="Instruction_Commit">git commit -m "-completed editing-in-vs-code exercise".<br>  Also git <b>push</b> your changes.</li>
+                            <span id="cursor"></span>
+                          <li class="Instruction_Todo">Open the folder <span class="File_Name">editing-in-vs-code/first</span> in VS Code.  Modify the string printed out in JavaScript file app.js in order to introduce yourself.</li>                          
+                          <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise first" .</span> </li>                          
                         </ol>
                       </li>                      
                     </ol>
@@ -397,48 +413,47 @@ These modifications are <b>required</b> by the course grading system to automate
                     covers in detail VS Code's code editing UI.  The exercises below guide the reader through a subset of the sections of 
                     the article and then provide short exercises to do based on the reading.
                     
-                    <ol>                        
-                      <li> [<em>YourServer</em>=<strong>cci-git</strong>]
-                        <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name">basic-editing</span>. using the
-                          procedures of <abbr>GT</abbr>: Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>.<br>
-                          &nbsp; <br>
-                          Do not forget to to <strong><u>share</u></strong> your repo with the TA and Professor (as discussed in the Appendix section <a href="#Basic_Git_Operations">Basic
-                            Git Operations).</a></div>
-                      </li>                      
-                      <li>Fork the repo as described below.&nbsp; (You will be performing all the various exercises in your forked version of this
-                        repo.)
-                        
-                        <table class="Code_Example" id="Code_Example1_0">
-                          <tbody>
-                            <tr>
-                              <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
-                              <td>
-                                <div>                                   
-                                  
-                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span
-                                      data-project-name-dir="">data-project-name </span></code>
-                                 <code class="Shell_Code_Input-v2">  git clone <span class="User_Input">URL to your course repositories</span>/<span class="File_Name">basic-editing.</span>git</code>
-                                  
-                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name </span></code> 
-                                  <code class="Shell_Code_Input-v2"> cd basic-editing</code>
-                                  
-                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;basic-editing</code>                                  
-                                  <code class="Shell_Code_Input-v2">cci-git-fork.js https://cci-git.charlotte.edu/UNCC_Graphics/basic-editing.git</code>
-                                  <span class="Shell_Code_Comment">The output generated by cci-git-fork.js is not shown. It will be similar that shown in exercise <a href="#My_First_Cci_Git_Fork">My_First_Cci_Git_Fork</a></span>.
-                                </div>                                
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>                        
-                      </li>                        
+                    <ol>                                                                                  
                         <li class="Instruction_Reading"><u>Read [<abbr>VSC</abbr>: ... Keyboard shortcuts]</u> Read up and including through <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts','VSC')">https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts</a></li>
                         <li class="Instruction_Reading">
                           <u>[<abbr>VSC</abbr>: 
                             <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor','VSC');">multiple-selections-multicursor</a>]</u>
-                            <br> Read the first paragraphs of above section, stopping <u>before</u> 
-                            <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>
+                            Open the following folder in VS Code:
+                            <table class="Code_Example" id="Code_Example1_0">
+                              <tbody>
+                                <tr>
+                                  <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                                  <td>
+                                    <div>                                                                                                                                            
+                                      <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vscode&sol;basic-editing</code>                                  
+                                    </div>                                
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>                                                    
+                            <span id="cursor"></span>
                             <ol>
-                              <li></li>
+                              <li>Read the first paragraphs of above section upto and including 
+                                <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>.
+                                <br>
+                                Use the multi-cursor to change the file <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
+                              </li>
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_shrinkexpand-selection','VSC');">Shrink/expand selection</a>.
+                                <br>
+                                Play with this feature in frogStory.html <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
+                              </li>                              
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection','VSC');">Column (box) selection</a>.
+                                <br>
+                                Use column box selection to change the mis-spelled Ascii Art version "Computer Science" to be spelled properly.
+                              </li>                              
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save','VSC');">Save/Auto Save</a>.
+                                <br>
+                                Read and explore.
+                              </li>                                                            
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_hot-exit','VSC');">Hot Exit</a>.
+                                <br>
+                                Read and explore.
+                              </li>                                             
                             </ol>
                         </li>
                     </ol>
@@ -1353,21 +1368,16 @@ These modifications are <b>required</b> by the course grading system to automate
                                                 data-course-number="">6120</span>-HTML-Tutorial<br>
                                             </code> <code class="Shell_Code_Input"> $ mkdir internal-javascript<br>
                                             </code>
-                                            <!--
-                                                                                                                        <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>                          --->
                                           </div>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <!--
-                                                                                          <img src="images/image012.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial          $ mkdir internal-javascript" height="54" width="566">                  -->
                                 </li>
                                 <li>Move all the code for the MDN exercise into the above sub-directory. <br>
                                   <br>
                                   Verify it displays correctly in Chrome. </li>
-                                <li class="Instruction_Git_Commit">Git commit the file(s) with message:&nbsp; <span class="Git_Commit_Message">"-exercise
-                                    internal-javascript"</span> </li>
+                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise internal-javascript"  .</span> </li>
                               </ol>
                               <br>
                             </li>
@@ -1384,15 +1394,11 @@ These modifications are <b>required</b> by the course grading system to automate
                                                 data-course-number="">6120</span>-HTML-Tutorial<br>
                                             </code> <code class="Shell_Code_Input"> $ mkdir external-javascript<br>
                                             </code>
-                                            <!--
-                                                                                                                        <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>                          --->
                                           </div>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <!--
-                                                                                          <img src="images/image013.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial          $ mkdir internal-javascript" height="54" width="566">-->
                                 </li>
                                 <li>Move all the code for the MDN exercise into the above sub-directory. <br>
                                   <br>
@@ -1537,15 +1543,11 @@ These modifications are <b>required</b> by the course grading system to automate
                                                 data-course-number="">6120</span>-HTML-Tutorial<br>
                                             </code> <code class="Shell_Code_Input"> $ mkdir event-object<br>
                                             </code>
-                                            <!--
-                                                                                                                          <span class="Shell_Code_Comment">[…]</span>                          <span class="Shell_Code_Comment">                                          […misc additional output will                                          appear…] </span>                          --->
                                           </div>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <!--
-                                                                                          <img src="images/image016.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial        $ mkdir useful-eventtarget" height="54" width="566">-->
                                 </li>
                                 <li class="Instruction_Todo">Perform the MDN exercises in the sub-section
                                   <ol>
@@ -1663,7 +1665,7 @@ These modifications are <b>required</b> by the course grading system to automate
                           </ol>
                         </li>
                         <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation','MDN');">Event_Delegation</a>
-                          - Download the source code that this MDN section refers to. As you read each active learning exercises perform the exercises on the
+                          - Download the source code that this <abbr>MDN</abbr> section refers to. As you read each active learning exercises perform the exercises on the
                           downloaded files and inside the directory described below:<br>
                           <ol>
                             <li class="Instruction_Todo"><u>Exercise</u>: [event-delegation]
@@ -1720,15 +1722,15 @@ These modifications are <b>required</b> by the course grading system to automate
                 <li class="Instruction_Git_Commit"> Git commit and git push. </li>
               </ol>
             </section>
-            <section data-point-fraction="40" class="Instruction_Section"><h1 class="Section"><a id="Part3">Part 3: Chrome DevTools</a></h1>
+            <div hidden="true">
+            <section data-point-fraction_HIDE="40" class="Instruction_Section_HIDE"><h1 class="Section_HIDE"><a id="Part3_HIDE">Part 3: Chrome DevTools</a></h1>
               <div class="Staff_Notes" style="color:red;background-color: yellow;">
                   Reconsidering this section.
                   \todo Probably want to remove and and find a suitable replacement with VS Code
               </div>
               <p>Part 3 is required of all students. Part 3 is series of readings and exercises from the Chrome DevTool doc's. </p>
               <section data-point-fraction="16.6">
-                <h2 class="Section">Panel Overview</h2>
-                <!-- cleanup list start -->
+                <h2 class="Section">Panel Overview</h2>                
                 <ol>
                   <li>Using Chrome goto <a target="_blank" href="https://developers.google.com/web/tools/chrome-devtools/">https://developers.google.com/web/tools/chrome-devtools/</a>
                     <br>
@@ -1739,8 +1741,7 @@ These modifications are <b>required</b> by the course grading system to automate
                     Read all of the "Chrome DevTools" page -- but do <u>not</u> follow any further hyperlinks.&nbsp; The goal is just to get a rough idea of
                     the functionality that the various "panels" provide.<a name="_Ref523490878"></a></li>
                 </ol>
-              </section>
-              <!-- cleanup list end -->
+              </section>              
               <section data-point-fraction="16.6">
                 <h2 class="Section">Get Started With Viewing And Changing The DOM</h2>
                 Under "Elements Panel", follow the link <a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/">Get Started With Viewing And
@@ -1781,15 +1782,12 @@ These modifications are <b>required</b> by the course grading system to automate
 
                                       data-course-number="">6120</span>-HTML-Tutorial<br>
                                   </code> <code class="Shell_Code_Input"> $ mkdir view-and-change-DOM<br>
-                                  </code>
-                                  <!--                      <span class="Shell_Code_Comment">[…]</span>                      <span class="Shell_Code_Comment">                                      […misc additional output will                                      appear…] </span>                      --->
+                                  </code>                        
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                        <!--
-                                                              <img src="images/image018.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial        $ mkdir view-and-change-DOM" height="56" width="566">-->
                       </li>
                       <li class="Instruction_Todo">Move the png file(s) into this directory. <br>
                         <br>
@@ -1890,15 +1888,11 @@ These modifications are <b>required</b> by the course grading system to automate
                             <div style="height: 40px;"><code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial<br>
                               </code> <code class="Shell_Code_Input"> $ mkdir get-started-console<br>
                               </code>
-                              <!--
-                                                                        <span class="Shell_Code_Comment">[…]</span>                  <span class="Shell_Code_Comment">                                  […misc additional output will                                  appear…] </span>                  --->
                             </div>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <!--
-                                        <img src="images/image019.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial$ mkdir get-started-console" height="69" width="566">-->
                     <br>
                     <br>
                   </li>
@@ -1941,15 +1935,11 @@ These modifications are <b>required</b> by the course grading system to automate
                                     document.getElementById('changeMyText').textContent = 'Hello' VM378:1 Uncaught TypeError: Cannot set property 'textContent'
                                     of null <br>
                                     <span class="Shell_Code_Comment">[... the rest of log file will appear here ... ]</span> </code>
-                                  <!--
-                                                                                            <span class="Shell_Code_Comment">[…]</span>                      <span class="Shell_Code_Comment">                                      […misc additional output will                                      appear…] </span>                      --->
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                        <!--
-                                                            <img src="images/image021.png" alt="Text Box: lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial/get-started-console /$ lsdevelopers.google.com-1535898597380.log                      [.your file name will differ.]lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial/get-started-console /$ cat developers.google.com-1535898597380.log             [cat displays the file contents… your details will differ.]   document.getElementById('changeMyText')&lt;button id=&quot;changeMyText&quot;&gt;Change My Text&lt;/button&gt;document.getElementById('changeMyText').textContent = 'Hello'VM378:1 Uncaught TypeError: Cannot set property 'textContent' of null                 [….the rest of log file will appear here … ] "                height="255" width="566">-->
                         <br>
                         <br>
                       </li>
@@ -2043,6 +2033,7 @@ These modifications are <b>required</b> by the course grading system to automate
                 </ol>
                 <b>Reminder: git push your local repo to the server and give the TA and professor reporter access. </b></section>
             </section>
+            </div>
             <section id="Section_Rubric"><h1 id="Section_Rubric" class="toc">Appendix I: Rubric</h1>
               <!--
                       <div style="border: solid 1px" hidden="">              <p style="background-color: yellow; color: red; text-align: center;"><em>[3/12/2021                  - 12:05am] Section&nbsp; Under Construction<br>                </em></p>              This Tutorial is out of will be 160 total points<br>              The rubric is generated from the "<strong>[x pts]</strong>"<strong>              </strong>labels<strong> </strong>next to each of the tutorial<strong>              </strong><u>Exercise</u><strong>:'s.<br>                <br>              </strong>ZJW: 3/12/2021:&nbsp; The rubric is nearly complete<strong>.<br>              </strong>            </div>            -->
@@ -2201,7 +2192,7 @@ These modifications are <b>required</b> by the course grading system to automate
         </article>
       </div>      
       <!--
-        most external site will refuse to connect via an iframe
+        most external site will refuse to connect via an iframe, therefore I went with the windowOpenLeft() solution.
         <div class="side-read-bar">          <iframe src="https://developer.mozilla.org/en-US/html/zjwgi/Web/JavaScript/Guide/Expressions_and_Operators">          </iframe>        </div>                      -->
     </div>
     <p> <template id="SectionRubricTemplate" data-version="1.0">
@@ -2223,4 +2214,5 @@ These modifications are <b>required</b> by the course grading system to automate
         <div class="Instruction_Section"> </div>
       </template> </p>
   </body>
-</html>
+
+  </html>
