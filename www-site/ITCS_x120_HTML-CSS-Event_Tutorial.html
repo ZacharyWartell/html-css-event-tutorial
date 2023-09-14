@@ -119,11 +119,11 @@
                   onclick="window.open('https://docs.google.com/spreadsheets/d/1ptfQQKmokFro5CC4nCB_x9myjuK32064COfipYYk2jI/edit#gid=0');"> Test2 </button> </div>
               <h1 class="nocount">Learning Objectives</h1>
               <ul>
+                <li>Install and setup various course tools and libraries</li>
                 <li>Learn basics of Visual Studio Code IDE</li>
-                <li>Learn minimalist basics of HTML5</li>
-                <li>Learn minimalist basics of CSS</li>
-                <li>Learn basics of JavaScript event handling</li>
-                <li>Learn the basics of using Developer Tools in the Chrome web browser </li>
+                <li>Learn very basics of HTML5</li>
+                <li>Learn very basics of CSS</li>
+                <li>Learn very basics of JavaScript event handling</li>                
               </ul>
             </section>
             <section>
@@ -139,45 +139,49 @@
               </p>
               <ol>
               </ol>
-              <ol>
-                <li><a href="#Part1">Part 1</a> - required by all students </li>
-                <li>Part 2 - Option I or Option II is required<br>
+              <ol>                
+                <li><a href="#Part1">Part 1</a> is required for all students. </li>
+                <li>Part 2: Either Option I or Option II is required for all students.<br>
                   <ol>                    
-                    <li>Option I - <a href="#Part2_OptionI">Visual Studio Code: Tutorial</a>:&nbsp;&nbsp; This option is designed primarily for students without
-                      extensive experience using a debugger in an integrated developement enviornment that supports HTML5 (HTML+JavaScript) and supports debugging
-                      code when it is running in the Chrome browser.                                    
+                    <li>Option I - <a href="#Part2_OptionI">Visual Studio Code: Tutorial</a>:&nbsp;&nbsp; Option I is for students without
+                      extensive experience using a debugger in an integrated developement enviornment that supports HTML5 (HTML+JavaScript) and which supports debugging
+                      HTML5 projects when it is running in the Chrome browser.   Option I is a tutorial on 
+                      the Visual Studio Code (VS Code) IDE including: using it's basic code editing
+                      functionality, using it's debugging features and and configuring it for this course's HTML5+WebGL projects.                                  
                     </li>
                     <li>Option II - <u><a href="#Part2_OptionII">Using another IDE</a></u> </u><br>
-                      If you have extensive experience using a debugger in another IDE and you choose Option II, you are responsible for 
-                      configuring your IDE to run and debug HTML5 projects (HTML+JavaScript) <b>including</b> when the code is running on in the Chrome browser.
-                      <p>The TA will grade all projects as they run in Chrome.</p>                      
+                      Option II is for those who have extensive experience using an IDE and it's debugger, and who
+                      are capable of configuring their preferred IDE to run and debug HTML5 projects (HTML+JavaScript+WebGL) <b>including</b> a configuration where the code is running in the Chrome browser.
+                      <p>The TA will grade all projects as they run in Chrome.</p>                                            
                     </li>
                   </ol>
                 </li>
-                <li>Part 3 - Option I or Option II is required<br>
+                <li>Part 3: Either Option I or Option II is required<br>
                   <ol>                    
-                    <li>Option I - <a href="#Part3_OptionI">HTML, CSS and Event Handling</a>:&nbsp;&nbsp; This option is designed primarily for students without
+                    <li>Option I - <a href="#Part3_OptionI">HTML, CSS and Event Handling</a>:&nbsp;&nbsp; This option is for students 
+                      without experience programming in HTML5, CSS and a good understanding of event handling in HTML+JavaScript projects.
                     </li>
-                    <li>Option II - <u><a href="#Part3_OptionII">Prior Experience in HTML, CSS and Event Handling</a></u> </u><br>
+                    <li>Option II - <a href="#Part3_OptionII">Prior Experience in HTML, CSS and Event Handling</a><br>
+                      This option is for students who already have the experience described above.                      
                     </li>
                   </ol>
                 </li>
-                <li><a href="#Part3">Part 3</a> - required by all students</li>
               </ol>
               <p></p>
             </section>
             <section data-point-fraction="5" class="Instruction_Section"><h1 class="Section" id="Part1">Part 1: [<b>REQUIRED</b>]  Directory and cci-git GitLab Tools Setup</h1>
               <ol class="Instruction">
-                <li> <b> Install and Test: WebGL Programming Guide Examples</b>
+                <li> <b> Installing WebGL Programming Guide Examples</b>
                   <ol>                      
                       <li class="Instruction_Todo"><span class="Instruction_Title">VSCode - Install</span>
                         Watch and follow the instructions at: 
                         <a href="https://code.visualstudio.com/docs/introvideos/basics" target="_blank">https://code.visualstudio.com/docs/introvideos/basics </a> to installed Visual Studio Code.
+                        (It should only take 5-10 minutes).
                       </li>
                       <li class="Instruction_Todo"><span class="Instruction_Title">NodeJS - Install</span>
                         Install <a href="https://nodejs.org/en" target="_blank">https://nodejs.org/en</a>.
                       </li>
-                      <li class="Instruction_Todo"><span class="Instruction_Title">Clone WGL PG Code</span>&nbsp;&nbsp;
+                      <li class="Instruction_Todo"><span class="Instruction_Title">Clone the WebGL Programming Guide Examples</span>&nbsp;&nbsp;
                         In your ITCS_<span class="DataField" data-course-number="">3120</span> directory, clone the WebGL Programming Guide
                         example code:
                         <table class="Code_Example">
@@ -197,17 +201,16 @@
                           </tbody>
                         </table>
                       </li>
-                      <li class="Instruction_Todo"><span class="Instruction_Title">View WGL PG Examples in VS Code</span>&nbsp;&nbsp;
+                      <li class="Instruction_Todo"><span class="Instruction_Title">Explore the WebGL Examples in VS Code</span>&nbsp;&nbsp;
                         In VS Code, from the main menu select items <span class="File_Name">File
                           -&gt; Open Folder</span> and select the above folder, i.e. <span
-                          class="File_Name">WebGL_Programming_Guide.</span>&nbsp;&nbsp;
-                        This will load the code files in this directory.&nbsp; They will
-                        appear listed in the VS Code (left side) Explorer
-                        panel,&nbsp;&nbsp;&nbsp; In the Explorer panel, right-click the
+                          class="File_Name">~/ITCS_3120/WebGL_Programming_Guide.</span> These code files will
+                        appear listed in the VS Code Explorer
+                        panel, one the left side. In the Explorer panel, right-click the
                         file <span class="File_Name">index.html</span>.&nbsp; In the
-                        pop-up menu, select <span class="File_Name">Show Preview</span>. &nbsp; Select some of links to run some of the
-                        examples.<br>
-                        The video below illustrates these instructions:<br>
+                        pop-up menu, select <span class="File_Name">Show Preview</span> (or <span class="File_Name">Show Live Server</span>).
+                        A browser will be started displaying <span class="File_Name">index.html</span>.
+                        Select some of links on the displayed page and run some of the examples. The video below illustrates these instructions:<br>
                         <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_hd3gg1gn&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_3z5k2v3w"
                           allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
                           allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
@@ -215,11 +218,12 @@
                           height="285" frameborder="0" width="400"></iframe> </li>
                   </ol>
                 </li>                
-                <li> <b> Install and Test: UNCC Graphics GitLab Tools:</b>
+                <li>                
+                  <b> Install UNCC Graphics GitLab Tools:</b>
                   <p>To automate some GitLab operations several command-line programs have been created for this course.
-                    You should download and install them as follows:<br>
+                    You need to install them as described below.<br>
                   <ol>
-                    <li> Clone the tools:
+                    <li><b>Clone the tools:</b>
                       <table class="Code_Example" id="Code_Example1_0">
                         <tbody>
                           <tr>
@@ -244,14 +248,14 @@
                         </tbody>
                       </table>                      
                     </li>
-                    <li> Add the tools path to the $PATH bash environment variable:
+                    <li><b>Set your PATH env variable:</b> Add the tools path to the $PATH bash environment variable:
                       <table class="Code_Example" id="Code_Example1_0">
                         <tbody>
                           <tr>
                             <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                             <td>
                               <div> 
-                                <span class="Shell_Code_Comment">First check if you have a .bash_profile file in your bash home directory</span>
+                                <span class="Shell_Code_Comment">First check if you have a .bash_profile file in your bash home directory</span><br>
                                 <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/
                                 </code>                                                                 
                                 <code class="Shell_Code_Input-v2">cd ~</code>
@@ -259,11 +263,10 @@
                                 </code>                                 
                                 <code class="Shell_Code_Input-v2">ls -la .bash_profile</code>
                                 <span class="Shell_Code_Comment">
-                                  If the file exists, then stop with the above command.  Next, edit the existing file with any text file editor such as notepad, etc.                                  
+                                If the file exists, then stop with the above command. Goto step (c).
                                 </span><br><br>
                                 <span class="Shell_Code_Comment">
-                                  If the file does not exist, then first create an empty file with the command below.
-                                  After creating it, then edit the file with a text file editor such as notepad, etc.                                  
+                                  If the file does not exist, then first create an empty file with the command below.                                
                                 </span><br>
                                 <code class="Shell_Code_Input-v2">echo > .bash_profile</code>
                                 <br>
@@ -273,9 +276,10 @@
                         </tbody>
                       </table>                      
                     </li>
-                    <li> Edit the file <span class="File_Name">.bash_profile</span> and add the following line to the file.  Substitute the path shown (in grey) with whatever path 
-                      you copied earlier from running the <span class="File_Name">pwd</span> command. <br>
+                    <li> Edit the file <span class="File_Name">.bash_profile</span> and add the following line to the file.  In the line, substitute the path shown (in grey) with whatever path 
+                      you copied earlier from the <span class="File_Name">pwd</span> command in step (a). <br><br>
                         <code>export PATH=$PATH:<span class="User_Input">/c/Users/zwart/ITCS_3120/tools</span></code>
+                        <br><br>
                     </li>
                     <li> To activate the updated PATH in your current bash shell, explicitly execute the .bash_profile script as follows.
                       (When you start any future instance of bash the .bash_profile will be automatically executed).
@@ -316,7 +320,7 @@
                   </ol>
                 </li>
                 <li>Create a directory for this assignment in your class directory and cd to that directory. Perform all the exercise in this tutorial within
-                  that subdirectory<br>
+                  that subdirectory.<br>
                   <table class="Code_Example" id="Code_Example1_0">
                     <tbody>
                       <tr>
@@ -331,14 +335,15 @@
                     </tbody>
                   </table>
                 </li>
-                <li><u>Exercise[Remote Repo Setup]</u>:
+                <span id="cursor"></span>
+                <li><u>Exercise [Remote Repo Setup]</u>:
                   <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name"> editing-in-vscode</span> using the
                     procedures of <abbr>GT</abbr>: Appendix I-3 <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Git_Server_Access">Git_Server_Access</a>.<br>                          
                     Do not forget to to <strong><u>share</u></strong> your repo with the TA and Professor (as discussed in the Appendix section <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Basic_Git_Operations">Basic
                       Git Operations).</a></div>
                 </li>
-                <li><u id="My_First_Cci_Git_Fork">Exercise[Forking editing-in-vscode.git]</u>:
-                  <br>Fork the repo exactly as described below.
+                <li><u id="My_First_Cci_Git_Fork">Exercise [Forking editing-in-vscode.git]</u>:
+                  <br>Fork the editing-in-vscode.git repo exactly as described below.
                   <table class="Code_Example" id="Code_Example1_0">
                     <tbody>
                       <tr>
@@ -348,7 +353,20 @@
                             <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span
                                 data-project-name-dir="">data-project-name </span></code>
                             <code class="Shell_Code_Input-v2">git clone https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
-                            
+                     
+                            <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name </span></code> 
+                            <code class="Shell_Code_Input-v2"> $ git config --global --get-regexp "user.*"</code>
+                            <code class="Shell_Code_Output">
+                            user.email zwartell@uncc.edu <br>
+                            user.name Zachary Wartell<br>                      
+                            <div class="Shell_Code_Comment">
+                            Make sure the above git config information is correct.
+                            If not something has gone wrong with your original Git Tutorial assignment.<br>
+                            You need to reset the config information as described here:                              
+                            <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup</a>
+                            </div>
+                            </code>
+                     
                             <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name </span></code> 
                             <code class="Shell_Code_Input-v2"> cd editing-in-vscode</code>
                             
@@ -356,7 +374,7 @@
                             <code class="Shell_Code_Input-v2"> cci-git-fork.js https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
                             <div class="Shell_Code_Comment">
                               Note, the above command is our first use of one of the UNCC_Graphics GitLab tools installed in ~/ITCS_3120/tools.
-                              The cci-git-fork.js can execute only because you already installed NodeJs when you installed of VS Code IDE.
+                              The cci-git-fork.js can execute only because you already installed NodeJS earlier.   (NodeJS is also required for using many VS Code features).
                             </div>
                             <code class="Shell_Code_Output">
                               <br>
@@ -372,7 +390,7 @@ To https://cci-git.charlotte.edu/student-wartell/editing-in-vscode.git
 * [new branch]      main -> main
 </pre>
 <span class="Shell_Code_Comment">In addition to automating the git fork operations, cci-git-fork adds your cci-git name to the header of each source code file.
-These modifications are <b>required</b> by the course grading system to automate grading, confirm identify, manage academic integrity, etc.
+These modifications are <b>required</b> by the course grading system to help automate grading and confirm student identity etc.
 </span>
 <pre>
 > Signing forked files with your cci-git info:
@@ -1967,7 +1985,7 @@ signing 'app.js'
 
                 </li>
                 <li>
-                  <span id="cursor"></span>
+                  
                   In the README.md file after the line "### HTML and CSS Experience":
                   <ol class="Instruction">
                     <li>List all courses you already took or are currently taking where you learned HTML5, CSS, and Event Handling.<br>
