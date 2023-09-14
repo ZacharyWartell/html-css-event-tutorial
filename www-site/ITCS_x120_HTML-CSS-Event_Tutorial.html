@@ -35,9 +35,9 @@
     <script type="application/json" id="AssignmentName">
         {
             "AssignmentName" : {
-                "courseNumber" : "5122",
+                "courseNumber" : "3120",
                 "number" : "t2",
-                "numberLongDir" : "5122-t2-html-css-event-tutorial",
+                "numberLongDir" : "3120-t2-html-css-event-tutorial",
                 "name" : "html-css-event-tutorial"
               }   
         }
@@ -65,7 +65,7 @@
       <!-- disabled:  having problems getting HTML flexbox layout to open sidebar initially to show fit-content and still allow the sidebar to be shrunk
         using CSS resize.          <div id="side-nav-bar" class="side_nav_bar">        <div></div>      </div>                     -->
       <div style="resize:both;" class="main-content" id="Content">
-        <div class="toolbar" id="Toolbar">
+        <div class="toolbar" id="Toolbar" style="position:sticky;">
           <div class="Menu"> <button id="help" class="DocButton" onclick='window.open("html/zjwgi/Help.html");'> Help </button> <b>|</b>
             <div class="DocButton"> <input name="Beta_Mode" id="Beta_Mode" type="checkbox"> <label for="Beta_Mode">Beta Mode</label> </div>
             <div id="BetaModeGUI" style="display:inherit;">
@@ -140,45 +140,84 @@
               <ol>
               </ol>
               <ol>
-                <li><a href="#Part1">Part 1</a> - required</li>
-                <li>Part 2 - one of two options are required<br>
-                  <ol>
-                    <li>Option I - <a href="#Part2_OptionI">HTML, CSS, Event Handling</a>:&nbsp;&nbsp; This option is designed for students without experience
-                      in either HTML, CSS, or HTML5 Event handling.&nbsp;&nbsp; If you are missing <u>any</u> of these backgrounds you must complete the
-                      entirety of Option I.
-                      <ul>
-                      </ul>
+                <li><a href="#Part1">Part 1</a> - required by all students </li>
+                <li>Part 2 - Option I or Option II is required<br>
+                  <ol>                    
+                    <li>Option I - <a href="#Part2_OptionI">Visual Studio Code: Tutorial</a>:&nbsp;&nbsp; This option is designed primarily for students without
+                      extensive experience using a debugger in an integrated developement enviornment that supports HTML5 (HTML+JavaScript) and supports debugging
+                      code when it is running in the Chrome browser.                                    
                     </li>
-                    <li>Option II - <u><a href="#Part2_OptionII">Description of Prior Experience in HTML, CSS and Event Handling</a></u>:<u>&nbsp; </u><br>
-                      This option is designed for individuals who already have programming experience in all three areas:&nbsp; HTML, CSS, and HTML5 Event
-                      handling.&nbsp; "Part 2 - Option II " is very short but must be completed if you choose Option II. </li>
+                    <li>Option II - <u><a href="#Part2_OptionII">Using another IDE</a></u> </u><br>
+                      If you have extensive experience using a debugger in another IDE and you choose Option II, you are responsible for 
+                      configuring your IDE to run and debug HTML5 projects (HTML+JavaScript) <b>including</b> when the code is running on in the Chrome browser.
+                      <p>The TA will grade all projects as they run in Chrome.</p>                      
+                    </li>
                   </ol>
                 </li>
-                <li><a href="#Part3">Part 3</a> - required</li>
+                <li>Part 3 - Option I or Option II is required<br>
+                  <ol>                    
+                    <li>Option I - <a href="#Part3_OptionI">HTML, CSS and Event Handling</a>:&nbsp;&nbsp; This option is designed primarily for students without
+                    </li>
+                    <li>Option II - <u><a href="#Part3_OptionII">Prior Experience in HTML, CSS and Event Handling</a></u> </u><br>
+                    </li>
+                  </ol>
+                </li>
+                <li><a href="#Part3">Part 3</a> - required by all students</li>
               </ol>
               <p></p>
             </section>
-            <section data-point-fraction="5" class="Instruction_Section"><h1 class="Section" id="Part1">Directory and cci-git GitLab Tools Setup</h1>
+            <section data-point-fraction="5" class="Instruction_Section"><h1 class="Section" id="Part1">Part 1: [<b>REQUIRED</b>]  Directory and cci-git GitLab Tools Setup</h1>
               <ol class="Instruction">
-                <li>Create a directory for this assignment in your class directory and cd to that directory. Perform all the exercise in this tutorial within
-                  that subdirectory<br>
-                  <table class="Code_Example" id="Code_Example1_0">
-                    <tbody>
-                      <tr>
-                        <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
-                        <td>
-                          <div style="height: 25px;"> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
-
-                                data-project-name-dir="">data-project-name</span><br>
-                            </code> </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </li>
-                
-                <li>To automate some GitLab operations several command-line programs have been created for this course.
-                  You should download and install them as follows:<br>
+                <li> <b> Install and Test: WebGL Programming Guide Examples</b>
+                  <ol>                      
+                      <li class="Instruction_Todo"><span class="Instruction_Title">VSCode - Install</span>
+                        Watch and follow the instructions at: 
+                        <a href="https://code.visualstudio.com/docs/introvideos/basics" target="_blank">https://code.visualstudio.com/docs/introvideos/basics </a> to installed Visual Studio Code.
+                      </li>
+                      <li class="Instruction_Todo"><span class="Instruction_Title">NodeJS - Install</span>
+                        Install <a href="https://nodejs.org/en" target="_blank">https://nodejs.org/en</a>.
+                      </li>
+                      <li class="Instruction_Todo"><span class="Instruction_Title">Clone WGL PG Code</span>&nbsp;&nbsp;
+                        In your ITCS_<span class="DataField" data-course-number="">3120</span> directory, clone the WebGL Programming Guide
+                        example code:
+                        <table class="Code_Example">
+                          <tbody>
+                            <tr>
+                              <td><button>▽</button></td>
+                              <td>
+                                <div style="height: fit-content;">
+                                   <code class="Shell_Code_Prompt-v2">lucretius@Monad42 ~/ITCS_<span class="DataField" data-course-number=""></span>/</code>
+                                  <br>
+                                  <code class="Shell_Code_Input-v2">git clone
+        https://cci-git.charlotte.edu/UNCC_Graphics_Third_Party_Libraries/WebGL_Programming_Guide.git</code>
+                                  <code class="Shell_Code_Output"><br>
+                                  </code> </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                      <li class="Instruction_Todo"><span class="Instruction_Title">View WGL PG Examples in VS Code</span>&nbsp;&nbsp;
+                        In VS Code, from the main menu select items <span class="File_Name">File
+                          -&gt; Open Folder</span> and select the above folder, i.e. <span
+                          class="File_Name">WebGL_Programming_Guide.</span>&nbsp;&nbsp;
+                        This will load the code files in this directory.&nbsp; They will
+                        appear listed in the VS Code (left side) Explorer
+                        panel,&nbsp;&nbsp;&nbsp; In the Explorer panel, right-click the
+                        file <span class="File_Name">index.html</span>.&nbsp; In the
+                        pop-up menu, select <span class="File_Name">Show Preview</span>. &nbsp; Select some of links to run some of the
+                        examples.<br>
+                        The video below illustrates these instructions:<br>
+                        <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_hd3gg1gn&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_3z5k2v3w"
+                          allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
+                          allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
+                          title="Kaltura Capture recording - April 5th 2023, 9:53:43 am"
+                          height="285" frameborder="0" width="400"></iframe> </li>
+                  </ol>
+                </li>                
+                <li> <b> Install and Test: UNCC Graphics GitLab Tools:</b>
+                  <p>To automate some GitLab operations several command-line programs have been created for this course.
+                    You should download and install them as follows:<br>
                   <ol>
                     <li> Clone the tools:
                       <table class="Code_Example" id="Code_Example1_0">
@@ -276,90 +315,52 @@
                     </li>
                   </ol>
                 </li>
-              </ol>
-              <h1 class="Section"> Part 1:&nbsp; The Visual Studio Code IDE </h1>
-              <p>The TA will grade all assignments in this course using:</p>
-              <ol>
-                <li>The Visual Studio Code (VS Code) <a class="WindowOpenLeft" onclick="windowOpenLeft('https://en.wikipedia.org/wiki/Integrated_development_environment','wikipedia');">IDE</a></li>
-                with
-                <li>The Chrome web browser.</li>
-              </ol>
-              <p>It is the responsibility of each student to test all their submitted assignments using VS Code and the Chrome Browser using the "VS Code +
-                Chrome" configuration specified in the rest of this document. Therefore each student is expected to be have basic familiarity with using VS Code.
-                
-                If you are an expert in another IDE, you may well choose to develop and debug your assignments in your favored IDE.  However, 
-                all course assignments will be graded in the "VS Code + Chrome" environment, therefore you must learn enough about the "VS Code + Chrome" environment
-                thorugh this tutorial such that your submitted programs execute properly in the "VS Code + Chrome" environment.</p>
-                <p>                
-                The following sections guides the reader through tutorial exercises that require reading parts of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>.&nbsp;&nbsp;
-                The abbreviation, <abbr>VSC</abbr>, will be used to refer to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>.</p>
-              <ol>
-              </ol>
-              <section class="Instruction_Section" data-point-fraction="50">
-                <h2 class="Section">Visual Studio Code Tutorial</h2>
-                <ol class="Instruction">
-                  <li data-point-fraction="33"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
-                    Watch the video below and follow all the instructions to install VS Code on your computer and learn the basics of the VS Code GUI:<br>
-                    <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
-                    </a><br>
-                    <div class="Side_Note"> <b>Side Note:</b>
-                      In the above reading,  the Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
-                      Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
-                      <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
-                          <img src="images/terminal.png" alt="images/terminal.png">
-                      </figure>
-                    </div>                    
-                  </li>
-                  <li data-point-fraction="33"><u>Exercise [<abbr>VSC</abbr>:Code editing in Visual Studio Code]</u>: <br>
-                    Watch the video below.&nbsp; Follow all the video instructions:<br>
-                    <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/codeediting','VSC')">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
-                    <br>
-                    You must perform <u>all</u> the instructions in the video above. The items below partition the above video instructions into separate rubric points.
-                    Shortly, you will perform series of exercises based on these readings and the readings' further component installation instructions.
-                    <br>
-                    <br>
-                    <ol>
-                      <li><u>Exercise: [<abbr>VSC</abbr>:"Open a folder".... "Use File Explorer"]</u></li>
-                      <li><u>Exercise: [<abbr>VSC</abbr>:"Install the Node.js runtime" ... "Check your Node.js"]</u></li>
-                      <li><u>Exercise: [<abbr>VSC</abbr>:"Create a simple 'Hello world'" ..."Run the application"]</u></li>
-                    </ol>
-                  </li>                  
-                  <li data-point-fraction="33"><u>Exercise[VS Code Editing - Modifying app.js ]</u>:                    
-                    <p>
-                    This tutorial will intersperse short exercises to demonstrate your understanding of the readings in <abbr>VSC</abbr>.  These exercises will require you
-                    to git fork various repo's containing starter code. You will modify the code to practice the skills presented in the <abbr>VSC</abbr> readings.
-                  </p>
-                    <ol class="Instruction_Option Instruction_Todo">
-                      <li><u>Exercise[Remote Repo Setup]</u>:
-                        <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name"> editing-in-vscode</span> using the
-                          procedures of <abbr>GT</abbr>: Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>.<br>                          
-                          Do not forget to to <strong><u>share</u></strong> your repo with the TA and Professor (as discussed in the Appendix section <a href="#Basic_Git_Operations">Basic
-                            Git Operations).</a></div>
-                      </li>
-                      <li><u id="My_First_Cci_Git_Fork">Exercise[Forking editing-in-vscode.git]</u>:
-                        <br>Fork the repo exactly as described below.
-                        <table class="Code_Example" id="Code_Example1_0">
-                          <tbody>
-                            <tr>
-                              <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
-                              <td>
-                                <div>                                   
-                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span
-                                      data-project-name-dir="">data-project-name </span></code>
-                                  <code class="Shell_Code_Input-v2">git clone https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
-                                  
-                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name </span></code> 
-                                  <code class="Shell_Code_Input-v2"> cd editing-in-vscode</code>
-                                  
-                                  <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vs-code</code>
-                                  <code class="Shell_Code_Input-v2"> cci-git-fork.js https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
-                                  <div class="Shell_Code_Comment">
-                                    Note, the above command is our first use of one of the UNCC_Graphics GitLab tools installed in ~/ITCS_3120/tools.
-                                    The cci-git-fork.js can execute only because you already installed NodeJs when you installed of VS Code IDE.
-                                  </div>
-                                  <code class="Shell_Code_Output">
-                                    <br>
-                                  <span class="Shell_Code_Comment">The output below is generated by cci-git-fork.js. It shows what git operations cci-git-fork is performing.</span>
+                <li>Create a directory for this assignment in your class directory and cd to that directory. Perform all the exercise in this tutorial within
+                  that subdirectory<br>
+                  <table class="Code_Example" id="Code_Example1_0">
+                    <tbody>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                        <td>
+                          <div style="height: 25px;"> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span
+
+                                data-project-name-dir="">data-project-name</span><br>
+                            </code> </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li><u>Exercise[Remote Repo Setup]</u>:
+                  <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name"> editing-in-vscode</span> using the
+                    procedures of <abbr>GT</abbr>: Appendix I-3 <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Git_Server_Access">Git_Server_Access</a>.<br>                          
+                    Do not forget to to <strong><u>share</u></strong> your repo with the TA and Professor (as discussed in the Appendix section <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Basic_Git_Operations">Basic
+                      Git Operations).</a></div>
+                </li>
+                <li><u id="My_First_Cci_Git_Fork">Exercise[Forking editing-in-vscode.git]</u>:
+                  <br>Fork the repo exactly as described below.
+                  <table class="Code_Example" id="Code_Example1_0">
+                    <tbody>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                        <td>
+                          <div>                                   
+                            <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span
+                                data-project-name-dir="">data-project-name </span></code>
+                            <code class="Shell_Code_Input-v2">git clone https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
+                            
+                            <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name </span></code> 
+                            <code class="Shell_Code_Input-v2"> cd editing-in-vscode</code>
+                            
+                            <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vs-code</code>
+                            <code class="Shell_Code_Input-v2"> cci-git-fork.js https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git</code>
+                            <div class="Shell_Code_Comment">
+                              Note, the above command is our first use of one of the UNCC_Graphics GitLab tools installed in ~/ITCS_3120/tools.
+                              The cci-git-fork.js can execute only because you already installed NodeJs when you installed of VS Code IDE.
+                            </div>
+                            <code class="Shell_Code_Output">
+                              <br>
+                            <span class="Shell_Code_Comment">The output below is generated by cci-git-fork.js. It shows what git operations cci-git-fork is performing.</span>
 <pre>  
 > git remote add upstream https://cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git
 > git pull upstream main
@@ -375,64 +376,118 @@ These modifications are <b>required</b> by the course grading system to automate
 </span>
 <pre>
 > Signing forked files with your cci-git info:
-      user.name Arthur Dent
-      user.email adent42@uncc.edu
-      url https://cci-git.charlotte.edu/adent42/editing-in-vscode.git
+user.name Arthur Dent
+user.email adent42@uncc.edu
+url https://cci-git.charlotte.edu/adent42/editing-in-vscode.git
 ---------------------------------------
-  signing 'app.js'
+signing 'app.js'
 > git commit -m "-completed fork and signing of skeleton code" .
 > git push origin main
 </pre>
-                                  </code>
+                            </code>
 
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </li>
-                      <li> You can verify that cci-git-fork successfully pushed your fork by viewing the your private repo history on the git www server.
-                        <div style="display:flex; flex-direction: row;">
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/gitlab-history.png"><figcaption>Click History button to display History Details (middle figure)</figcaption></figure>
-                          <figure class="Screen_Capture" tabindex="2"><img src="images/gitlab-history-details.png"><figcaption>History Details. Click on top item to display git diff (right most figure)</figcaption></figure>
-                          <figure class="Screen_Capture" tabindex="2"><img src="images/cci-git-fork-auto-grader-header.png"><figcaption>cci-git-fork insertion of git user.name for autograding.</figcaption></figure>
-                        </div>                          
-                      </li>                      
-                      <li><u>Exercise: [modify app.js]</u>
-                        <ol>
-                            <span id="cursor"></span>
-                          <li class="Instruction_Todo">Open the folder <span class="File_Name">editing-in-vs-code/first</span> in VS Code.  Modify the string printed out in JavaScript file app.js in order to introduce yourself.</li>                          
-                          <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise first" .</span> </li>                          
-                        </ol>
-                      </li>                      
-                    </ol>
-                  </li>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li> You can verify that cci-git-fork successfully pushed your fork by viewing the your private repo history on the git www server.
+                  <div style="display:flex; flex-direction: row;">
+                    <figure class="Screen_Capture" tabindex="1"><img src="images/gitlab-history.png"><figcaption>Click History button to display History Details (middle figure)</figcaption></figure>
+                    <figure class="Screen_Capture" tabindex="2"><img src="images/gitlab-history-details.png"><figcaption>History Details. Click on top item to display git diff (right most figure)</figcaption></figure>
+                    <figure class="Screen_Capture" tabindex="2"><img src="images/cci-git-fork-auto-grader-header.png"><figcaption>cci-git-fork insertion of git user.name for autograding.</figcaption></figure>
+                  </div>                          
+                </li>                                  
+              </ol>
+              <section><h1 class="Section"> Part 2:&nbsp;Option I: The Visual Studio Code IDE </h1>
+                <p>The TA will grade all assignments in this course using:</p>
+                <ol>
+                  <li>The Visual Studio Code (VS Code) <a class="WindowOpenLeft" onclick="windowOpenLeft('https://en.wikipedia.org/wiki/Integrated_development_environment','wikipedia');">IDE</a></li>
+                  with
+                  <li>The Chrome web browser.</li>
+                </ol>
+                <p>It is the responsibility of each student to test all their submitted assignments using VS Code and the Chrome Browser using the "VS Code +
+                  Chrome" configuration specified in the rest of this document. Therefore each student is expected to be have basic familiarity with using VS Code.
                   
-                  <li><u>Exercise [<abbr>VSC</abbr>:Basic Editing]</u>: <br>
-                    The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics','VSC')">https://code.visualstudio.com/docs/editor/codebasics</a> 
-                    covers in detail VS Code's code editing UI.  The exercises below guide the reader through a subset of the sections of 
-                    the article and then provide short exercises to do based on the reading.
+                  If you are an expert in another IDE, you may well choose to develop and debug your assignments in your favored IDE.  However, 
+                  all course assignments will be graded in the "VS Code + Chrome" environment, therefore you must learn enough about the "VS Code + Chrome" environment
+                  thorugh this tutorial such that your submitted programs execute properly in the "VS Code + Chrome" environment.</p>
+                  <p>                
+                  The following sections guides the reader through tutorial exercises that require reading parts of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>.&nbsp;&nbsp;
+                  The abbreviation, <abbr>VSC</abbr>, will be used to refer to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>.</p>
+                <ol>
+                </ol>
+                <section class="Instruction_Section" data-point-fraction="50">
+                  <h2 class="Section">Visual Studio Code Tutorial</h2>
+                  <ol class="Instruction">
+                    <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
+                      If you did not already do so, watch the video below and follow all the instructions to install VS Code on your computer and learn the basics of the VS Code GUI:<br>
+                      <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
+                      </a><br>
+                      <div class="Side_Note"> <b>Side Note:</b>
+                        In the above reading,  the Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
+                        Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
+                        <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
+                            <img src="images/terminal.png" alt="images/terminal.png">
+                        </figure>
+                      </div>                    
+                    </li>
+                    <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>:Code editing in Visual Studio Code]</u>: <br>
+                      Watch the video below.&nbsp; Follow all the video instructions:<br>
+                      <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/codeediting','VSC')">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
+                      <br>
+                      You must perform <u>all</u> the instructions in the video above. The items below partition the above video instructions into separate rubric points.
+                      Shortly, you will perform series of exercises based on these readings and the readings' further component installation instructions.
+                      <br>
+                      <br>
+                      <ol>
+                        <li><u>Exercise: [<abbr>VSC</abbr>:"Open a folder".... "Use File Explorer"]</u></li>
+                        <li><u id="Install_NodeJS"> Exercise: [<abbr>VSC</abbr>:"Install the Node.js runtime" ... "Check your Node.js"]</u>
+                        Note these steps are important.  All later readings in <abbr>VSC</abbr> and the exercises in this document based on those reading require 
+                        you installed <a href="https://nodejs.org/">https://nodejs.org/</a> according to the instruction in the above <abbr>VSC</abbr> section.s
+                        </li>
+                        <li><u>Exercise: [<abbr>VSC</abbr>:"Create a simple 'Hello world'" ..."Run the application"]</u></li>
+                      </ol>
+                    </li>                  
+                    <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise[VS Code Editing - Modifying app.js ]</u>:                    
+                      <p>
+                      This tutorial will intersperse short exercises to demonstrate your understanding of the readings in <abbr>VSC</abbr>.  These exercises will require you
+                      to git fork various repo's containing starter code. You will modify the code to practice the skills presented in the <abbr>VSC</abbr> readings.
+                    </p>
+                      <ol class="Instruction_Option Instruction_Todo">                    
+                        <li><u>Exercise: [modify app.js]</u>
+                          <ol>                            
+                            <li class="Instruction_Todo">Open the folder <span class="File_Name">editing-in-vs-code/first</span> in VS Code.  Modify the string printed out in JavaScript file app.js in order to introduce yourself.</li>                          
+                            <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise first" .</span> </li>                          
+                          </ol>
+                        </li>                      
+                      </ol>
+                    </li>
                     
-                    <ol>                                                                                  
-                        <li class="Instruction_Reading"><u>Read [<abbr>VSC</abbr>: ... Keyboard shortcuts]</u> Read up and including through <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts','VSC')">https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts</a></li>
-                        <li class="Instruction_Reading">
-                          <u>[<abbr>VSC</abbr>: 
-                            <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor','VSC');">multiple-selections-multicursor</a>]</u>
-                            Open the following folder in VS Code:
-                            <table class="Code_Example" id="Code_Example1_0">
-                              <tbody>
-                                <tr>
-                                  <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
-                                  <td>
-                                    <div>                                                                                                                                            
-                                      <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vscode&sol;basic-editing</code>                                  
-                                    </div>                                
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>                                                    
-                            <span id="cursor"></span>
-                            <ol>
+                    <li class="Instruction_Todo" data-point-fraction="32"><u>Exercise [<abbr>VSC</abbr>:Basic Editing]</u>: <br>
+                      The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics','VSC')">https://code.visualstudio.com/docs/editor/codebasics</a> 
+                      covers in detail VS Code's code editing UI.  The exercises below guide the reader through a subset of the sections of 
+                      the article and then provide short exercises to do based on the reading.
+                      
+                      <ol>                                                                                  
+                          <li class="Instruction_Reading"><u>Read [<abbr>VSC</abbr>: ... Keyboard shortcuts]</u> Read up and including through <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts','VSC')">https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts</a></li>
+                          <li class="Instruction_Reading">
+                            <u>[<abbr>VSC</abbr>: 
+                              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor','VSC');">multiple-selections-multicursor</a>]</u>
+                              Open the following folder in VS Code:
+                              <table class="Code_Example" id="Code_Example1_0">
+                                <tbody>
+                                  <tr>
+                                    <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                                    <td>
+                                      <div>                                                                                                                                            
+                                        <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vscode&sol;basic-editing</code>                                  
+                                      </div>                                
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>                                                                                
                               <li>Read the first paragraphs of above section upto and including 
                                 <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>.
                                 <br>
@@ -444,7 +499,7 @@ These modifications are <b>required</b> by the course grading system to automate
                               </li>                              
                               <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection','VSC');">Column (box) selection</a>.
                                 <br>
-                                Use column box selection to change the mis-spelled Ascii Art version "Computer Science" to be spelled properly.
+                                Use column box selection to change the mis-spelled Ascii Art of "Computer Science" in <span class="File_Name">frogStory.html</span> to be spelled properly.
                               </li>                              
                               <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save','VSC');">Save/Auto Save</a>.
                                 <br>
@@ -453,85 +508,263 @@ These modifications are <b>required</b> by the course grading system to automate
                               <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_hot-exit','VSC');">Hot Exit</a>.
                                 <br>
                                 Read and explore.
-                              </li>                                             
+                              </li>              
+                              <li>In the directory <span class="File_Name">editing-in-vscode/basic-editing/a-program-from-an-earlier-course</span>, add any short program that <b>you</b>
+                                wrote in any previous source in any programming language.  Edit the file <span class="File_Name">a-program-from-an-earlier-course/README.md</span> to included
+                                a brief description of (1) what course you wrote this previous program in and (2) what the program does.
+  
+                                Use this program to play with and learn the VS Code editor features described in the remaining items (i) through (p).
+                              <ol>
+                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-a-program-from-an-earlier-course" .</span> </li>
+                              </ol>
+                              </li>
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace','VSC');">Find and Replace</a>.
+                                <br>
+                                Read and explore.
+                              </li>                                                                          
+                              <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-across-files','VSC');">Search across files</a>.
+                                <br>
+                                This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
+                                start using VS Code for a some course projects.
+                              </li>                                                              
+                              <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-editor','VSC');">Search Editor</a>.
+                                <br>
+                                This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
+                                start using VS Code for a some course projects.
+                              </li>                                            
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_intellisense','VSC');">intellisense</a>.
+                                <br>
+                                Read and explore.
+                              </li>              
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_formatting','VSC');">Formating</a>.
+                                <br>
+                                Read and explore.
+                              </li>              
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_folding','VSC');">Folding</a>.
+                                <br>
+                                Read and explore.
+                              </li>                                            
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_indentation','VSC');">Identation</a>.
+                                <br>
+                                Read and explore.
+                              </li>
+                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support','VSC');">File Encoding Support</a>.
+                                <br>
+                                Read and explore.
+                              </li>
+                              <li class="Instruction_Git_Commit">
+                                Commit any changes you made to your <span class="File_Name">a-program-from-an-earlier-course</span> while exploring the VS Code editing features above.
+                                <br>
+                                <span class="Git_Commit_Message">git commit -m "played with VS Code editing feature using a-program-from-an-earlier-course" .</span>
+                              </li>                                                                                                                                                                                    
+                      </ol>
+                    </li>
+                    <li class="Instruction_Todo" data-point-fraction="33"><u>Exercise [<abbr>VSC</abbr>:Debugging]</u>: <br>
+                      The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging','VSC')">https://code.visualstudio.com/docs/editor/debugging</a> 
+                      covers in detail VS Code's code debugging UI.  VS Code's debugging provides standard features found in IDE's and programing tool chains at least 
+                      as far back as the 1980's -- an probably earlier.   (The first one I (ZJW) used was <a href="https://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>).
+                      The exercises below guide you through a subset of the sections of  the article and then provide short exercises to do based on the reading.                    
+                      <ol>                                                                      
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debugger-extensions','VSC')">Debugger extensions</a>
+                          Read this section.   Then follow the instructions 
+                          <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/extension-marketplace','VSC')">extensions marketplace</a>
+                          <ol>
+                            <li> Install the following extensions (or the lastest version of it)
+  <code>
+    <pre>
+      Live Preview
+      v0.4.9
+      Microsoft
+      microsoft.com
+      2,779,724
+      (57)
+      Hosts a local server in your workspace for you to preview your webpages on.                            
+    </pre>
+  </code>                                                        
+                            </li>
+                            <li>
+                              Use Live Preview to view <span class="File_Name">frogStory.html</span>.   Read about Live Preview so that you can both use Live Preview 
+                              inside the sub-window with VS Code and use Live Preview to open the <span class="File_Name">frogStory.html</span> in an separate browser window.
+                              While running Live Preview modify the story about the frog.   Have him hop, skip and perform other antics relative to the water bug.
+                              Note, that the Livew Preview browser immediately (with a minor delay) reflects the changes you make to the HTML source
+                            </li>
+                            <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-played with Live Preview" .</span> </li>
+                          </ol>
+                          
+                          </li>                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_start-debugging','VSC')">Start debugging</a>
+                            <ol>
+                              <li class="Instruction_NonRubric">Note, you already installed NodeJS in an earlier step (<a href="#Install_NodeJS"> Install_NodeJS </a>).</li>
+                              <li>To record your work, perform this next few debugging exercises using the app.js file in  <span class="File_Name">editing-in-vscode/debugging/Hello</span> </li>
+                            </ol>                          
+                          </li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-and-debug-view','VSC')">Run and Debug view</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-menu','VSC')">Run menu</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-configurations','VSC')">Launch configurations</a>
+                            <ol>
+                                <li>Follow the <abbr>VSC</abbr> instructions to create the launch.json file.   Note, your launch.json will be slightly different than the <abbr>VSC</abbr> launch.json.</li>
+                                <li> [VSC: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations','VSC')">launch-versus-attach-configurations</a>] - Read </li>
+                                <li> [VSC:  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_add-a-new-configuration','VSC')">add-a-new-configuration</a>] - Perform these steps </li>
+                                <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -add-a-new-configuration .</span> </li>
                             </ol>
-                        </li>
-                    </ol>
-                  </li>
-                </ol>
+                          </li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-actions','VSC')">Debug actions</a>
+                             <p>Read about the different debug actions.  Play with the app.js, until you understand how each different debug action works.                        </p>                          
+                          </li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_breakpoints','VSC')">Breakpoints</a>
+                            <p>Read about the different breakpoint types.  Play with the app.js, until you understand breakpoints.</p>                          
+                          </li>
+                          
+                          <li class="active"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_logpoints','VSC')">Logpoints</a>
+                            <p>Read about the different logpoint types.  Play with the app.js, until you understand logpoint.</p>                          
+                          </li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_data-inspection','VSC')">Data inspection</a>
+                            <p>Read about the different data inspections tools.  Play with the app.js, until you understand the data inspections tools.</p>                          
+                          </li>
+                          <!--
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes','VSC')">Launch.json attributes</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_variable-substitution','VSC')">Variable substitution</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_platformspecific-properties','VSC')">Platform-specific properties</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_global-launch-configuration','VSC')">Global launch configuration</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_advanced-breakpoint-topics','VSC')">Advanced breakpoint topics</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-console-repl','VSC')">Debug Console REPL</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_redirect-inputoutput-tofrom-the-debug-target','VSC')">Redirect input/output to/from the debug target</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_multitarget-debugging','VSC')">Multi-target debugging</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_remote-debugging','VSC')">Remote debugging</a></li>
+                          
+                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_automatically-open-a-uri-when-debugging-a-server-program','VSC')">Automatically open a URI when debugging a server program</a></li>                                             
+                          -->                
+                      </ol>
+                    </li>
+                    <li class="Instruction_Todo" data-point-fraction="5">
+                      <b>Git Push</b>:   Don't forget to git push all your work to your remote repository
+                    </li>
+                  </ol>
+                </section>
               </section>
-            </section>
-            <section data-point-fraction="5" class="Instruction_Section">   <h1 class="Section" id="Part1"> Part 2:&nbsp; Project Organization and Setup </h1>
-              Part 1 covers project organization, setup, and general requirements.
-              <section data-point-fraction="50" class="Instruction_Section"><h2 class="Section">Git Repo Setup</h2>
-                <p>Your working directory structure and your git repository structure <u>must</u> be exactly as described below.<br>
-                </p>                
-                <ol class="Instruction">
-                  <li class="Instruction_Todo">Create a Git repository called <span class="File_Name"><span data-course-number="">6120</span>-html-exercises</span> on
-                    the course's designated Git server following the guidelines prescribed for the course.
-                    <a class="WindowOpenLeft" onclick="windowOpenLeft('https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html','GT');"></a><br>
-                  </li>
-                  <span id="cursor"></span>
-                  <li class="Instruction_Todo"> Clone your repo, enter the created directory and fork the starter code.&nbsp;&nbsp; <span class="Highlight"></span> <br>
+            <section><h1 id="Part2_OptionII" class="Section">Part 2:  Option II:  Using another IDE</h1>
+              <p>
+              In this course, each student must test all their projects using the Chrome browser.
+              This means you must know how to develop, debug and run your HTML5 projects (HTML+JavaScript+WebGL) on a local server on your development computer and then
+              have the Chrome browser correctly execute your project.  Every IDE and developement tool chain has a dozen ways to do this, if you choose Option II, it is your
+              responsibility to configure your IDE appropriately.
+              </p>
+              <p>
+              Finally, students choosing Option II must submit a brief description of their plan for developing projects in this course as described below.
+              </p>              
+              <ol>
+                  <li>
                     <table class="Code_Example" id="Code_Example1_0">
                       <tbody>
                         <tr>
                           <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                           <td>
-                            <div>
-                              <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>
-                              </code>
-                              <code class="Shell_Code_Input-v2">git clone <span class="User_Input">URL of the <span data-course-number="">6120</span>-HTML-Tutorial
-                                  repo
-                              </code> <code class="Shell_Code_Output"> Cloning into '<span data-course-number="">6120</span>-html-exercises'<br>
-                                <span class="Shell_Code_Comment">[...]</span><br>
-                              </code>
-                               <code class="Shell_Code_Input-v2"> cd <span data-course-number="">6120</span>-html-exercises</span></code>                              
-                               <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>/<span data-course-number="">6120</span>-html-exercises</span></code>
-                               <code class="Shell_Code_Input-v2">cci-git-fork.js https://cci-git.charlotte.edu/UNCC_Graphics/html-exercises.git</code>
-                               <span class="Shell_Code_Comment">The output generated by cci-git-fork.js is not shown. It will be similar that shown in exercise <a href="#My_First_Cci_Git_Fork">My_First_Cci_Git_Fork</a></span>.
+                            <div>                                                                 
+                              <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vs-code</code>
+                              <span class="Shell_Code_Comment">[Use notepad or your favorite editor to edit the top-level README.md file]</span><br>
+                              <code class="Shell_Code_Input-v2">notepad README.md</code>
                             </div>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                  </li>
-                  <li class="Instruction_NonRubric"> Examine the contents of the above directory.  It contains starter and skeleton files for the exercises you will be completing.
-                  </li>
-                </ol>   
-                <section><h3 class="Section">Git Commit Protocol and Rubric</h3>
-                  <p> In the instructions in this document, you are required to make git commits at specific points using specific commit messages.&nbsp;&nbsp; This is a <b><u>required</u></b>
-                    part of the assignment.&nbsp;&nbsp; It also develops good git practices.</p>
-                  <ol class="Instruction">
-                    <li class="Instruction_NonRubric">For a given exercise that includes specific git commit instructions, if there is not at least 1 git commit
-                      message associated with that exercise, 1 point will be subtracted for "poor software development practices" for that exercise.&nbsp;<br>
-                      <br>
-                      The student’s commit message need not be a verbatim copy of the commit message given in the exercise’s instructions, but it should be<span>&nbsp;</span><u>very
-                        similar</u>.&nbsp;&nbsp;&nbsp; (But you can simply cut &amp; paste the messages, so they really should be verbatim).<br>
-                      <br>
-                      The grader will allow for a few of the required commit messages to be missing without incurring a penalty.<br>
-                      <br>
-                      <b>Note</b>: If you accidentally commit with a missing or bad message, you can correct the message using git commit –amend option (see<span>&nbsp;</span><a
   
-                        target="_blank" href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things">https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</a>)<br>
-                      <br>
-                      Finally, extra commit's are perfectly fine and common practice, such for fixing other types of coding mistakes, etc.<br>
-                    </li>
-                    <li class="Instruction_NonRubric">For exercises that require students modify code already given to you, if only the original example code is
-                      committed with no change &amp; there is no evidence from the student (documentation, notes, etc) of trying to solve the exercise, then
-                      minimal points will be awarded for that exercise. </li>
-                  </ol>
-                  <p> The complete grading Rubric is available on Canvas.</p>
-                </section>           
-              </section>
-              <section data-point-fraction="50" class="Instruction_Section"><h2 class="Section">Setup for Chrome and Chrome DevTools</h2>
-                <ol class="Instruction">
-                  <li class="Instruction_Todo">Download and install the Chrome browser <a target="_blank" href="https://www.google.com/chrome">https://www.google.com/chrome</a></li>
-                </ol>
-              </section>
+                  </li>
+                  <li>
+                    In the README.md file after the line "### IDE Experience", describe in no more than 250 words your plan for using your preferred IDE to develop, debug and test
+                    your projects in this course which will be written in HTML5 (HTML+JavaScript+WebGL) and which the TA will grade and run in Chrome.
+                  </li>
+                  <li class="Instruction_Git_Commit"> 
+                    <span class="Git_Commit_Message">git commit -m '-wrote my IDE plan' .</span>
+                    <p>Git push your editing-in-vs-code repo.</p>
+                    <p>For Option II, that is all you need to do for Part 1.</p>                    
+                  </li>
+              </ol>
+
             </section>
-            <section data-point-fraction="50" class="Instruction_Section"><h1 class="Section" id="Part2_OptionI">Part 3:Option I - HTML, CSS, Event Handling</h1>
+            </section>
+            <section data-point-fraction="50" class="Instruction_Section"><h1 class="Section" id="Part3_OptionI">Part 3: Option I - HTML, CSS and Event Handling</h1>
               Part 3: Option I is series of readings and exercises from the <abbr>MDN</abbr> doc's on HTML, CSS and event handling.
+
+              <section data-point-fraction="5" class="Instruction_Section"><h2 class="Section">Git Repo Setup</h2>
+                  <p>Your working directory structure and your git repository structure <u>must</u> be exactly as described below.<br>
+                  </p>                
+                  <ol class="Instruction">
+                    <li class="Instruction_Todo"> <u>Exercise: [Create Remote Repo]</u>
+                      <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name">html-exercises</span> using the
+                        procedures of <abbr>GT</abbr>: Appendix I-3 <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Git_Server_Access">Git_Server_Access</a>.<br>                          
+                        Do not forget to to <strong><u>share</u></strong> your repo with the TA and Professor (as discussed in the Appendix section <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Basic_Git_Operations">Basic
+                          Git Operations).</a></div>
+    
+                    </li>
+                    
+                    <li class="Instruction_Todo"> <u>Exercise: [Clone and Fork Repo]</u>
+                      <br>Clone your repo, enter the created directory and fork the starter code.&nbsp;&nbsp; <span class="Highlight"></span> <br>
+                      <table class="Code_Example" id="Code_Example1_0">
+                        <tbody>
+                          <tr>
+                            <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                            <td>
+                              <div>
+                                <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>
+                                </code>
+                                <code class="Shell_Code_Input-v2">git clone <span class="User_Input">URL of the <span data-course-number="">6120</span>-HTML-Tutorial
+                                    repo
+                                </code> <code class="Shell_Code_Output"> Cloning into 'html-exercises'<br>
+                                  <span class="Shell_Code_Comment">[...]</span><br>
+                                </code>
+                                 <code class="Shell_Code_Input-v2"> cd html-exercises</span></code>                              
+                                 <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>/<span data-course-number="">6120</span>-html-exercises</span></code>
+                                 <code class="Shell_Code_Input-v2">cci-git-fork.js https://cci-git.charlotte.edu/UNCC_Graphics/html-exercises.git</code>
+                                 <span class="Shell_Code_Comment">The output generated by cci-git-fork.js is not shown. It will be similar that shown in exercise <a href="#My_First_Cci_Git_Fork">My_First_Cci_Git_Fork</a></span>.
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                    <li class="Instruction_NonRubric"> Examine the contents of the above directory.  It contains starter and skeleton files for the exercises you will be completing.
+                    </li>
+                  </ol>   
+                  <section><h3 class="Section">Git Commit Protocol and Rubric</h3>
+                    <p> In the instructions in this document, you are required to make git commits at specific points using specific commit messages.&nbsp;&nbsp; This is a <b><u>required</u></b>
+                      part of the assignment.&nbsp;&nbsp; It also develops good git practices.</p>
+                    <ol class="Instruction">
+                      <li class="Instruction_NonRubric">For a given exercise that includes specific git commit instructions, if there is not at least 1 git commit
+                        message associated with that exercise, 1 point will be subtracted for "poor software development practices" for that exercise.&nbsp;<br>
+                        <br>
+                        The student’s commit message need not be a verbatim copy of the commit message given in the exercise’s instructions, but it should be<span>&nbsp;</span><u>very
+                          similar</u>.&nbsp;&nbsp;&nbsp; (But you can simply cut &amp; paste the messages, so they really should be verbatim).<br>
+                        <br>
+                        The grader will allow for a few of the required commit messages to be missing without incurring a penalty.<br>
+                        <br>
+                        <b>Note</b>: If you accidentally commit with a missing or bad message, you can correct the message using git commit –amend option (see<span>&nbsp;</span><a
+    
+                          target="_blank" href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things">https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</a>)<br>
+                        <br>
+                        Finally, extra commit's are perfectly fine and common practice, such for fixing other types of coding mistakes, etc.<br>
+                      </li>
+                      <li class="Instruction_NonRubric">For exercises that require students modify code already given to you, if only the original example code is
+                        committed with no change &amp; there is no evidence from the student (documentation, notes, etc) of trying to solve the exercise, then
+                        minimal points will be awarded for that exercise. </li>
+                    </ol>
+                    <p> The complete grading Rubric is available on Canvas.</p>
+                  </section>           
+              </section>
               <section data-point-fraction="33.3" class="Instruction_Section"><h2 class="Section">Introduction to HTML</h2>                
                   <div>                
                     <p>Go to the MDN page <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML','MDN');">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.
@@ -1710,17 +1943,46 @@ These modifications are <b>required</b> by the course grading system to automate
               </section>                
               </section>            
             </section>            
-            <section data-point-fraction="5" class="Instruction_Section"><h1 class="Section"><a id="Part2_OptionII">Part 3: Option II - Description of Your Prior Experience in HTML, CSS and Event Handling<br>
+            <section data-point-fraction="5" class="Instruction_Section"><h1 class="Section"><a id="Part3_OptionII">Part 3: Option II - Prior Experience in HTML, CSS and Event Handling<br>
                 </a></h1>
-              Part 3: Option II is only for students meeting the criteria discussed in Section&nbsp;<a href="#Tutorial_Structure">Tutorial Structure</a>. In
-              your previously created README.md file, add the following:
-              <ol class="Instruction">
-                <li>List all courses you already took or are currently taking where you learned HTML5, CSS, and Event Handling.<br>
-                  <br>
+              Part 3: Option II is only for students meeting the criteria discussed in Section&nbsp;<a href="#Tutorial_Structure">Tutorial Structure</a>.
+              For Part 3: Option II, you must submit a brief description of your prior experience in HTML, CSS and event handling as described below.
+            </p>            
+            <ol class="Instruction">
+                <li>
+                  <table class="Code_Example" id="Code_Example1_0">
+                    <tbody>
+                      <tr>
+                        <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                        <td>
+                          <div>                                                                 
+                            <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vs-code</code>
+                            <span class="Shell_Code_Comment">[Use notepad or your favorite editor to edit the top-level README.md file]</span><br>
+                            <code class="Shell_Code_Input-v2">notepad README.md</code>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
                 </li>
-                <li>List any other experience you had outside of a class work where you learned HTML5, CSS, and Event Handling. </li>
-                <li class="Instruction_Git_Commit"> Git commit and git push. </li>
-              </ol>
+                <li>
+                  <span id="cursor"></span>
+                  In the README.md file after the line "### HTML and CSS Experience":
+                  <ol class="Instruction">
+                    <li>List all courses you already took or are currently taking where you learned HTML5, CSS, and Event Handling.<br>
+                      <br>
+                    </li>
+                    <li>List any other experience you had outside of a class work where you learned HTML5, CSS, and Event Handling. </li>                    
+                  </ol>
+    
+                </li>
+                <li class="Instruction_Git_Commit"> 
+                  <span class="Git_Commit_Message">git commit -m '-add Prior Experience in HTML, CSS and Event Handling' .</span>
+                  <p>Git <b>push</b> your editing-in-vscode repo.</p>                  
+                </li>
+            </ol>
+
             </section>
             <div hidden="true">
             <section data-point-fraction_HIDE="40" class="Instruction_Section_HIDE"><h1 class="Section_HIDE"><a id="Part3_HIDE">Part 3: Chrome DevTools</a></h1>
@@ -2189,12 +2451,84 @@ These modifications are <b>required</b> by the course grading system to automate
               </section>
             </section>
           </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p>&nbsp;____________________________</p>
         </article>
       </div>      
       <!--
         most external site will refuse to connect via an iframe, therefore I went with the windowOpenLeft() solution.
         <div class="side-read-bar">          <iframe src="https://developer.mozilla.org/en-US/html/zjwgi/Web/JavaScript/Guide/Expressions_and_Operators">          </iframe>        </div>                      -->
     </div>
+
     <p> <template id="SectionRubricTemplate" data-version="1.0">
         <table class="SectionRubric">
           <tbody>
