@@ -17,7 +17,7 @@
       import * as Rubric from "./scripts/zjwgi/Rubric.js";
       import * as CAW from "./scripts/zjwgi/ClassAssignmentWartell.js";
       window.BreadCrumb = Rubric.BreadCrumb;
-      CAW.main(150);
+      CAW.main(100);
       
       window.Visibility_Toggle = CAW.Visibility_Toggle; 
       console.log("window.rubricMain");
@@ -171,7 +171,7 @@
               </ol>
               <p></p>
             </section>
-            <section data-point-fraction="5" data-f="" class="Instruction_Section"><h1 class="Section" id="Part1">Part 1: [<b>REQUIRED</b>]  Directory and cci-git GitLab Tools Setup</h1>
+            <section data-point-fraction="5" data-optionset='{"name":"Part 1"}' class="Instruction_Section"><h1 class="Section" id="Part1">Part 1: [<b>REQUIRED</b>]  Directory and cci-git GitLab Tools Setup</h1>
               <ol class="Instruction">
                 <li> <b> Installing WebGL Programming Guide Examples</b>
                   <ol>                
@@ -435,176 +435,176 @@ signing 'app.js'
                 </li>                                  
               </ol>
             </section>
-            <section data-point-fraction="50" data-f=""><h1 class="Section"> Part 2:&nbsp;Option I: The Visual Studio Code IDE </h1>
-              <p>The TA will grade all assignments in this course using:</p>
-              <ol>
-                <li>The Visual Studio Code (VS Code) <a class="WindowOpenLeft" onclick="windowOpenLeft('https://en.wikipedia.org/wiki/Integrated_development_environment','wikipedia');">IDE</a></li>
-                with
-                <li>The Chrome web browser.</li>
-              </ol>                
-              <p>                
-                The Part 2: Option I guides the reader through reading parts of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>,
-                and performing tutorial exercises based on that reading. The abbreviation, <abbr>VSC</abbr>, will be used to refer to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>
-              </p>
-              <!--
-              <p>If you are an expert in another IDE, you may well choose to develop and debug your assignments in your favored IDE.  However, 
-                all course assignments will be graded in the "VS Code + Chrome" environment, therefore you must learn enough about the "VS Code + Chrome" environment
-                thorugh this tutorial such that your submitted programs execute properly in the "VS Code + Chrome" environment.</p>
-              -->
-              <section class="Instruction_Section" data-point-fraction="50">
-                <h2 class="Section">Visual Studio Code Tutorial</h2>
-                <ol class="Instruction">
-                  <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
-                    If you did not already do so, watch the video below and follow all the instructions to install VS Code on your computer and learn the basics of the VS Code GUI:<br>
-                    <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
-                    </a><br>
-                    <div class="Side_Note"> <b>Side Note:</b>
-                      In the above video and it's associated reading, VS Code Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
-                      Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
-                      <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
-                          <img src="images/terminal.png" alt="images/terminal.png">
-                      </figure>
-                    </div>                    
-                  </li>
-                  <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>:Code editing in Visual Studio Code]</u>: <br>
-                    Watch the video below.&nbsp; Follow all the video instructions:<br>
-                    <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/codeediting','VSC')">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
-                    <br>
-                    You must perform <u>all</u> the instructions in the video above. The instruction items below partition the above video instructions into separate rubric points.
-                    Shortly, you will perform series of tutorial exercises based on these readings and their installation instructions.
-                    <br>
-                    <br>
-                    <ol>
-                      <li><u>Exercises: [<abbr>VSC</abbr>:"Open a folder".... "Use File Explorer"]</u> Perform all steps.</li>
-                      <li><u id="Install_NodeJS"> Exercises: [<abbr>VSC</abbr>:"Install the Node.js runtime" ... "Check your Node.js"]</u> Perform all steps.
-                      <!-- 
-                      Note these steps are important.  All later readings in <abbr>VSC</abbr> and the exercises in this document based on those reading require 
-                      you installed <a href="https://nodejs.org/">https://nodejs.org/</a> according to the instruction in the above <abbr>VSC</abbr> sections.
-                      -->
-                      </li>
-                      <li><u>Exercises: [<abbr>VSC</abbr>:"Create a simple 'Hello world'" ..."Run the application"]</u> Perform all steps.
-                      </li>
-                    </ol>
-                  </li>                                      
-                  <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise[VS Code Editing - Modifying app.js ]</u>:                    
-                    <p>
-                    This tutorial will intersperse short exercises to demonstrate your understanding of the readings in <abbr>VSC</abbr>.  These exercises will require you
-                    to git fork various repo's containing starter code. You will modify the code to practice the skills presented in the <abbr>VSC</abbr> readings.
-                  </p>
-                    <ol class="Instruction_Option Instruction_Todo">                    
-                      <li><u>Exercise: [modify app.js]</u>
-                        <ol>                            
-                          <li class="Instruction_Todo">Open the folder <span class="File_Name">~ITCS_3120/editing-in-vs-code/first</span> in VS Code.  In VS Code, modify the file app.js.  In particular modify the string printed out, so that is introduces yourself.</li>                          
-                          <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-modify app.js" .</span> </li>                          
-                        </ol>
-                      </li>                      
-                    </ol>
-                  </li>
+            <section data-point-fraction="47.5" data-optionset='{"name":"Part 2"}' class="Instruction_Section"><h1 class="Section"> Part 2:&nbsp;Option I: The Visual Studio Code IDE </h1>
+              <div>
+                <p>The TA will grade all assignments in this course using:</p>
+                <ol>
+                  <li>The Visual Studio Code (VS Code) <a class="WindowOpenLeft" onclick="windowOpenLeft('https://en.wikipedia.org/wiki/Integrated_development_environment','wikipedia');">IDE</a></li>
+                  with
+                  <li>The Chrome web browser.</li>
+                </ol>                
+                <p>                
+                  The Part 2: Option I guides the reader through reading parts of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>,
+                  and performing tutorial exercises based on that reading. The abbreviation, <abbr>VSC</abbr>, will be used to refer to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>
+                </p>
+                <!--
+                <p>If you are an expert in another IDE, you may well choose to develop and debug your assignments in your favored IDE.  However, 
+                  all course assignments will be graded in the "VS Code + Chrome" environment, therefore you must learn enough about the "VS Code + Chrome" environment
+                  thorugh this tutorial such that your submitted programs execute properly in the "VS Code + Chrome" environment.</p>
+                -->  
+              </div>
+              <ol class="Instruction">
+                <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
+                  If you did not already do so, watch the video below and follow all the instructions to install VS Code on your computer and learn the basics of the VS Code GUI:<br>
+                  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
+                  </a><br>
+                  <div class="Side_Note"> <b>Side Note:</b>
+                    In the above video and it's associated reading, VS Code Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
+                    Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
+                    <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
+                        <img src="images/terminal.png" alt="images/terminal.png">
+                    </figure>
+                  </div>                    
+                </li>
+                <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>:Code editing in Visual Studio Code]</u>: <br>
+                  Watch the video below.&nbsp; Follow all the video instructions:<br>
+                  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/codeediting','VSC')">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
+                  <br>
+                  You must perform <u>all</u> the instructions in the video above. The instruction items below partition the above video instructions into separate rubric points.
+                  Shortly, you will perform series of tutorial exercises based on these readings and their installation instructions.
+                  <br>
+                  <br>
+                  <ol>
+                    <li><u>Exercises: [<abbr>VSC</abbr>:"Open a folder".... "Use File Explorer"]</u> Perform all steps.</li>
+                    <li><u id="Install_NodeJS"> Exercises: [<abbr>VSC</abbr>:"Install the Node.js runtime" ... "Check your Node.js"]</u> Perform all steps.
+                    <!-- 
+                    Note these steps are important.  All later readings in <abbr>VSC</abbr> and the exercises in this document based on those reading require 
+                    you installed <a href="https://nodejs.org/">https://nodejs.org/</a> according to the instruction in the above <abbr>VSC</abbr> sections.
+                    -->
+                    </li>
+                    <li><u>Exercises: [<abbr>VSC</abbr>:"Create a simple 'Hello world'" ..."Run the application"]</u> Perform all steps.
+                    </li>
+                  </ol>
+                </li>                                      
+                <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise[VS Code Editing - Modifying app.js ]</u>:                    
+                  <p>
+                  This tutorial will intersperse short exercises to demonstrate your understanding of the readings in <abbr>VSC</abbr>.  These exercises will require you
+                  to git fork various repo's containing starter code. You will modify the code to practice the skills presented in the <abbr>VSC</abbr> readings.
+                </p>
+                  <ol class="Instruction_Option Instruction_Todo">                    
+                    <li><u>Exercise: [modify app.js]</u>
+                      <ol>                            
+                        <li class="Instruction_Todo">Open the folder <span class="File_Name">~ITCS_3120/editing-in-vs-code/first</span> in VS Code.  In VS Code, modify the file app.js.  In particular modify the string printed out, so that is introduces yourself.</li>                          
+                        <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-modify app.js" .</span> </li>                          
+                      </ol>
+                    </li>                      
+                  </ol>
+                </li>
+                
+                <li class="Instruction_Todo" data-point-fraction="35"><u>Exercise [<abbr>VSC</abbr>:Basic Editing]</u>: <br>
+                  The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics','VSC')">https://code.visualstudio.com/docs/editor/codebasics</a> 
+                  covers in detail VS Code's code editing UI.  The exercises below guide the reader through a subset of the sections of 
+                  the article and then provide short exercises to do based on the reading.
                   
-                  <li class="Instruction_Todo" data-point-fraction="32"><u>Exercise [<abbr>VSC</abbr>:Basic Editing]</u>: <br>
-                    The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics','VSC')">https://code.visualstudio.com/docs/editor/codebasics</a> 
-                    covers in detail VS Code's code editing UI.  The exercises below guide the reader through a subset of the sections of 
-                    the article and then provide short exercises to do based on the reading.
-                    
-                    <ol>                                                                                  
-                        <li class="Instruction_Reading"><u>Read [<abbr>VSC</abbr>: ... Keyboard shortcuts]</u> Read up and including through <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts','VSC')">https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts</a></li>
-                        <li class="Instruction_Reading">
-                          <u>[<abbr>VSC</abbr>: 
-                            <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor','VSC');">multiple-selections-multicursor</a>]</u>
-                            Open the following folder in VS Code:
-                            <table class="Code_Example" id="Code_Example1_0">
-                              <tbody>
-                                <tr>
-                                  <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
-                                  <td>
-                                    <div>                                                                                                                                            
-                                      <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vscode&sol;basic-editing</code>                                  
-                                    </div>                                
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>                                                                                
-                            <li>Read the first paragraphs of above section upto and including 
-                              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>.
-                              <br>
-                              In VS Code, use the multi-cursor to change the file <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
-                            </li>
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_shrinkexpand-selection','VSC');">Shrink/expand selection</a>.
-                              <br>
-                              In VS Code, play with this feature in frogStory.html <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
-                            </li>                              
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection','VSC');">Column (box) selection</a>.
-                              <br>
-                              Use column box selection to change the mis-spelled Ascii Art of "Computer Science" in <span class="File_Name">frogStory.html</span> to be spelled properly.
-                            </li>                              
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save','VSC');">Save/Auto Save</a>.
-                              <br>
-                              Read and explore.
-                            </li>                                                            
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_hot-exit','VSC');">Hot Exit</a>.
-                              <br>
-                              Read and explore.
-                            </li>              
-                            <li>In the directory <span class="File_Name">editing-in-vscode/basic-editing/a-program-from-an-earlier-course</span>, add any short program that <b>you</b>
-                              wrote in any previous cource in any programming language.  Edit the file <span class="File_Name">a-program-from-an-earlier-course/README.md</span> to included
-                              a brief description of (1) what course you wrote this previous program in and (2) what the program does.
+                  <ol>                                                                                  
+                      <li class="Instruction_Reading"><u>Read [<abbr>VSC</abbr>: ... Keyboard shortcuts]</u> Read up and including through <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts','VSC')">https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts</a></li>
+                      <li class="Instruction_Reading">
+                        <u>[<abbr>VSC</abbr>: 
+                          <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor','VSC');">multiple-selections-multicursor</a>]</u>
+                          Open the following folder in VS Code:
+                          <table class="Code_Example" id="Code_Example1_0">
+                            <tbody>
+                              <tr>
+                                <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                                <td>
+                                  <div>                                                                                                                                            
+                                    <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vscode&sol;basic-editing</code>                                  
+                                  </div>                                
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>                                                                                
+                          <li>Read the first paragraphs of above section upto and including 
+                            <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>.
+                            <br>
+                            In VS Code, use the multi-cursor to change the file <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
+                          </li>
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_shrinkexpand-selection','VSC');">Shrink/expand selection</a>.
+                            <br>
+                            In VS Code, play with this feature in frogStory.html <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
+                          </li>                              
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection','VSC');">Column (box) selection</a>.
+                            <br>
+                            Use column box selection to change the mis-spelled Ascii Art of "Computer Science" in <span class="File_Name">frogStory.html</span> to be spelled properly.
+                          </li>                              
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save','VSC');">Save/Auto Save</a>.
+                            <br>
+                            Read and explore.
+                          </li>                                                            
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_hot-exit','VSC');">Hot Exit</a>.
+                            <br>
+                            Read and explore.
+                          </li>              
+                          <li>In the directory <span class="File_Name">editing-in-vscode/basic-editing/a-program-from-an-earlier-course</span>, add any short program that <b>you</b>
+                            wrote in any previous cource in any programming language.  Edit the file <span class="File_Name">a-program-from-an-earlier-course/README.md</span> to included
+                            a brief description of (1) what course you wrote this previous program in and (2) what the program does.
 
-                              Use this program to play with and learn the VS Code editor features described in the remaining items (i) through (p).
-                            <ol>
-                              <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-a-program-from-an-earlier-course" .</span> </li>
-                            </ol>
-                            </li>
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace','VSC');">Find and Replace</a>.
-                              <br>
-                              Read and explore.
-                            </li>                                                                          
-                            <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-across-files','VSC');">Search across files</a>.
-                              <br>
-                              This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
-                              start using VS Code for a some course projects.
-                            </li>                                                              
-                            <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-editor','VSC');">Search Editor</a>.
-                              <br>
-                              This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
-                              start using VS Code for a some course projects.
-                            </li>                                            
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_intellisense','VSC');">intellisense</a>.
-                              <br>
-                              Read and explore.
-                            </li>              
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_formatting','VSC');">Formating</a>.
-                              <br>
-                              Read and explore.
-                            </li>              
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_folding','VSC');">Folding</a>.
-                              <br>
-                              Read and explore.
-                            </li>                                            
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_indentation','VSC');">Identation</a>.
-                              <br>
-                              Read and explore.
-                            </li>
-                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support','VSC');">File Encoding Support</a>.
-                              <br>
-                              Read and explore.
-                            </li>
-                            <li class="Instruction_Git_Commit">
-                              Commit any changes you made to your <span class="File_Name">a-program-from-an-earlier-course</span> while exploring the VS Code editing features above.
-                              <br>
-                              <span class="Git_Commit_Message">git commit -m "played with VS Code editing feature using a-program-from-an-earlier-course" .</span>
-                            </li>                                                                                                                                                                                    
-                    </ol>
-                  </li>
-                  <span id="cursor"></span>
-                  <li class="Instruction_Todo" data-point-fraction="33"><u>Exercise [<abbr>VSC</abbr>:Debugging]</u>: <br>
-                    The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging','VSC')">https://code.visualstudio.com/docs/editor/debugging</a> 
-                    covers in detail VS Code's code debugging UI.  VS Code's debugging provides standard features found in IDE's and programing tool chains at least 
-                    as far back as the 1980's -- and probably earlier.   (The first one I (ZJW) used was <a href="https://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>).
-                    The exercises below guide you through a subset of the sections of the VSC article and then gives you short exercises to do based on the reading.                    
-                    <ol>                                                                      
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debugger-extensions','VSC')">Debugger extensions</a>
-                        Read this section.   Then follow the instructions 
-
+                            Use this program to play with and learn the VS Code editor features described in the remaining items (i) through (p).
+                          <ol>
+                            <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-a-program-from-an-earlier-course" .</span> </li>
+                          </ol>
+                          </li>
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace','VSC');">Find and Replace</a>.
+                            <br>
+                            Read and explore.
+                          </li>                                                                          
+                          <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-across-files','VSC');">Search across files</a>.
+                            <br>
+                            This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
+                            start using VS Code for a some course projects.
+                          </li>                                                              
+                          <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-editor','VSC');">Search Editor</a>.
+                            <br>
+                            This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
+                            start using VS Code for a some course projects.
+                          </li>                                            
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_intellisense','VSC');">intellisense</a>.
+                            <br>
+                            Read and explore.
+                          </li>              
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_formatting','VSC');">Formating</a>.
+                            <br>
+                            Read and explore.
+                          </li>              
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_folding','VSC');">Folding</a>.
+                            <br>
+                            Read and explore.
+                          </li>                                            
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_indentation','VSC');">Identation</a>.
+                            <br>
+                            Read and explore.
+                          </li>
+                          <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support','VSC');">File Encoding Support</a>.
+                            <br>
+                            Read and explore.
+                          </li>
+                          <li class="Instruction_Git_Commit">
+                            Commit any changes you made to your <span class="File_Name">a-program-from-an-earlier-course</span> while exploring the VS Code editing features above.
+                            <br>
+                            <span class="Git_Commit_Message">git commit -m "played with VS Code editing feature using a-program-from-an-earlier-course" .</span>
+                          </li>                                                                                                                                                                                    
+                  </ol>
+                </li>
+                
+                <li class="Instruction_Todo" data-point-fraction="35"><u>Exercise [<abbr>VSC</abbr>:Debugging]</u>: <br>
+                  The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging','VSC')">https://code.visualstudio.com/docs/editor/debugging</a> 
+                  covers in detail VS Code's code debugging UI.  VS Code's debugging provides standard features found in IDE's and programing tool chains at least 
+                  as far back as the 1980's -- and probably earlier.   (The first one I (ZJW) used was <a href="https://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>).
+                  The exercises below guide you through a subset of the sections of the VSC article and then gives you short exercises to do based on the reading.                    
+                  <ol>                                                                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debugger-extensions','VSC')">Debugger extensions</a>
+                      Read this section.   Then follow the instructions 
+                        <ol>
                           <li>
                             Use Live Preview to view <span class="File_Name">frogStory.html</span>.   Read about Live Preview so that you can both use Live Preview 
                             inside the sub-window with VS Code and use Live Preview to open the <span class="File_Name">frogStory.html</span> in an separate browser window.
@@ -612,74 +612,72 @@ signing 'app.js'
                             Note, that the Live Preview browser immediately (with a minor delay) reflects the changes you make to the HTML source
                           </li>
                           <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-played with Live Preview" .</span> </li>
+                        </ol>                 
+                      </li>                          
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_start-debugging','VSC')">Start debugging</a>
+                        <ol>
+                          <li class="Instruction_NonRubric">Note, you already installed NodeJS in an earlier step (<a href="#Install_NodeJS"> Install_NodeJS </a>).</li>
+                          <li>To record your work, perform this next few debugging exercises using the app.js file in  <span class="File_Name">editing-in-vscode/debugging/Hello</span> </li>
+                        </ol>                          
+                      </li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-and-debug-view','VSC')">Run and Debug view</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-menu','VSC')">Run menu</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-configurations','VSC')">Launch configurations</a>
+                        <ol>
+                            <li>Follow the <abbr>VSC</abbr> instructions to create the launch.json file.   Note, your launch.json will be slightly different than the <abbr>VSC</abbr> launch.json.</li>
+                            <li> [VSC: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations','VSC')">launch-versus-attach-configurations</a>] - Read </li>
+                            <li> [VSC:  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_add-a-new-configuration','VSC')">add-a-new-configuration</a>] - Perform these steps </li>
+                            <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -add-a-new-configuration .</span> </li>
                         </ol>
-                        
-                        </li>                          
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_start-debugging','VSC')">Start debugging</a>
-                          <ol>
-                            <li class="Instruction_NonRubric">Note, you already installed NodeJS in an earlier step (<a href="#Install_NodeJS"> Install_NodeJS </a>).</li>
-                            <li>To record your work, perform this next few debugging exercises using the app.js file in  <span class="File_Name">editing-in-vscode/debugging/Hello</span> </li>
-                          </ol>                          
-                        </li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-and-debug-view','VSC')">Run and Debug view</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-menu','VSC')">Run menu</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-configurations','VSC')">Launch configurations</a>
-                          <ol>
-                              <li>Follow the <abbr>VSC</abbr> instructions to create the launch.json file.   Note, your launch.json will be slightly different than the <abbr>VSC</abbr> launch.json.</li>
-                              <li> [VSC: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations','VSC')">launch-versus-attach-configurations</a>] - Read </li>
-                              <li> [VSC:  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_add-a-new-configuration','VSC')">add-a-new-configuration</a>] - Perform these steps </li>
-                              <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -add-a-new-configuration .</span> </li>
-                          </ol>
-                        </li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-actions','VSC')">Debug actions</a>
-                            <p>Read about the different debug actions.  Play with the app.js, until you understand how each different debug action works.                        </p>                          
-                        </li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_breakpoints','VSC')">Breakpoints</a>
-                          <p>Read about the different breakpoint types.  Play with the app.js, until you understand breakpoints.</p>                          
-                        </li>
-                        
-                        <li class="active"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_logpoints','VSC')">Logpoints</a>
-                          <p>Read about the different logpoint types.  Play with the app.js, until you understand logpoint.</p>                          
-                        </li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_data-inspection','VSC')">Data inspection</a>
-                          <p>Read about the different data inspections tools.  Play with the app.js, until you understand the data inspections tools.</p>                          
-                        </li>
-                        <!--
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes','VSC')">Launch.json attributes</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_variable-substitution','VSC')">Variable substitution</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_platformspecific-properties','VSC')">Platform-specific properties</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_global-launch-configuration','VSC')">Global launch configuration</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_advanced-breakpoint-topics','VSC')">Advanced breakpoint topics</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-console-repl','VSC')">Debug Console REPL</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_redirect-inputoutput-tofrom-the-debug-target','VSC')">Redirect input/output to/from the debug target</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_multitarget-debugging','VSC')">Multi-target debugging</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_remote-debugging','VSC')">Remote debugging</a></li>
-                        
-                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_automatically-open-a-uri-when-debugging-a-server-program','VSC')">Automatically open a URI when debugging a server program</a></li>                                             
-                        -->                
-                    </ol>
-                  </li>
-                  <li class="Instruction_Todo" data-point-fraction="5">
-                    <b>Git Push</b>:   Don't forget to git push all your work to your remote repository
-                  </li>
-                </ol>
-              </section>
+                      </li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-actions','VSC')">Debug actions</a>
+                          <p>Read about the different debug actions.  Play with the app.js, until you understand how each different debug action works.                        </p>                          
+                      </li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_breakpoints','VSC')">Breakpoints</a>
+                        <p>Read about the different breakpoint types.  Play with the app.js, until you understand breakpoints.</p>                          
+                      </li>
+                      
+                      <li class="active"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_logpoints','VSC')">Logpoints</a>
+                        <p>Read about the different logpoint types.  Play with the app.js, until you understand logpoint.</p>                          
+                      </li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_data-inspection','VSC')">Data inspection</a>
+                        <p>Read about the different data inspections tools.  Play with the app.js, until you understand the data inspections tools.</p>                          
+                      </li>
+                      <!--
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes','VSC')">Launch.json attributes</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_variable-substitution','VSC')">Variable substitution</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_platformspecific-properties','VSC')">Platform-specific properties</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_global-launch-configuration','VSC')">Global launch configuration</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_advanced-breakpoint-topics','VSC')">Advanced breakpoint topics</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-console-repl','VSC')">Debug Console REPL</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_redirect-inputoutput-tofrom-the-debug-target','VSC')">Redirect input/output to/from the debug target</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_multitarget-debugging','VSC')">Multi-target debugging</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_remote-debugging','VSC')">Remote debugging</a></li>
+                      
+                      <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_automatically-open-a-uri-when-debugging-a-server-program','VSC')">Automatically open a URI when debugging a server program</a></li>                                             
+                      -->                
+                  </ol>
+                </li>
+                <li class="Instruction_Todo" data-point-fraction="5">
+                  <b>Git Push</b>:   Don't forget to git push all your work to your remote repository
+                </li>
+              </ol>
             </section>
-            <section data-point-fraction="50" data-f=""><h1 id="Part2_OptionII" class="Section">Part 2:  Option II:  Using another IDE</h1>
+            <section data-point-fraction="5" data-optionset='{"name":"Part 2"}' class="Instruction_Section"><h1 id="Part2_OptionII" class="Section">Part 2:  Option II:  Using another IDE</h1>
               <p>
               In this course, each student must test all their projects using the Chrome browser.
               This means you must know how to develop, debug and run your HTML5 projects (HTML+JavaScript+WebGL) on a local server on your development computer and then
@@ -719,10 +717,10 @@ signing 'app.js'
               </ol>
 
             </section>            
-            <section data-point-fraction="50" data-f="" class="Instruction_Section"><h1 class="Section" id="Part3_OptionI">Part 3: Option I - HTML, CSS and Event Handling</h1>
+            <section data-point-fraction="47.5" data-optionset='{"name":"Part 3"}' class="Instruction_Section"><h1 class="Section" id="Part3_OptionI">Part 3: Option I - HTML, CSS and Event Handling</h1>
               Part 3: Option I is series of readings and exercises from the <abbr>MDN</abbr> doc's on HTML, CSS and event handling.
 
-              <section data-point-fraction="5" data-f="" class="Instruction_Section"><h2 class="Section">Git Repo Setup</h2>
+              <section data-point-fraction="5" class="Instruction_Section"><h2 class="Section">Git Repo Setup</h2>
                   <p>Your working directory structure and your git repository structure <u>must</u> be exactly as described below.<br>
                   </p>                
                   <ol class="Instruction">
@@ -787,10 +785,11 @@ signing 'app.js'
                     <p> The complete grading Rubric is available on Canvas.</p>
                   </section>           
               </section>
-              <section data-point-fraction="33.3" data-f="" class="Instruction_Section"><h2 class="Section">Introduction to HTML</h2>                
+              <section data-point-fraction="32" class="Instruction_Section"><h2 class="Section">Introduction to HTML</h2>                
                   <div>                
-                    <p>Go to the MDN page <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML','MDN');">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.
+                   
                       <!--
+                         <p>Go to the MDN page <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML','MDN');">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.
                       Note the expandable index on the left hand-side of the page.&nbsp;&nbsp; Expand the first sub-section.&nbsp; It should look like:</p>
                     <p style="text-align:center"><img src="images/image003.jpg" height="296" width="247"><br>
                       <br>
@@ -803,16 +802,16 @@ signing 'app.js'
                       <li>Which of the <abbr>MDN</abbr> webpages "Active Learning" exercises you must perform. </li>
                       <li>How to submit the results of <u>some</u> of the "Active Learning" exercises to your git repository. </li>
                     </ul>
+                  
+            
                   </div>
-                  <section data-point-fraction="5"><h3 class="Section">Overview of HTML</h3>
+                  <section data-point-fraction="25" class="Instruction_Section"><h3 class="Section">Getting Started with HTML</h3>
                     <p>
-                    Read <u>just</u> the first paragraph of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML','MDN');">Introduction
-                        to HTML</a>
+                      Read <u>just</u> the first paragraph of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML','MDN');">Introduction
+                        to HTML</a>  
                     </p>
-                  </section>
-                  <section data-point-fraction="23" class="Instruction_Section"><h3 class="Section">Getting Started with HTML</h3>
-                    <p>Go to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started','MDN');">Getting
-                        Started with HTML</a>. <br>
+                    <p>Next go to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started','MDN');">Getting
+                        Started with HTML</a> and read through the MDN sections in the list below and performing the exercises in the list below. <br>
                     </p>
                     <ol class="Instruction">
                       <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started','MDN');">Getting
@@ -896,7 +895,7 @@ signing 'app.js'
                       </li>
                     </ol>
                   </section>
-                  <section data-point-fraction="23" class="Instruction_Section"><h3 class="Section"><a id="_Ref523303742">What’s in the head? Metadata in HTML</a></h3>                  
+                  <section data-point-fraction="25" class="Instruction_Section"><h3 class="Section"><a id="_Ref523303742">What’s in the head? Metadata in HTML</a></h3>                  
                     <p>Goto the next MDN subsection.&nbsp;&nbsp; There is a "Next" button at the top and bottom of the page that you just read.&nbsp;&nbsp; <br>
                     </p>
                     <ol class="Instruction">
@@ -1027,7 +1026,7 @@ signing 'app.js'
                             class="MDN_h2">Setting the primary language of the document</span></a> - read all. </li>
                     </ol>
                   </section>
-                  <section data-point-fraction="23" class="Instruction_Section"><h3 class="Section"><a id="_Ref523305604">HTML text fundamentals</a></h3>
+                  <section data-point-fraction="25" class="Instruction_Section"><h3 class="Section"><a id="_Ref523305604">HTML text fundamentals</a></h3>
                     <p>Goto the next MDN page, <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals','MDN');">HTML
                         text fundamentals</a>.&nbsp; </p>
                     <ol class="Instruction">
@@ -1106,7 +1105,7 @@ signing 'app.js'
                       </li>
                     </ol>
                   </section>                  
-                  <section data-point-fraction="23" class="Instruction_Section"><h3 class="Section">Test Your Skills</h3>
+                  <section data-point-fraction="25" class="Instruction_Section"><h3 class="Section">Test Your Skills</h3>
                     Goto <abbr>MDN</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics','MDN');">
                       Test your skills!</a>.
                     <ol class="Instruction">
@@ -1185,7 +1184,7 @@ signing 'app.js'
                     </ol>
                   </section>                      
               </section>
-              <section data-point-fraction="33.3" data-f="" class="Instruction_Section"><h2 class="Section">CSS – Styling the Web</h2>
+              <section data-point-fraction="32" class="Instruction_Section"><h2 class="Section">CSS – Styling the Web</h2>
                 <p>Next, you will read and work through sub-sections of the MDN topic <a class="WindowOpenLeft" onclick="windowOpenLeft('http://developer.mozilla.org/en-US/docs/Learn/CSS','MDN');">CSS —
                     Styling the Web</a>.</p>
                 <ol>
@@ -1515,11 +1514,10 @@ signing 'app.js'
                   </ol>
                 </section>
               </section>            
-              <section data-point-fraction="33.3" data-f="" class="Instruction_Section"><h2 class="Section">Event Programming (and a teeny bit of JavaScript)</h2>
+              <section data-point-fraction="31" class="Instruction_Section"><h2 class="Section">Event Programming (and a teeny bit of JavaScript)</h2>
                     <p>This section guides you through reading about event handling, but first it covers a teeny bit of JavaScript so as to better understand the
                       event handling tutorial.&nbsp;&nbsp; (A latter optional tutorial in this course will cover JavaScript in depth).</p>
-                    <section data-point-fraction="50">
-                      <h3 class="Section"><a id="_Ref523574167">What is JavaScript</a></h3>
+                    <section data-point-fraction="50" class="Instruction_Section"><h3 class="Section"><a id="_Ref523574167">What is JavaScript</a></h3>
                       <p>Goto topic <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript','MDN');">What is
                           JavaScript?</a></p>
                       <ol class="Instruction">
@@ -1675,8 +1673,7 @@ signing 'app.js'
                       <p>This introduction to JavaScript should be enough in order to complete the rest of this tutorial.&nbsp;&nbsp; A later tutorial in the course
                         will cover JavaScript in greater details.</p>
                     </section>
-                    <section data-point-fraction="50" class="Instruction_Section">
-                      <h3 class="Section">Introduction to Events</h3>
+                    <section data-point-fraction="50" class="Instruction_Section"><h3 class="Section">Introduction to Events</h3>
                       <p>Goto the sub-topic <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events','MDN');">
                           Introduction to events</a>. </p>
                       <ol class="Instruction">
@@ -1964,365 +1961,63 @@ signing 'app.js'
                     </section>
               </section>                
             </section>            
-            <section data-point-fraction="5" data-f="" class="Instruction_Section"><h1 class="Section"><a id="Part3_OptionII">Part 3: Option II - Prior Experience in HTML, CSS and Event Handling<br>
-                </a></h1>
+            <section data-point-fraction="5"  data-optionset='{"name":"Part 3"}' class="Instruction_Section"><h1 class="Section"><a id="Part3_OptionII">Part 3: Option II - Prior Experience in HTML, CSS and Event Handling</a></h1>
+              <p>
               Part 3: Option II is only for students meeting the criteria discussed in Section&nbsp;<a href="#Tutorial_Structure">Tutorial Structure</a>.
               For Part 3: Option II, you must submit a brief description of your prior experience in HTML, CSS and event handling as described below.
-            </p>            
-            <ol class="Instruction">
-                <li>
-                  <table class="Code_Example" id="Code_Example1_0">
-                    <tbody>
-                      <tr>
-                        <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
-                        <td>
-                          <div>                                                                 
-                            <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vs-code</code>
-                            <span class="Shell_Code_Comment">[Use notepad or your favorite editor to edit the top-level README.md file]</span><br>
-                            <code class="Shell_Code_Input-v2">notepad README.md</code>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                </li>
-                <li>
-                  
-                  In the README.md file after the line "### HTML and CSS Experience":
-                  <ol class="Instruction">
-                    <li>List all courses you already took or are currently taking where you learned HTML5, CSS, and Event Handling.<br>
-                      <br>
-                    </li>
-                    <li>List any other experience you had outside of a class work where you learned HTML5, CSS, and Event Handling. </li>                    
-                  </ol>
-    
-                </li>
-                <li class="Instruction_Git_Commit"> 
-                  <span class="Git_Commit_Message">git commit -m '-add Prior Experience in HTML, CSS and Event Handling' .</span>
-                  <p>Git <b>push</b> your editing-in-vscode repo.</p>                  
-                </li>
-            </ol>
-
-            </section>
-            <div hidden="true">
-            <section data-point-fraction_SKIP="40" class="Instruction_Section_SKIP"><h1 class="Section_SKIP"><a id="Part3_SKIP">Part 3: Chrome DevTools</a></h1>
-              <div class="Staff_Notes" style="color:red;background-color: yellow;">
-                  Removed this section replaced with VS Code tutorial
-              </div>
-              <p>Part 3 is required of all students. Part 3 is series of readings and exercises from the Chrome DevTool doc's. </p>
-              <section data-point-fraction="16.6">
-                <h2 class="Section">Panel Overview</h2>                
-                <ol>
-                  <li>Using Chrome goto <a target="_blank" href="https://developers.google.com/web/tools/chrome-devtools/">https://developers.google.com/web/tools/chrome-devtools/</a>
-                    <br>
-                    <br>
-                  </li>
-                  <li><u>Panel Overview</u>: <br>
-                    <br>
-                    Read all of the "Chrome DevTools" page -- but do <u>not</u> follow any further hyperlinks.&nbsp; The goal is just to get a rough idea of
-                    the functionality that the various "panels" provide.<a name="_Ref523490878"></a></li>
-                </ol>
-              </section>              
-              <section data-point-fraction="16.6">
-                <h2 class="Section">Get Started With Viewing And Changing The DOM</h2>
-                Under "Elements Panel", follow the link <a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/">Get Started With Viewing And
-                  Changing The DOM</a><br>
-                <ol class="Instruction">
-                  <li class="Instruction_Read">Read the first paragraph and follow the link to <a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/#appendix">Appendix:
-                      HTML versus the DOM </a> and read through that appendix before continuing. </li>
-                  <li class="Instruction_Read"><a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/#appendix">Appendix: HTML versus the DOM</a>
-                    -<br>
-                    <br>
-                  </li>
-                  <li class="Instruction_Todo"><a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/#view">View DOM nodes</a> - return to
-                    "Get Started With Viewing And Changing The DOM" and continue reading sub-section "View DOM nodes<br>
-                    <ol>
-                      <li><u>Exercises</u>:&nbsp; Do all the exercises in this sub-section.&nbsp; Regarding the further links embedded this sub-section follow
-                        and read all them -- but <u>skip</u> <a target="_blank" href="https://developers.google.com/web/tools/chrome-devtools/css/">Get
-                          Started With Viewing And Changing CSS</a>. </li>
-                    </ol>
-                    <br>
-                  </li>
-                  <li class="Instruction_Todo"><a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/#edit">Edit the DOM</a><br>
-                    <br>
-                    Do all the exercises in this sub-section.&nbsp; <br>
-                    <p>Take screenshot(s) of the rendered HTML page as it appears <u>after</u> all your DOM changes.&nbsp; Save it to png file(s) named <span
-
-                        class="ProgramName">edit-DOM.png</span>.&nbsp;&nbsp; If needed, take multiple screen capture and save to multiple files (edit-DOM-1.png,
-                      edit-DOM-2.png, etc.) in order to show the entirety of the changes that occurred to the rendered HTML page.&nbsp;&nbsp; (It's also
-                      acceptable to composite the multiple screenshots into a single .png, if you prefer).<br>
-                    </p>
-                    <ol>
-                      <li class="Instruction_Todo">Create the following directory structure: <br>
-                        <table class="Code_Example">
-                          <tbody>
-                            <tr>
-                              <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ▽ </button> </td>
-                              <td>
-                                <div style="height: 40px;"><code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
-
-                                      data-course-number="">6120</span>-HTML-Tutorial<br>
-                                  </code> <code class="Shell_Code_Input"> $ mkdir view-and-change-DOM<br>
-                                  </code>                        
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </li>
-                      <li class="Instruction_Todo">Move the png file(s) into this directory. <br>
-                        <br>
-                      </li>
-                      <li class="Instruction_Git_Commit">Git commit the above files with commit message&nbsp; "-exercise edit-the-dom" </li>
-                    </ol>
-                  </li>
-                  <li class="Instruction_Todo"><a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/#console">Access nodes in the
-                      Console&nbsp;</a> <br>
-                    <ol>
-                      <li><u>Exercises</u>:&nbsp; Do all the exercises, but there is nothing to submit to git. </li>
-                    </ol>
-                    <a target="_blank" href="https://developers.google.com/web/tools/chrome-devtools/dom/#breakpoints"><br>
-                    </a></li>
-                  <li class="Instruction_Todo"><a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/#breakpoints">Break on DOM changes</a> <br>
-                    <ol>
-                      <li><u>Exercises</u>:&nbsp; Do all the exercises, but there is nothing to submit to git. </li>
-                    </ol>
-                    <br>
-                  </li>
-                  <li class="Instruction_Read"><a target="_blank" href="https://developer.chrome.com/docs/devtools/dom/#next">Next Steps</a> -&nbsp; read this
-                    sub-section.&nbsp;&nbsp; (But you do <u>not</u> have to follow all the links).<br>
-                    <br>
-                    Stop here.<br>
-                  </li>
-                </ol>
-              </section>
-              <!-- ZJW: described this is not necessary for 3120, not going to do much CSS -->
-              <section data-point-fraction="16.6">
-                <h2 class="Section">Get Started With Viewing And Changing CSS</h2>                
-                <ol class="Instruction">
-                  <li><a target="_blank" href="https://developer.chrome.com/docs/devtools/css/"><span class="MDN_h2">View an element's CSS</span></a>- read all
-                    and ...<br>
-                    <ol>
-                      <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but there is nothing to submit to git.<br>
-                        <br>
-                      </li>
-                    </ol>
-                  </li>
-                  <li><a target="_blank" href="https://developer.chrome.com/docs/devtools/css/#declarations"><span class="MDN_h2">Add a CSS declaration to an
-                        element</span></a> - read all and ...<br>
-                    <ol>
-                      <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but there is nothing to submit to git.<br>
-                        <br>
-                      </li>
-                    </ol>
-                  </li>
-                  <li><span class="MDN_h2"><a target="_blank" href="https://developer.chrome.com/docs/devtools/css/#classes">Add a CSS class to an element</a> </span>-
-                    read all and ..<br>
-                    <ol>
-                      <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but there is nothing to submit to git.<br>
-                        <br>
-                      </li>
-                    </ol>
-                  </li>
-                  <li><a target="_blank" href="https://developer.chrome.com/docs/devtools/css/#pseudostates"><span class="MDN_h2">Add a pseudostate to a class</span></a>
-                    - read all and ...<br>
-                    <ol>
-                      <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but there is nothing to submit to git.<br>
-                        <br>
-                      </li>
-                    </ol>
-                  </li>
-                  <li><a target="_blank" href="https://developer.chrome.com/docs/devtools/css/#box-model"><span class="MDN_h2">Change the dimensions of an
-                        element</span></a> - read all and ...<br>
-                    <ol>
-                      <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp;&nbsp;&nbsp; Do them all, but there is nothing to submit to git. </li>
-                    </ol>
-                  </li>
-                </ol>
-              </section>
-              <section data-point-fraction="16.6">
-                <h2 class="Section"><a id="_Ref19088667">Get Started With The Console</a></h2>
-                <p>Go to page&nbsp; <a target="_blank" href="https://developer.chrome.com/docs/devtools/console/">Get Started With The Console</a>. </p>
-                <ol class="Instruction">
-                  <li class="Instruction_Read"><a target="_blank" href="https://developer.chrome.com/docs/devtools/console/#view"><span class="MDN_h2">Viewing
-                        logged messages</span></a> – read this section.<br>
-                    <br>
-                  </li>
-                  <li class="Instruction_Read"><a target="_blank" href="https://developer.chrome.com/docs/devtools/console/#javascript"><span class="MDN_h2">Running
-                        JavaScript</span></a> – read this section<br>
-                  </li>
-                </ol>
-              </section>
-              <section data-point-fraction="16.6">
-                <h2 class="Section">Log messages in the Console </h2>
-                <p>Go to <a target="_blank" href="https://developer.chrome.com/docs/devtools/console/log/">Log messages in the Console</a>.</p>
-                <ol class="Instruction">
-                  <li class="Instruction_Todo">First, prepare a git repo directory as follows:<br>
-                    <u>Exercise</u>:<br>
-                    <br>
-                    Create the following directory structure: <br>
-                    <table class="Code_Example">
+              </p>            
+              <ol class="Instruction">
+                  <li>
+                    <table class="Code_Example" id="Code_Example1_0">
                       <tbody>
                         <tr>
-                          <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ▽ </button> </td>
+                          <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                           <td>
-                            <div style="height: 40px;"><code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial<br>
-                              </code> <code class="Shell_Code_Input"> $ mkdir get-started-console<br>
-                              </code>
+                            <div>                                                                 
+                              <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vs-code</code>
+                              <span class="Shell_Code_Comment">[Use notepad or your favorite editor to edit the top-level README.md file]</span><br>
+                              <code class="Shell_Code_Input-v2">notepad README.md</code>
                             </div>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <br>
-                    <br>
-                  </li>
-                  <li class="Instruction_Todo"><span class="MDN_h2"><a target="_blank" href="https://developer.chrome.com/docs/devtools/console/log/#setup">Set
-                        up the demo and DevTools</a> - As described in this Chrome doc article set up the demo and DevTools.&nbsp; R</span>ead and do all the
-                    exercises in this section.<br>
-                    <br>
-                  </li>
-                  <li class="Instruction_Todo">Click the Settings Icon in the Console (<img src="images/image020.jpg" height="22" width="28">).&nbsp;&nbsp;
-                    Enable the check box |<span class="ProgramName">Preserve Log|.&nbsp;&nbsp; </span>Click the Settings Icon again to close the Settings
-                    panel.<span class="ProgramName"><br>
-                      <br>
-                    </span></li>
-                  <li class="Instruction_Todo"><u>Exercise [save-log]:</u>
-                    <ol>
-                      <li class="Instruction_Todo">Return to the Console window and right click the mouse on any Console output line.&nbsp;&nbsp; A pop-up menu
-                        will list an option |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp; Select |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
-                        This opens a dialog box to save all the text that you typed in at the Console.&nbsp;&nbsp; <br>
-                      </li>
-                      <li class="Instruction_Todo">Save the file to the directory, <span class="ProgramName">get-started-console</span> that you created the
-                        directory earlier.<br>
-                        <br>
-                      </li>
-                      <li class="Instruction_Todo">Verify the file is saved to the directory:<br>
-                        <table class="Code_Example">
-                          <tbody>
-                            <tr>
-                              <td> <button onclick="Code_Example_Toggle('Code_Example3_0');"> ▽ </button> </td>
-                              <td>
-                                <div style="height: 175px;"><code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span
 
-                                      data-course-number="">6120</span>-HTML-Tutorial/get-started-console /<br>
-                                  </code> <code class="Shell_Code_Input"> $ ls developers.google.com-1535898597380.log<br>
-                                    <span class="Shell_Code_Comment">[.your file name will differ.]</span><br>
-                                  </code> <code class="Shell_Code_Output"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-course-number="">6120</span>-HTML-Tutorial/get-started-console
-                                    /<br>
-                                  </code> <code class="Shell_Code_Input"> $ cat developers.google.com-1535898597380.log<br>
-                                    <span class="Shell_Code_Comment">[cat displays the file contents… your details will differ.]</span> </code> <code class="Shell_Code_Output">
-                                    document.getElementById('changeMyText') button id="changeMyText"&gt;Change My Text/button
-                                    document.getElementById('changeMyText').textContent = 'Hello' VM378:1 Uncaught TypeError: Cannot set property 'textContent'
-                                    of null <br>
-                                    <span class="Shell_Code_Comment">[... the rest of log file will appear here ... ]</span> </code>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <br>
+                  </li>
+                  <li>
+                    
+                    In the README.md file after the line "### HTML and CSS Experience":
+                    <ol class="Instruction">
+                      <li>List all courses you already took or are currently taking where you learned HTML5, CSS, and Event Handling.<br>
                         <br>
                       </li>
-                      <li class="Instruction_Git_Commit">Git commit the above file(s) with commit message: <span>"-exercise get-started-console #1</span> </li>
+                      <li>List any other experience you had outside of a class work where you learned HTML5, CSS, and Event Handling. </li>                    
                     </ol>
+      
                   </li>
-                  <li><a target="_blank" href="https://developer.chrome.com/docs/devtools/console/log/#javascript"><span class="MDN_h2">View messages logged
-                        from JavaScript</span></a><br>
-                    <br>
-                    Read and do all the exercises this section.&nbsp; Then save the console output log:
-                    <ol>
-                      <li class="Instruction_Todo"><u>Exercise [save log]</u>:
-                        <ol>
-                          <li class="Instruction_Todo">Return to the Console window and right click the mouse on any Console output line. &nbsp;&nbsp;A pop-up
-                            menu will list an option |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp; Select |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
-                            This opens a dialog box to save all the text that you typed in at the Console.&nbsp;&nbsp; <br>
-                          </li>
-                          <li class="Instruction_Todo">Save the file to the directory, <span class="ProgramName">get-started-console</span> that you created
-                            the directory earlier.<br>
-                          </li>
-                          <li class="Instruction_Todo">Verify the file is saved to the directory (as discussed earlier)<br>
-                          </li>
-                          <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise
-                              get-started-console #2" .</span> </li>
-                        </ol>
-                      </li>
-                    </ol>
+                  <li class="Instruction_Git_Commit"> 
+                    <span class="Git_Commit_Message">git commit -m '-add Prior Experience in HTML, CSS and Event Handling' .</span>
+                    <p>Git <b>push</b> your editing-in-vscode repo.</p>                  
                   </li>
-                  <li><a target="_blank" href="https://developer.chrome.com/docs/devtools/console/log/#browser"><span class="MDN_h2">View messages logged by the
-                        browser</span></a> - Read and do all the exercises this section.&nbsp; Then save the console output log as described below:<br>
-                    <ol>
-                      <li class="Instruction_Todo"><u>Exercise [save log]</u>:<br>
-                        <ol>
-                          <li class="Instruction_Todo">Return to the Console window and right click the mouse on any Console output line.&nbsp;&nbsp; A pop-up
-                            menu will list an option |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp; Select |<span class="ProgramName">Save As|</span>.&nbsp;&nbsp;&nbsp;
-                            This opens a dialog box to save all the text that you typed in at the Console.&nbsp;&nbsp; <br>
-                          </li>
-                          <li class="Instruction_Todo">Save the file to the directory, <span class="ProgramName">get-started-console</span> that you created
-                            the directory earlier.<br>
-                          </li>
-                          <li class="Instruction_Todo">Verify the file is saved to the directory (as discussed earlier)<br>
-                          </li>
-                          <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise
-                              get-started-console #3" . </span> </li>
-                        </ol>
-                        <br>
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="Instruction_Read"><span class="MDN_h2"><a target="_blank" href="https://developer.chrome.com/docs/devtools/console/log/#drawer">Use
-                        the Console alongside any other panel</a> - </span>read all. </li>
-                </ol>
-              </section>
-              <section data-point-fraction="16.6">
-                <h2 class="Section">Get Started With Running JavaScript In The Console</h2>
-                Go to <a target="_blank" href="https://developer.chrome.com/docs/devtools/console/javascript/">Run JavaScript in the Console</a>
-                <ol class="Instruction">
-                  <li class="Instruction_Todo">Click the Settings Icon in the Console (<img src="images/image020.jpg" height="22" width="28">).&nbsp;&nbsp;
-                    Enable the check box <span class="ProgramName">Preserve Log</span>, (if it’s not already enabled)<span class="ProgramName">. </span>Click
-                    the Settings Icon again to close the Settings panel. </li>
-                  <li class="Instruction_Todo">Return to the "Console" window and right click the mouse on any Console output line.&nbsp;&nbsp; In the pop-up
-                    menu, select <span class="ProgramName">|Clear console|</span>.<br>
-                    <br>
-                  </li>
-                  <li>Now read the entire DevTools <a target="_blank" href="https://developer.chrome.com/docs/devtools/console/javascript/">Run JavaScript in
-                      the Console</a> article and work through all the examples.&nbsp; (You do <u>not</u> have to follow every link within this article, it's
-                    up to you).<br>
-                    <br>
-                    When you are done, save the console log as follows:<br>
-                    <br>
-                    <ol>
-                      <li class="Instruction_Todo"><u>Exercise [save log]</u>:<br>
-                        <ol>
-                          <li class="Instruction_Todo">Return to the "Console" window and right click the mouse.&nbsp;&nbsp; In the pop-up menu, select <span class="ProgramName">|Save
-                              As|</span>.&nbsp;&nbsp;&nbsp; This opens a dialog box to save all your interactions on the Console.&nbsp;&nbsp; <br>
-                            <br>
-                          </li>
-                          <li class="Instruction_Todo">Save the file to the directory, <span class="ProgramName">get-started-console</span> that you created
-                            the directory earlier.<br>
-                            <br>
-                          </li>
-                          <li class="Instruction_Todo">Verify the file is saved to the directory (as described earlier)<br>
-                            <br>
-                          </li>
-                          <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise
-                              javascript-console" .</span> </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-                <b>Reminder: git push your local repo to the server and give the TA and professor reporter access. </b></section>
+              </ol>
+
             </section>
-            </div>
+
+            <span id="cursor"></span>
             <section id="Section_Rubric"><h1 id="Section_Rubric" class="toc">Appendix I: Rubric</h1>
               <!--
                       <div style="border: solid 1px" hidden="">              <p style="background-color: yellow; color: red; text-align: center;"><em>[3/12/2021                  - 12:05am] Section&nbsp; Under Construction<br>                </em></p>              This Tutorial is out of will be 160 total points<br>              The rubric is generated from the "<strong>[x pts]</strong>"<strong>              </strong>labels<strong> </strong>next to each of the tutorial<strong>              </strong><u>Exercise</u><strong>:'s.<br>                <br>              </strong>ZJW: 3/12/2021:&nbsp; The rubric is nearly complete<strong>.<br>              </strong>            </div>            -->
+                    
               <div id="Div_Rubric">
                 <div>
-                  <div> <span id="Total">Max Points: &nbsp;&nbsp;&nbsp;</span><span data-total-points=""></span> </div>
-                  <div> Awarded Points:&nbsp;&nbsp;&nbsp;<span id="AwardedPoints">0.0</span> </div>
+                  <table id="RubricAwardedPoints" class="RubricAwardedPoints">
+                    <thead>
+                      <tr><th>Sequence</th><th>Max Points</th><th>Awarded Points</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td></td><td><span data-total-points=""></span></td><td><span id="AwardedPoints">0.0</span></td></tr>
+                    </tbody>
+                  </table>                  
                   <br>
                 </div>
                 <table class="Rubric" id="RubricTable">
