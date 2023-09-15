@@ -97,6 +97,7 @@
         </div>
         <article>
           <div contenteditable="false">
+            <div>
             <p style="text-align:center"><span style="font-size:18.0pt">HTML, CSS and Event Tutorial</span></p>
             <!--
         <p style="text-align:center" >ITCS 5121/4121 Information        Visualization </p>        -->
@@ -112,6 +113,7 @@
             </p>
             <p style="text-align:center"><span style="font-size:10.0pt">Copyright September 2018, Zachary Wartell @ University of North Carolina at Charlotte<br>
                 All Rights Reserved.</span></p>
+            </div>
             <section>
               <div hidden="hidden">
                 <!-- experimental stuff  --> <button onclick="window.open('mailto:zwartell@uncc.edu?subject=subject&amp;body=Test%201');">Test1</button> <button
@@ -169,10 +171,10 @@
               </ol>
               <p></p>
             </section>
-            <section data-point-fraction="5" class="Instruction_Section"><h1 class="Section" id="Part1">Part 1: [<b>REQUIRED</b>]  Directory and cci-git GitLab Tools Setup</h1>
+            <section data-point-fraction="5" data-f="" class="Instruction_Section"><h1 class="Section" id="Part1">Part 1: [<b>REQUIRED</b>]  Directory and cci-git GitLab Tools Setup</h1>
               <ol class="Instruction">
                 <li> <b> Installing WebGL Programming Guide Examples</b>
-                  <ol>                      
+                  <ol>                
                       <li class="Instruction_Todo"><span class="Instruction_Title">VSCode - Install</span>
                         Watch and follow the instructions at: 
                         <a href="https://code.visualstudio.com/docs/introvideos/basics" target="_blank">https://code.visualstudio.com/docs/introvideos/basics </a> to installed Visual Studio Code.
@@ -181,6 +183,21 @@
                       <li class="Instruction_Todo"><span class="Instruction_Title">NodeJS - Install</span>
                         Install <a href="https://nodejs.org/en" target="_blank">https://nodejs.org/en</a>.
                       </li>
+                      
+                        <li><span class="Instruction_Title"> Live Preview Extension</span> Install the following extensions (or the lastest version of it) following the instructions about VS Code's 
+                          <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/extension-marketplace','VSC')">extensions marketplace</a>
+<code>
+<pre>
+  Live Preview
+  v0.4.9
+  Microsoft
+  microsoft.com
+  2,779,724
+  (57)
+  Hosts a local server in your workspace for you to preview your webpages on.                            
+</pre>
+</code>                                                        
+                        </li>
                       <li class="Instruction_Todo"><span class="Instruction_Title">Clone the WebGL Programming Guide Examples</span>&nbsp;&nbsp;
                         In your ITCS_<span class="DataField" data-course-number="">3120</span> directory, clone the WebGL Programming Guide
                         example code:
@@ -206,7 +223,7 @@
                           -&gt; Open Folder</span> and select the above folder, i.e. <span
                           class="File_Name">~/ITCS_3120/WebGL_Programming_Guide.</span> These code files will
                         appear listed in the VS Code Explorer
-                        panel, one the left side. In the Explorer panel, right-click the
+                        panel, on the left side. In the Explorer panel, right-click the
                         file <span class="File_Name">index.html</span>.&nbsp; In the
                         pop-up menu, select <span class="File_Name">Show Preview</span> (or <span class="File_Name">Show Live Server</span>).
                         A browser will be started displaying <span class="File_Name">index.html</span>.
@@ -334,8 +351,7 @@
                       </tr>
                     </tbody>
                   </table>
-                </li>
-                <span id="cursor"></span>
+                </li>                
                 <li><u>Exercise [Remote Repo Setup]</u>:
                   <div class="Server_Cci_Git"> Create new remote repo on cci-git called,<span class="File_Name"> editing-in-vscode</span> using the
                     procedures of <abbr>GT</abbr>: Appendix I-3 <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Git_Server_Access">Git_Server_Access</a>.<br>                          
@@ -418,263 +434,252 @@ signing 'app.js'
                   </div>                          
                 </li>                                  
               </ol>
-              <section><h1 class="Section"> Part 2:&nbsp;Option I: The Visual Studio Code IDE </h1>
-                <p>The TA will grade all assignments in this course using:</p>
-                <ol>
-                  <li>The Visual Studio Code (VS Code) <a class="WindowOpenLeft" onclick="windowOpenLeft('https://en.wikipedia.org/wiki/Integrated_development_environment','wikipedia');">IDE</a></li>
-                  with
-                  <li>The Chrome web browser.</li>
-                </ol>
-                <p>It is the responsibility of each student to test all their submitted assignments using VS Code and the Chrome Browser using the "VS Code +
-                  Chrome" configuration specified in the rest of this document. Therefore each student is expected to be have basic familiarity with using VS Code.
+            </section>
+            <section data-point-fraction="50" data-f=""><h1 class="Section"> Part 2:&nbsp;Option I: The Visual Studio Code IDE </h1>
+              <p>The TA will grade all assignments in this course using:</p>
+              <ol>
+                <li>The Visual Studio Code (VS Code) <a class="WindowOpenLeft" onclick="windowOpenLeft('https://en.wikipedia.org/wiki/Integrated_development_environment','wikipedia');">IDE</a></li>
+                with
+                <li>The Chrome web browser.</li>
+              </ol>                
+              <p>                
+                The Part 2: Option I guides the reader through reading parts of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>,
+                and performing tutorial exercises based on that reading. The abbreviation, <abbr>VSC</abbr>, will be used to refer to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>
+              </p>
+              <!--
+              <p>If you are an expert in another IDE, you may well choose to develop and debug your assignments in your favored IDE.  However, 
+                all course assignments will be graded in the "VS Code + Chrome" environment, therefore you must learn enough about the "VS Code + Chrome" environment
+                thorugh this tutorial such that your submitted programs execute properly in the "VS Code + Chrome" environment.</p>
+              -->
+              <section class="Instruction_Section" data-point-fraction="50">
+                <h2 class="Section">Visual Studio Code Tutorial</h2>
+                <ol class="Instruction">
+                  <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
+                    If you did not already do so, watch the video below and follow all the instructions to install VS Code on your computer and learn the basics of the VS Code GUI:<br>
+                    <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
+                    </a><br>
+                    <div class="Side_Note"> <b>Side Note:</b>
+                      In the above video and it's associated reading, VS Code Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
+                      Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
+                      <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
+                          <img src="images/terminal.png" alt="images/terminal.png">
+                      </figure>
+                    </div>                    
+                  </li>
+                  <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>:Code editing in Visual Studio Code]</u>: <br>
+                    Watch the video below.&nbsp; Follow all the video instructions:<br>
+                    <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/codeediting','VSC')">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
+                    <br>
+                    You must perform <u>all</u> the instructions in the video above. The instruction items below partition the above video instructions into separate rubric points.
+                    Shortly, you will perform series of tutorial exercises based on these readings and their installation instructions.
+                    <br>
+                    <br>
+                    <ol>
+                      <li><u>Exercises: [<abbr>VSC</abbr>:"Open a folder".... "Use File Explorer"]</u> Perform all steps.</li>
+                      <li><u id="Install_NodeJS"> Exercises: [<abbr>VSC</abbr>:"Install the Node.js runtime" ... "Check your Node.js"]</u> Perform all steps.
+                      <!-- 
+                      Note these steps are important.  All later readings in <abbr>VSC</abbr> and the exercises in this document based on those reading require 
+                      you installed <a href="https://nodejs.org/">https://nodejs.org/</a> according to the instruction in the above <abbr>VSC</abbr> sections.
+                      -->
+                      </li>
+                      <li><u>Exercises: [<abbr>VSC</abbr>:"Create a simple 'Hello world'" ..."Run the application"]</u> Perform all steps.
+                      </li>
+                    </ol>
+                  </li>                                      
+                  <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise[VS Code Editing - Modifying app.js ]</u>:                    
+                    <p>
+                    This tutorial will intersperse short exercises to demonstrate your understanding of the readings in <abbr>VSC</abbr>.  These exercises will require you
+                    to git fork various repo's containing starter code. You will modify the code to practice the skills presented in the <abbr>VSC</abbr> readings.
+                  </p>
+                    <ol class="Instruction_Option Instruction_Todo">                    
+                      <li><u>Exercise: [modify app.js]</u>
+                        <ol>                            
+                          <li class="Instruction_Todo">Open the folder <span class="File_Name">~ITCS_3120/editing-in-vs-code/first</span> in VS Code.  In VS Code, modify the file app.js.  In particular modify the string printed out, so that is introduces yourself.</li>                          
+                          <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-modify app.js" .</span> </li>                          
+                        </ol>
+                      </li>                      
+                    </ol>
+                  </li>
                   
-                  If you are an expert in another IDE, you may well choose to develop and debug your assignments in your favored IDE.  However, 
-                  all course assignments will be graded in the "VS Code + Chrome" environment, therefore you must learn enough about the "VS Code + Chrome" environment
-                  thorugh this tutorial such that your submitted programs execute properly in the "VS Code + Chrome" environment.</p>
-                  <p>                
-                  The following sections guides the reader through tutorial exercises that require reading parts of <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>.&nbsp;&nbsp;
-                  The abbreviation, <abbr>VSC</abbr>, will be used to refer to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/','VSC')">https://code.visualstudio.com/</a>.</p>
-                <ol>
-                </ol>
-                <section class="Instruction_Section" data-point-fraction="50">
-                  <h2 class="Section">Visual Studio Code Tutorial</h2>
-                  <ol class="Instruction">
-                    <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
-                      If you did not already do so, watch the video below and follow all the instructions to install VS Code on your computer and learn the basics of the VS Code GUI:<br>
-                      <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
-                      </a><br>
-                      <div class="Side_Note"> <b>Side Note:</b>
-                        In the above reading,  the Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
-                        Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
-                        <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
-                            <img src="images/terminal.png" alt="images/terminal.png">
-                        </figure>
-                      </div>                    
-                    </li>
-                    <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>:Code editing in Visual Studio Code]</u>: <br>
-                      Watch the video below.&nbsp; Follow all the video instructions:<br>
-                      <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/codeediting','VSC')">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
-                      <br>
-                      You must perform <u>all</u> the instructions in the video above. The items below partition the above video instructions into separate rubric points.
-                      Shortly, you will perform series of exercises based on these readings and the readings' further component installation instructions.
-                      <br>
-                      <br>
-                      <ol>
-                        <li><u>Exercise: [<abbr>VSC</abbr>:"Open a folder".... "Use File Explorer"]</u></li>
-                        <li><u id="Install_NodeJS"> Exercise: [<abbr>VSC</abbr>:"Install the Node.js runtime" ... "Check your Node.js"]</u>
-                        Note these steps are important.  All later readings in <abbr>VSC</abbr> and the exercises in this document based on those reading require 
-                        you installed <a href="https://nodejs.org/">https://nodejs.org/</a> according to the instruction in the above <abbr>VSC</abbr> section.s
-                        </li>
-                        <li><u>Exercise: [<abbr>VSC</abbr>:"Create a simple 'Hello world'" ..."Run the application"]</u></li>
-                      </ol>
-                    </li>                  
-                    <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise[VS Code Editing - Modifying app.js ]</u>:                    
-                      <p>
-                      This tutorial will intersperse short exercises to demonstrate your understanding of the readings in <abbr>VSC</abbr>.  These exercises will require you
-                      to git fork various repo's containing starter code. You will modify the code to practice the skills presented in the <abbr>VSC</abbr> readings.
-                    </p>
-                      <ol class="Instruction_Option Instruction_Todo">                    
-                        <li><u>Exercise: [modify app.js]</u>
-                          <ol>                            
-                            <li class="Instruction_Todo">Open the folder <span class="File_Name">editing-in-vs-code/first</span> in VS Code.  Modify the string printed out in JavaScript file app.js in order to introduce yourself.</li>                          
-                            <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise first" .</span> </li>                          
-                          </ol>
-                        </li>                      
-                      </ol>
-                    </li>
+                  <li class="Instruction_Todo" data-point-fraction="32"><u>Exercise [<abbr>VSC</abbr>:Basic Editing]</u>: <br>
+                    The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics','VSC')">https://code.visualstudio.com/docs/editor/codebasics</a> 
+                    covers in detail VS Code's code editing UI.  The exercises below guide the reader through a subset of the sections of 
+                    the article and then provide short exercises to do based on the reading.
                     
-                    <li class="Instruction_Todo" data-point-fraction="32"><u>Exercise [<abbr>VSC</abbr>:Basic Editing]</u>: <br>
-                      The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics','VSC')">https://code.visualstudio.com/docs/editor/codebasics</a> 
-                      covers in detail VS Code's code editing UI.  The exercises below guide the reader through a subset of the sections of 
-                      the article and then provide short exercises to do based on the reading.
-                      
-                      <ol>                                                                                  
-                          <li class="Instruction_Reading"><u>Read [<abbr>VSC</abbr>: ... Keyboard shortcuts]</u> Read up and including through <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts','VSC')">https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts</a></li>
-                          <li class="Instruction_Reading">
-                            <u>[<abbr>VSC</abbr>: 
-                              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor','VSC');">multiple-selections-multicursor</a>]</u>
-                              Open the following folder in VS Code:
-                              <table class="Code_Example" id="Code_Example1_0">
-                                <tbody>
-                                  <tr>
-                                    <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
-                                    <td>
-                                      <div>                                                                                                                                            
-                                        <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vscode&sol;basic-editing</code>                                  
-                                      </div>                                
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>                                                                                
-                              <li>Read the first paragraphs of above section upto and including 
-                                <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>.
-                                <br>
-                                Use the multi-cursor to change the file <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
-                              </li>
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_shrinkexpand-selection','VSC');">Shrink/expand selection</a>.
-                                <br>
-                                Play with this feature in frogStory.html <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
-                              </li>                              
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection','VSC');">Column (box) selection</a>.
-                                <br>
-                                Use column box selection to change the mis-spelled Ascii Art of "Computer Science" in <span class="File_Name">frogStory.html</span> to be spelled properly.
-                              </li>                              
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save','VSC');">Save/Auto Save</a>.
-                                <br>
-                                Read and explore.
-                              </li>                                                            
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_hot-exit','VSC');">Hot Exit</a>.
-                                <br>
-                                Read and explore.
-                              </li>              
-                              <li>In the directory <span class="File_Name">editing-in-vscode/basic-editing/a-program-from-an-earlier-course</span>, add any short program that <b>you</b>
-                                wrote in any previous source in any programming language.  Edit the file <span class="File_Name">a-program-from-an-earlier-course/README.md</span> to included
-                                a brief description of (1) what course you wrote this previous program in and (2) what the program does.
-  
-                                Use this program to play with and learn the VS Code editor features described in the remaining items (i) through (p).
-                              <ol>
-                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-a-program-from-an-earlier-course" .</span> </li>
-                              </ol>
-                              </li>
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace','VSC');">Find and Replace</a>.
-                                <br>
-                                Read and explore.
-                              </li>                                                                          
-                              <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-across-files','VSC');">Search across files</a>.
-                                <br>
-                                This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
-                                start using VS Code for a some course projects.
-                              </li>                                                              
-                              <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-editor','VSC');">Search Editor</a>.
-                                <br>
-                                This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
-                                start using VS Code for a some course projects.
-                              </li>                                            
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_intellisense','VSC');">intellisense</a>.
-                                <br>
-                                Read and explore.
-                              </li>              
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_formatting','VSC');">Formating</a>.
-                                <br>
-                                Read and explore.
-                              </li>              
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_folding','VSC');">Folding</a>.
-                                <br>
-                                Read and explore.
-                              </li>                                            
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_indentation','VSC');">Identation</a>.
-                                <br>
-                                Read and explore.
-                              </li>
-                              <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support','VSC');">File Encoding Support</a>.
-                                <br>
-                                Read and explore.
-                              </li>
-                              <li class="Instruction_Git_Commit">
-                                Commit any changes you made to your <span class="File_Name">a-program-from-an-earlier-course</span> while exploring the VS Code editing features above.
-                                <br>
-                                <span class="Git_Commit_Message">git commit -m "played with VS Code editing feature using a-program-from-an-earlier-course" .</span>
-                              </li>                                                                                                                                                                                    
-                      </ol>
-                    </li>
-                    <li class="Instruction_Todo" data-point-fraction="33"><u>Exercise [<abbr>VSC</abbr>:Debugging]</u>: <br>
-                      The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging','VSC')">https://code.visualstudio.com/docs/editor/debugging</a> 
-                      covers in detail VS Code's code debugging UI.  VS Code's debugging provides standard features found in IDE's and programing tool chains at least 
-                      as far back as the 1980's -- an probably earlier.   (The first one I (ZJW) used was <a href="https://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>).
-                      The exercises below guide you through a subset of the sections of  the article and then provide short exercises to do based on the reading.                    
-                      <ol>                                                                      
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debugger-extensions','VSC')">Debugger extensions</a>
-                          Read this section.   Then follow the instructions 
-                          <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/extension-marketplace','VSC')">extensions marketplace</a>
-                          <ol>
-                            <li> Install the following extensions (or the lastest version of it)
-  <code>
-    <pre>
-      Live Preview
-      v0.4.9
-      Microsoft
-      microsoft.com
-      2,779,724
-      (57)
-      Hosts a local server in your workspace for you to preview your webpages on.                            
-    </pre>
-  </code>                                                        
+                    <ol>                                                                                  
+                        <li class="Instruction_Reading"><u>Read [<abbr>VSC</abbr>: ... Keyboard shortcuts]</u> Read up and including through <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts','VSC')">https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts</a></li>
+                        <li class="Instruction_Reading">
+                          <u>[<abbr>VSC</abbr>: 
+                            <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor','VSC');">multiple-selections-multicursor</a>]</u>
+                            Open the following folder in VS Code:
+                            <table class="Code_Example" id="Code_Example1_0">
+                              <tbody>
+                                <tr>
+                                  <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
+                                  <td>
+                                    <div>                                                                                                                                            
+                                      <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>&sol;<span data-project-name-dir="">data-project-name</span>&sol;editing-in-vscode&sol;basic-editing</code>                                  
+                                    </div>                                
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>                                                                                
+                            <li>Read the first paragraphs of above section upto and including 
+                              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>.
+                              <br>
+                              In VS Code, use the multi-cursor to change the file <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
                             </li>
-                            <li>
-                              Use Live Preview to view <span class="File_Name">frogStory.html</span>.   Read about Live Preview so that you can both use Live Preview 
-                              inside the sub-window with VS Code and use Live Preview to open the <span class="File_Name">frogStory.html</span> in an separate browser window.
-                              While running Live Preview modify the story about the frog.   Have him hop, skip and perform other antics relative to the water bug.
-                              Note, that the Livew Preview browser immediately (with a minor delay) reflects the changes you make to the HTML source
-                            </li>
-                            <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-played with Live Preview" .</span> </li>
-                          </ol>
-                          
-                          </li>                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_start-debugging','VSC')">Start debugging</a>
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_shrinkexpand-selection','VSC');">Shrink/expand selection</a>.
+                              <br>
+                              In VS Code, play with this feature in frogStory.html <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
+                            </li>                              
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection','VSC');">Column (box) selection</a>.
+                              <br>
+                              Use column box selection to change the mis-spelled Ascii Art of "Computer Science" in <span class="File_Name">frogStory.html</span> to be spelled properly.
+                            </li>                              
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save','VSC');">Save/Auto Save</a>.
+                              <br>
+                              Read and explore.
+                            </li>                                                            
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_hot-exit','VSC');">Hot Exit</a>.
+                              <br>
+                              Read and explore.
+                            </li>              
+                            <li>In the directory <span class="File_Name">editing-in-vscode/basic-editing/a-program-from-an-earlier-course</span>, add any short program that <b>you</b>
+                              wrote in any previous cource in any programming language.  Edit the file <span class="File_Name">a-program-from-an-earlier-course/README.md</span> to included
+                              a brief description of (1) what course you wrote this previous program in and (2) what the program does.
+
+                              Use this program to play with and learn the VS Code editor features described in the remaining items (i) through (p).
                             <ol>
-                              <li class="Instruction_NonRubric">Note, you already installed NodeJS in an earlier step (<a href="#Install_NodeJS"> Install_NodeJS </a>).</li>
-                              <li>To record your work, perform this next few debugging exercises using the app.js file in  <span class="File_Name">editing-in-vscode/debugging/Hello</span> </li>
-                            </ol>                          
-                          </li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-and-debug-view','VSC')">Run and Debug view</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-menu','VSC')">Run menu</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-configurations','VSC')">Launch configurations</a>
-                            <ol>
-                                <li>Follow the <abbr>VSC</abbr> instructions to create the launch.json file.   Note, your launch.json will be slightly different than the <abbr>VSC</abbr> launch.json.</li>
-                                <li> [VSC: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations','VSC')">launch-versus-attach-configurations</a>] - Read </li>
-                                <li> [VSC:  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_add-a-new-configuration','VSC')">add-a-new-configuration</a>] - Perform these steps </li>
-                                <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -add-a-new-configuration .</span> </li>
+                              <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-a-program-from-an-earlier-course" .</span> </li>
                             </ol>
+                            </li>
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace','VSC');">Find and Replace</a>.
+                              <br>
+                              Read and explore.
+                            </li>                                                                          
+                            <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-across-files','VSC');">Search across files</a>.
+                              <br>
+                              This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
+                              start using VS Code for a some course projects.
+                            </li>                                                              
+                            <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-editor','VSC');">Search Editor</a>.
+                              <br>
+                              This slightly more advanced.  I suggested either read and exploring it now, or just bookmark this section to read at some later time after you
+                              start using VS Code for a some course projects.
+                            </li>                                            
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_intellisense','VSC');">intellisense</a>.
+                              <br>
+                              Read and explore.
+                            </li>              
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_formatting','VSC');">Formating</a>.
+                              <br>
+                              Read and explore.
+                            </li>              
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_folding','VSC');">Folding</a>.
+                              <br>
+                              Read and explore.
+                            </li>                                            
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_indentation','VSC');">Identation</a>.
+                              <br>
+                              Read and explore.
+                            </li>
+                            <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support','VSC');">File Encoding Support</a>.
+                              <br>
+                              Read and explore.
+                            </li>
+                            <li class="Instruction_Git_Commit">
+                              Commit any changes you made to your <span class="File_Name">a-program-from-an-earlier-course</span> while exploring the VS Code editing features above.
+                              <br>
+                              <span class="Git_Commit_Message">git commit -m "played with VS Code editing feature using a-program-from-an-earlier-course" .</span>
+                            </li>                                                                                                                                                                                    
+                    </ol>
+                  </li>
+                  <span id="cursor"></span>
+                  <li class="Instruction_Todo" data-point-fraction="33"><u>Exercise [<abbr>VSC</abbr>:Debugging]</u>: <br>
+                    The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging','VSC')">https://code.visualstudio.com/docs/editor/debugging</a> 
+                    covers in detail VS Code's code debugging UI.  VS Code's debugging provides standard features found in IDE's and programing tool chains at least 
+                    as far back as the 1980's -- and probably earlier.   (The first one I (ZJW) used was <a href="https://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>).
+                    The exercises below guide you through a subset of the sections of the VSC article and then gives you short exercises to do based on the reading.                    
+                    <ol>                                                                      
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debugger-extensions','VSC')">Debugger extensions</a>
+                        Read this section.   Then follow the instructions 
+
+                          <li>
+                            Use Live Preview to view <span class="File_Name">frogStory.html</span>.   Read about Live Preview so that you can both use Live Preview 
+                            inside the sub-window with VS Code and use Live Preview to open the <span class="File_Name">frogStory.html</span> in an separate browser window.
+                            While running Live Preview modify the story about the frog.   Have him hop, skip and perform other antics relative to the water bug.
+                            Note, that the Live Preview browser immediately (with a minor delay) reflects the changes you make to the HTML source
                           </li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-actions','VSC')">Debug actions</a>
-                             <p>Read about the different debug actions.  Play with the app.js, until you understand how each different debug action works.                        </p>                          
-                          </li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_breakpoints','VSC')">Breakpoints</a>
-                            <p>Read about the different breakpoint types.  Play with the app.js, until you understand breakpoints.</p>                          
-                          </li>
-                          
-                          <li class="active"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_logpoints','VSC')">Logpoints</a>
-                            <p>Read about the different logpoint types.  Play with the app.js, until you understand logpoint.</p>                          
-                          </li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_data-inspection','VSC')">Data inspection</a>
-                            <p>Read about the different data inspections tools.  Play with the app.js, until you understand the data inspections tools.</p>                          
-                          </li>
-                          <!--
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes','VSC')">Launch.json attributes</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_variable-substitution','VSC')">Variable substitution</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_platformspecific-properties','VSC')">Platform-specific properties</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_global-launch-configuration','VSC')">Global launch configuration</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_advanced-breakpoint-topics','VSC')">Advanced breakpoint topics</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-console-repl','VSC')">Debug Console REPL</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_redirect-inputoutput-tofrom-the-debug-target','VSC')">Redirect input/output to/from the debug target</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_multitarget-debugging','VSC')">Multi-target debugging</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_remote-debugging','VSC')">Remote debugging</a></li>
-                          
-                          <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_automatically-open-a-uri-when-debugging-a-server-program','VSC')">Automatically open a URI when debugging a server program</a></li>                                             
-                          -->                
-                      </ol>
-                    </li>
-                    <li class="Instruction_Todo" data-point-fraction="5">
-                      <b>Git Push</b>:   Don't forget to git push all your work to your remote repository
-                    </li>
-                  </ol>
-                </section>
+                          <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-played with Live Preview" .</span> </li>
+                        </ol>
+                        
+                        </li>                          
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_start-debugging','VSC')">Start debugging</a>
+                          <ol>
+                            <li class="Instruction_NonRubric">Note, you already installed NodeJS in an earlier step (<a href="#Install_NodeJS"> Install_NodeJS </a>).</li>
+                            <li>To record your work, perform this next few debugging exercises using the app.js file in  <span class="File_Name">editing-in-vscode/debugging/Hello</span> </li>
+                          </ol>                          
+                        </li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-and-debug-view','VSC')">Run and Debug view</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-menu','VSC')">Run menu</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-configurations','VSC')">Launch configurations</a>
+                          <ol>
+                              <li>Follow the <abbr>VSC</abbr> instructions to create the launch.json file.   Note, your launch.json will be slightly different than the <abbr>VSC</abbr> launch.json.</li>
+                              <li> [VSC: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations','VSC')">launch-versus-attach-configurations</a>] - Read </li>
+                              <li> [VSC:  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_add-a-new-configuration','VSC')">add-a-new-configuration</a>] - Perform these steps </li>
+                              <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -add-a-new-configuration .</span> </li>
+                          </ol>
+                        </li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-actions','VSC')">Debug actions</a>
+                            <p>Read about the different debug actions.  Play with the app.js, until you understand how each different debug action works.                        </p>                          
+                        </li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_breakpoints','VSC')">Breakpoints</a>
+                          <p>Read about the different breakpoint types.  Play with the app.js, until you understand breakpoints.</p>                          
+                        </li>
+                        
+                        <li class="active"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_logpoints','VSC')">Logpoints</a>
+                          <p>Read about the different logpoint types.  Play with the app.js, until you understand logpoint.</p>                          
+                        </li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_data-inspection','VSC')">Data inspection</a>
+                          <p>Read about the different data inspections tools.  Play with the app.js, until you understand the data inspections tools.</p>                          
+                        </li>
+                        <!--
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes','VSC')">Launch.json attributes</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_variable-substitution','VSC')">Variable substitution</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_platformspecific-properties','VSC')">Platform-specific properties</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_global-launch-configuration','VSC')">Global launch configuration</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_advanced-breakpoint-topics','VSC')">Advanced breakpoint topics</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-console-repl','VSC')">Debug Console REPL</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_redirect-inputoutput-tofrom-the-debug-target','VSC')">Redirect input/output to/from the debug target</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_multitarget-debugging','VSC')">Multi-target debugging</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_remote-debugging','VSC')">Remote debugging</a></li>
+                        
+                        <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_automatically-open-a-uri-when-debugging-a-server-program','VSC')">Automatically open a URI when debugging a server program</a></li>                                             
+                        -->                
+                    </ol>
+                  </li>
+                  <li class="Instruction_Todo" data-point-fraction="5">
+                    <b>Git Push</b>:   Don't forget to git push all your work to your remote repository
+                  </li>
+                </ol>
               </section>
-            <section><h1 id="Part2_OptionII" class="Section">Part 2:  Option II:  Using another IDE</h1>
+            </section>
+            <section data-point-fraction="50" data-f=""><h1 id="Part2_OptionII" class="Section">Part 2:  Option II:  Using another IDE</h1>
               <p>
               In this course, each student must test all their projects using the Chrome browser.
               This means you must know how to develop, debug and run your HTML5 projects (HTML+JavaScript+WebGL) on a local server on your development computer and then
@@ -713,12 +718,11 @@ signing 'app.js'
                   </li>
               </ol>
 
-            </section>
-            </section>
-            <section data-point-fraction="50" class="Instruction_Section"><h1 class="Section" id="Part3_OptionI">Part 3: Option I - HTML, CSS and Event Handling</h1>
+            </section>            
+            <section data-point-fraction="50" data-f="" class="Instruction_Section"><h1 class="Section" id="Part3_OptionI">Part 3: Option I - HTML, CSS and Event Handling</h1>
               Part 3: Option I is series of readings and exercises from the <abbr>MDN</abbr> doc's on HTML, CSS and event handling.
 
-              <section data-point-fraction="5" class="Instruction_Section"><h2 class="Section">Git Repo Setup</h2>
+              <section data-point-fraction="5" data-f="" class="Instruction_Section"><h2 class="Section">Git Repo Setup</h2>
                   <p>Your working directory structure and your git repository structure <u>must</u> be exactly as described below.<br>
                   </p>                
                   <ol class="Instruction">
@@ -783,7 +787,7 @@ signing 'app.js'
                     <p> The complete grading Rubric is available on Canvas.</p>
                   </section>           
               </section>
-              <section data-point-fraction="33.3" class="Instruction_Section"><h2 class="Section">Introduction to HTML</h2>                
+              <section data-point-fraction="33.3" data-f="" class="Instruction_Section"><h2 class="Section">Introduction to HTML</h2>                
                   <div>                
                     <p>Go to the MDN page <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML','MDN');">https://developer.mozilla.org/en-US/docs/Learn/HTML</a>.
                       <!--
@@ -1181,7 +1185,7 @@ signing 'app.js'
                     </ol>
                   </section>                      
               </section>
-              <section data-point-fraction="33.3" class="Instruction_Section"><h2 class="Section">CSS – Styling the Web</h2>
+              <section data-point-fraction="33.3" data-f="" class="Instruction_Section"><h2 class="Section">CSS – Styling the Web</h2>
                 <p>Next, you will read and work through sub-sections of the MDN topic <a class="WindowOpenLeft" onclick="windowOpenLeft('http://developer.mozilla.org/en-US/docs/Learn/CSS','MDN');">CSS —
                     Styling the Web</a>.</p>
                 <ol>
@@ -1511,7 +1515,7 @@ signing 'app.js'
                   </ol>
                 </section>
               </section>            
-              <section data-point-fraction="33.3" class="Instruction_Section"><h2 class="Section">Event Programming (and a teeny bit of JavaScript)</h2>
+              <section data-point-fraction="33.3" data-f="" class="Instruction_Section"><h2 class="Section">Event Programming (and a teeny bit of JavaScript)</h2>
                     <p>This section guides you through reading about event handling, but first it covers a teeny bit of JavaScript so as to better understand the
                       event handling tutorial.&nbsp;&nbsp; (A latter optional tutorial in this course will cover JavaScript in depth).</p>
                     <section data-point-fraction="50">
@@ -1959,9 +1963,8 @@ signing 'app.js'
                       </ol>
                     </section>
               </section>                
-              </section>            
             </section>            
-            <section data-point-fraction="5" class="Instruction_Section"><h1 class="Section"><a id="Part3_OptionII">Part 3: Option II - Prior Experience in HTML, CSS and Event Handling<br>
+            <section data-point-fraction="5" data-f="" class="Instruction_Section"><h1 class="Section"><a id="Part3_OptionII">Part 3: Option II - Prior Experience in HTML, CSS and Event Handling<br>
                 </a></h1>
               Part 3: Option II is only for students meeting the criteria discussed in Section&nbsp;<a href="#Tutorial_Structure">Tutorial Structure</a>.
               For Part 3: Option II, you must submit a brief description of your prior experience in HTML, CSS and event handling as described below.
@@ -2003,10 +2006,9 @@ signing 'app.js'
 
             </section>
             <div hidden="true">
-            <section data-point-fraction_HIDE="40" class="Instruction_Section_HIDE"><h1 class="Section_HIDE"><a id="Part3_HIDE">Part 3: Chrome DevTools</a></h1>
+            <section data-point-fraction_SKIP="40" class="Instruction_Section_SKIP"><h1 class="Section_SKIP"><a id="Part3_SKIP">Part 3: Chrome DevTools</a></h1>
               <div class="Staff_Notes" style="color:red;background-color: yellow;">
-                  Reconsidering this section.
-                  \todo Probably want to remove and and find a suitable replacement with VS Code
+                  Removed this section replaced with VS Code tutorial
               </div>
               <p>Part 3 is required of all students. Part 3 is series of readings and exercises from the Chrome DevTool doc's. </p>
               <section data-point-fraction="16.6">
@@ -2468,78 +2470,7 @@ signing 'app.js'
                 </p>
               </section>
             </section>
-          </div>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <p>&nbsp;____________________________</p>
+          </div>         
         </article>
       </div>      
       <!--
