@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            td {
+                border: solid 1px;
+            }
+        </style>
+        <script>
+            function Cell()
+            {
+                if (arguments.length===1)
+                {
+                    if (typeof arguments[0] === "string")
+                    {
+                        let e = document.getElementById(arguments[0]);
+                        if (e.dataset.cell === undefined)
+                        {
+                            return e.innerText;
+                        }
+                        else
+                        {
+                            if (e.dataset.cell==="")
+                                return e.innerText;
+                            else
+                                //return eval(e.dataset.cell+".call("+e+")");
+                                return eval(e.dataset.cell);
+                        }
+                    }                                
+                    else if (arguments[0] instanceof HTMLElement)
+                    {
+                        let e = arguments[0];
+                        if (e.dataset.cell === undefined)
+                        {
+                            return e.innerText;
+                        }
+                        else
+                        {
+                            if (e.dataset.cell==="")
+                                return e.innerText;
+                            else
+                                //return eval(e.dataset.cell+".call("+e+")");
+                                return eval(e.dataset.cell);
+                        }
+                    }
+                        
+                } else if (arguments.length===3)
+                {
+                    if (typeof arguments[0] === "string")
+                    {
+                        let e = document.getElementById(arguments[0]);
+                        if (e instanceof HTMLTableElement)
+                        {
+                            let tb = e.querySelector(":scope tbody");
+                            let tr = tb.children[parseInt(arguments[1])]
+                            let td = tr.children[parseInt(arguments[2])]
+                            return Cell(td);
+                        }
+                    }
+                }
+                return "NULL";
+            }
+            function onload()
+            {
+                let cells = document.querySelectorAll('[data-cell]');
+                for (c of cells)
+                {
+                    console.log(c);
+                    console.log(Cell(c));
+                }                
+            }
+        </script>
+    </head>
+    <body onload="onload();">        
+        Max
+        <table id="PointTable">
+           <thead>
+            <tr><td>Sequence</td><td>Max Credits</td><td>Max Points<br> (Assignment Weight [<span id="Assignment_Weight" class="Cell" data-cell="">100</span>])</td><td>Awarded Points</td></tr>
+        </thead>
+            <tbody>
+                <tr><td>1,2.I,3.I</td>      <td>5</td>      <!--<td data-cell="function f(e){console.log(e);return Cell('Assignment_Weight')* parseInt(e.previousElementSibling.innerText);} f"></td>    -->
+                                                                <td data-cell="Cell('Assignment_Weight') * Cell('PointTable',0,1)"></td>   
+                    <td></td></tr>
+                <tr><td>1,2.I,3.II</td>     <td>55</td>     <td></td>   <td></td></tr>
+                <tr><td>1,2.II,3.I</td>     <td>55</td>     <td></td>   <td></td></tr>
+                <tr><td>1,2.II,3.II</td>    <td>100</td>    <td></td>   <td></td></tr>
+            </tbody>
+        </table>
+        <ol>
+            <li>Part 1
+                <ol>
+                    <li>5</li>                    
+                </ol>
+            </li>
+            <li>Part 2
+                <ol>
+                    <li>5</li>                    
+                    <li>47.5</li>                                        
+                </ol>
+            </li>
+            <li>Part 3
+                <ol>
+                    <li>5</li>      
+                    <li>47.5</li>                                                      
+                </ol>
+            </li>
+        </ol>
+        <p>1x2x2=4
+
+        </p>
+    </body>
+</html>
+
+
+
