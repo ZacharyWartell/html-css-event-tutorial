@@ -63,9 +63,15 @@
     <div class="window-container"> </div>
     <div class="main-container">
       <!-- disabled:  having problems getting HTML flexbox layout to open sidebar initially to show fit-content and still allow the sidebar to be shrunk
-        using CSS resize.          <div id="side-nav-bar" class="side_nav_bar">        <div></div>      </div>                     -->
-      <div style="resize:both;" class="main-content" id="Content">
-        <div class="toolbar" id="Toolbar" style="position:sticky;">
+        using CSS resize.                               
+ 
+         
+      -->
+      <div id="side-nav-bar" class="side_nav_bar">     
+        <div></div>      
+      </div>          
+      <div class="main-content" id="Content">
+        <div class="toolbar" id="Toolbar">
           <div class="Menu"> <button id="help" class="DocButton" onclick='window.open("html/zjwgi/Help.html");'> Help </button> <b>|</b>
             <div class="DocButton"> <input name="Beta_Mode" id="Beta_Mode" type="checkbox"> <label for="Beta_Mode">Beta Mode</label> </div>
             <div id="BetaModeGUI" style="display:inherit;">
@@ -546,7 +552,7 @@ signing 'app.js'
                             Read and explore.
                           </li>              
                           <li>In the directory <span class="File_Name">editing-in-vscode/basic-editing/a-program-from-an-earlier-course</span>, add any short program that <b>you</b>
-                            wrote in any previous cource in any programming language.  Edit the file <span class="File_Name">a-program-from-an-earlier-course/README.md</span> to included
+                            wrote in any previous source in any programming language.  Edit the file <span class="File_Name">a-program-from-an-earlier-course/README.md</span> to included
                             a brief description of (1) what course you wrote this previous program in and (2) what the program does.
 
                             Use this program to play with and learn the VS Code editor features described in the remaining items (i) through (p).
@@ -556,7 +562,7 @@ signing 'app.js'
                           </li>
                           <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace','VSC');">Find and Replace</a>.
                             <br>
-                            Read and explore.
+                            Read and explore using your <span class="File_Name">a-program-from-an-earlier-course</span> code.
                           </li>                                                                          
                           <li>[Optional] Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_search-across-files','VSC');">Search across files</a>.
                             <br>
@@ -570,23 +576,23 @@ signing 'app.js'
                           </li>                                            
                           <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_intellisense','VSC');">intellisense</a>.
                             <br>
-                            Read and explore.
+                            Read and explore using your <span class="File_Name">a-program-from-an-earlier-course</span> code.
                           </li>              
                           <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_formatting','VSC');">Formating</a>.
                             <br>
-                            Read and explore.
+                            Read and explore using your <span class="File_Name">a-program-from-an-earlier-course</span> code.
                           </li>              
                           <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_folding','VSC');">Folding</a>.
                             <br>
-                            Read and explore.
+                            Read and explore using your <span class="File_Name">a-program-from-an-earlier-course</span> code.
                           </li>                                            
                           <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_indentation','VSC');">Identation</a>.
                             <br>
-                            Read and explore.
+                            Read and explore using your <span class="File_Name">a-program-from-an-earlier-course</span> code.
                           </li>
                           <li>Read <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support','VSC');">File Encoding Support</a>.
                             <br>
-                            Read and explore.
+                            Read and explore using your <span class="File_Name">a-program-from-an-earlier-course</span> code.
                           </li>
                           <li class="Instruction_Git_Commit">
                             Commit any changes you made to your <span class="File_Name">a-program-from-an-earlier-course</span> while exploring the VS Code editing features above.
@@ -799,8 +805,8 @@ signing 'app.js'
                     <p>The assignment instructions below tell you:</p>
                     <ul>
                       <li>What sections of the <abbr>MDN</abbr> webpages to read </li>
-                      <li>Which of the <abbr>MDN</abbr> webpages "Active Learning" exercises you must perform. </li>
-                      <li>How to submit the results of <u>some</u> of the "Active Learning" exercises to your git repository. </li>
+                      <li>Which of the <abbr>MDN</abbr> webpages "Active Learning" exercises to perform with <abbr>MDN</abbr> builtin interactive editors. </li>
+                      <li>Which of the <abbr>MDN</abbr> "Active Learning" exercises to perform in separate files that you commit to your git repository. </li>
                     </ul>
                   
             
@@ -2012,10 +2018,10 @@ signing 'app.js'
                 <div>
                   <table id="RubricAwardedPoints" class="RubricAwardedPoints">
                     <thead>
-                      <tr><th>Sequence</th><th>Max Points</th><th>Awarded Points</th></tr>
+                      <tr><th>Sequence</th><th>Active</th><th>Max Points</th><th>Awarded Points</th></tr>
                     </thead>
                     <tbody>
-                      <tr><td></td><td><span data-total-points=""></span></td><td><span id="AwardedPoints">0.0</span></td></tr>
+                      <tr><td></td><td></td><td><span data-total-points=""></span></td><td><span id="AwardedPoints">0.0</span></td></tr>
                     </tbody>
                   </table>                  
                   <br>
@@ -2172,25 +2178,23 @@ signing 'app.js'
         most external site will refuse to connect via an iframe, therefore I went with the windowOpenLeft() solution.
         <div class="side-read-bar">          <iframe src="https://developer.mozilla.org/en-US/html/zjwgi/Web/JavaScript/Guide/Expressions_and_Operators">          </iframe>        </div>                      -->
     </div>
-
-    <p> <template id="SectionRubricTemplate" data-version="1.0">
-        <table class="SectionRubric">
-          <tbody>
-            <tr>
-              <td> Time&nbsp;</td>
-              <td> MSDoc: "2 minutes to read"</td>
-              <td> Assignment: "? minutes to do"</td>
-            </tr>
-            <tr>
-              <td><input onclick='new GradingScript({category : "MSVSSolution", projectDirectory : "MSVS-CSharp-Tutorial/Arrays" }).downloadScript();' value="Grade"
-
-                  type="button"></td>
-            </tr>
-          </tbody>
-        </table>
-      </template> <template id="Instruction_Section_Template" data-version="1.0">
-        <div class="Instruction_Section"> </div>
-      </template> </p>
   </body>
+   <template id="SectionRubricTemplate" data-version="1.0">
+    <table class="SectionRubric">
+      <tbody>
+        <tr>
+          <td> Time&nbsp;</td>
+          <td> MSDoc: "2 minutes to read"</td>
+          <td> Assignment: "? minutes to do"</td>
+        </tr>
+        <tr>
+          <td><input onclick='new GradingScript({category : "MSVSSolution", projectDirectory : "MSVS-CSharp-Tutorial/Arrays" }).downloadScript();' value="Grade"
 
+              type="button"></td>
+        </tr>
+      </tbody>
+    </table>
+  </template> <template id="Instruction_Section_Template" data-version="1.0">
+    <div class="Instruction_Section"> </div>
+  </template> 
   </html>
