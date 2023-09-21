@@ -5,9 +5,41 @@
         <style>
             td {
                 border: solid 1px;
+            }            
+            th {
+                align-content: center;
+                border: solid 1px;
+            }
+            tr:last-child > th:last-child, tr:last-child > th:nth-last-child(2) {
+                align-content: center;
+                border: solid 4px;
+            }
+            div.MaxPoints::before
+            {
+                content: "(";
+                align-content: center;
+            }
+            div.MaxPoints::after
+            {
+                content: ")";
+                align-content: center;
+            }
+            table#ExampleStudentTable td 
+            {
+                text-align: center;
+                border: solid 1px;                
             }
         </style>
         <script>
+            class Sheet
+            {
+                static average()
+                {
+                    let sum=0;
+                    for (a of arguments) sum += a;
+                    return sum/arguments.length;
+                }
+            }
             function Cell()
             {
                 if (arguments.length===1)
@@ -24,8 +56,12 @@
                             if (e.dataset.cell==="")
                                 return e.innerText;
                             else
-                                //return eval(e.dataset.cell+".call("+e+")");
-                                return eval(e.dataset.cell);
+                                {//return eval(e.dataset.cell+".call("+e+")");
+                                console.log("cell:", e.dataset.cell)
+                                const code = e.dataset.cell.replace(/\$\("#([^"]*)"\)/g,'document.getElementById("$1")');
+                                console.log("code:", code)
+                                return eval(code);
+                                }
                         }
                     }                                
                     else if (arguments[0] instanceof HTMLElement)
@@ -40,9 +76,12 @@
                             if (e.dataset.cell==="")
                                 return e.innerText;
                             else
-                                //return eval(e.dataset.cell+".call("+e+")");
-                                return eval(e.dataset.cell);
-                        }
+                                {//return eval(e.dataset.cell+".call("+e+")");
+                                console.log("cell:", e.dataset.cell)
+                                const code = e.dataset.cell.replace(/\$\(("|')#([^"']*)("|')\)/g,'document.getElementById("$2")');
+                                console.log("code:", code)
+                                return eval(code);
+                                }                        }
                     }
                         
                 } else if (arguments.length===3)
@@ -94,6 +133,48 @@
                 <tr><td>1,2.II,3.II</td>    <td>100</td>    <td data-cell="Cell('Assignment_Weight') * Cell('PointTable',3,1)"></td>   <td></td></tr>
             </tbody>
         </table>
+        Frog
+        <table id="ExampleStudentTable">
+            <thead>
+                <tr>
+                    <th>Student</th><th colspan="8">T1</th> <th>Tutorials and Projects</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th id="Part1" colspan="1">       Part 1 </th>
+                    <th id="Part2" colspan="2">       Part 2 </th>
+                    <th id="Part3" colspan="1">       Part 3 </th>
+                    <th id="Part4" colspan="2">       Part 4 </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th id="T1_Part1">       <div class="MaxPoints" data-cell="">5</div></th>
+                    <th id="T1_Part2_Opt-I"> Opt. I   <div class="MaxPoints" data-cell="">50</div></th>
+                    <th id="T1_Part2_Opt-I"> Opt. II  <div class="MaxPoints" data-cell="">100</div></th>
+                    <th id="T1_Part3">                <div class="MaxPoints" data-cell="">100</div></th>
+                    <th id="T1_Part4_Opt-I"> Opt. I   <div class="MaxPoints" data-cell="">50</div></th>
+                    <th id="T1_Part4_Opt-II">Opt. II  <div class="MaxPoints" data-cell="">100</div></th>
+                    <th id="T1_Part4_Opt-II">Total <br> (Awarded)  </th>
+                    <th id="T1_Part4_Opt-II">Total <br> (Max)     </th>                    
+                </tr>
+            </thead>
+             <tbody>
+                <tr><td>Person Alpha</td>    <td>5</td>  <td>   </td>   <td>100</td>       <td>100</td> <td>50</td> <td></td>         
+                    <td data-cell="let f=()=>{let sum=0,max=0,c=0;for (let i=1;i<7;i++) {let colMax=parseFloat(Cell($('#ExampleStudentTable').children[0].children[2].children[i].children[0])); sum += Cell('ExampleStudentTable',0,i) === '' ? 0 : (c++,max+=colMax,parseFloat(Cell('ExampleStudentTable',0,i)));  } return sum;};f().toFixed(0);"></td>
+                    <td data-cell="let f=()=>{let sum=0,max=0,c=0;for (let i=1;i<7;i++) {let colMax=parseFloat(Cell($('#ExampleStudentTable').children[0].children[2].children[i].children[0])); sum += Cell('ExampleStudentTable',0,i) === '' ? 0 : (c++,max+=colMax,parseFloat(Cell('ExampleStudentTable',0,i)));  } return max;};f().toFixed(0);"></td>    
+                </tr>
+                    
+                <tr><td>Person Beta</td>     <td>3</td>  <td>   </td>   <td>90 </td>       <td>100</td> <td></td>   <td>100</td>
+                    <td data-cell="let f=()=>{let sum=0,max=0,c=0;for (let i=1;i<7;i++) {let colMax=parseFloat(Cell($('#ExampleStudentTable').children[0].children[2].children[i].children[0])); sum += Cell('ExampleStudentTable',1,i) === '' ? 0 : (c++,max+=colMax,parseFloat(Cell('ExampleStudentTable',1,i)));  } return sum;};f().toFixed(0);"></td>
+                    <td data-cell="let f=()=>{let sum=0,max=0,c=0;for (let i=1;i<7;i++) {let colMax=parseFloat(Cell($('#ExampleStudentTable').children[0].children[2].children[i].children[0])); sum += Cell('ExampleStudentTable',1,i) === '' ? 0 : (c++,max+=colMax,parseFloat(Cell('ExampleStudentTable',1,i)));  } return max;};f().toFixed(0);"></td>    
+                </tr>                    
+                    
+                <tr><td>Person Gamma</td>    <td></td>   <td>50 </td>   <td></td>       <td></td>    <td>50</td> <td></td>
+                    <td data-cell="let f=()=>{let sum=0,max=0,c=0;for (let i=1;i<7;i++) {let colMax=parseFloat(Cell($('#ExampleStudentTable').children[0].children[2].children[i].children[0])); sum += Cell('ExampleStudentTable',2,i) === '' ? 0 : (c++,max+=colMax,parseFloat(Cell('ExampleStudentTable',2,i)));  } return sum;};f().toFixed(0);"></td>
+                    <td data-cell="let f=()=>{let sum=0,max=0,c=0;for (let i=1;i<7;i++) {let colMax=parseFloat(Cell($('#ExampleStudentTable').children[0].children[2].children[i].children[0])); sum += Cell('ExampleStudentTable',2,i) === '' ? 0 : (c++,max+=colMax,parseFloat(Cell('ExampleStudentTable',2,i)));  } return max;};f().toFixed(0);"></td>                        
+                </tr>
+             </tbody>
+         </table>
         <ol>
             <li>Part 1
                 <ol>

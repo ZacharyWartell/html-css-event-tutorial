@@ -17,7 +17,7 @@
       import * as Rubric from "./scripts/zjwgi/Rubric.js";
       import * as CAW from "./scripts/zjwgi/ClassAssignmentWartell.js";
       window.BreadCrumb = Rubric.BreadCrumb;
-      CAW.main(100);
+      CAW.main(150);
       
       window.Visibility_Toggle = CAW.Visibility_Toggle; 
       console.log("window.rubricMain");
@@ -28,9 +28,58 @@
       }); 
       function onload_Body() { console.log("function onload_Body()");}
       window.onload_Body = onload_Body;
-      
-      const c = document.getElementById("cursor");
-      if (c !== null) c.scrollIntoView();           
+
+      /**
+       * @source https://developer.mozilla.org/en-US/docs/Web/API/History_API
+       */
+      window.addEventListener("popstate", (event) => {
+        /*
+          alert(
+            `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+          );
+          */
+        });
+
+      window.addEventListener("hashchange", (event) => 
+      {
+        /*
+          alert(            
+      `"hashchange" 
+      location: ${document.location}, event: ${JSON.stringify(event)}`,); 
+      */
+        console.log(event);        
+        let split = event.newURL.split("#");
+        let e = document.getElementById(split[1]);        
+        console.log("split:",split,split[1]);
+        if (e !== null) 
+        {
+          console.log("e:",e);
+          e.scrollIntoView();           
+        }
+        // if (event.target instanceof HTMLElement)
+        // {
+        //   document.getElementById(event.newURL.split("#")[1]).scrollIntoView();           
+        //   console.log("2:",event.newURL.split("#")[1]);
+        // }
+            
+      });
+
+      /**
+       * temp hack
+       */
+      let target = document.getElementById("RubricAwardedPointsClone");
+      let source = document.getElementById(target.dataset.clone);
+      let clone = source.cloneNode(true);
+      target.insertAdjacentElement('afterbegin',clone);
+
+      /**
+       *  for debugging
+       */
+      if (true)
+      {
+        const c = document.getElementById("cursor");
+        if (c !== null) c.scrollIntoView();           
+      }
    </script>
     <script type="application/json" id="AssignmentName">
         {
@@ -80,12 +129,17 @@
               <b>|</b>
               <div class="DocButton"> <button id="GoogleGroupButton" class="DocButton" disabled="true" onclick="window.open('https://groups.google.com/a/uncc.edu/g/computer-graphics-wartell-group','_blank')">Google
                   Group</button> <span>Open tab with class Google Group <br>
-                  <!-- <a target="_blank" href="html/zjwgi/help.html#DocButton_Question">(more)</a> --> </span> </div>
+                  <!-- <a target="_blank" href="html/zjwgi/help.html#DocButton_Question">(more)</a> --> </span> 
+              </div>
+              <!--
               <b>||</b>
               <div class="DocButton"> <button id="back" class="DocButton" disabled="true">🡰</button> <span>Navigate Back <a href="html/zjwgi/help.html#DocButton_back"></a>
-                </span> </div>
+                </span> 
+              </div>
               <div class="DocButton"> <button id="forward" class="DocButton" disabled="true">🡲</button> <span>Navigate Forward <a href="html/zjwgi/help.html#DocButton_forward"></a>
-                </span> </div>
+                </span> 
+              </div>
+              -->
               <b>||</b>
               <div> <input name="Instructor_Mode" id="Instructor_Mode" disabled="true" type="checkbox"> <label for="Instructor_Mode">TA Mode</label> <b>|</b>
                 |
@@ -173,8 +227,15 @@
                     </li>
                   </ol>
                 </li>
-              </ol>
-              <p>See the <a href="#RubricAwardedPoints">Rubric Awarded Points</a> Table for each combination's of options maximum possible points. </p>
+              </ol>              
+
+              The with the above options, the possible combinations and their maximum points are shown in 
+              table <a href="#RubricAwardedPoints">Rubric Awarded Points</a>
+              <!-- doesn't look good enough
+              <figure id='RubricAwardedPointsClone' data-clone="RubricAwardedPoints">
+                <figcaption>  See also <a href="#RubricAwardedPoints">Rubric Awarded Points</a></figcaption>
+              </figure>              
+              -->
             </section>
             <section data-point-fraction="5" data-optionset='{"name":"Part 1"}' class="Instruction_Section"><h1 class="Section" id="Part1">Part 1: Directory and cci-git GitLab Tools Setup</h1>
               <div>
@@ -445,7 +506,7 @@ signing 'app.js'
                 </li>                                  
               </ol>
             </section>
-            <section data-point-fraction="47.5" data-optionset='{"name":"Part 2"}' class="Instruction_Section"><h1 class="Section"> Part 2:&nbsp;Option I: The Visual Studio Code IDE </h1>
+            <section data-point-fraction="47.5" data-optionset='{"name":"Part 2"}' class="Instruction_Section"><h1 h1 id="Part2_OptionI" class="Section"> Part 2:&nbsp;Option I: The Visual Studio Code IDE </h1>
               <div>
                 <!--
                 <p>The TA will grade all assignments in this course using:</p>
@@ -612,7 +673,7 @@ signing 'app.js'
                   </ol>
                 </li>
                 
-                <li class="Instruction_Todo" data-point-fraction="35"><u>Exercise [<abbr>VSC</abbr>:Debugging]</u>: <br>
+                <li class="Instruction_Todo" data-point-fraction="30"><u>Exercise [<abbr>VSC</abbr>:Debugging]</u>: <br>
                   The <abbr>VSC</abbr> article <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging','VSC')">https://code.visualstudio.com/docs/editor/debugging</a> 
                   covers in detail VS Code's code debugging UI.  VS Code's debugging provides standard features found in IDE's and programing tool chains at least 
                   as far back as the 1980's -- and probably earlier.   (The first one I (ZJW) used was <a href="https://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>).
@@ -1487,13 +1548,9 @@ signing 'app.js'
                         </li>
                         <li> Inside the above directory, create a minimal working HTML file, <span class="File_Name">index.html</span>, and then insert your
                           solution code that you developed in the embedded interactive editor into <span class="File_Name">index.html</span>. <br>
-                          <p> </p>
-                          <ol>
-                            <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise
-                                different-display-types"  .</span></li>
-                          </ol>
-                          <p></p>
                         </li>
+                        <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise
+                          different-display-types"  .</span></li>
                       </ol>
                     </li>
                     <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model','MDN');"><span
@@ -1526,13 +1583,9 @@ signing 'app.js'
                         </li>
                         <li> Inside the above directory, create a minimal working HTML file, <span class="File_Name">index.html</span>, and then insert your
                           solution code that you developed in the embedded interactive editor into <span class="File_Name">index.html</span>. <br>
-                          <p> </p>
-                          <ol>
-                            <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise
-                                playing-with-box-models"  .</span></li>
-                          </ol>
-                          <p></p>
                         </li>
+                        <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise
+                          playing-with-box-models"  .</span></li>
                       </ol>
                     </li>
                   </ol>
@@ -1551,7 +1604,7 @@ signing 'app.js'
                           with the instruction modifications listed below: <br>
                           <br>
                           <ol>
-                            <li class="Instruction_Todo"><u>Exercise [javascript-label]</u>:
+                            <li class="Instruction_Composite"><u>Exercise [javascript-label]</u>:
                               <ol>
                                 <li>Create a sub-directory:<br>
                                   <table class="Code_Example">
@@ -1574,16 +1627,11 @@ signing 'app.js'
                                   section).<br>
                                   <br>
                                   Verify the code displays correctly in Chrome. </li>
-                                <li>
-                                  <ol>
-                                    <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise <u>javascript-label</u></span></li>
-                                    <li>Using a text editor, change the code to display ‘First Player’ instead of ‘Player 1’.&nbsp;&nbsp;&nbsp; <br>
-                                      Modify the background color of the paragraph style.&nbsp;&nbsp; Save your changes and verify the page appears correctly in
-                                      Chrome. </li>
-                                    <li class="  .Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise
-                                        javascript-label" . </span> </li>
-                                  </ol>
-                                </li>
+                                  <li class="Instruction_Todo">Using a text editor, change the code to display 'First Player' instead of 'Player 1'.&nbsp;&nbsp;&nbsp; <br>
+                                    Modify the background color of the paragraph style.&nbsp;&nbsp; Save your changes and verify the page appears correctly in
+                                    Chrome. 
+                                  </li>
+                                  <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise javascript-label" . </span> </li>
                               </ol>
                             </li>
                           </ol>
@@ -1617,10 +1665,8 @@ signing 'app.js'
                                   above your answer in the file.<br>
                                   <br>
                                 </li>
-                                <ol>
-                                  <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise what is JS
-                                      doing" .</span> </li>
-                                </ol>
+                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise what is JS
+                                  doing" .</span> </li>
                               </ol>
                             </li>
                           </ol>
@@ -1683,8 +1729,6 @@ signing 'app.js'
                                 <li class="Instruction_Git_Commit">Git commit the file(s) with message <span class="Git_Commit_Message">"-exercise
                                     external-javascript"</span> </li>
                               </ol>
-                            </li>
-                            <li><br>
                             </li>
                           </ol>
                         </li>
@@ -1826,10 +1870,8 @@ signing 'app.js'
                                   </table>
                                 </li>
                                 <li class="Instruction_Todo">Perform the MDN exercises in the sub-section
-                                  <ol>
-                                    <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise: event-object" .</span> </li>
-                                  </ol>
                                 </li>
+                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-exercise: event-object" .</span> </li>
                                 <li class="Instruction_Todo"> Motify the code to show a border of a few pixels on the button and also randomly change the
                                     border color on each button click. <br>
                                   <br>
@@ -1880,10 +1922,9 @@ signing 'app.js'
                                 </li>
                                 <li class="Instruction_Todo">Put all the MDN's sections downloaded files in this directory and modified them as suggested by the MDN
                                   docs..
-                                  <ol>
-                                    <li class="Instruction_Git_Commit"> Git commit with message:&nbsp; <span>"-exercise: preventing-defaults"</span> </li>
-                                  </ol>
                                 </li>
+                                <li class="Instruction_Git_Commit">                                                                     
+                                  Git commit with message:&nbsp; <span class="Git_Commit_Message">"-exercise: preventing-defaults"</span> </li>
                               </ol>
                             </li>
                           </ol>
@@ -1921,10 +1962,8 @@ signing 'app.js'
                                 <!-- \todo MDN doc's don't give the full code.  Need to grab it from via inspector tool and make it available to students as part of assignment -->
                                 <li class="Instruction_Todo"> Put all the file you created in the above directory and verify result web page works as expected in
                                   Chrome.
-                                  <ol>
-                                    <li> <span class="Git_Commit_Message">git commit -m "-exercise: video-player" .</span> </li>
-                                  </ol>
                                 </li>
+                                <li> <span class="Git_Commit_Message">git commit -m "-exercise: video-player" .</span> </li>
                               </ol>
                             </li>
                             <li class="Instruction_Todo"><u>Exercise</u>: [stop-propagation]&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#fixing_the_problem_with_stoppropagation','MDN');">Fixing_the_problem_with_stop_propagation.</a>
@@ -1963,17 +2002,12 @@ signing 'app.js'
                                   </table>
                                 </li>
                                 <li class="Instruction_Todo"> Place the downloaded files in this directory and perform any modifications described in the MDN docs.
-                                  <br>
-                                  <ol>
-                                    <li class="Instruction_Git_Commit"> <span class="Git_Commit_Message"> git commit -m "-exercise: event-capture"  .</span>
-                                    </li>
-                                  </ol>
+                                </li>
+                                <li class="Instruction_Git_Commit"> <span class="Git_Commit_Message"> git commit -m "-exercise: event-capture"  .</span>
                                 </li>
                                 <li class="Instruction_Todo"> Modify the code to have 64 tiles (8 x 8) with each one 50px in height.
-                                  <ol>
-                                    <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-changed to 8 x 8 tiles" .</span>
-                                    </li>
-                                  </ol>
+                                </li>
+                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-changed to 8 x 8 tiles" .</span>
                                 </li>
                               </ol>
                             </li>
@@ -2038,10 +2072,10 @@ signing 'app.js'
                 <div>
                   <table id="RubricAwardedPoints" class="RubricAwardedPoints">
                     <thead>
-                      <tr><th>Combination</th><th>Chosen</th><th>Max Points</th><th>Awarded Points</th></tr>
+                      <tr><th>Combination</th><!--<th>Completed</th> --> <th>Max Points</th><th>Awarded Points</th></tr>
                     </thead>
                     <tbody>
-                      <tr><td></td><td></td><td><span data-total-points=""></span></td><td><span id="AwardedPoints">0.0</span></td></tr>
+                      <tr><td><!--</td><td>--></td><td><span data-total-points=""></span></td><td><span id="AwardedPoints">0.0</span></td></tr>
                     </tbody>
                   </table>                  
                   <br>
