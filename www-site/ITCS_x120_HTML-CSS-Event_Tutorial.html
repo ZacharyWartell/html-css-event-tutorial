@@ -36,9 +36,9 @@
     <script type="application/json" id="AssignmentName">
         {
             "AssignmentName" : {
-                "courseNumber" : "3120",
+                "courseNumber" : "5122",
                 "number" : "t3",
-                "numberLongDir" : "3120-t3-html-css-event-tutorial",
+                "numberLongDir" : "5122-t3-html-css-event-tutorial",
                 "name" : "html-css-event-tutorial"
               }   
         }
@@ -111,17 +111,16 @@
           <div contenteditable="false">
             <div>
             <p style="text-align:center"><span style="font-size:18.0pt">HTML, CSS and Event Tutorial</span></p>
-            <!--
-        <p style="text-align:center" >ITCS 5121/4121 Information        Visualization </p>        -->
-            <p style="text-align:center">ITCS 3120 Computer Graphics </p>
+            <!-- -->            
+            <p style="text-align:center" >ITCS 5122/4122 Visual Analytics </p>        
             <!-- <p style="text-align:center" >ITCS 6120/8120 Computer Graphics </p> -->
-            <p style="text-align:center">Spring 2023<br>
+            <p style="text-align:center">Fall 2024<br>
             </p>
             <p style="text-align:center">Professor Zachary Wartell<br>
               <br>
               <strong>Due Date:&nbsp; </strong>See <a target="_blank" href="https://uncc.instructure.com/courses/191192/assignments/1769671"> Canvas
                 Assignment </a></p>
-            <p style="text-align:center">Revised:<span class="Revision">Tue Jan 30 14:17:27 2024 -0500</span><sup>(<a target="_blank" href="https://gitlab.com/zwartell/html-css-event-tutorial/-/commits/master">git-log</a>)</sup><br>
+            <p style="text-align:center">Revised:<span class="Revision">Tue Jan 30 14:38:26 2024 -0500</span><sup>(<a target="_blank" href="https://gitlab.com/zwartell/html-css-event-tutorial/-/commits/master">git-log</a>)</sup><br>
             </p>
             <p style="text-align:center"><span style="font-size:10.0pt">Copyright September 2018, Zachary Wartell @ University of North Carolina at Charlotte<br>
                 All Rights Reserved.</span></p>
@@ -140,17 +139,25 @@
             </section>
             <section>
               <h1 class="Section" id="Overview">Overview </h1>
-              <!-- -->
+              <!-- 
               <p>This course focuses on 2D/3D computer graphics and programming with WebGL.&nbsp; WebGL runs in the context of a HTML5 web browser environment
                 with JavaScript.&nbsp; This tutorial selects a subset of several on-line resources to cover the minimal amount of HTML5, CSS and event handling
                 required to get the most out of the book, <u><em>WebGL Programming Guide</em></u>, that will be used in this class.</p>
-              <!--
-                <p>This course focuses Information Visualization and programming with D3          and SVG.&nbsp; D3 and SVG runs in the context of a HTML5 web browser          environment with JavaScript.&nbsp; This tutorial selects a subset of          several on-line resources to cover the minimal amount of HTML5, CSS          and event handling required to get the most out of the later D3          tutorials and documentation that will be used in this class.</p> 					-->
+                -->
+              <!-- -->
+              <p>
+                  This course focuses visual analytics and programming with D3 and SVG.&nbsp; D3 and SVG runs in the context of a HTML5 web browser          
+                  environment with JavaScript.&nbsp; This tutorial selects a subset of several on-line resources to cover the minimal amount of HTML5, CSS          
+                  and event handling required to prepare for the later D3 tutorials.
+              </p> 					
+              <!--  and documentation that will be used in this class -->
               <h1 class="Section" id="Tutorial_Structure">Tutorial Structure</h1>
               <p>This tutorial has 2 parts. The parts are very different in size and complexity and contain alternative options for students with prior knowledge of some of the Learning Objectives.<br>
               </p>
               <ol>                
-                <li><a href="#Part1">Part 1</a> is required. </li>               
+                <li>
+                    Part 1 is required.
+                </li>
                 <li>Part 2: Either Option I or Option II is required<br>
                   <ol>                    
                     <li>Option I - <a href="#Part2_OptionI">HTML, CSS and Event Handling</a>:&nbsp;&nbsp; This option is for students 
@@ -176,24 +183,24 @@
                 </p>                
                 <ol class="Instruction">
                   <li class="Instruction_Todo"> <u>Exercise: [Create Remote Repo]</u>                    
-                    <div class="Server_Cci_Git"> Create new remote repo on cci-git called,
+                    <div class="Server_Cci_Git">
                       Create a new remote repo on cci-git called,<span class="File_Name" data-project-number-long-dir=""></span> using the
-                      procedures of <abbr>GT</abbr>: Appendix <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Basic_Git_Operations">Basic
+                      procedures of Git Tutorial : Appendix <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Basic_Git_Operations">Basic
                         Git Operations.</a>
                       </div>
                   </li>
                   
                   <li class="Instruction_Todo"> <u>Exercise: [Clone Repo]</u>
-                    <br>Clone your repo, enter the created directory and fork the starter code.&nbsp;&nbsp; <span class="Highlight"></span> <br>
+                    <br>Clone your repo and enter the created directory.&nbsp;&nbsp; <span class="Highlight"></span> <br>
                     <table class="Code_Example" id="Code_Example1_0">
                       <tbody>
                         <tr>
                           <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                           <td>
                             <div>
-                              <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/<span data-project-name-dir="">6120</span>
+                              <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">6120</span>/
                               </code>
-                              <code class="Shell_Code_Input-v2">git clone 
+                              <code class="Shell_Code_Input-v2">
                                 git clone https://<span class="User_Input">Your UserID</span>:<span class="User_Input">Your PAT</span>@cci-git.charlotte.edu/<span class="User_Input">your_user_id</span>/<span class="File_Name" data-project-number-long-dir=""></span>.git <span class="File_Name" data-project-name-dir=""></span>                                                                
                               </code> <code class="Shell_Code_Output"> Cloning into 'html-css-event-tutorial'<br>
                                 <span class="Shell_Code_Comment">[...]</span><br>
@@ -257,39 +264,40 @@
                   <li class="Instruction_NonRubric"> Examine the contents of the above directory.  It contains starter and skeleton files for the exercises you will be completing.
                   </li>
                 </ol>   
-                <section><h2 class="Section">Git Commit Protocol and Rubric</h2>
-                  <p> In the instructions in this document, you are required to make git commits at specific points using specific commit messages.&nbsp;&nbsp; This is a <b><u>required</u></b>
-                    part of the assignment.&nbsp;&nbsp; It also develops good git practices.</p>
+                <section><h2 class="Section">Git Commit Protocol and Grading</h2>
+                  <p> In the instructions in this document, you are required to make git commits at specific points using specific commit messages.&nbsp;&nbsp; 
+                    This is a <b><u>required</u></b> part of the assignment.&nbsp;&nbsp; It also develops good git practices.</p>
                   <ol class="Instruction">
-                    <li class="Instruction_NonRubric">For a given exercise that includes specific git commit instructions, if there is not at least 1 git commit
-                      message associated with that exercise, 1 point will be subtracted for "poor software development practices" for that exercise.&nbsp;<br>
+                    <li class="Instruction_NonRubric">
+                      A point will be deducted from each exercise if the exercise includes a specific git commit instruction 
+                      but your repository history is missing that commit.   Generally, each of your commit messages should be a verbatim copy of the 
+                      commit message given in the exercise’s instructions. You can cut &amp; paste the messages from this document into the git commit message.<br>
                       <br>
-                      The student’s commit message need not be a verbatim copy of the commit message given in the exercise’s instructions, but it should be<span>&nbsp;</span><u>very
-                        similar</u>.&nbsp;&nbsp;&nbsp; (But you can simply cut &amp; paste the messages, so they really should be verbatim).<br>
-                      <br>
+                      Extra commit's are perfectly fine and generally expected as you develop and debug your code.<br>
+                      <!-- 
                       The grader will allow for a few of the required commit messages to be missing without incurring a penalty.<br>
-                      <br>
-                      <b>Note</b>: If you accidentally commit with a missing or bad message, you can correct the message using git commit –amend option (see<span>&nbsp;</span><a
+                      -->
+                      <br>                      
+                      If you commit with a missing or 'incorrect' message, you can amend the message using the <span class="File_Name">git commit –amend </span> option (see<span>&nbsp;</span><a
   
                         target="_blank" href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things">https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</a>)<br>
                       <br>
-                      Finally, extra commit's are perfectly fine and common practice, such for fixing other types of coding mistakes, etc.<br>
+                      
                     </li>
-                    <li class="Instruction_NonRubric">For exercises that require students modify code already given to you, if only the original example code is
-                      committed with no change &amp; there is no evidence from the student (documentation, notes, etc) of trying to solve the exercise, then
-                      minimal points will be awarded for that exercise. </li>
-                  </ol>
-                  <p> The complete grading Rubric is available on Canvas.</p>
+                    <li class="Instruction_NonRubric">For exercises that require you modify code already given to you, if the original example code is
+                      committed with no changes, then minimal points will be awarded for that exercise. 
+                    </li>
+                  </ol>                  
                 </section>           
             
 
             </section>
             <section data-point-fraction="95" data-optionset='{"name":"Part 2"}' class="Instruction_Section"><h1 class="Section" id="Part2_OptionI">Part 2: Option I - HTML, CSS and Event Handling</h1>
-              <p>
-                This section covers Option I for Part 2.  Review the <a href="#Tutorial_Structure">Tutorial Structure</a> regarding the requirements for completing either Option I or Option II of Part 2.
+              <p style="border: 1px solid black;">
+                This section covers Option I for Part 2.  See <a href="#Tutorial_Structure">Tutorial Structure</a> regarding which option for Part 2 you should complete.                
               </p>
-              Part 2: Option I is series of readings and exercises from the <abbr>MDN</abbr> doc's on HTML, CSS and event handling.
-
+              Part 2: Option I is series of readings and exercises from the Mozilla Developer Network (<abbr>MDN</abbr>)
+              on HTML, CSS and event handling.  
               <section data-point-fraction="34" class="Instruction_Section"><h2 class="Section">Introduction to HTML</h2>                
                   <div>                
                    
@@ -300,8 +308,7 @@
                       <br>
                     </p>
                     -->
-                    <p>This assignment will guide you through reading a small subset of this documentation.</p>
-                    <p>The assignment instructions below tell you:</p>
+                    <p>The instructions below tell you:</p>
                     <ul>
                       <li>What sections of the <abbr>MDN</abbr> webpages to read </li>
                       <li>Which of the <abbr>MDN</abbr> webpages "Active Learning" exercises to perform with <abbr>MDN</abbr> builtin interactive editors. </li>
@@ -316,7 +323,7 @@
                         to HTML</a>  
                     </p>
                     <p>Next go to <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started','MDN');">Getting
-                        Started with HTML</a> and read through the MDN sections in the list below and performing the exercises in the list below. <br>
+                        Started with HTML</a> and read through the MDN sections and perform the exercises listed below. <br>
                     </p>
                     <ol class="Instruction">
                       <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started','MDN');">Getting
@@ -370,9 +377,9 @@
                           </li>
                         </ol>
                       </li>
-                      <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html','MDN');"><span
+                      <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#character_references_including_special_characters_in_html','MDN');"><span
   
-                            class="MDN_h2">Entity references: Including special characters in HTML</span></a> - read all.<br>
+                            class="MDN_h2">Character references: including special characters in HTML</span></a> - read all.<br>
                         <br>
                       </li>
                       <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments','MDN');"><span
@@ -606,7 +613,7 @@
                           with some HTML</span></a> - read all.&nbsp;&nbsp; When you reach each Active Learning exercise perform the exercise with the
                       instruction modifications listed below:&nbsp;
                       <ol>
-                        <li class="Instruction_Todo"><u>Exercise [started-with-CSS]</u>: As described in this MDN section, created the file, <span class="ProgramName">index.html</span>
+                        <li class="Instruction_Todo"><u>Exercise [starting-with-some-HTML]</u>: As described in this MDN section, created the file, <span class="ProgramName">index.html</span>
                           <ol>
                             <li> Create a sub-directory:<br>
                               <table class="Code_Example">
@@ -912,7 +919,7 @@
               </section>            
               <section data-point-fraction="33" class="Instruction_Section"><h2 class="Section">Event Programming (and a teeny bit of JavaScript)</h2>
                     <p>This section guides you through reading about event handling, but first it covers a teeny bit of JavaScript so as to better understand the
-                      event handling tutorial.&nbsp;&nbsp; (A latter optional tutorial in this course will cover JavaScript in depth).</p>
+                      event handling tutorial.&nbsp;&nbsp; (A later optional tutorial in this course will cover JavaScript in depth).</p>
                     <section data-point-fraction="50" class="Instruction_Section"><h3 class="Section"><a id="_Ref523574167">What is JavaScript</a></h3>
                       <p>Goto topic <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript','MDN');">What is
                           JavaScript?</a></p>
@@ -997,7 +1004,9 @@
                           <br>
                           While reading do the following exercises:<br>
                           <ol start="1" type="a">
-                            <li class="Instruction_Todo"><u>Exercise [internal-js]</u>: Do the exercise in sub-section "Internal JavaScript<br>
+                            <li class="Instruction_Todo"><u>Exercise [internal-js]</u>: Do the exercise in sub-section                               
+                              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#internal_javascript','MDN');">Internal JavaScript</a>
+                              <br>
                               <ol>
                                 <li>Create a sub-directory:<br>
                                   <table class="Code_Example">
@@ -1023,7 +1032,8 @@
                               </ol>
                               <br>
                             </li>
-                            <li class="Instruction_Todo"><u>Exercise [external-js]</u>: Do the exercise in sub-section "External JavaScript<br>
+                            <li class="Instruction_Todo"><u>Exercise [external-js]</u>: Do the exercise in sub-section                               
+                              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#external_javascript','MDN');">External JavaScript</a>
                               <ol>
                                 <li>Create a sub-directory:<br>
                                   <table class="Code_Example">
@@ -1045,8 +1055,8 @@
                                 <li>Move all the code for the MDN exercise into the above sub-directory. <br>
                                   <br>
                                   Verify it displays correctly in Chrome. </li>
-                                <li class="Instruction_Git_Commit">Git commit the file(s) with message <span class="Git_Commit_Message">"-exercise
-                                    external-javascript"</span> </li>
+                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise
+                                  external-javascript"</li>
                               </ol>
                             </li>
                           </ol>
@@ -1058,11 +1068,12 @@
                           <span class="MDN_h2">Summary</span></a> - read all. </li>
                       </ol>
                       <p>This introduction to JavaScript should be enough in order to complete the rest of this tutorial.&nbsp;&nbsp; A later tutorial in the course
-                        will cover JavaScript in greater details.</p>
+                        will cover JavaScript in greater detail.</p>
                     </section>
                     <section data-point-fraction="50" class="Instruction_Section"><h3 class="Section">Introduction to Events</h3>
-                      <p>Goto the sub-topic <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events','MDN');">
-                          Introduction to events</a>. </p>
+                      <p>Goto the sub-topic 
+                        <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events','MDN');"> Introduction to events</a>. 
+                      </p>
                       <ol class="Instruction">
                         <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#what_is_an_event','MDN');"><span
       
@@ -1098,9 +1109,10 @@
                                   class="MDN_h2">Using addEventListener()</span></a> discusses downloading example files.&nbsp;&nbsp; Place them in the above
                               directory.&nbsp; <br>
                               <br>
-                              <ol>
-                                <li class="Instruction_Git_Commit"> Git commit with message <span class="Git_Commit_Message"> "-exercise:start
-                                    random-color-addeventlistener" </span> </li>
+                              <ol>                                
+                                  <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise:start
+                                    random-color-addeventlistener" 
+                                  </li>
                               </ol>
                             </li>
                           </ol>
@@ -1110,8 +1122,10 @@
                               class="MDN_h2">Using addEventListener()</span></a> : <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#listening_for_other_events','MDN');">Listening
                             for other events</a> - read and perform the MDN exercises on the files in your <span class="File_Name">random-color-addeventlistener</span>&nbsp;
                           <br>
-                          <ol>
-                            <li class="Instruction_Todo"><u>Exercise</u>:&nbsp;&nbsp; Git commit with message "-exercise:Listening for other events" </li>
+                          <ol>                            
+                            <li class="Instruction_Git_Commit">
+                              <span class="Git_Commit_Message"> git commit -m "-exercise: Listening for other events" </span>
+                            </li>
                           </ol>
                         </li>
                         <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener','MDN');"><span
@@ -1120,10 +1134,10 @@
                             listeners</a> - read.<br>
                           This exercise does not require you add anything to your Git repo.<br>
                           <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener','MDN');"><span class="MDN_h2"></span></a></li>
-                        <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener','MDN');"><span
-      
-                              class="MDN_h2">Using addEventListener()</span></a> : <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#adding_multiple_listeners_for_a_single_event','MDN');">Adding
-                            multiple listeners for a single event</a> - read.<br>
+                        <li class="Instruction_Read">
+                          <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener','MDN');">
+                            <span class="MDN_h2">Using addEventListener()</span></a> : <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#adding_multiple_listeners_for_a_single_event','MDN');">
+                              Adding multiple listeners for a single event</a> - read.<br>
                           <br>
                           <ol>
                             <li><u>Exercise</u> [multiple-listeners]:<br>
@@ -1131,21 +1145,16 @@
                               Add additional listeners to some of the code in your <span class="File_Name">random-color-addeventlistener<span style="font-family: serif;">
                                 </span></span>directory.&nbsp;&nbsp; Make the additional listeners do something that is visible in the browser.<br>
                               <br>
-                              <ol>
-                                <li class="Instruction_Git_Commit">Git commit with message <span class="Git_Commit_Message">"-exercise: multiple listeners"</span></li>
+                              <ol>                                
+                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message"> git commit -m "-exercise: multiple listeners" 
+                                </li>
                               </ol>
                             </li>
                           </ol>
                           <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#other_event_listener_mechanisms','MDN');"><span
       
-                              class="MDN_h2"></span></a></li>
-                        <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener','MDN');"><span
-      
-                              class="MDN_h2">Using addEventListener()</span></a> : <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#adding_multiple_listeners_for_a_single_event','MDN');">Adding
-                            multiple listeners for a single event</a> - read.<br>
-                          <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#other_event_listener_mechanisms','MDN');"><span
-      
-                              class="MDN_h2"></span></a></li>
+                              class="MDN_h2"></span></a>
+                        </li>
                         <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#other_event_listener_mechanisms','MDN');"><span
       
                               class="MDN_h2">Other event listener mechanisms</span></a> - read all.&nbsp; When you reach each Active Learning exercise perform the
@@ -1158,7 +1167,9 @@
                               to use event handler properties.<br>
                               <br>
                               <ol>
-                                <li class="Instruction_Git_Commit">Git commit with message <span class="Git_Commit_Message">"-exercise: other-mechanisms"</span></li>
+                                <li class="Instruction_Git_Commit">                                  
+                                  <span class="Git_Commit_Message"> git commit -m "-exercise: other-mechanisms" </span>
+                                </li>
                               </ol>
                             </li>
                           </ol>
@@ -1195,7 +1206,7 @@
                                     border color on each button click. <br>
                                   <br>
                                 </li>
-                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-playing :)" .</span> </li>
+                                <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "random colors :)" .</span> </li>
                               </ol>
                             </li>
                           </ol>
@@ -1242,24 +1253,32 @@
                                 <li class="Instruction_Todo">Put all the MDN's sections downloaded files in this directory and modified them as suggested by the MDN
                                   docs..
                                 </li>
-                                <li class="Instruction_Git_Commit">                                                                     
-                                  Git commit with message:&nbsp; <span class="Git_Commit_Message">"-exercise: preventing-defaults"</span> </li>
+                                <li class="Instruction_Git_Commit">                                                                                                       
+                                  <span class="Git_Commit_Message"> git commit -m "-exercise: preventing-defaults"  .</span> 
+                                </li>
                               </ol>
                             </li>
                           </ol>
                           <br>
                         </li>
-                        <li class="Instruction_Read"><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling','MDN');">Event_Bubbling</a>
+                        <li class="Instruction_Read">
+                          <span id="cursor"></span>
+                          <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling','MDN');">Event_Bubbling</a>
                           <!-- - \todo fix-me --> <br>
                           <ol>
-                            <li class="Instruction_Todo"><u>Exercise</u>: [parent-element]&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#setting_a_listener_on_a_parent_element','MDN');">Setting_a_listener_on_a_parent_element</a><br>
+                            <li class="Instruction_Todo"><u>Exercise</u>: [parent-element]&nbsp; Read and do the exercise in MDN sub-section 
+                              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#setting_a_listener_on_a_parent_element','MDN');">Setting_a_listener_on_a_parent_element</a><br>
                               <br>
                               This exercise does not require you add anything to your Git repo. </li>
-                            <li class="Instruction_Todo"><u>Exercise</u>: [bubbling-example&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_example','MDN');">Bubbling_example</a><br>
+                            <li class="Instruction_Todo"><u>Exercise</u>: [bubbling-example&nbsp; Read and do the exercise in MDN sub-section
+                               <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#bubbling_example','MDN');">Bubbling_example</a><br>
                               <br>
-                              This exercise does not require you add anything to your Git repo. </li>
-                            <li class="Instruction_Todo"><u>Exercise</u>: [video-player]&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#video_player_example','MDN');">Video_player_example.</a>
-                              <ins> Download the code from this link, <a href="./code/video-player.html" target="_blank">video-player.html</a></ins> <span class="Updated_Text_Popup_Note">2/15/2023:
+                              This exercise does not require you add anything to your Git repo. 
+                            </li>
+                            <li class="Instruction_Todo"><u>Exercise</u>: [video-player]&nbsp; Read and do the exercise in MDN sub-section 
+                              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#video_player_example','MDN');">Video_player_example.</a>
+                               Download the code from this link, <a href="./code/video-player.html" download>video-player.html</a>
+                              <span class="Updated_Text_Popup_Note">2/15/2023:
                                 Simplified exercise by giving .html file </span>, and organize the file(s) as follows:<br>
                               <ol>
                                 <li class="Instruction_Todo">Create a sub-directory:<br>
@@ -1285,20 +1304,20 @@
                                 <li> <span class="Git_Commit_Message">git commit -m "-exercise: video-player" .</span> </li>
                               </ol>
                             </li>
-                            <li class="Instruction_Todo"><u>Exercise</u>: [stop-propagation]&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#fixing_the_problem_with_stoppropagation','MDN');">Fixing_the_problem_with_stop_propagation.</a>
+                            <li class="Instruction_Todo"><u>Exercise</u>: [stop-propagation]&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#fixing_the_problem_with_stoppropagation','MDN');">Fixing_the_problem_with_stop_propagation.</a>
                               Apply the discussed changes to your code in your <span class="File_Name">video-player</span> directory. <br>
                               <br>
                               <ol>
                                 <li class="Instruction_Git_Commit"> <span class="Git_Commit_Message">git commit -m "-exercise: fixed propagation problem" .</span> </li>
                               </ol>
                             </li>
-                            <li class="Instruction_Todo"><u>Exercise</u>: [event-capture]&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_capture','MDN');">Event_capture.</a>
+                            <li class="Instruction_Todo"><u>Exercise</u>: [event-capture]&nbsp; Read and do the exercise in MDN sub-section <a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#event_capture','MDN');">Event_capture.</a>
                               <br>
                               <br>
                               This exercise does not require you add anything to your Git repo. </li>
                           </ol>
                         </li>
-                        <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation','MDN');">Event_Delegation</a>
+                        <li><a class="WindowOpenLeft" onclick="windowOpenLeft('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#event_delegation','MDN');">Event_Delegation</a>
                           - Download the source code that this <abbr>MDN</abbr> section refers to. As you read each active learning exercises perform the exercises on the
                           downloaded files and inside the directory described below:<br>
                           <ol>
@@ -1339,9 +1358,9 @@
               </section>                
             </section>            
             <section data-point-fraction="5"  data-optionset='{"name":"Part 2"}' class="Instruction_Section"><h1  ><a id="Part2_OptionII">Part 2: Option II - Prior Experience in HTML, CSS and Event Handling</a></h1>
-              <p>
-                This section covers Option II for Part 2.  Review the <a href="#Tutorial_Structure">Tutorial Structure</a> regarding the requirements for completing either Option I or Option II of Part 2.
-                </p>
+              <p style="border: 1px solid black;">
+                This section covers Option II for Part 2.  See <a href="#Tutorial_Structure">Tutorial Structure</a> regarding which option for Part 2 you should complete.                
+              </p>
               <p>
               For Part 2: Option II, you must submit a brief description of your prior experience in HTML, CSS and event handling as described below.
               </p>            
@@ -1443,6 +1462,7 @@
               </ul>
               If you have questions about whether using a particular resource is acceptable or not, email the TA and/or Professor. </section>
             <section hidden="hidden"><h1 class="Section">Appendix:&nbsp;&nbsp; Notes for TA and Professor</h1>
+              
               <p style="text-align:center"><i><span style="color:red;background:yellow">This section should NOT be distributed to students when the file is
                     printed to a PDF</span></i></p>
               <ul>
