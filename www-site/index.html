@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--
+\author Zachary Wartell\copyright Copyright 2015. Zachary Wartell.  All rights reserved.-->
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0">
+    <title>HTML CSS Event Tutorial</title>
+
+    <link rel="manifest" crossorigin="use-credentials" href="manifest.json">    
+    <link rel="shortcut icon" type="image/png" href="icons/icon48.png">
+    <link rel="shortcut icon" type="image/png" href="icons/icon144.png">
+
+    <!-- BEGIN:  ZxW MVC <head> -->
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/style.css">
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/technical-writing.css">
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/annotation.css">        
+    <script type="importmap">
+          {
+            "imports": {
+              "ZxW_MVC": "./modules/zxw-mvc/ZxW_MVC.js",
+              "ZxW_GUI": "./modules/zxw-mvc/ZxW_GUI.js",
+              "ZxW_TabContainer": "./modules/zxw-mvc/ZxW_TabContainer.js",
+              "ZxW_Annotation": "./modules/zxw-mvc/ZxW_Annotation.js",
+              "ZxW_Toolbar": "./modules/zxw-mvc/ZxW_Toolbar.js",
+              "ZxW_TextEditor": "./modules/zxw-mvc/ZxW_TextEditor.js"
+            }
+          }
+      </script>      
+    <!-- END:  ZxW MVC <head> -->
+
+    <link href="modules/zjw-generic-instructions/css/generic_instructions.css" rel="stylesheet" type="text/css">
+    <link href="modules/zjw-generic-instructions/css/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
+    <link href="modules/zjw-generic-instructions/css/GUI.css" rel="stylesheet" type="text/css">
+    <link media="print" href="modules/zjw-generic-instructions/css/generic_instructions-print.css" rel="stylesheet" type="text/css">
+    <!--      
+    <script type="application/json" class="js-hypothesis-config">        {            "openSidebar": false        }    </script>        <script src="https://hypothes.is/embed.js" async=""></script>              <script src="scripts/zjwgi/third-party/jquery-3.5.1.min.js"></script>        <script src="scripts/zjwgi/third-party/jquery-3.5.1.min.js" lang="javascript"></script>         -->    
+    <script src="modules/zjw-generic-instructions/scripts/generic_instructions.js"></script>
+    <script type="module" lang="javascript">
+      import * as ZxW_GUI from "ZxW_GUI";
+      import * as Rubric from "./modules/zjw-generic-instructions/scripts/Rubric.js";
+      import * as CAW from "../modules/zjw-generic-instructions/scripts/ClassAssignmentWartell.js";
+
+      class App extends ZxW_GUI.DefaultApplication
+      {
+          constructor(){super();}
+      }
+      let app = new App()
+      await ZxW_GUI.DefaultApplication.fetchUserDocument(app, "html-css-event-tutorial.zxw-doc.html");
+      window.BreadCrumb = Rubric.BreadCrumb;
+      CAW.main(150);
+      
+      window.Visibility_Toggle = CAW.Visibility_Toggle; 
+      console.log("window.rubricMain");
+
+      document.getElementById("Instructor_Mode").addEventListener('change', (e) => {
+        Visibility_Toggle('Instructor_Mode', e.target.checked); Visibility_Toggle('Staff_Only', e.target.checked); document.getElementById("fileMenu").disabled
+          = !e.target.checked;
+      }); 
+      function onload_Body() { console.log("function onload_Body()");}
+      window.onload_Body = onload_Body;
+
+      /**
+       * @source https://developer.mozilla.org/en-US/docs/Web/API/History_API
+       */
+      window.addEventListener("popstate", (event) => {
+        /*
+          alert(
+            `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+          );
+          */
+        });
+
+      window.addEventListener("hashchange", (event) => 
+      {
+        /*
+          alert(            
+      `"hashchange" 
+      location: ${document.location}, event: ${JSON.stringify(event)}`,); 
+      */
+        console.log(event);        
+        let split = event.newURL.split("#");
+        let e = document.getElementById(split[1]);        
+        console.log("split:",split,split[1]);
+        if (e !== null) 
+        {
+          console.log("e:",e);
+          e.scrollIntoView();           
+        }
+        // if (event.target instanceof HTMLElement)
+        // {
+        //   document.getElementById(event.newURL.split("#")[1]).scrollIntoView();           
+        //   console.log("2:",event.newURL.split("#")[1]);
+        // }
+            
+      });
+
+      /**
+       * temp hack
+       */
+      let target = document.getElementById("RubricAwardedPointsClone");
+      let source = document.getElementById(target.dataset.clone);
+      let clone = source.cloneNode(true);
+      target.insertAdjacentElement('afterbegin',clone);
+
+      /**
+       *  for debugging
+       */
+      if (true)
+      {
+        const c = document.getElementById("cursor");
+        if (c !== null) c.scrollIntoView();           
+      }
+   </script>
+    <script type="application/json" id="AssignmentName">
+        {
+            "AssignmentName" : {
+                "courseNumber" : "3120",
+                "number" : "t2",
+                "numberLongDir" : "3120-t2-html-css-event-tutorial",
+                "name" : "html-css-event-tutorial"
+              }   
+        }
+    </script>
+    <!--
+        [            
+            {
+                "courseNumber" : "3120",
+                "number" : "t2",
+                "numberLongDir" : "3120-t2-html-css-event-tutorial",
+                "name" : "html-css-event-tutorial"
+            },
+            {
+              "courseNumber" : "5122",
+              "number" : "t2",
+              "numberLongDir" : "5122-t2-html-css-event-tutorial",
+              "name" : "html-css-event-tutorial"
+            }            
+        ]
+    -->
+  </head>
+  <body>
+    <div class="window-container"> </div>
+    <div class="main-container">
+      <!-- disabled:  having problems getting HTML flexbox layout to open sidebar initially to show fit-content and still allow the sidebar to be shrunk
+        using CSS resize.                               
+ 
+         
+      -->
+      <div id="side-nav-bar" class="side_nav_bar">     
+        <div></div>      
+      </div>          
+      <div class="main-content" id="Content">
+        <div class="toolbar" id="Toolbar">
+          <div class="Menu"> <button id="help" class="DocButton" onclick='window.open("html/zjwgi/Help.html");'> Help </button> <b>|</b>
+            <div class="DocButton"> <input name="Beta_Mode" id="Beta_Mode" type="checkbox"> <label for="Beta_Mode">Beta Mode</label> </div>
+            <div id="BetaModeGUI" style="display:inherit;">
+              <div class="DocButton"> <button id="Question" class="DocButton" disabled="true">Q&amp;A</button> <span>Post question on <br>
+                  selected text <a target="_blank" href="html/zjwgi/Help.html#DocButton_Question">(more)</a> </span> </div>
+              <b>|</b>
+              <div class="DocButton"> <button id="GoogleGroupButton" class="DocButton" disabled="true" onclick="window.open('https://groups.google.com/a/uncc.edu/g/computer-graphics-wartell-group','_blank')">Google
+                  Group</button> <span>Open tab with class Google Group <br>
+                  <!-- <a target="_blank" href="html/zjwgi/help.html#DocButton_Question">(more)</a> --> </span> 
+              </div>
+              <!--
+              <b>||</b>
+              <div class="DocButton"> <button id="back" class="DocButton" disabled="true">🡰</button> <span>Navigate Back <a href="html/zjwgi/help.html#DocButton_back"></a>
+                </span> 
+              </div>
+              <div class="DocButton"> <button id="forward" class="DocButton" disabled="true">🡲</button> <span>Navigate Forward <a href="html/zjwgi/help.html#DocButton_forward"></a>
+                </span> 
+              </div>
+              -->
+              <b>||</b>
+              <div> <input name="Instructor_Mode" id="Instructor_Mode" disabled="true" type="checkbox"> <label for="Instructor_Mode">TA Mode</label> <b>|</b>
+                |
+                <!--
+                      <a href="mailto:computer-graphics-wartell-group@uncc.edu">mail test</a>                                  <a id="SendComment" target="_blank" class="WindowOpenLeft">Send Comment</a>                     <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox?compose=new">mail test #2 </a>                      -->
+                <button id="fileMenu" disabled="disabled" onclick="document.getElementById('fileSubMenu').hidden=false;">Rubric</button>
+                <ul id="fileSubMenu" class="SubMenu" hidden="">
+                  <li> <input id="loadFile" name="loadFile" accept="/html" type="file"> </li>
+                  <li><button id="Export">Export</button></li>
+                  <li><button id="exportAll">Download</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="UserDocument">
+        </div>
+      </div>      
+      <!--
+        most external site will refuse to connect via an iframe, therefore I went with the windowOpenLeft() solution.
+        <div class="side-read-bar">          <iframe src="https://developer.mozilla.org/en-US/html/zjwgi/Web/JavaScript/Guide/Expressions_and_Operators">          </iframe>        </div>                      -->
+    </div>
+  </body>
+   <template id="SectionRubricTemplate" data-version="1.0">
+    <table class="SectionRubric">
+      <tbody>
+        <tr>
+          <td> Time&nbsp;</td>
+          <td> MSDoc: "2 minutes to read"</td>
+          <td> Assignment: "? minutes to do"</td>
+        </tr>
+        <tr>
+          <td><input onclick='new GradingScript({category : "MSVSSolution", projectDirectory : "MSVS-CSharp-Tutorial/Arrays" }).downloadScript();' value="Grade"
+
+              type="button"></td>
+        </tr>
+      </tbody>
+    </table>
+  </template> <template id="Instruction_Section_Template" data-version="1.0">
+    <div class="Instruction_Section"> </div>
+  </template> 
+  </html>
