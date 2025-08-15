@@ -1,1 +1,1 @@
-export PATH=$PATH:$(pwd)/module/scripts
+export PATH=$PATH:$(pwd)/git-modules/zxw-git-modules/module/scripts
