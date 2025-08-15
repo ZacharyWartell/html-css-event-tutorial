@@ -6,16 +6,39 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0">
     <title>HTML CSS Event Tutorial</title>
-    <link href="css/zjwgi/generic_instructions.css" rel="stylesheet" type="text/css">
-    <link href="css/zjwgi/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
-    <link href="css/zjwgi/GUI.css" rel="stylesheet" type="text/css">
-    <link media="print" href="css/zjwgi/generic_instructions-print.css" rel="stylesheet" type="text/css">
+
+    <link rel="manifest" crossorigin="use-credentials" href="manifest.json">    
+    <link rel="shortcut icon" type="image/png" href="icons/icon48.png">
+    <link rel="shortcut icon" type="image/png" href="icons/icon144.png">
+
+    <!-- BEGIN:  ZxW MVC <head> -->
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/style.css">
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/technical-writing.css">
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/annotation.css">        
+    <script type="importmap">
+          {
+            "imports": {
+              "ZxW_MVC": "./modules/zxw-mvc/ZxW_MVC.js",
+              "ZxW_GUI": "./modules/zxw-mvc/ZxW_GUI.js",
+              "ZxW_TabContainer": "./modules/zxw-mvc/ZxW_TabContainer.js",
+              "ZxW_Annotation": "./modules/zxw-mvc/ZxW_Annotation.js",
+              "ZxW_Toolbar": "./modules/zxw-mvc/ZxW_Toolbar.js",
+              "ZxW_TextEditor": "./modules/zxw-mvc/ZxW_TextEditor.js"
+            }
+          }
+      </script>      
+    <!-- END:  ZxW MVC <head> -->
+
+    <link href="modules/zjw-generic-instructions/css/generic_instructions.css" rel="stylesheet" type="text/css">
+    <link href="modules/zjw-generic-instructions/css/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
+    <link href="modules/zjw-generic-instructions/css/GUI.css" rel="stylesheet" type="text/css">
+    <link media="print" href="modules/zjw-generic-instructions/css/generic_instructions-print.css" rel="stylesheet" type="text/css">
     <!--      
     <script type="application/json" class="js-hypothesis-config">        {            "openSidebar": false        }    </script>        <script src="https://hypothes.is/embed.js" async=""></script>              <script src="scripts/zjwgi/third-party/jquery-3.5.1.min.js"></script>        <script src="scripts/zjwgi/third-party/jquery-3.5.1.min.js" lang="javascript"></script>         -->    
-    <script src="scripts/zjwgi/generic_instructions.js"></script>
+    <script src="modules/zjw-generic-instructions/scripts/generic_instructions.js"></script>
     <script type="module" lang="javascript">
-      import * as Rubric from "./scripts/zjwgi/Rubric.js";
-      import * as CAW from "./scripts/zjwgi/ClassAssignmentWartell.js";
+      import * as Rubric from "./modules/zjw-generic-instructions/scripts/Rubric.js";
+      import * as CAW from "../modules/zjw-generic-instructions/scripts/ClassAssignmentWartell.js";
       window.BreadCrumb = Rubric.BreadCrumb;
       CAW.main(150);
       
@@ -108,7 +131,7 @@
         ]
     -->
   </head>
-  <body onload="onload_Body();">
+  <body>
     <div class="window-container"> </div>
     <div class="main-container">
       <!-- disabled:  having problems getting HTML flexbox layout to open sidebar initially to show fit-content and still allow the sidebar to be shrunk
@@ -155,6 +178,7 @@
             </div>
           </div>
         </div>
+        <div id="UserDocument">
         <article>
           <div contenteditable="false">
             <div>
@@ -2227,6 +2251,8 @@ signing 'app.js'
             </section>
           </div>         
         </article>
+        </div>
+
       </div>      
       <!--
         most external site will refuse to connect via an iframe, therefore I went with the windowOpenLeft() solution.
