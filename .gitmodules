@@ -6,10 +6,6 @@
 	path = git-modules/zjw-pwa-template.git
 	url = https://gitlab.com/zachary-wartell-public/zjw-pwa-template.git
 	branch = main
-[submodule "git-modules/zjw-generic-instructions.git"]
-	path = git-modules/zjw-generic-instructions.git
-	url = https://gitlab.com/zwartell/zjw-generic-instructions.git
-	branch = version2
 [submodule "git-modules/zxw-mvc.git"]
 	path = git-modules/zxw-mvc.git
 	url = https://gitlab.com/zachary-wartell/zxw-mvc.git
