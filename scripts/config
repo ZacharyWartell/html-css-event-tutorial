@@ -1,4 +1,4 @@
 ftphost webpages.charlotte.edu
 ftpdir public_html/Teaching/html-css-event-tutorial
 ftpuser zwartell
-htmlfile ITCS_x120_HTML-CSS-Event_Tutorial.html
+htmlfile index.html
