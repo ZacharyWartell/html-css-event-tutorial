@@ -13,4 +13,4 @@
 [submodule "git-modules/zjw-generic-instructions.git"]
 	path = git-modules/zjw-generic-instructions.git
 	url = https://gitlab.com/zwartell/zjw-generic-instructions.git
-	branch = version4
+	branch = master
