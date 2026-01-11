@@ -1,0 +1,22 @@
+{
+    "name": "HTML CSS Event Tutorial",
+    "version": "1.2.5",
+    "short_name": "HTML CSS Event Tutorial",
+    "author": "Zachary Wartell",    
+    //"start_url":"https://webpages.charlotte.edu/zwartell/Teaching/ITCS%203120%20-%20VS%20Code%20Tutorial/index.html",
+    "start_url":"https://127.0.0.1:8082/index.html",
+    "display":"standalone",
+    "description" : "",
+    "icons": [
+      {
+        "src": "icons/icon144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "icons/icon48.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      }
+    ]
+}
