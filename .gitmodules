@@ -14,3 +14,6 @@
 	path = git-modules/zjw-generic-instructions.git
 	url = git@gitlab.com:zwartell/zjw-generic-instructions.git
 	branch = master
+[submodule "git-modules/zxw-env.git"]
+	path = git-modules/zxw-env.git
+	url = git@gitlab.com:/zachary-wartell/zxw-env.git
