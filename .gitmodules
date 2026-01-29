@@ -1,19 +1,19 @@
 [submodule "git-modules/zxw-git-modules.git"]
 	path = git-modules/zxw-git-modules.git
-	url = git@gitlab.com:zachary-wartell-public/zxw-git-modules.git
+	url = git@github.com:ZacharyWartell/zxw-git-modules.git
 	branch = main
 [submodule "git-modules/zjw-pwa-template.git"]
 	path = git-modules/zjw-pwa-template.git
-	url = git@gitlab.com:zachary-wartell-public/zjw-pwa-template.git
+	url = git@github.com:ZacharyWartell/zjw-pwa-template.git
 	branch = main
 [submodule "git-modules/zxw-mvc.git"]
 	path = git-modules/zxw-mvc.git
-	url = git@gitlab.com:zachary-wartell/zxw-mvc.git
+	url = git@github.com:ZacharyWartell/zxw-mvc.git
 	branch = master
 [submodule "git-modules/zjw-generic-instructions.git"]
 	path = git-modules/zjw-generic-instructions.git
-	url = git@gitlab.com:zwartell/zjw-generic-instructions.git
+	url = git@github.com:ZacharyWartell/zjw-generic-instructions.git
 	branch = master
 [submodule "git-modules/zxw-env.git"]
 	path = git-modules/zxw-env.git
-	url = git@gitlab.com:/zachary-wartell/zxw-env.git
+	url = git@github.com:ZacharyWartell/zxw-env.git

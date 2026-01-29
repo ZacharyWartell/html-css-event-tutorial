@@ -4,8 +4,8 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0">
-    <title>HTML CSS Event Tutorial</title>
+    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0">    
+    <title>ITCS 3120 : Visual Studio Code Tutorial </title>    
 
     <link rel="manifest" crossorigin="use-credentials" href="manifest.json">    
     <link rel="shortcut icon" type="image/png" href="icons/icon48.png">
@@ -29,17 +29,23 @@
       </script>      
     <!-- END:  ZxW MVC <head> -->
 
-    <link href="modules/zjw-generic-instructions/css/generic_instructions.css" rel="stylesheet" type="text/css">
+    <!-- BEGIN:  ZJW Generic Instructions <head> -->
     <link href="modules/zjw-generic-instructions/css/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
     <link href="modules/zjw-generic-instructions/css/GUI.css" rel="stylesheet" type="text/css">
+    <link href="modules/zjw-generic-instructions/css/generic_instructions.css" rel="stylesheet" type="text/css">
     <link media="print" href="modules/zjw-generic-instructions/css/generic_instructions-print.css" rel="stylesheet" type="text/css">
     <!--      
-    <script type="application/json" class="js-hypothesis-config">        {            "openSidebar": false        }    </script>        <script src="https://hypothes.is/embed.js" async=""></script>              <script src="scripts/zjwgi/third-party/jquery-3.5.1.min.js"></script>        <script src="scripts/zjwgi/third-party/jquery-3.5.1.min.js" lang="javascript"></script>         -->    
+    <script type="application/json" class="js-hypothesis-config">        {            "openSidebar": false        }    </script>        <script src="https://hypothes.is/embed.js" async=""></script>              <script src="modules/zjw-generic-instructions/scripts/third-party/jquery-3.5.1.min.js"></script>        <script src="modules/zjw-generic-instructions/scripts/third-party/jquery-3.5.1.min.js" lang="javascript"></script>    
+     -->
     <script src="modules/zjw-generic-instructions/scripts/generic_instructions.js"></script>
+    <!-- END:  ZJW Generic Instructions <head> -->
     <script type="module" lang="javascript">
       import * as ZxW_GUI from "ZxW_GUI";
       import * as Rubric from "./modules/zjw-generic-instructions/scripts/Rubric.js";
       import * as CAW from "./modules/zjw-generic-instructions/scripts/ClassAssignmentWartell.js";
+
+      //const DEV_BUILD=true;
+      const DEV_BUILD=false;
 
       class App extends ZxW_GUI.DefaultApplication
       {
@@ -47,100 +53,71 @@
       }
       let app = new App()
       await ZxW_GUI.DefaultApplication.fetchUserDocument(app, "html-css-event-tutorial.zxw-doc.html");
+
       window.BreadCrumb = Rubric.BreadCrumb;
-      CAW.main(150);
+      CAW.main(150,!DEV_BUILD);
+
       
       window.Visibility_Toggle = CAW.Visibility_Toggle; 
       console.log("window.rubricMain");
 
+      document.getElementById("fileMenu").disabled = false;
       document.getElementById("Instructor_Mode").addEventListener('change', (e) => {
         Visibility_Toggle('Instructor_Mode', e.target.checked); Visibility_Toggle('Staff_Only', e.target.checked); document.getElementById("fileMenu").disabled
           = !e.target.checked;
       }); 
-      function onload_Body() { console.log("function onload_Body()");}
-      window.onload_Body = onload_Body;
-
-      /**
-       * @source https://developer.mozilla.org/en-US/docs/Web/API/History_API
-       */
-      window.addEventListener("popstate", (event) => {
-        /*
-          alert(
-            `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
-          );
-          */
-        });
-
-      window.addEventListener("hashchange", (event) => 
+      //function onload_Body() { console.log("function onload_Body()");}
+      //window.onload_Body = onload_Body;
+      
+      if (DEV_BUILD)
       {
-        /*
-          alert(            
-      `"hashchange" 
-      location: ${document.location}, event: ${JSON.stringify(event)}`,); 
-      */
-        console.log(event);        
-        let split = event.newURL.split("#");
-        let e = document.getElementById(split[1]);        
-        console.log("split:",split,split[1]);
-        if (e !== null) 
-        {
-          console.log("e:",e);
-          e.scrollIntoView();           
-        }
-        // if (event.target instanceof HTMLElement)
-        // {
-        //   document.getElementById(event.newURL.split("#")[1]).scrollIntoView();           
-        //   console.log("2:",event.newURL.split("#")[1]);
-        // }
-            
-      });
-
-      /**
-       * temp hack
-       */
-      /*
-      let target = document.getElementById("RubricAwardedPointsClone");
-      let source = document.getElementById(target.dataset.clone);
-      let clone = source.cloneNode(true);
-      target.insertAdjacentElement('afterbegin',clone);
-      */
-
-      /**
-       *  for debugging
-       */
-      if (true)
-      {
-        const c = document.getElementById("cursor");
-        if (c !== null) c.scrollIntoView();           
+        const c = document.getElementById("cursor");        
+        if (c !== null) c.scrollIntoView();    
       }
+      
+      if (false)
+      window.addEventListener("popstate", (event) => {
+          //alert(
+          //  `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+          //);
+          const s = document.location.toString().split('#');
+          if (s.length == 2)
+          {
+            console.log(s[1]);
+            const id = document.getElementById(s[1]);
+            console.log("id:",id);
+            if (id !== null)
+              id.scrollIntoView();
+            else
+            {
+              const mc = document.querySelector("article");
+              console.log("mc 1:"+mc);
+              mc.scrollIntoView();
+            }
+          } else
+          {
+              const mc = document.querySelector("article");
+              console.log("mc 2:"+mc+mc.classList);
+              mc.scrollIntoView({ behavior: "instant", block: "start" });
+          }
+             
+          console.log(
+            `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+          );
+        });
    </script>
+
     <script type="application/json" id="AssignmentName">
         {
             "AssignmentName" : {
                 "courseNumber" : "3120",
-                "number" : "t2",
-                "numberLongDir" : "3120-t2-html-css-event-tutorial",
+                "number" : "t3",
+                "numberLongDir" : "3120-t3-html-css-event-tutorial",
                 "name" : "html-css-event-tutorial"
               }   
         }
     </script>
-    <!--
-        [            
-            {
-                "courseNumber" : "3120",
-                "number" : "t2",
-                "numberLongDir" : "3120-t2-html-css-event-tutorial",
-                "name" : "html-css-event-tutorial"
-            },
-            {
-              "courseNumber" : "5122",
-              "number" : "t2",
-              "numberLongDir" : "5122-t2-html-css-event-tutorial",
-              "name" : "html-css-event-tutorial"
-            }            
-        ]
-    -->
-  </head>
+  </head>  
   <body>
     <div class="window-container"> </div>
     <div class="main-container">
