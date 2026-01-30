@@ -4,7 +4,7 @@
     "short_name": "HTML CSS Event Tutorial",
     "author": "Zachary Wartell",    
     //"start_url":"https://webpages.charlotte.edu/zwartell/Teaching/ITCS%203120%20-%20VS%20Code%20Tutorial/index.html",
-    "start_url":"https://127.0.0.1:8084//index.html",
+    "start_url":"https://127.0.0.1:8081",
     "display":"standalone",
     "description" : "",
     "icons": [
